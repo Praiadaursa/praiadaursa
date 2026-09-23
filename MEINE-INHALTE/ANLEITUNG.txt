@@ -1,0 +1,107 @@
+================================================================
+  PRAIA DA URSA — so pflegst du deine Website
+================================================================
+
+Du arbeitest NUR in diesem Ordner. Alles andere im Projekt
+darfst du ignorieren.
+
+
+  IN DREI SCHRITTEN
+  -----------------
+
+  1. Ordner öffnen, Text ändern oder Foto hineinlegen
+  2. Doppelklick auf  aktualisieren.command  (eine Ebene höher)
+  3. index.html öffnen und nachsehen
+
+  Fertig. Wenn die Seite ins Netz soll, lädst du danach den
+  ganzen Projektordner hoch.
+
+
+  FOTOS
+  -----
+
+  Leg sie einfach in den passenden Ordner. Erlaubt sind
+  .jpg  .jpeg  .png  .webp
+
+  * Das ERSTE Foto (alphabetisch) ist das Hauptbild.
+  * Alle weiteren erscheinen als Galerie darunter.
+  * Willst du die Reihenfolge festlegen, nenne die Dateien
+    1.jpg, 2.jpg, 3.jpg — dann stimmt sie immer.
+  * Ein Foto austauschen: alte Datei löschen, neue hineinlegen.
+  * Format ist egal, die Seite schneidet passend zu. Hochkant
+    sieht am besten aus. Unter 500 KB pro Bild bleibt die Seite
+    auch am Handy schnell.
+
+  Nur der Ordner 02-logo-medaillon braucht ein QUADRATISCHES
+  Foto mit dem Kopf in der Mitte.
+
+
+  TEXTE
+  -----
+
+  In jedem Ordner liegt  text-de.txt  (deutsch) und
+  text-en.txt  (englisch). Öffne sie mit TextEdit.
+
+  Der Aufbau ist immer gleich:
+
+      Titel: Die Zucht          <- Angaben, oben
+      ---                       <- Trennstrich
+      Hier steht der Fließtext. <- Text, unten
+
+      Eine Leerzeile macht einen neuen Absatz.
+
+  Drei Regeln:
+
+  * Zeilen, die mit # beginnen, sind Notizen für dich und
+    erscheinen NICHT auf der Website.
+  * Alles ÜBER dem Strich --- sind Angaben im Format
+    Name: Wert. Die Namen nicht ändern.
+  * Alles UNTER dem Strich ist Fließtext.
+
+  Manche Dateien enthalten mehrere Blöcke. Die sind durch eine
+  Zeile mit  ===  getrennt. Ein neuer Block heißt: ein weiterer
+  Schritt, ein weiterer Punkt, ein weiteres Thema.
+
+
+  ENGLISCH
+  --------
+
+  Fehlt in text-en.txt etwas, nimmt die Website automatisch den
+  deutschen Text. Du kannst die englischen Dateien also erst
+  einmal liegen lassen.
+
+
+  NEUE KATZE ODER NEUES KITTEN
+  ----------------------------
+
+  Kopiere einen vorhandenen Ordner und benenne ihn um:
+
+      06-kitten-1-ash   ->   06-kitten-5-luna
+
+  Die Zahl bestimmt die Reihenfolge auf der Website.
+  Danach die Texte im neuen Ordner anpassen.
+
+  Ein Kitten entfernen: Ordner löschen.
+
+
+  WENN ETWAS NICHT KLAPPT
+  -----------------------
+
+  Das Fenster von aktualisieren.command zeigt an, was fehlt.
+  Es ändert nichts, solange ein Fehler gemeldet wird — deine
+  Website bleibt dann so, wie sie war.
+
+  Sicherheitskopie: die vorige Fassung liegt danach unter
+  werkzeuge/inhalte-vorher.js
+
+
+  WAS DAS WERKZEUG NICHT ANFASST
+  ------------------------------
+
+  Impressum und Datenschutzerklärung. Die stehen direkt in
+  impressum.html und datenschutz.html, weil sie sich selten
+  ändern und rechtlich genau stimmen müssen.
+
+  Alte Fotos werden nicht gelöscht. Nimmst du ein Bild aus
+  einem Ordner heraus, verschwindet es von der Website, die
+  Datei bleibt aber in bilder/ liegen. Das stört nicht.

@@ -1,0 +1,26 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+# ERSTER Block enthaelt nur die Ueberschrift.
+# Jeder weitere Block ist ein Punkt der Liste.
+
+Titel: Unsere Bedingungen
+---
+
+===
+---
+Abgabe frühestens mit zwölf Wochen, geimpft, gechipt und entwurmt.
+
+===
+---
+Reine Wohnungshaltung nur mit gesichertem Freigang.
+
+===
+---
+Keine Einzelhaltung. Birmas sind ausgesprochen menschenbezogen und brauchen Gesellschaft einer zweiten Katze.
+
+===
+---
+Kastrationspflicht für alle Kitten. 
+
+===
+---
+Schriftlicher Kaufvertrag.

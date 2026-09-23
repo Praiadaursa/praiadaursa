@@ -1,0 +1,4 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+Titel: Price
+---
+A kitten costs 1,200 €. This includes the Felidae e.V. pedigree, the first vaccination, microchip, repeated deworming, insurance up to and including the fourteenth week of life, veterinary examination and a starter pack for the first few days.

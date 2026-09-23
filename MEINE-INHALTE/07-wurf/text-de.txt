@@ -1,0 +1,21 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+# Die Wurfdaten. Der ERSTE Block beschreibt den aktuellen Wurf,
+# der ZWEITE Block erscheint stattdessen, wenn kein Wurf da ist.
+# Wurf vorhanden: ja  oder  nein
+
+Wurf vorhanden: ja
+Bezeichnung: A-Wurf
+Mutter: Yoselin
+Vater: Luigi
+Geboren: 2026-08-24
+AbgabeAb: Mitte November 2026
+---
+Drei kleine Zwerge haben unser Wohnzimmer übernommen. Sie wachsen mitten im Familienalltag auf und werden von uns mit viel Liebe, Geborgenheit und Fürsorge begleitet. Alltagsgeräusche und Artgenossen sind für sie längst nichts Neues: Unsere Hündin Willow ist die beste Spielkameradin, und Zweitkatze Hailey kümmert sich ebenfalls liebevoll um die Kleinen.
+
+Ausziehen dürfen die drei frühestens mit 12 Wochen – bis dahin sind sie geimpft, gechipt, entwurmt, versichert und haben ihren Stammbaum vom Felidae e.V. im Gepäck.
+
+===
+
+# Dieser Text erscheint, wenn oben "Wurf vorhanden: nein" steht.
+---
+Zurzeit haben wir keine Kitten. Der nächste Wurf ist in Planung — schreib uns gern, wenn du auf die Warteliste möchtest.

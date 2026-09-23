@@ -1,0 +1,17 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+# Ein Kitten. Fuer ein weiteres: diesen Ordner kopieren und umbenennen.
+# Geschlecht: m oder w
+# Status: verfuegbar, reserviert oder vergeben
+# Fotos in diesen Ordner legen. Das erste ist das Hauptbild.
+
+Name: Ash
+Geschlecht: m
+Status: verfuegbar
+Farbschlag: Black Silver Tabby Point
+---
+
+Vom kleinsten Zwerg des Wurfes zum unangefochtenen Chef der Rasselbande! Ash hält seine Geschwister ordentlich auf Trab, und sobald auch nur ein Hauch von Milchgeruch in der Luft liegt, gibt es kein Halten mehr.
+
+Neben seinem umwerfenden Charakter ist er auch optisch ein echter Hingucker: Als Black Silver Tabby Point glänzt sein Fell in einem atemberaubenden Silbergrau. Dieser kleine Racker sucht dringend einen Spielgefährten auf Augenhöhe!
+
+Diese kleine Rakete braucht auf jeden Fall jemanden, der genauso viel Lust auf Toben und Spielen hat wie er!

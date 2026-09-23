@@ -1,0 +1,39 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+# ERSTER Block = Einleitung. Danach jeder weitere Block = ein Schritt.
+# Bloecke werden durch eine Zeile mit === getrennt.
+
+---
+Katze to go? Gibt es bei uns nicht. Wir möchten, dass Mensch und Kitten wirklich zueinander passen, und nehmen uns deshalb Zeit fürs Kennenlernen.
+===
+
+Titel: Anfrage
+---
+Schreib uns gerne einfach per WhatsApp oder E-Mail und erzählt uns von euch.
+
+===
+
+Titel: Kennenlernen
+---
+Wer mag, kommt einfach direkt bei uns auf einen Besuch vorbei! Und wenn der Weg zu weit ist: Wir leben schließlich im 21. Jahrhundert – ein Erstkontakt per Zoom oder Telefon klappt mindestens genauso super.
+
+===
+
+Titel: Reservierung
+---
+Bereit für das Abenteuer mit der kleinen Rakete?
+
+Wenn die Chemie stimmt und ihr euch sicher seid, reservieren wir das Kitten fest für euch. Die Reservierungsgebühr beträgt 300 € und fließt direkt in den Kaufpreis ein. Ab diesem Moment seid ihr hautnah dabei: Wir versorgen euch bis zum Einzug ständig mit frischen Updates!
+
+===
+
+Titel: Auszug
+---
+Frühestens ab der 12. Lebenswoche steht der Umzug an. Im Koffer hat der Zwerg dann alles, was für einen perfekten Start nötig ist: den offiziellen Stammbaum, Impfpass samt Chipnummer, EU-Heimtierausweis, das gewohnte Futter für die ersten Tage und eine Decke mit dem vertrauten Geruch von Mama und Geschwistern.
+
+Top Extra: Ein lückenloser Versicherungsschutz ist bis einschließlich der 14. Lebenswoche direkt inklusive. Danach entscheidet ihr einfach selbst, ob ihr ihn weiterlaufen lassen wollt.
+
+===
+
+Titel: Danach
+---
+Wir lassen euch nicht im Regen stehen. Auch nach dem Einzug könnt ihr euch bei allen Fragen jederzeit bei uns melden. Und falls es irgendwann im Leben gar nicht mehr geht und die Katze abgegeben werden muss: Sie geht immer zuerst zurück an uns. Tierheime sind absolut tabu.

@@ -1,0 +1,19 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+# Die Grunddaten deiner Zucht. Sie erscheinen auf jeder Seite.
+# Instagram leer lassen = wird ueberall ausgeblendet.
+# WhatsApp: Landesvorwahl ohne Plus und ohne fuehrende Null.
+
+Zuchtname: Praia da Ursa
+Untertitel: Heilige Birma · Trier
+Ort: Trier
+Gegruendet: 2025
+Verband: Felidae e.V.
+VerbandLink: https://www.felidae-ev.de/
+WhatsApp: +49 177 1530695
+Telefon: +49 177 1530695
+EMail: magnani.giasophie@gmail.com
+Instagram:
+WhatsAppText: Hallo, ich habe Ihre Website gesehen und interessiere mich für Ihre Birma-Kitten.
+---
+# Der Satz unter dem Logo auf der Startseite:
+Eine Birma lebt mit dir, nicht nur neben dir.

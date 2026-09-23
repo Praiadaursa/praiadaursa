@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Originalfotos: bleiben auf dem Mac, gehoeren aber nicht ins Repository.
+# Die Website nutzt ausschliesslich die verkleinerten Fassungen in bilder/.
+MEINE-INHALTE/**/*.jpg
+MEINE-INHALTE/**/*.jpeg
+MEINE-INHALTE/**/*.png
+MEINE-INHALTE/**/*.webp
+
+# Sicherheitskopie, die das Werkzeug anlegt
+werkzeuge/inhalte-vorher.js
+
+# Lokale Servereinstellungen
+.claude/

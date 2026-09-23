@@ -1,0 +1,11 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+# Der Textblock auf der Startseite unter dem Logo.
+# Ein Foto in diesen Ordner legen (hochkant sieht am besten aus).
+
+Titel: Die Zucht
+Bildbeschreibung: Birma-Katze auf einer Fensterbank
+---
+Praia da Ursa – eine der wohl schönsten Buchten, die wir je mit eigenen Augen sehen durften. Graue Felsen, die steil aus dem Wasser ragen, heller Sandstrand, tiefblaues Meer und ein Wellengang, der einen einfach nur staunen lässt. Fast könnte man meinen, die Heilige Birma hätte sich ihre Fellzeichnung und Farben genau in dieser Bucht abgeschaut!
+
+Und doch ist der eigentlich berühmte Strand direkt daneben. Genauso wie diese kleine, versteckte Bucht sind auch wir kein riesiger Zuchtbetrieb: Wir haben lediglich unser Mädchen Yoselin, und einmal im Jahr wirbelt ein Wurf kleiner Wonneproppen durch unser Zuhause – wie der Wellengang durch die Bucht in Portugal!
+

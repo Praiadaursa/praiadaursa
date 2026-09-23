@@ -1,0 +1,7 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+# Ein einziger Block: Ueberschrift und Text.
+# Den Betrag bei PLATZHALTER eintragen.
+
+Titel: Preis
+---
+Ein Kitten kostet 1.200 €. Darin enthalten sind Stammbaum des Felidae e.V., erst Impfung, Chip, mehrfache Entwurmung, Versicherung bis einschließlich 14. Lebenswoche, tierärztliche Untersuchung und das Startpaket für die ersten Tage.

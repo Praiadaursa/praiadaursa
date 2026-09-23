@@ -1,0 +1,5 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+# ERSTER Block = Einleitung oben. ZWEITER Block = Hinweis unten.
+
+---
+Am schnellsten erreichst du uns per WhatsApp. Schreib uns gern auch dann, wenn du dir noch unsicher bist — wir beantworten lieber eine Frage zu viel als eine zu wenig.

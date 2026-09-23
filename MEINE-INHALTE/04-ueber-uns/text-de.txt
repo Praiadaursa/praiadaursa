@@ -1,0 +1,19 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+# Drei Abschnitte, getrennt durch eine Zeile mit ===
+# Ein Foto in diesen Ordner legen.
+
+Titel: Aufzucht mitten im Leben
+Bildbeschreibung: Kitten im Wohnzimmer
+---
+Unsere Kitten wachsen nicht hinter verschlossenen Türen auf – sondern mittendrin im ganz normalen Alltagschaos! Nach den ersten geschützten Wochen geht’s ab ins Getümmel! Unsere Zwerge lernen früh, dass Staubsauger nicht beißen, Hündin Willow eine prima Spielgefährtin ist und Besuch meistens Leckerlis bedeutet.
+
+===
+
+Titel: Wenige Würfe, viel Zeit
+---
+Wir betreiben keine Massenabfertigung. Bei uns gibt es bewusst lange Pausen für die Mutter und volle Aufmerksamkeit für den Nachwuchs. So wissen wir bei jedem Kitten ganz genau, wer die Schmusenase und wer für den Blödsinn verantwortlich ist.
+===
+
+Titel: Angeschlossen an den Felidae e.V.
+---
+Transparenz und das Wohl unserer Tiere stehen für uns an erster Stelle. Wir sind eingetragenes Mitglied im Felidae e.V. und züchten streng nach dessen Zucht- und Registrierordnung. Das bedeutet für dich: Jedes unserer Kitten zieht mit einem offiziellen, anerkannten Stammbaum und allerbester Vorsorge in sein neues Zuhause.

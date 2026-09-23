@@ -1,0 +1,20 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+# Eine Zuchtkatze. Fuer eine weitere: diesen Ordner kopieren und
+# umbenennen, z.B. 05-katze-luna
+# Rolle: koenigin  oder  kater
+# Gentests mit Semikolon trennen.
+# Fotos in diesen Ordner legen. Das erste ist das Hauptbild.
+
+Rolle: Mutter
+Rufname: Yoselin
+VollerName: Yoselin von den Schneeblumen
+Geboren: 2025-04-20
+Farbschlag: Seal Tabby Point
+Blutgruppe: A
+Gentests: HCM: Negativ; PKD: Negativ; FeLV / FIV: Negativ
+---
+Yoselin – Ausdrucksstark, temperamentvoll und einfach zuckersüß
+
+Sie schläft am liebsten mitten im Bett, versteckt sich clever hinter den Kissen und betrachtet frisch gestapelte Wäsche als ihre persönliche Spielwiese.
+
+Ehrlich gesagt: Den Unterschied zwischen einer normalen Hauskatze und einer Rassekatze wollten wir vor ihr gar nicht so recht glauben. Aber Birmas sind einfach anders: absolut bezogen auf ihre Menschen, herrlich mitteilungsbedürftig und treue Begleiter auf Schritt und Tritt. Yoselin meckert mit uns, wenn das Futter nicht schmeckt, läuft uns wie ein kleiner Hund durch die Wohnung hinterher und besetzt sofort den Schoß, sobald man sich auch nur kurz hinsetzt. Eine Katze mit Charakter!
