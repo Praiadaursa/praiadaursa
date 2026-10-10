@@ -619,6 +619,34 @@ def schreiben(daten):
         f.write(";\n")
 
 
+def versionen_stempeln():
+    """Haengt an stil.css, seite.js und inhalte.js in allen Seiten eine
+       Versionsnummer an (?v=...). Aendert sich eine Datei, aendert sich
+       die Nummer — so laden Browser sofort die neue Fassung statt einer
+       alten Kopie aus ihrem Zwischenspeicher."""
+    dateien = ["assets/stil.css", "assets/seite.js", "inhalte.js"]
+    nummern = {}
+    for d in dateien:
+        with open(os.path.join(WURZEL, d), "rb") as f:
+            inhalt = f.read()
+        # Die Zeile mit dem Erzeugungsdatum zaehlt nicht mit
+        inhalt = re.sub(rb"Zuletzt erzeugt am [^\n]*", b"", inhalt)
+        nummern[d] = hashlib.sha1(inhalt).hexdigest()[:8]
+    for seite in sorted(os.listdir(WURZEL)):
+        if not seite.endswith(".html"):
+            continue
+        pfad = os.path.join(WURZEL, seite)
+        with open(pfad, encoding="utf-8") as f:
+            alt = f.read()
+        text = alt
+        for d, nr in nummern.items():
+            text = re.sub(r'((?:src|href)=")' + re.escape(d) + r'(?:\?v=[0-9a-f]*)?"',
+                          lambda m: m.group(1) + d + "?v=" + nr + '"', text)
+        if text != alt:
+            with open(pfad, "w", encoding="utf-8") as f:
+                f.write(text)
+
+
 def main():
     if not os.path.isdir(QUELLE):
         print("FEHLER: Der Ordner MEINE-INHALTE wurde nicht gefunden.")
@@ -634,6 +662,7 @@ def main():
         return 1
 
     schreiben(daten)
+    versionen_stempeln()
     entfernt = bilder_aufraeumen()
 
     print("\n  Fertig.\n")

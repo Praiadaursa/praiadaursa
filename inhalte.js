@@ -5,7 +5,7 @@
    Bearbeite stattdessen den Ordner MEINE-INHALTE und starte
    danach aktualisieren.command per Doppelklick.
 
-   Zuletzt erzeugt am 10.10.2026 um 11:58 Uhr
+   Zuletzt erzeugt am 10.10.2026 um 12:03 Uhr
    ============================================================ */
 
 const INHALTE = {
