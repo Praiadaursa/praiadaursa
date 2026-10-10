@@ -7,6 +7,14 @@ MEINE-INHALTE/**/*.jpg
 MEINE-INHALTE/**/*.jpeg
 MEINE-INHALTE/**/*.png
 MEINE-INHALTE/**/*.webp
+MEINE-INHALTE/**/*.mp4
+MEINE-INHALTE/**/*.mov
+MEINE-INHALTE/**/*.m4v
+MEINE-INHALTE/**/*.MP4
+MEINE-INHALTE/**/*.MOV
+
+# Bereits umgewandelte Videos, damit sie nicht jedes Mal neu entstehen
+werkzeuge/zwischenspeicher/
 
 # Sicherheitskopie, die das Werkzeug anlegt
 werkzeuge/inhalte-vorher.js

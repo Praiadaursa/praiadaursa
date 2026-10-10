@@ -1,0 +1,21 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+# Der Vater des A-Wurfs. Erscheint auf der Seite "Unsere Katzen".
+# Fotos und Videos einfach in diesen Ordner legen.
+# 1.jpg, 1.1.jpg, 1.2.jpg ... werden zu einer Diashow.
+# Leere Angaben werden auf der Website ausgeblendet — bitte nach
+# Moeglichkeit ergaenzen, besonders Blutgruppe und Gentests.
+# Gentests mit Semikolon trennen, z.B.: HCM: Negativ; PKD: Negativ
+
+Rolle: Vater
+Rufname: Luigi
+VollerName:
+Geboren:
+Farbschlag:
+Blutgruppe:
+Gentests:
+---
+Luigi – die Ruhe in Person und ein echter Gentleman auf vier Pfoten
+
+Wenn um ihn herum das Chaos tobt, bleibt Luigi einfach gemütlich liegen und schaut sich das Spektakel mit stoischer Gelassenheit an. Hektik? Kennt er nicht. Er ist so gutmütig, dass er keiner Fliege etwas zuleide tun könnte – nicht einmal der, die ihm frech auf der Nase landet.
+
+Dafür liebt er Gesellschaft über alles: Ob Mensch oder Tier, bei ihm ist jeder herzlich willkommen, und kaum hat man sich hingesetzt, kommt er schon zum Schmusen vorbei. Genau dieses sanfte, gesellige Wesen wünschen wir uns für unsere Kitten.

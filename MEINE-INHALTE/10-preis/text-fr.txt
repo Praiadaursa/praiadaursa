@@ -1,0 +1,4 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+Titel: Prix
+---
+Un chaton coûte 1 100 €. Ce prix comprend le pedigree du Felidae e.V., la première vaccination, la puce électronique, plusieurs vermifugations, l'assurance jusqu'à la fin de la 14e semaine, l'examen vétérinaire et le kit de départ pour les premiers jours.

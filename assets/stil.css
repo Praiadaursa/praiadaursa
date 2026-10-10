@@ -173,14 +173,23 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
   --linie-fein:#9A8C7B;
   --taupe:     #6E6254;
 }
-@media (min-width: 901px) {
-  /* Weichzeichner nur am Desktop — unterhalb 900px liegt das
+@media (min-width: 1220px) {
+  /* Weichzeichner nur am Desktop — unterhalb 1220px liegt das
      Klappmenue als position:fixed IN der Kopfzeile, und ein
      backdrop-filter wuerde es auf Kopfzeilenhoehe zusammenfalten. */
   .kopf {
     background:rgba(170, 154, 134, .96);
     backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
   }
+}
+
+/* Die Menuetaste behaelt ihre Breite; reicht der Platz nicht, gibt
+   der Schriftzug nach und nicht der Bildschirmrand.               */
+.menuetaste { flex-shrink:0; min-width:3.25rem; }
+.wortmarke { min-width:0; }
+.marke-schrift { min-width:0; overflow:hidden; }
+@media (max-width: 360px) {
+  .marke-schrift b { letter-spacing:.12em; font-size:.95rem; }
 }
 
 /* Kleines Logo: Oval mit Haarlinie plus Wortmarke */
@@ -227,7 +236,7 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
   color:var(--blau); font-weight:500; border-bottom-color:var(--blau);
 }
 
-.sprachen { display:flex; align-items:center; gap:.4rem; margin-left:.5rem; }
+.sprachen { display:flex; align-items:center; gap:.25rem; margin-left:.5rem; }
 .sprachen button {
   font-family:var(--sans); font-size:.6875rem; font-weight:400;
   letter-spacing:.16em; text-transform:uppercase;
@@ -243,7 +252,9 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
   letter-spacing:.2em; text-transform:uppercase; color:var(--text);
 }
 
-@media (max-width: 900px) {
+/* Ab 1220px passt das Menue mit vier Sprachen in eine Zeile;
+   darunter (Tablets, kleine Laptops) uebernimmt das Klappmenue. */
+@media (max-width: 1219px) {
   .menuetaste { display:block; }
   .navi {
     position:fixed; inset:var(--kopf) 0 0 0;
@@ -351,7 +362,8 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
 
 /* ---------- BILDER ---------------------------------------- */
 .bild-rahmen { position:relative; background:var(--flaeche); overflow:hidden; }
-.bild-rahmen img { width:100%; height:100%; object-fit:cover; }
+.bild-rahmen img,
+.bild-rahmen video { width:100%; height:100%; object-fit:cover; display:block; }
 
 .hoch  { aspect-ratio:4 / 5; }
 .quadr { aspect-ratio:1; }
@@ -379,7 +391,8 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
   transition:opacity .7s ease; pointer-events:none;
 }
 .diashow .dia[data-aktiv="true"] { opacity:1; pointer-events:auto; }
-.diashow .dia img { width:100%; height:100%; object-fit:cover; }
+.diashow .dia img,
+.diashow .dia video { width:100%; height:100%; object-fit:cover; display:block; }
 
 .dia-taste {
   position:absolute; top:50%; transform:translateY(-50%);
@@ -453,6 +466,8 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
   text-transform:uppercase; color:var(--text-leise); margin:0 0 1rem;
 }
 .karte-text { color:var(--text-leise); margin:0; max-width:34em; }
+.karte-text.fliess { font-size:inherit; }
+.karte-text.fliess p { margin:0 0 .9em; }
 
 .steckbrief { margin:1.75rem 0 0; padding:0; list-style:none; }
 .steckbrief div {
@@ -508,6 +523,7 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
   letter-spacing:.16em; text-transform:uppercase; margin:0; line-height:1.4;
 }
 .schritte p { margin:0; color:var(--text-leise); max-width:36em; }
+.schritte p + p { margin-top:.8em; }   /* Schritte mit mehreren Absaetzen */
 @media (max-width: 560px) { .schritte li { grid-template-columns:2.25rem 1fr; gap:.4rem 1rem; } }
 
 /* ---------- AUFZAEHLUNG ----------------------------------- */
@@ -545,7 +561,8 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
   padding:clamp(1rem, 4vw, 3rem); background:rgba(51, 41, 31, .94); border:0;
 }
 .leuchtkasten::backdrop { background:rgba(51, 41, 31, .94); }
-.leuchtkasten img { max-width:100%; max-height:85svh; object-fit:contain; }
+.leuchtkasten img,
+.leuchtkasten video { max-width:100%; max-height:85svh; object-fit:contain; }
 .leuchtkasten-zu {
   position:absolute; top:1rem; right:1rem; background:none;
   border:1px solid rgba(246,240,228,.4); color:var(--grund); cursor:pointer;

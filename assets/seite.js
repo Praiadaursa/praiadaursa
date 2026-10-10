@@ -6,8 +6,17 @@
 (function () {
   "use strict";
 
-  /* ---------- Sprache -------------------------------------- */
-  var SPRACHEN = ["de", "en"];
+  /* ---------- Sprache --------------------------------------
+     de Deutsch · en Englisch · lb Luxemburgisch · fr Franzoesisch.
+     Fehlt ein Text in einer Sprache, springt ERSATZ ein.        */
+  var SPRACHEN = ["de", "en", "lb", "fr"];
+  var ERSATZ = {
+    de: ["de"],
+    en: ["en", "de"],
+    lb: ["lb", "de"],
+    fr: ["fr", "en", "de"]
+  };
+  var GEBIET = { de: "de-DE", en: "en-GB", lb: "lb-LU", fr: "fr-FR" };
 
   function spracheLesen() {
     var ausUrl = new URLSearchParams(location.search).get("lang");
@@ -34,12 +43,107 @@
 
   /* ---------- Helfer --------------------------------------- */
 
-  /* t() nimmt entweder "Text" oder { de: "...", en: "..." } */
+  /* t() nimmt entweder "Text" oder { de: "...", en: "...", ... } */
   function t(wert) {
     if (wert === null || wert === undefined) return "";
-    if (typeof wert === "object") return wert[sprache] || wert.de || "";
+    if (typeof wert === "object") {
+      var reihe = ERSATZ[sprache] || ["de"];
+      for (var i = 0; i < reihe.length; i++) {
+        if (wert[reihe[i]]) return wert[reihe[i]];
+      }
+      return "";
+    }
     return String(wert);
   }
+
+  /* ---------- Woerterbuch fuer alle festen Beschriftungen --- */
+  var UI = {
+    sprung:        { de: "Zum Inhalt springen", en: "Skip to content",
+                     lb: "Direkt bei den Inhalt", fr: "Aller au contenu" },
+    menue:         { de: "Menü", en: "Menu", lb: "Menü", fr: "Menu" },
+    schliessen:    { de: "Schließen", en: "Close", lb: "Zoumaachen", fr: "Fermer" },
+    hauptnavi:     { de: "Hauptnavigation", en: "Main navigation",
+                     lb: "Haaptnavigatioun", fr: "Navigation principale" },
+    sprachwahl:    { de: "Sprache", en: "Language", lb: "Sprooch", fr: "Langue" },
+    seiten:        { de: "Seiten", en: "Pages", lb: "Säiten", fr: "Pages" },
+    kontakt:       { de: "Kontakt", en: "Contact", lb: "Kontakt", fr: "Contact" },
+    kontaktMarke:  { de: "Kontakt", en: "Get in touch", lb: "Kontakt", fr: "Contact" },
+    verband:       { de: "Verband", en: "Association", lb: "Verband", fr: "Association" },
+    impressum:     { de: "Impressum", en: "Legal notice", lb: "Impressum", fr: "Mentions légales" },
+    datenschutz:   { de: "Datenschutz", en: "Privacy", lb: "Dateschutz", fr: "Confidentialité" },
+    frage:         { de: "Eine Frage? Schreib uns einfach.", en: "Have a question? Just ask.",
+                     lb: "Eng Fro? Schreift eis einfach.", fr: "Une question ? Écrivez-nous." },
+    perWhatsapp:   { de: "Per WhatsApp schreiben", en: "Message on WhatsApp",
+                     lb: "Iwwer WhatsApp schreiwen", fr: "Écrire sur WhatsApp" },
+    perMail:       { de: "E-Mail schreiben", en: "Send an email",
+                     lb: "E-Mail schreiwen", fr: "Envoyer un e-mail" },
+    anrufen:       { de: "Anrufen", en: "Call us", lb: "Uruffen", fr: "Appeler" },
+    alleReserviert:{ de: "Alle reserviert", en: "All reserved",
+                     lb: "All reservéiert", fr: "Tous réservés" },
+    kittenAnsehen: { de: "Die Kitten ansehen", en: "Meet the kittens",
+                     lb: "D'Kitten ukucken", fr: "Découvrir les chatons" },
+    wuerfe:        { de: "Würfe", en: "Litters", lb: "Wierf", fr: "Portées" },
+    inPlanung:     { de: "In Planung", en: "Planned", lb: "A Planung", fr: "En préparation" },
+    mehrDazu:      { de: "Mehr dazu", en: "More about this", lb: "Méi dozou", fr: "En savoir plus" },
+    weiterlesen:   { de: "Weiterlesen ↓", en: "Read on ↓", lb: "Weiderliesen ↓", fr: "Lire la suite ↓" },
+    dieZucht:      { de: "Die Zucht", en: "The cattery", lb: "D'Zucht", fr: "L'élevage" },
+    ueberUns:      { de: "Über uns", en: "About us", lb: "Iwwer eis", fr: "À propos" },
+    dieMutter:     { de: "Die Mutter", en: "The mother", lb: "D'Mamm", fr: "La mère" },
+    ihrSteckbrief: { de: "Ihr Steckbrief", en: "Her profile", lb: "Hire Steckbréif", fr: "Sa fiche" },
+    wieWirZuechten:{ de: "Wie wir züchten", en: "How we breed",
+                     lb: "Wéi mir zuchten", fr: "Notre façon d'élever" },
+    ueberUnsIntro: { de: "Eine kleine Zucht in Trier, angeschlossen an den Felidae e.V.",
+                     en: "A small cattery in Trier, registered with Felidae e.V.",
+                     lb: "Eng kleng Zucht zu Tréier, ugeschloss un de Felidae e.V.",
+                     fr: "Un petit élevage à Trèves, affilié au Felidae e.V." },
+    katzeEine:     { de: "Unsere Katze", en: "Our cat", lb: "Eis Kaz", fr: "Notre femelle" },
+    katzeMehr:     { de: "Unsere Katzen", en: "Our cats", lb: "Eis Kazen", fr: "Nos chats" },
+    katzeTitelEine:{ de: "Die Katze hinter der Zucht", en: "The cat behind the cattery",
+                     lb: "D'Kaz hannert der Zucht", fr: "Le cœur de notre élevage" },
+    katzeTitelMehr:{ de: "Die Katzen hinter der Zucht", en: "The cats behind the cattery",
+                     lb: "D'Kazen hannert der Zucht", fr: "Les chats de notre élevage" },
+    geboren:       { de: "Geboren", en: "Born", lb: "Gebuer", fr: "Naissance" },
+    farbschlag:    { de: "Farbschlag", en: "Colour", lb: "Faarf", fr: "Couleur" },
+    vollerName:    { de: "Voller Name", en: "Full name", lb: "Vollen Numm", fr: "Nom complet" },
+    blutgruppe:    { de: "Blutgruppe", en: "Blood group", lb: "Bluttgrupp", fr: "Groupe sanguin" },
+    gesundheit:    { de: "Gesundheit", en: "Health", lb: "Gesondheet", fr: "Santé" },
+    kitten:        { de: "Kitten", en: "Kittens", lb: "Kitten", fr: "Chatons" },
+    keineKitten:   { de: "Zurzeit keine Kitten", en: "No kittens at the moment",
+                     lb: "Momentan keng Kitten", fr: "Aucun chaton pour le moment" },
+    mutter:        { de: "Mutter", en: "Mother", lb: "Mamm", fr: "Mère" },
+    vater:         { de: "Vater", en: "Father", lb: "Papp", fr: "Père" },
+    auszugAb:      { de: "Auszug ab", en: "Ready from", lb: "Ëmzuch ab", fr: "Départ possible" },
+    kaetzin:       { de: "Kätzin", en: "Female", lb: "Weibchen", fr: "Femelle" },
+    kater:         { de: "Kater", en: "Male", lb: "Männchen", fr: "Mâle" },
+    fruehereWuerfe:{ de: "Frühere Würfe", en: "Past litters",
+                     lb: "Fréier Wierf", fr: "Portées précédentes" },
+    vermittlung:   { de: "Vermittlung", en: "Rehoming", lb: "Vermëttlung", fr: "Adoption" },
+    vermittlungTitel: { de: "Wie ein Kitten sein Zuhause findet", en: "How a kitten finds its home",
+                     lb: "Wéi e Kitten säin Doheem fënnt", fr: "Comment un chaton trouve son foyer" },
+    voraussetzen:  { de: "Was wir voraussetzen", en: "What we ask of you",
+                     lb: "Wat mir virausetzen", fr: "Ce que nous attendons de vous" },
+    gesundheitTitel: { de: "Worauf wir untersuchen", en: "What we test for",
+                     lb: "Wourop mir ënnersichen", fr: "Ce que nous dépistons" },
+    verbandVor:    { de: "Wir züchten nach der Zucht- und Registrierordnung des ",
+                     en: "We breed under the breeding and registration rules of ",
+                     lb: "Mir zuchte no der Zucht- a Registréierungsuerdnung vum ",
+                     fr: "Nous élevons dans le respect du règlement d'élevage et d'enregistrement du " },
+    verbandNach:   { de: ". Jedes Kitten verlässt uns mit anerkanntem Stammbaum.",
+                     en: ". Every kitten leaves us with a recognised pedigree.",
+                     lb: ". All Kitten verléisst eis mat engem unerkannte Stammbam.",
+                     fr: ". Chaque chaton nous quitte avec un pedigree reconnu." },
+    sprichUnsAn:   { de: "Sprich uns an", en: "Talk to us", lb: "Schwätzt eis un", fr: "Parlons-en" },
+    chatStarten:   { de: "Chat starten", en: "Start a chat", lb: "Chat starten", fr: "Démarrer une discussion" },
+    email:         { de: "E-Mail", en: "Email", lb: "E-Mail", fr: "E-mail" },
+    telefon:       { de: "Telefon", en: "Phone", lb: "Telefon", fr: "Téléphone" },
+    woWirSind:     { de: "Wo wir sind", en: "Where we are", lb: "Wou mir sinn", fr: "Où nous trouver" },
+    bildFehlt:     { de: "Bild fehlt", en: "Image missing", lb: "Bild feelt", fr: "Image manquante" },
+    bild:          { de: "Bild", en: "Image", lb: "Bild", fr: "Image" },
+    bildZurueck:   { de: "Vorheriges Bild", en: "Previous image", lb: "Viregt Bild", fr: "Image précédente" },
+    bildVor:       { de: "Nächstes Bild", en: "Next image", lb: "Nächst Bild", fr: "Image suivante" }
+  };
+
+  function u(schluessel) { return t(UI[schluessel]); }
 
   function esc(text) {
     return String(text).replace(/[&<>"']/g, function (z) {
@@ -57,34 +161,58 @@
   function datum(iso) {
     if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return esc(iso || "");
     var d = new Date(iso + "T12:00:00");
-    return d.toLocaleDateString(sprache === "en" ? "en-GB" : "de-DE",
-      { day: "2-digit", month: "long", year: "numeric" });
+    var form = { day: "2-digit", month: "long", year: "numeric" };
+    try { return d.toLocaleDateString(GEBIET[sprache] || "de-DE", form); }
+    catch (e) { return d.toLocaleDateString("de-DE", form); }
   }
 
-  /* Bild mit Ersatzdarstellung, falls die Datei fehlt */
+  /* ---------- Fotos und Videos ------------------------------ */
+
+  var VIDEO = /\.(mp4|webm|m4v|mov)$/i;
+  function istVideo(pfad) { return VIDEO.test(pfad || ""); }
+
+  /* Wer am System "Bewegung reduzieren" eingestellt hat, bekommt
+     keine automatisch laufenden Diashows und Videos.            */
+  var ruhig = !!(window.matchMedia &&
+                 window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+
+  /* Ein Foto oder ein Video. Videos laufen stumm, im Fenster und nie
+     im Vollbild; abgespielt werden sie erst, wenn sie zu sehen sind. */
+  function medium(pfad, alt, inDiashow) {
+    if (istVideo(pfad)) {
+      return '<video src="' + esc(pfad) + '" data-pfad="' + esc(pfad) + '" ' +
+        'muted playsinline preload="metadata" disablepictureinpicture ' +
+        'disableremoteplayback controlslist="nofullscreen nodownload noremoteplayback"' +
+        (inDiashow ? "" : " loop") +
+        (alt ? ' aria-label="' + esc(t(alt)) + '"' : "") + "></video>";
+    }
+    return '<img src="' + esc(pfad) + '" alt="' + esc(t(alt)) + '" loading="lazy" ' +
+      'data-pfad="' + esc(pfad) + '">';
+  }
+
   function bild(pfad, alt, klassen) {
     if (!pfad) return "";
-    return '<div class="bild-rahmen ' + (klassen || "") + '">' +
-      '<img src="' + esc(pfad) + '" alt="' + esc(t(alt)) + '" loading="lazy" ' +
-      'data-pfad="' + esc(pfad) + '"></div>';
+    return '<div class="bild-rahmen ' + (klassen || "") + '">' + medium(pfad, alt, false) + "</div>";
   }
 
-  /* Ersetzt kaputte Bilder durch eine getoente Flaeche mit Dateinamen */
+  function spielen(video) {
+    var versuch = video.play();
+    if (versuch && versuch.catch) { versuch.catch(function () {}); }
+  }
+
+  /* Ersetzt fehlende Fotos und Videos durch eine getoente Flaeche */
   function bilderAbsichern(wurzel) {
-    wurzel.querySelectorAll("img[data-pfad]").forEach(function (img) {
-      img.addEventListener("error", function () {
-        var rahmen = img.parentElement;
+    wurzel.querySelectorAll("img[data-pfad], video[data-pfad]").forEach(function (el) {
+      el.addEventListener("error", function () {
+        var rahmen = el.parentElement;
         if (!rahmen || rahmen.querySelector(".bild-fehlt")) return;
-        var hinweis = sprache === "en" ? "Image missing" : "Bild fehlt";
-        rahmen.innerHTML = '<div class="bild-fehlt"><b>' + hinweis + '</b>' +
-          "<code>" + esc(img.getAttribute("data-pfad")) + "</code></div>";
+        rahmen.innerHTML = '<div class="bild-fehlt"><b>' + esc(u("bildFehlt")) + "</b>" +
+          "<code>" + esc(el.getAttribute("data-pfad")) + "</code></div>";
       });
     });
   }
 
-  /* ---------- Ornamente -----------------------------------
-     Der Kranz ist eine Viertelgruppe, die vierfach gespiegelt
-     wird — daraus entsteht die symmetrische Kartusche.      */
+  /* ---------- Ornamente ------------------------------------ */
 
   var KRANZ =
     '<svg class="medaillon-svg" viewBox="0 0 360 410" fill="none" ' +
@@ -109,14 +237,21 @@
     "</svg>";
 
   var STATUS_TEXT = {
-    verfuegbar: { de: "Verfügbar", en: "Available" },
-    reserviert: { de: "Reserviert", en: "Reserved" },
-    vergeben:   { de: "Vergeben",   en: "Homed" }
+    verfuegbar: { de: "Verfügbar", en: "Available", lb: "Disponibel", fr: "Disponible" },
+    reserviert: { de: "Reserviert", en: "Reserved", lb: "Reservéiert", fr: "Réservé" },
+    vergeben:   { de: "Vergeben",   en: "Homed",    lb: "Adoptéiert",  fr: "Adopté" }
+  };
+  /* Im Franzoesischen richtet sich das Wort nach dem Geschlecht */
+  var STATUS_FR = {
+    w: { verfuegbar: "Disponible", reserviert: "Réservée", vergeben: "Adoptée" },
+    p: { verfuegbar: "Disponibles", reserviert: "Réservés", vergeben: "Adoptés" }
   };
 
-  function statusMarke(status) {
+  function statusMarke(status, geschlecht) {
     var s = STATUS_TEXT[status] ? status : "reserviert";
-    return '<span class="status status--' + s + '">' + esc(t(STATUS_TEXT[s])) + "</span>";
+    var text = (sprache === "fr" && STATUS_FR[geschlecht]) ? STATUS_FR[geschlecht][s]
+                                                          : t(STATUS_TEXT[s]);
+    return '<span class="status status--' + s + '">' + esc(text) + "</span>";
   }
 
   /* "tel:" vertraegt nur Ziffern und ein fuehrendes Plus */
@@ -133,15 +268,30 @@
     de: ["kein", "Ein", "Zwei", "Drei", "Vier", "Fünf", "Sechs",
          "Sieben", "Acht", "Neun", "Zehn", "Elf", "Zwölf"],
     en: ["no", "One", "Two", "Three", "Four", "Five", "Six",
-         "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"]
+         "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"],
+    lb: ["keng", "Ee", "Zwee", "Dräi", "Véier", "Fënnef", "Sechs",
+         "Siwen", "Aacht", "Néng", "Zéng", "Eelef", "Zwielef"],
+    fr: ["aucun", "Un", "Deux", "Trois", "Quatre", "Cinq", "Six",
+         "Sept", "Huit", "Neuf", "Dix", "Onze", "Douze"]
   };
 
-  /* "Drei Kitten" statt einer festen Zahl — richtet sich nach dem Wurf */
+  /* "Vier Kitten" statt einer festen Zahl — richtet sich nach dem Wurf */
   function kittenZahl(anzahl) {
     var woerter = ZAHLWORT[sprache] || ZAHLWORT.de;
     var wort = anzahl < woerter.length ? woerter[anzahl] : String(anzahl);
     if (sprache === "en") { return wort + (anzahl === 1 ? " kitten" : " kittens"); }
+    if (sprache === "fr") { return wort + (anzahl === 1 ? " chaton" : " chatons"); }
     return wort + " Kitten";
+  }
+
+  function nochFrei(anzahl) {
+    var texte = {
+      de: anzahl + " noch verfügbar",
+      en: anzahl + " still available",
+      lb: anzahl + " nach disponibel",
+      fr: anzahl + (anzahl === 1 ? " chaton encore disponible" : " chatons encore disponibles")
+    };
+    return texte[sprache] || texte.de;
   }
 
   function whatsappLink() {
@@ -150,8 +300,8 @@
       "?text=" + encodeURIComponent(t(z.whatsappText));
   }
 
-  /* Ein Bildplatz. Liegen dafuer mehrere Fotos vor (1.jpg, 1.1.jpg ...),
-     entsteht daraus automatisch eine Diashow.                        */
+  /* Ein Bildplatz. Liegen dafuer mehrere Fotos oder Videos vor
+     (1.jpg, 1.1.mp4, 1.2.jpg ...), entsteht automatisch eine Diashow. */
   function bildplatz(gruppe, ersatz, alt, klassen) {
     var liste = (gruppe && gruppe.length) ? gruppe : (ersatz ? [ersatz] : []);
     if (!liste.length) return "";
@@ -159,21 +309,19 @@
 
     var dias = liste.map(function (pfad, i) {
       return '<div class="dia" data-aktiv="' + (i === 0) + '">' +
-        '<img src="' + esc(pfad) + '" data-pfad="' + esc(pfad) + '" alt="' +
-        (i === 0 ? esc(t(alt)) : "") + '" loading="lazy"></div>';
+        medium(pfad, i === 0 ? alt : "", true) + "</div>";
     }).join("");
 
     var punkte = liste.map(function (pfad, i) {
       return '<button type="button" data-dia="' + i + '" aria-current="' + (i === 0) +
-        '"><span class="nur-vorleser">' +
-        (sprache === "en" ? "Image " : "Bild ") + (i + 1) + "</span></button>";
+        '"><span class="nur-vorleser">' + esc(u("bild")) + " " + (i + 1) + "</span></button>";
     }).join("");
 
     return '<div class="diashow ' + (klassen || "") + '">' + dias +
       '<button class="dia-taste dia-taste--zurueck" type="button" aria-label="' +
-        (sprache === "en" ? "Previous image" : "Vorheriges Bild") + '">\u2039</button>' +
+        esc(u("bildZurueck")) + '">‹</button>' +
       '<button class="dia-taste dia-taste--vor" type="button" aria-label="' +
-        (sprache === "en" ? "Next image" : "Nächstes Bild") + '">\u203A</button>' +
+        esc(u("bildVor")) + '">›</button>' +
       '<div class="dia-punkte">' + punkte + "</div></div>";
   }
 
@@ -210,12 +358,11 @@
     }).join("");
 
     var umschalter = SPRACHEN.map(function (s) {
-      return '<button type="button" data-sprache="' + s + '" aria-pressed="' +
+      return '<button type="button" data-sprache="' + s + '" lang="' + s + '" aria-pressed="' +
         (s === sprache) + '">' + s.toUpperCase() + "</button>";
     }).join("<span>/</span>");
 
-    return '<a class="sprung" href="#inhalt">' +
-        (sprache === "en" ? "Skip to content" : "Zum Inhalt springen") + "</a>" +
+    return '<a class="sprung" href="#inhalt">' + esc(u("sprung")) + "</a>" +
       '<header class="kopf">' +
         '<a class="wortmarke" href="index.html">' +
           '<span class="marke-oval">' + bild(logoPfad(), z.name, "") + "</span>" +
@@ -223,19 +370,17 @@
             "<span>" + esc(t(z.untertitel)) + "</span></span>" +
         "</a>" +
         '<button class="menuetaste" type="button" aria-expanded="false" aria-controls="hauptmenue">' +
-          (sprache === "en" ? "Menu" : "Menü") + "</button>" +
-        '<nav class="navi" id="hauptmenue" aria-label="' +
-          (sprache === "en" ? "Main navigation" : "Hauptnavigation") + '">' +
+          esc(u("menue")) + "</button>" +
+        '<nav class="navi" id="hauptmenue" aria-label="' + esc(u("hauptnavi")) + '">' +
           punkte +
-          '<div class="sprachen" role="group" aria-label="' +
-            (sprache === "en" ? "Language" : "Sprache") + '">' + umschalter + "</div>" +
+          '<div class="sprachen" role="group" aria-label="' + esc(u("sprachwahl")) + '">' +
+            umschalter + "</div>" +
         "</nav>" +
       "</header>";
   }
 
   function fussBauen() {
     var z = INHALTE.zucht;
-    var en = sprache === "en";
     var punkte = INHALTE.navigation.map(function (n) {
       return "<li><a href=" + '"' + esc(n.datei) + '">' + esc(t(n.label)) + "</a></li>";
     }).join("");
@@ -245,21 +390,21 @@
           '<p class="fuss-name">' + esc(z.name) + "</p>" +
           '<p class="leise" style="margin:0">' + esc(t(z.untertitel)) + "</p>" +
         "</div>" +
-        '<div><p class="marke">' + (en ? "Pages" : "Seiten") + "</p><ul>" + punkte + "</ul></div>" +
-        '<div><p class="marke">' + (en ? "Contact" : "Kontakt") + '</p><ul>' +
+        '<div><p class="marke">' + esc(u("seiten")) + "</p><ul>" + punkte + "</ul></div>" +
+        '<div><p class="marke">' + esc(u("kontakt")) + "</p><ul>" +
           '<li><a href="' + whatsappLink() + '" rel="noopener">WhatsApp</a></li>' +
           '<li><a href="mailto:' + esc(z.email) + '">' + esc(z.email) + "</a></li>" +
           (z.telefon ? '<li><a href="' + telefonLink() + '">' + esc(z.telefon) + "</a></li>" : "") +
           (z.instagram ? '<li><a href="' + esc(z.instagram) + '" rel="noopener">Instagram</a></li>' : "") +
         "</ul></div>" +
-        '<div><p class="marke">' + (en ? "Association" : "Verband") + '</p><ul>' +
+        '<div><p class="marke">' + esc(u("verband")) + "</p><ul>" +
           '<li><a href="' + esc(z.verband.url) + '" rel="noopener">' + esc(z.verband.name) + "</a></li>" +
         "</ul></div>" +
       "</div>" +
       '<div class="fuss-unten">' +
         "<span>© " + new Date().getFullYear() + " " + esc(z.name) + "</span>" +
-        '<a href="impressum.html">' + (en ? "Legal notice" : "Impressum") + "</a>" +
-        '<a href="datenschutz.html">' + (en ? "Privacy" : "Datenschutz") + "</a>" +
+        '<a href="impressum.html">' + esc(u("impressum")) + "</a>" +
+        '<a href="datenschutz.html">' + esc(u("datenschutz")) + "</a>" +
       "</div></footer>";
   }
 
@@ -286,18 +431,15 @@
   }
 
   function kontaktband() {
-    var z = INHALTE.zucht, en = sprache === "en";
+    var z = INHALTE.zucht;
     return '<section class="abschnitt"><div class="eng" style="text-align:center">' +
-      '<p class="marke">' + (en ? "Get in touch" : "Kontakt") + "</p>" +
-      '<h2 class="untertitel">' +
-        (en ? "Have a question? Just ask." : "Eine Frage? Schreib uns einfach.") + "</h2>" +
+      '<p class="marke">' + esc(u("kontaktMarke")) + "</p>" +
+      '<h2 class="untertitel">' + esc(u("frage")) + "</h2>" +
       '<div class="knopf-reihe" style="justify-content:center">' +
         '<a class="knopf knopf--voll" href="' + whatsappLink() + '" rel="noopener">' +
-          (en ? "Message on WhatsApp" : "Per WhatsApp schreiben") + "</a>" +
-        '<a class="knopf" href="mailto:' + esc(z.email) + '">' +
-          (en ? "Send an email" : "E-Mail schreiben") + "</a>" +
-        (z.telefon ? '<a class="knopf" href="' + telefonLink() + '">' +
-          (en ? "Call us" : "Anrufen") + "</a>" : "") +
+          esc(u("perWhatsapp")) + "</a>" +
+        '<a class="knopf" href="mailto:' + esc(z.email) + '">' + esc(u("perMail")) + "</a>" +
+        (z.telefon ? '<a class="knopf" href="' + telefonLink() + '">' + esc(u("anrufen")) + "</a>" : "") +
       "</div></div></section>";
   }
 
@@ -306,29 +448,31 @@
   var SEITEN = {};
 
   SEITEN["index.html"] = function () {
-    var z = INHALTE.zucht, s = INHALTE.start, w = INHALTE.wurf, en = sprache === "en";
+    var z = INHALTE.zucht, s = INHALTE.start, w = INHALTE.wurf;
 
     var wurfteaser;
     if (w.vorhanden) {
       var frei = w.kitten.filter(function (k) { return k.status === "verfuegbar"; }).length;
-      wurfteaser = '<p class="marke">' + esc(w.bezeichnung) + "</p>" +
+      wurfteaser = '<p class="marke">' + esc(t(w.bezeichnung)) + "</p>" +
         '<h2 class="titel">' + esc(kittenZahl(w.kitten.length)) + "</h2>" +
         '<div class="fliess leise">' + absaetze(w.text) + "</div>" +
-        '<p style="margin-top:1.5rem">' + statusMarke(frei ? "verfuegbar" : "reserviert") + " " +
+        '<p style="margin-top:1.5rem">' + statusMarke(frei ? "verfuegbar" : "reserviert", "p") + " " +
           '<span class="leise" style="margin-left:.5rem">' +
-          (frei ? (frei + (en ? " still available" : " noch verfügbar"))
-                : (en ? "All reserved" : "Alle reserviert")) + "</span></p>" +
+          esc(frei ? nochFrei(frei) : u("alleReserviert")) + "</span></p>" +
         '<div class="knopf-reihe"><a class="knopf" href="kitten.html">' +
-          (en ? "Meet the kittens" : "Die Kitten ansehen") + "</a></div>";
+          esc(u("kittenAnsehen")) + "</a></div>";
     } else {
-      wurfteaser = '<p class="marke">' + (en ? "Litters" : "Würfe") + "</p>" +
-        '<h2 class="titel">' + (en ? "Planned" : "In Planung") + "</h2>" +
+      wurfteaser = '<p class="marke">' + esc(u("wuerfe")) + "</p>" +
+        '<h2 class="titel">' + esc(u("inPlanung")) + "</h2>" +
         '<div class="fliess leise">' + absaetze(w.keinWurfText) + "</div>" +
         '<div class="knopf-reihe"><a class="knopf" href="kitten.html">' +
-          (en ? "More about this" : "Mehr dazu") + "</a></div>";
+          esc(u("mehrDazu")) + "</a></div>";
     }
 
-    var katze = INHALTE.katzen[0];
+    /* Die Mutter gezielt suchen — die Ordner sind alphabetisch sortiert,
+       "luigi" kaeme sonst vor "yoselin" und stuende unter "Die Mutter". */
+    var katze = INHALTE.katzen.filter(function (k) { return k.rolle === "koenigin"; })[0] ||
+                INHALTE.katzen[0];
 
     return '<section class="empfang">' +
         '<div class="medaillon">' + KRANZ +
@@ -340,27 +484,27 @@
         (z.gegruendet ? '<p class="est">Est. ' + esc(z.gegruendet) + "</p>" : "") +
         '<p class="empfang-unter">' + esc(t(z.untertitel)) + "</p>" +
         '<p class="empfang-satz">' + esc(t(z.leitsatz)) + "</p>" +
-        '<a class="weiter" href="#zucht">' + (en ? "Read on ↓" : "Weiterlesen ↓") + "</a>" +
+        '<a class="weiter" href="#zucht">' + esc(u("weiterlesen")) + "</a>" +
       "</section>" +
 
       '<section class="abschnitt" id="zucht"><div class="breit paar">' +
         "<div>" +
-          '<p class="marke">' + (en ? "The cattery" : "Die Zucht") + "</p>" +
+          '<p class="marke">' + esc(u("dieZucht")) + "</p>" +
           '<h2 class="titel">' + esc(t(s.zuchtTitel)) + "</h2>" +
           '<div class="fliess leise">' + absaetze(s.zuchtText) + "</div>" +
           '<div class="knopf-reihe"><a class="knopf" href="ueber-uns.html">' +
-            (en ? "About us" : "Über uns") + "</a></div>" +
+            esc(u("ueberUns")) + "</a></div>" +
         "</div>" +
         bildplatz(s.zuchtGruppe, s.zuchtBild, s.zuchtBildAlt, "hoch bogen gerahmt") +
       "</div></section>" +
 
       (katze ? '<section class="abschnitt"><div class="breit paar paar--umgekehrt">' +
         "<div>" +
-          '<p class="marke">' + (en ? "The mother" : "Die Mutter") + "</p>" +
+          '<p class="marke">' + esc(u("dieMutter")) + "</p>" +
           '<h2 class="titel">' + esc(katze.rufname) + "</h2>" +
           '<div class="fliess leise">' + absaetze(katze.text) + "</div>" +
           '<div class="knopf-reihe"><a class="knopf" href="katzen.html">' +
-            (en ? "Her profile" : "Ihr Steckbrief") + "</a></div>" +
+            esc(u("ihrSteckbrief")) + "</a></div>" +
         "</div>" +
         bildplatz(katze.bildgruppen && katze.bildgruppen[0], katze.bilder[0],
                   katze.rufname, "hoch bogen gerahmt") +
@@ -371,15 +515,15 @@
         bildplatz(w.bilder && w.bilder.length ? [w.bilder[0]] :
                     (w.vorhanden && w.kitten[0] ? w.kitten[0].bildgruppen[0] : null),
                   w.vorhanden && w.kitten[0] ? w.kitten[0].bilder[0] : "bilder/zucht.jpg",
-                  "Kitten", "hoch bogen gerahmt") +
+                  UI.kitten, "hoch bogen gerahmt") +
       "</div></section>" +
 
       kontaktband();
   };
 
   SEITEN["ueber-uns.html"] = function () {
-    var u = INHALTE.ueberuns, en = sprache === "en";
-    var bloecke = u.absaetze.map(function (a, i) {
+    var uu = INHALTE.ueberuns;
+    var bloecke = uu.absaetze.map(function (a, i) {
       return '<section class="abschnitt">' +
         '<div class="breit paar' + (i % 2 ? " paar--umgekehrt" : "") + '">' +
           "<div>" +
@@ -388,28 +532,24 @@
             '<div class="fliess leise">' + absaetze(a.text) + "</div>" +
           "</div>" +
           /* Jeder Abschnitt bekommt ein eigenes Foto, sofern vorhanden */
-          bildplatz(u.gruppen && u.gruppen.length ? u.gruppen[i % u.gruppen.length] : null,
-                    (u.bilder && u.bilder.length ? u.bilder[i % u.bilder.length] : u.bild),
-                    i === 0 ? u.bildAlt : "", "hoch bogen gerahmt") +
+          bildplatz(uu.gruppen && uu.gruppen.length ? uu.gruppen[i % uu.gruppen.length] : null,
+                    (uu.bilder && uu.bilder.length ? uu.bilder[i % uu.bilder.length] : uu.bild),
+                    i === 0 ? uu.bildAlt : "", "hoch bogen gerahmt") +
         "</div></section>";
     }).join("");
 
-    return seitenkopf(en ? "About us" : "Über uns",
-      en ? "How we breed" : "Wie wir züchten",
-      { de: "Eine kleine Zucht in Trier, angeschlossen an den Felidae e.V.",
-        en: "A small cattery in Trier, registered with Felidae e.V." }) +
+    return seitenkopf(UI.ueberUns, UI.wieWirZuechten, UI.ueberUnsIntro) +
       bloecke + kontaktband();
   };
 
   SEITEN["katzen.html"] = function () {
-    var en = sprache === "en";
     var rollen = [
       { schluessel: "koenigin",
-        ein:  { de: "Mutter", en: "Mother" },
-        mehr: { de: "Mütter", en: "Mothers" } },
+        ein:  { de: "Mutter", en: "Mother", lb: "Mamm", fr: "Mère" },
+        mehr: { de: "Mütter", en: "Mothers", lb: "Mammen", fr: "Mères" } },
       { schluessel: "kater",
-        ein:  { de: "Kater", en: "Stud" },
-        mehr: { de: "Kater", en: "Studs" } }
+        ein:  { de: "Vater", en: "Father", lb: "Papp", fr: "Père" },
+        mehr: { de: "Väter", en: "Fathers", lb: "Pappen", fr: "Pères" } }
     ];
 
     var teile = rollen.map(function (r) {
@@ -424,30 +564,28 @@
     }).join("");
 
     var eine = INHALTE.katzen.length === 1;
-    return seitenkopf(
-      en ? (eine ? "Our cat" : "Our cats") : (eine ? "Unsere Katze" : "Unsere Katzen"),
-      en ? (eine ? "The cat behind the cattery" : "The cats behind the cattery")
-         : (eine ? "Die Katze hinter der Zucht" : "Die Katzen hinter der Zucht"), null) +
+    return seitenkopf(eine ? UI.katzeEine : UI.katzeMehr,
+                      eine ? UI.katzeTitelEine : UI.katzeTitelMehr, null) +
       teile + kontaktband();
   };
 
   function katzenKarte(k) {
-    var en = sprache === "en";
     var eintraege = [
-      [{ de: "Geboren", en: "Born" }, datum(k.geboren)],
-      [{ de: "Farbschlag", en: "Colour" }, esc(t(k.farbschlag))],
-      [{ de: "Voller Name", en: "Full name" }, esc(k.vollerName)],
-      [{ de: "Blutgruppe", en: "Blood group" }, esc(k.blutgruppe)],
-      [{ de: "Gesundheit", en: "Health" }, (k.gentests || []).map(esc).join("<br>")]
+      [UI.geboren, datum(k.geboren)],
+      [UI.farbschlag, esc(t(k.farbschlag))],
+      [UI.vollerName, esc(k.vollerName)],
+      [UI.blutgruppe, esc(k.blutgruppe)],
+      [UI.gesundheit, (k.gentests || []).map(esc).join("<br>")]
     ].filter(function (e) { return e[1]; });
 
-    return '<article class="karte">' +
+    var farbe = t(k.farbschlag);
+    return '<article class="karte" id="katze-' + esc(k.id) + '">' +
       '<div class="paar" style="align-items:start">' +
         bildplatz(k.bildgruppen && k.bildgruppen[0], k.bilder[0],
                   k.rufname, "hoch bogen gerahmt") +
         "<div>" +
           '<h2 class="karte-name">' + esc(k.rufname) + "</h2>" +
-          '<p class="karte-zeile">' + esc(t(k.farbschlag)) + "</p>" +
+          (farbe ? '<p class="karte-zeile">' + esc(farbe) + "</p>" : "") +
           '<div class="fliess leise">' + absaetze(k.text) + "</div>" +
           '<dl class="steckbrief">' + eintraege.map(function (e) {
             return "<div><dt>" + esc(t(e[0])) + "</dt><dd>" + e[1] + "</dd></div>";
@@ -458,32 +596,37 @@
       "</article>";
   }
 
+  /* Steht das Elterntier auf der Katzen-Seite, wird der Name ein Link */
+  function elternteil(name) {
+    var tier = INHALTE.katzen.filter(function (k) { return k.rufname === name; })[0];
+    if (!tier) { return esc(name); }
+    return '<a href="katzen.html#katze-' + esc(tier.id) + '">' + esc(name) + "</a>";
+  }
+
   SEITEN["kitten.html"] = function () {
-    var w = INHALTE.wurf, en = sprache === "en";
+    var w = INHALTE.wurf;
 
     if (!w.vorhanden) {
-      return seitenkopf(en ? "Kittens" : "Kitten",
-        en ? "No kittens at the moment" : "Zurzeit keine Kitten", w.keinWurfText) +
-        kontaktband();
+      return seitenkopf(UI.kitten, UI.keineKitten, w.keinWurfText) + kontaktband();
     }
 
     var kopfDaten = [
-      [{ de: "Mutter", en: "Mother" }, esc(w.mutter)],
-      [{ de: "Vater", en: "Father" }, esc(w.vater)],
-      [{ de: "Geboren", en: "Born" }, datum(w.geboren)],
-      [{ de: "Auszug ab", en: "Ready from" }, esc(t(w.abgabeAb))]
+      [UI.mutter, elternteil(w.mutter)],
+      [UI.vater, elternteil(w.vater)],
+      [UI.geboren, datum(w.geboren)],
+      [UI.auszugAb, esc(t(w.abgabeAb))]
     ];
 
     var karten = w.kitten.map(function (k) {
-      var geschlecht = k.geschlecht === "w"
-        ? { de: "Kätzin", en: "Female" } : { de: "Kater", en: "Male" };
+      var geschlecht = k.geschlecht === "w" ? u("kaetzin") : u("kater");
+      var farbe = t(k.farbschlag);
       return '<article class="karte">' +
         bildplatz(k.bildgruppen && k.bildgruppen[0], k.bilder[0],
                   k.name, "hoch bogen gerahmt") +
         '<h3 class="karte-name">' + esc(k.name) + "</h3>" +
-        '<p class="karte-zeile">' + esc(t(geschlecht)) + " · " + esc(t(k.farbschlag)) + "</p>" +
-        "<p>" + statusMarke(k.status) + "</p>" +
-        '<p class="karte-text" style="margin-top:1rem">' + esc(t(k.text)) + "</p>" +
+        '<p class="karte-zeile">' + esc(geschlecht) + (farbe ? " · " + esc(farbe) : "") + "</p>" +
+        "<p>" + statusMarke(k.status, k.geschlecht) + "</p>" +
+        '<div class="karte-text fliess" style="margin-top:1rem">' + absaetze(k.text) + "</div>" +
         galerie(restBilder(k), k.name) +
         "</article>";
     }).join("");
@@ -491,15 +634,15 @@
     var archiv = "";
     if (w.archiv && w.archiv.length) {
       archiv = '<section class="abschnitt abschnitt--sand"><div class="breit">' +
-        '<p class="marke">' + (en ? "Past litters" : "Frühere Würfe") + "</p>" +
+        '<p class="marke">' + esc(u("fruehereWuerfe")) + "</p>" +
         '<div class="raster">' + w.archiv.map(function (a) {
           return '<article class="karte">' + bild(a.bild, a.bezeichnung, "quadr") +
-            '<h3 class="karte-name">' + esc(a.bezeichnung) + "</h3>" +
+            '<h3 class="karte-name">' + esc(t(a.bezeichnung)) + "</h3>" +
             '<p class="karte-zeile">' + datum(a.geboren) + "</p></article>";
         }).join("") + "</div></div></section>";
     }
 
-    return seitenkopf(en ? "Kittens" : "Kitten", w.bezeichnung, null) +
+    return seitenkopf(UI.kitten, w.bezeichnung, null) +
       '<section class="abschnitt"><div class="breit">' +
         streifen(w.bilder, w.bezeichnung) +
         '<div class="wurfkopf">' +
@@ -513,18 +656,16 @@
   };
 
   SEITEN["vermittlung.html"] = function () {
-    var v = INHALTE.vermittlung, en = sprache === "en";
-    return seitenkopf(en ? "Rehoming" : "Vermittlung",
-      en ? "How a kitten finds its home" : "Wie ein Kitten sein Zuhause findet", v.einleitung) +
+    var v = INHALTE.vermittlung;
+    return seitenkopf(UI.vermittlung, UI.vermittlungTitel, v.einleitung) +
       '<section class="abschnitt"><div class="breit">' +
         '<ol class="schritte">' + v.schritte.map(function (s) {
-          return "<li><h3>" + esc(t(s.titel)) + "</h3><p>" + esc(t(s.text)) + "</p></li>";
+          return "<li><h3>" + esc(t(s.titel)) + "</h3>" + absaetze(s.text) + "</li>";
         }).join("") + "</ol>" +
       "</div></section>" +
       '<section class="abschnitt"><div class="breit">' +
         '<p class="marke">' + esc(t(v.bedingungen.titel)) + "</p>" +
-        '<h2 class="untertitel">' +
-          (en ? "What we ask of you" : "Was wir voraussetzen") + "</h2>" +
+        '<h2 class="untertitel">' + esc(u("voraussetzen")) + "</h2>" +
         '<ul class="liste">' + v.bedingungen.punkte.map(function (p) {
           return "<li>" + esc(t(p)) + "</li>";
         }).join("") + "</ul>" +
@@ -536,9 +677,8 @@
   };
 
   SEITEN["gesundheit.html"] = function () {
-    var g = INHALTE.gesundheit, en = sprache === "en";
-    return seitenkopf(en ? "Health" : "Gesundheit",
-      en ? "What we test for" : "Worauf wir untersuchen", g.einleitung) +
+    var g = INHALTE.gesundheit, z = INHALTE.zucht;
+    return seitenkopf(UI.gesundheit, UI.gesundheitTitel, g.einleitung) +
       '<section class="abschnitt"><div class="breit"><div class="raster raster--zwei">' +
         g.bloecke.map(function (b) {
           return '<article class="karte"><hr class="haarlinie">' +
@@ -547,33 +687,27 @@
         }).join("") +
       "</div></div></section>" +
       '<section class="abschnitt"><div class="breit">' +
-        '<p class="marke">' + (en ? "Association" : "Verband") + "</p>" +
-        '<h2 class="untertitel">' + esc(INHALTE.zucht.verband.name) + "</h2>" +
-        '<div class="fliess leise"><p>' +
-          (en ? "We breed under the breeding and registration rules of "
-              : "Wir züchten nach der Zucht- und Registrierordnung des ") +
-          '<a href="' + esc(INHALTE.zucht.verband.url) + '" rel="noopener">' +
-          esc(INHALTE.zucht.verband.name) + "</a>" +
-          (en ? ". Every kitten leaves us with a recognised pedigree."
-              : ". Jedes Kitten verlässt uns mit anerkanntem Stammbaum.") +
+        '<p class="marke">' + esc(u("verband")) + "</p>" +
+        '<h2 class="untertitel">' + esc(z.verband.name) + "</h2>" +
+        '<div class="fliess leise"><p>' + esc(u("verbandVor")) +
+          '<a href="' + esc(z.verband.url) + '" rel="noopener">' + esc(z.verband.name) + "</a>" +
+          esc(u("verbandNach")) +
         "</p></div></div></section>" + kontaktband();
   };
 
   SEITEN["kontakt.html"] = function () {
-    var z = INHALTE.zucht, k = INHALTE.kontakt, en = sprache === "en";
-    return seitenkopf(en ? "Contact" : "Kontakt",
-      en ? "Talk to us" : "Sprich uns an", k.einleitung) +
+    var z = INHALTE.zucht, k = INHALTE.kontakt;
+    return seitenkopf(UI.kontakt, UI.sprichUnsAn, k.einleitung) +
       '<section class="abschnitt"><div class="breit">' +
         '<div class="kontaktreihe">' +
           '<div><p class="marke">WhatsApp</p>' +
-            '<a href="' + whatsappLink() + '" rel="noopener">' +
-            (en ? "Start a chat" : "Chat starten") + "</a></div>" +
-          '<div><p class="marke">' + (en ? "Email" : "E-Mail") + "</p>" +
+            '<a href="' + whatsappLink() + '" rel="noopener">' + esc(u("chatStarten")) + "</a></div>" +
+          '<div><p class="marke">' + esc(u("email")) + "</p>" +
             '<a href="mailto:' + esc(z.email) + '">' + esc(z.email) + "</a></div>" +
-          (z.telefon ? '<div><p class="marke">' + (en ? "Phone" : "Telefon") + "</p>" +
+          (z.telefon ? '<div><p class="marke">' + esc(u("telefon")) + "</p>" +
             '<a href="' + telefonLink() + '">' + esc(z.telefon) + "</a></div>" : "") +
-          '<div><p class="marke">' + (en ? "Where we are" : "Wo wir sind") + "</p>" +
-            "<p style='margin:0'>" + esc(z.ort) + "</p></div>" +
+          '<div><p class="marke">' + esc(u("woWirSind")) + "</p>" +
+            "<p style='margin:0'>" + esc(t(z.ort)) + "</p></div>" +
           (z.instagram ? '<div><p class="marke">Instagram</p><a href="' +
             esc(z.instagram) + '" rel="noopener">@' + esc(z.name) + "</a></div>" : "") +
         "</div>" +
@@ -583,22 +717,39 @@
   };
 
   /* Impressum und Datenschutz stehen als Text in ihren HTML-Dateien.
-     Hier wird nur die passende Sprachfassung eingeblendet.          */
+     Eingeblendet wird die passende Fassung; gibt es keine, die erste
+     aus der Ersatzreihe (Luxemburgisch zeigt so die deutsche).      */
   function rechtstexteUmschalten() {
-    document.querySelectorAll("[data-sprachfassung]").forEach(function (block) {
-      block.hidden = block.getAttribute("data-sprachfassung") !== sprache;
+    var bloecke = document.querySelectorAll("[data-sprachfassung]");
+    if (!bloecke.length) return;
+    var vorhanden = {};
+    bloecke.forEach(function (b) { vorhanden[b.getAttribute("data-sprachfassung")] = true; });
+    var reihe = ERSATZ[sprache] || ["de"];
+    var gewaehlt = "de";
+    for (var i = 0; i < reihe.length; i++) {
+      if (vorhanden[reihe[i]]) { gewaehlt = reihe[i]; break; }
+    }
+    bloecke.forEach(function (b) {
+      b.hidden = b.getAttribute("data-sprachfassung") !== gewaehlt;
+    });
+    document.querySelectorAll("[data-nur-sprache]").forEach(function (el) {
+      el.hidden = el.getAttribute("data-nur-sprache") !== sprache;
     });
   }
 
   /* ---------- Leuchtkasten fuer Galeriebilder -------------- */
   function leuchtkastenOeffnen(pfad, alt) {
-    var alt_ = alt || "";
     var dlg = document.createElement("dialog");
     dlg.className = "leuchtkasten";
-    dlg.innerHTML = '<button class="leuchtkasten-zu" type="button">' +
-      (sprache === "en" ? "Close" : "Schließen") + "</button>" +
-      '<img src="' + esc(pfad) + '" alt="' + esc(alt_) + '">';
+    dlg.innerHTML = '<button class="leuchtkasten-zu" type="button">' + esc(u("schliessen")) +
+      "</button>" +
+      (istVideo(pfad)
+        ? '<video src="' + esc(pfad) + '" muted playsinline loop controls ' +
+          'controlslist="nofullscreen nodownload"></video>'
+        : '<img src="' + esc(pfad) + '" alt="' + esc(alt || "") + '">');
     document.body.appendChild(dlg);
+    var v = dlg.querySelector("video");
+    if (v) { v.muted = true; if (!ruhig) { spielen(v); } }
     dlg.addEventListener("close", function () { dlg.remove(); });
     dlg.querySelector("button").addEventListener("click", function () { dlg.close(); });
     dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
@@ -606,42 +757,109 @@
     else { window.open(pfad, "_blank", "noopener"); dlg.remove(); }
   }
 
-  /* ---------- Diashow in Gang setzen ----------------------- */
+  /* ---------- Videos ausserhalb von Diashows --------------- */
+  var videoWaechter = null;
+
+  function videosVorbereiten(wurzel) {
+    if (videoWaechter) { videoWaechter.disconnect(); videoWaechter = null; }
+    if ("IntersectionObserver" in window) {
+      videoWaechter = new IntersectionObserver(function (eintraege) {
+        eintraege.forEach(function (e) {
+          if (e.isIntersecting) { spielen(e.target); } else { e.target.pause(); }
+        });
+      }, { threshold: 0.3 });
+    }
+    wurzel.querySelectorAll("video[data-pfad]").forEach(function (v) {
+      /* stumm muss auch als Eigenschaft gesetzt sein, sonst verweigern
+         manche Browser das automatische Abspielen                  */
+      v.muted = true;
+      v.defaultMuted = true;
+      v.playsInline = true;
+      if (ruhig) { v.controls = true; return; }
+      if (v.closest(".dia")) { return; }            /* das regelt die Diashow */
+      if (videoWaechter) { videoWaechter.observe(v); } else { spielen(v); }
+    });
+  }
+
+  /* ---------- Diashow in Gang setzen -----------------------
+     Fotos bleiben sechs Sekunden stehen. Ein Video laeuft einmal
+     ganz durch, danach kommt das naechste Bild.                 */
+  var FOTO_DAUER = 6000;
+  var VIDEO_HOECHSTENS = 65000;
+
   function diashowStarten(wurzel) {
     wurzel.querySelectorAll(".diashow").forEach(function (show) {
       var dias   = [].slice.call(show.querySelectorAll(".dia"));
       var punkte = [].slice.call(show.querySelectorAll("[data-dia]"));
       if (dias.length < 2) { return; }
 
-      var aktiv = 0, uhr = null;
-      var ruhig = window.matchMedia &&
-                  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var aktiv = 0, uhr = null, angehalten = false, sichtbar = true;
+
+      function videoVon(i) { return dias[i].querySelector("video"); }
+
+      function stoppen() { if (uhr) { clearTimeout(uhr); uhr = null; } }
+
+      function planen() {
+        stoppen();
+        if (ruhig || angehalten || !sichtbar) { return; }
+        var v = videoVon(aktiv);
+        uhr = setTimeout(function () { zeige(aktiv + 1); },
+                         v ? VIDEO_HOECHSTENS : FOTO_DAUER);
+      }
+
+      function videosAbgleichen() {
+        dias.forEach(function (d, i) {
+          var v = videoVon(i);
+          if (!v) { return; }
+          if (i === aktiv && sichtbar && !ruhig) { spielen(v); } else { v.pause(); }
+        });
+      }
 
       function zeige(n) {
         aktiv = (n + dias.length) % dias.length;
         dias.forEach(function (d, i) { d.setAttribute("data-aktiv", String(i === aktiv)); });
         punkte.forEach(function (b, i) { b.setAttribute("aria-current", String(i === aktiv)); });
-      }
-      function stoppen() { if (uhr) { clearInterval(uhr); uhr = null; } }
-      function starten() {
-        stoppen();
-        /* Wer Bewegung reduziert haben moechte, bekommt keinen Wechsel */
-        if (!ruhig) { uhr = setInterval(function () { zeige(aktiv + 1); }, 6000); }
+        var v = videoVon(aktiv);
+        if (v) { try { v.currentTime = 0; } catch (e) {} }
+        videosAbgleichen();
+        planen();
       }
 
-      show.querySelector(".dia-taste--vor")
-          .addEventListener("click", function () { zeige(aktiv + 1); starten(); });
-      show.querySelector(".dia-taste--zurueck")
-          .addEventListener("click", function () { zeige(aktiv - 1); starten(); });
-      punkte.forEach(function (b, i) {
-        b.addEventListener("click", function () { zeige(i); starten(); });
+      dias.forEach(function (d) {
+        var v = d.querySelector("video");
+        if (!v) { return; }
+        v.addEventListener("ended", function () {
+          if (angehalten || ruhig) { try { v.currentTime = 0; } catch (e) {} spielen(v); }
+          else { zeige(aktiv + 1); }
+        });
       });
 
-      show.addEventListener("mouseenter", stoppen);
-      show.addEventListener("mouseleave", starten);
-      show.addEventListener("focusin", stoppen);
-      show.addEventListener("focusout", starten);
-      starten();
+      show.querySelector(".dia-taste--vor")
+          .addEventListener("click", function () { zeige(aktiv + 1); });
+      show.querySelector(".dia-taste--zurueck")
+          .addEventListener("click", function () { zeige(aktiv - 1); });
+      punkte.forEach(function (b, i) {
+        b.addEventListener("click", function () { zeige(i); });
+      });
+
+      function anhalten() { angehalten = true; stoppen(); }
+      function weiter() { angehalten = false; planen(); }
+      show.addEventListener("mouseenter", anhalten);
+      show.addEventListener("mouseleave", weiter);
+      show.addEventListener("focusin", anhalten);
+      show.addEventListener("focusout", weiter);
+
+      /* Ausserhalb des Bildschirms ruht die Diashow — spart Akku und Daten */
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (eintraege) {
+          sichtbar = eintraege[0].isIntersecting;
+          videosAbgleichen();
+          planen();
+        }, { threshold: 0.3 }).observe(show);
+      }
+
+      videosAbgleichen();
+      planen();
     });
   }
 
@@ -661,6 +879,7 @@
     rechtstexteUmschalten();
 
     bilderAbsichern(document.body);
+    videosVorbereiten(document.body);
     diashowStarten(document.body);
 
     /* Sprachumschalter */
@@ -676,8 +895,11 @@
         var offen = menue.getAttribute("data-offen") === "true";
         menue.setAttribute("data-offen", String(!offen));
         taste.setAttribute("aria-expanded", String(!offen));
-        taste.textContent = !offen ? (sprache === "en" ? "Close" : "Schließen")
-                                   : (sprache === "en" ? "Menu" : "Menü");
+        /* Geoeffnet nur ein schmales Kreuz — "Schliessen" waere auf kleinen
+           Bildschirmen zu breit (luxemburgisch "Zoumaachen"). Vorleseprogramme
+           hoeren trotzdem das Wort in der gewaehlten Sprache.            */
+        if (!offen) { taste.textContent = "\u2715"; taste.setAttribute("aria-label", u("schliessen")); }
+        else { taste.textContent = u("menue"); taste.removeAttribute("aria-label"); }
       });
     }
 

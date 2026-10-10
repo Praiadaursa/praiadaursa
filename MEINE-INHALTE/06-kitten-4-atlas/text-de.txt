@@ -1,0 +1,17 @@
+# Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
+# Ein Kitten. Fuer ein weiteres: diesen Ordner kopieren und umbenennen.
+# Geschlecht: m oder w
+# Status: verfuegbar, reserviert oder vergeben
+# Farbschlag: bitte noch eintragen — solange leer, wird er ausgeblendet.
+# Fotos und Videos in diesen Ordner legen. Das erste ist das Hauptbild.
+
+Name: Atlas
+Geschlecht: m
+Status: verfuegbar
+Farbschlag:
+---
+Atlas schaut nur mit einem Auge in die Welt – und verpasst trotzdem rein gar nichts! Er ist immer als Erster zur Stelle, wenn es etwas zu entdecken gibt, klettert mit seinen Geschwistern um die Wette und weiß ganz genau, wann und wo das Futter serviert wird.
+
+Katzen kommen mit einem Auge erstaunlich gut zurecht, und Atlas ist der beste Beweis dafür: Er spielt, tobt und kuschelt genauso wie seine Geschwister. Was ihm auf der einen Seite fehlt, macht er mit Neugier, Mut und einer extragroßen Portion Charme mehr als wett.
+
+Atlas sucht keine Familie, die ihn trotzdem nimmt – sondern eine, die genau ihn sucht. Menschen mit einem großen Herzen für das Besondere, bei denen er so geliebt wird, wie er ist. Wer ihm einmal ins Auge geschaut hat, versteht, warum.

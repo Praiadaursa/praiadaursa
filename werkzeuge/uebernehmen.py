@@ -4,38 +4,62 @@
 PRAIA DA URSA — Inhalte uebernehmen
 
 Liest den Ordner MEINE-INHALTE aus und erzeugt daraus
-  * inhalte.js   (alle Texte der Website)
-  * bilder/      (alle Fotos, passend benannt)
+  * inhalte.js   (alle Texte der Website, in allen Sprachen)
+  * bilder/      (alle Fotos und Videos, passend benannt und verkleinert)
 
 Aufruf: Doppelklick auf aktualisieren.command
         oder  python3 werkzeuge/uebernehmen.py
 """
 
+import datetime
+import hashlib
 import json
 import os
 import re
 import shutil
+import struct
 import subprocess
 import sys
-import datetime
 
-WURZEL   = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-QUELLE   = os.path.join(WURZEL, "MEINE-INHALTE")
-BILDER   = os.path.join(WURZEL, "bilder")
-ZIEL     = os.path.join(WURZEL, "inhalte.js")
-BILD_END = (".jpg", ".jpeg", ".png", ".webp")
+WURZEL    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+QUELLE    = os.path.join(WURZEL, "MEINE-INHALTE")
+BILDER    = os.path.join(WURZEL, "bilder")
+ZIEL      = os.path.join(WURZEL, "inhalte.js")
+ZWISCHEN  = os.path.join(WURZEL, "werkzeuge", "zwischenspeicher")
+
+BILD_END  = (".jpg", ".jpeg", ".png", ".webp")
+VIDEO_END = (".mp4", ".mov", ".m4v", ".webm")
+
+# Deutsch ist Pflicht, alle anderen Sprachen sind optional.
+SPRACHEN = ("de", "en", "lb", "fr")
+SPRACHNAME = {"en": "englische", "lb": "luxemburgische", "fr": "franzoesische"}
 
 fehler = []
 hinweise = []
 
 
+def melden(liste, text):
+    """Jede Meldung nur einmal, auch wenn sie mehrfach ausgeloest wird."""
+    if text not in liste:
+        liste.append(text)
+
+
 # ---------------------------------------------------------------- lesen
+
+_gelesen = {}
+
 
 def eintraege(ordner, sprache):
     """Liest text-<sprache>.txt und gibt eine Liste von Eintraegen zurueck.
-       Ein Eintrag ist {"felder": {...}, "absaetze": [...]}."""
+       Ein Eintrag ist {"felder": {...}, "absaetze": [...]}.
+       Fehlt die Datei, kommt None zurueck."""
+    schluessel = (ordner, sprache)
+    if schluessel in _gelesen:
+        return _gelesen[schluessel]
+
     pfad = os.path.join(QUELLE, ordner, "text-%s.txt" % sprache)
     if not os.path.exists(pfad):
+        _gelesen[schluessel] = None
         return None
     with open(pfad, encoding="utf-8") as f:
         roh = f.read()
@@ -65,7 +89,7 @@ def eintraege(ordner, sprache):
         for absatz in absaetze:
             for zeile in absatz.split("\n"):
                 if zeile.strip() == "---" or zeile.strip().lower().startswith("titel:"):
-                    fehler.append(
+                    melden(fehler,
                         "%s/text-%s.txt: Mitten im Text steht \"%s\".\n"
                         "      Dort fehlt vermutlich eine Trennzeile === davor."
                         % (ordner, sprache, zeile.strip()[:40]))
@@ -73,41 +97,48 @@ def eintraege(ordner, sprache):
 
         if felder or absaetze:
             ergebnis.append({"felder": felder, "absaetze": absaetze})
+
+    _gelesen[schluessel] = ergebnis
     return ergebnis
 
 
-def zweisprachig(ordner, index=0, feld=None):
-    """Holt denselben Wert auf Deutsch und Englisch.
-       Fehlt Englisch, wird Deutsch verwendet."""
+def _hol(liste, i, feld):
+    if i >= len(liste):
+        return ""
+    e = liste[i]
+    if feld:
+        return e["felder"].get(feld.lower(), "")
+    return "\n\n".join(e["absaetze"])
+
+
+def mehrsprachig(ordner, index=0, feld=None):
+    """Holt denselben Wert in allen Sprachen.
+
+       Fehlt eine Sprache, wird sie weggelassen — die Website zeigt dann
+       automatisch eine Ersatzsprache (siehe ERSATZ in assets/seite.js)."""
     de = eintraege(ordner, "de")
-    en = eintraege(ordner, "en")
     if de is None:
-        fehler.append("Datei fehlt: MEINE-INHALTE/%s/text-de.txt" % ordner)
-        return {"de": "", "en": ""}
-    if en is not None and len(en) != len(de) and index == 0:
-        fehler.append(
-            "%s: die deutsche Datei hat %d Bloecke, die englische %d.\n"
-            "      Dadurch wuerden die Uebersetzungen gegeneinander "
-            "verrutschen. Bitte gleiche Anzahl === verwenden."
-            % (ordner, len(de), len(en)))
-    if en is None or len(en) <= index:
-        # Nur melden, wenn die englische Datei wirklich fehlt oder kuerzer
-        # ist als die deutsche. Ein Block, den BEIDE nicht haben, ist
-        # kein Fehler — dann ist das Feld schlicht leer.
-        fehlt = en is None or (len(en) <= index < len(de))
-        if fehlt and ordner not in [h.split(":")[0] for h in hinweise]:
-            hinweise.append("%s: keine englische Fassung, es wird die deutsche verwendet." % ordner)
-        en = de
+        melden(fehler, "Datei fehlt: MEINE-INHALTE/%s/text-de.txt" % ordner)
+        return {"de": ""}
 
-    def hol(liste, i):
-        if i >= len(liste):
-            return ""
-        e = liste[i]
-        if feld:
-            return e["felder"].get(feld.lower(), "")
-        return "\n\n".join(e["absaetze"])
-
-    return {"de": hol(de, index), "en": hol(en, index)}
+    ergebnis = {"de": _hol(de, index, feld)}
+    for spr in SPRACHEN[1:]:
+        liste = eintraege(ordner, spr)
+        if liste is None:
+            melden(hinweise, "%s: keine %s Fassung, dort erscheint die Ersatzsprache."
+                   % (ordner, SPRACHNAME[spr]))
+            continue
+        if len(liste) != len(de):
+            melden(fehler,
+                "%s: die deutsche Datei hat %d Bloecke, die %s %d.\n"
+                "      Dadurch wuerden die Uebersetzungen gegeneinander "
+                "verrutschen. Bitte gleiche Anzahl === verwenden."
+                % (ordner, len(de), SPRACHNAME[spr], len(liste)))
+            continue
+        wert = _hol(liste, index, feld)
+        if wert:
+            ergebnis[spr] = wert
+    return ergebnis
 
 
 def feldwert(ordner, name, index=0, standard=""):
@@ -132,7 +163,7 @@ def rolle_deuten(wert):
     schluessel = ROLLEN.get(wert.strip().lower())
     if schluessel:
         return schluessel
-    hinweise.append("Rolle \"%s\" nicht erkannt, es wird koenigin verwendet." % wert)
+    melden(hinweise, "Rolle \"%s\" nicht erkannt, es wird koenigin verwendet." % wert)
     return "koenigin"
 
 
@@ -141,11 +172,11 @@ def anzahl(ordner):
     return len(de) if de else 0
 
 
-# ---------------------------------------------------------------- bilder
+# ---------------------------------------------------------------- fotos
 
 MAX_KANTE = 1600     # laengste Bildkante in Pixeln
 QUALITAET = 80       # JPEG-Qualitaet
-gespart = [0]        # Bytes, nur fuer die Meldung am Ende
+statistik = {"gespart": 0, "fotos": 0, "videos": 0}
 
 
 def verkleinern(pfad):
@@ -160,10 +191,133 @@ def verkleinern(pfad):
             subprocess.run(["sips", "-s", "formatOptions", str(QUALITAET), pfad],
                            check=True, capture_output=True)
     except Exception:
-        hinweise.append("Foto %s konnte nicht verkleinert werden."
-                        % os.path.basename(pfad))
+        melden(hinweise, "Foto %s konnte nicht verkleinert werden."
+               % os.path.basename(pfad))
         return
-    gespart[0] += vorher - os.path.getsize(pfad)
+    statistik["gespart"] += vorher - os.path.getsize(pfad)
+
+
+# ---------------------------------------------------------------- videos
+
+MAX_SEKUNDEN = 60    # laengere Videos werden gekuerzt
+UMWANDLUNG_VERSION = 2
+WARNGROESSE  = 40    # MB; darueber wird es fuer GitHub und Handys zaeh
+
+
+def _mp4_dauer(pfad):
+    """Liest die Laenge direkt aus dem Dateikopf (mvhd-Atom in moov).
+       Funktioniert fuer .mp4 und .mov, auch fuer frisch kopierte Dateien,
+       die Spotlight noch nicht kennt. Liest nur die noetigen Bytes."""
+    try:
+        with open(pfad, "rb") as f:
+            gesamt = os.path.getsize(pfad)
+
+            def boxen(start, ende):
+                pos = start
+                while pos + 8 <= ende:
+                    f.seek(pos)
+                    kopf = f.read(8)
+                    if len(kopf) < 8:
+                        return
+                    laenge, typ = struct.unpack(">I4s", kopf)
+                    kopflaenge = 8
+                    if laenge == 1:
+                        laenge = struct.unpack(">Q", f.read(8))[0]
+                        kopflaenge = 16
+                    elif laenge == 0:
+                        laenge = ende - pos
+                    if laenge < kopflaenge:
+                        return
+                    yield typ, pos + kopflaenge, pos + laenge
+                    pos += laenge
+
+            for typ, anfang, ende in boxen(0, gesamt):
+                if typ != b"moov":
+                    continue
+                for typ2, anfang2, _ in boxen(anfang, ende):
+                    if typ2 != b"mvhd":
+                        continue
+                    f.seek(anfang2)
+                    d = f.read(32)
+                    if d[0] == 1:
+                        einheit, dauer = struct.unpack(">IQ", d[20:32])
+                    else:
+                        einheit, dauer = struct.unpack(">II", d[12:20])
+                    return dauer / float(einheit) if einheit else None
+    except Exception:
+        return None
+    return None
+
+
+def videodauer(pfad):
+    """Laenge in Sekunden; None, wenn sie sich nicht bestimmen laesst."""
+    dauer = _mp4_dauer(pfad)
+    if dauer:
+        return dauer
+    try:
+        aus = subprocess.run(["mdls", "-raw", "-name", "kMDItemDurationSeconds", pfad],
+                             capture_output=True, text=True, timeout=10).stdout.strip()
+        return float(aus)
+    except Exception:
+        return None
+
+
+def video_uebernehmen(quelle, ziel):
+    """Wandelt ein Handyvideo in webtaugliches MP4 um (720p, H.264).
+
+       avconvert gehoert zu macOS und entfernt dabei auch Standortdaten.
+       Umgewandelte Videos landen im Zwischenspeicher, damit sie nicht
+       bei jedem Lauf neu berechnet werden muessen."""
+    st = os.stat(quelle)
+    # UMWANDLUNG_VERSION erhoehen, wenn sich die Einstellungen aendern —
+    # dann werden alte Ergebnisse im Zwischenspeicher nicht mehr verwendet.
+    kennung = "v%d|%s|%d|%d" % (UMWANDLUNG_VERSION, os.path.relpath(quelle, QUELLE),
+                                st.st_size, int(st.st_mtime))
+    zwischen = os.path.join(ZWISCHEN, hashlib.sha1(kennung.encode("utf-8")).hexdigest()[:16] + ".mp4")
+    name = os.path.relpath(quelle, QUELLE)
+
+    dauer = videodauer(quelle)
+
+    if not os.path.exists(zwischen):
+        os.makedirs(ZWISCHEN, exist_ok=True)
+        print("    wandle Video um: %s" % name)
+        vorlaeufig = zwischen + ".teil.mp4"
+        befehl = ["avconvert", "--source", quelle, "--preset", "Preset1280x720",
+                  "--output", vorlaeufig, "--replace"]
+        # Achtung: --duration kuerzt nicht nur, es FUELLT kuerzere Videos
+        # mit einem stehenden Bild auf. Deshalb nur bei wirklich zu langen.
+        if dauer and dauer > MAX_SEKUNDEN:
+            befehl += ["--duration", str(MAX_SEKUNDEN)]
+        try:
+            subprocess.run(befehl, check=True, capture_output=True, timeout=1800)
+            os.replace(vorlaeufig, zwischen)
+        except Exception:
+            if os.path.exists(vorlaeufig):
+                os.remove(vorlaeufig)
+            if quelle.lower().endswith((".mp4", ".webm")):
+                shutil.copy2(quelle, ziel)
+                melden(hinweise, "Video %s liess sich nicht umwandeln und wurde "
+                       "unveraendert uebernommen." % name)
+                return True
+            melden(hinweise, "Video %s liess sich nicht umwandeln und fehlt "
+                   "deshalb auf der Website." % name)
+            return False
+
+    shutil.copy2(zwischen, ziel)
+
+    if dauer and dauer > MAX_SEKUNDEN + 1:
+        melden(hinweise, "Video %s ist %d Sekunden lang und wurde auf %d Sekunden "
+               "gekuerzt." % (name, dauer, MAX_SEKUNDEN))
+    mb = os.path.getsize(ziel) / 1048576.0
+    if mb > WARNGROESSE:
+        melden(hinweise, "Video %s ist nach dem Umwandeln noch %.0f MB gross — "
+               "am Handy laedt das langsam." % (name, mb))
+    return True
+
+
+# ---------------------------------------------------------------- medien
+
+verwendet = set()    # alle Dateien in bilder/, die die Website braucht
 
 
 def sortierschluessel(datei):
@@ -184,28 +338,51 @@ def sortierschluessel(datei):
 
 
 def fotos(ordner, praefix):
-    """Kopiert alle Bilder eines Ordners nach bilder/.
+    """Uebernimmt alle Fotos UND Videos eines Ordners nach bilder/.
 
        Rueckgabe: (flache Liste, Gruppen). Dateien, deren Name vor dem
        ersten Punkt gleich ist, bilden eine Gruppe — aus 1.jpg, 1.1.jpg
-       und 1.2.jpg wird also EIN Bildplatz mit Diashow."""
+       und 1.2.mp4 wird also EIN Bildplatz mit Diashow, in der das Video
+       mitlaeuft."""
     quelle = os.path.join(QUELLE, ordner)
     if not os.path.isdir(quelle):
         return [], []
     dateien = sorted((d for d in os.listdir(quelle)
-                      if d.lower().endswith(BILD_END) and not d.startswith(".")),
+                      if d.lower().endswith(BILD_END + VIDEO_END) and not d.startswith(".")),
                      key=sortierschluessel)
 
     flach, gruppen, letzter = [], [], None
-    for nr, datei in enumerate(dateien, 1):
-        endung = os.path.splitext(datei)[1].lower()
-        if endung == ".jpeg":
-            endung = ".jpg"
+    nr = 0
+    for datei in dateien:
+        ist_video = datei.lower().endswith(VIDEO_END)
+        if ist_video:
+            endung = ".webm" if datei.lower().endswith(".webm") else ".mp4"
+        else:
+            endung = os.path.splitext(datei)[1].lower()
+            if endung == ".jpeg":
+                endung = ".jpg"
+            # Das Logo ist ein Standbild — ein Video hat dort nichts verloren
+        if ist_video and praefix == "logo-portrait":
+            melden(hinweise, "Im Ordner 02-logo-medaillon ist nur ein Foto moeglich, "
+                   "das Video %s wurde uebersprungen." % datei)
+            continue
+
+        nr += 1
         name = "%s-%d%s" % (praefix, nr, endung) if praefix != "logo-portrait" \
                else "logo-portrait" + endung
         ziel = os.path.join(BILDER, name)
-        shutil.copy2(os.path.join(quelle, datei), ziel)
-        verkleinern(ziel)
+
+        if ist_video:
+            if not video_uebernehmen(os.path.join(quelle, datei), ziel):
+                nr -= 1
+                continue
+            statistik["videos"] += 1
+        else:
+            shutil.copy2(os.path.join(quelle, datei), ziel)
+            verkleinern(ziel)
+            statistik["fotos"] += 1
+
+        verwendet.add(name)
         pfad = "bilder/" + name
         flach.append(pfad)
 
@@ -218,6 +395,20 @@ def fotos(ordner, praefix):
     return flach, gruppen
 
 
+def bilder_aufraeumen():
+    """Entfernt aus bilder/ alles, was die Website nicht mehr verwendet —
+       etwa umbenannte oder geloeschte Fotos. bilder/ wird vollstaendig
+       aus MEINE-INHALTE erzeugt, dabei geht also nichts verloren."""
+    behalten = verwendet | {"favicon.svg"}
+    entfernt = 0
+    for datei in os.listdir(BILDER):
+        if datei.startswith(".") or datei in behalten:
+            continue
+        os.remove(os.path.join(BILDER, datei))
+        entfernt += 1
+    return entfernt
+
+
 # ---------------------------------------------------------------- bauen
 
 def bauen():
@@ -227,42 +418,42 @@ def bauen():
 
     zucht = {
         "name":        feldwert("01-zucht-und-kontakt", "Zuchtname", standard="Praia da Ursa"),
-        "untertitel":  zweisprachig("01-zucht-und-kontakt", feld="Untertitel"),
-        "ort":         feldwert("01-zucht-und-kontakt", "Ort"),
+        "untertitel":  mehrsprachig("01-zucht-und-kontakt", feld="Untertitel"),
+        "ort":         mehrsprachig("01-zucht-und-kontakt", feld="Ort"),
         "gegruendet":  feldwert("01-zucht-und-kontakt", "Gegruendet"),
         "verband": {
             "name": feldwert("01-zucht-und-kontakt", "Verband"),
             "url":  feldwert("01-zucht-und-kontakt", "VerbandLink"),
         },
         "whatsapp":    re.sub(r"\D", "", feldwert("01-zucht-und-kontakt", "WhatsApp")),
-        "whatsappText": zweisprachig("01-zucht-und-kontakt", feld="WhatsAppText"),
+        "whatsappText": mehrsprachig("01-zucht-und-kontakt", feld="WhatsAppText"),
         "telefon":     feldwert("01-zucht-und-kontakt", "Telefon"),
         "email":       feldwert("01-zucht-und-kontakt", "EMail"),
         "instagram":   feldwert("01-zucht-und-kontakt", "Instagram"),
         "logoBild":    logo[0] if logo else "bilder/logo-portrait.jpg",
-        "leitsatz":    zweisprachig("01-zucht-und-kontakt"),
+        "leitsatz":    mehrsprachig("01-zucht-und-kontakt"),
     }
 
     start_bilder, start_gruppen = fotos("03-startseite-die-zucht", "zucht")
     start = {
-        "zuchtTitel":  zweisprachig("03-startseite-die-zucht", feld="Titel"),
-        "zuchtText":   zweisprachig("03-startseite-die-zucht"),
+        "zuchtTitel":  mehrsprachig("03-startseite-die-zucht", feld="Titel"),
+        "zuchtText":   mehrsprachig("03-startseite-die-zucht"),
         "zuchtBild":   start_bilder[0] if start_bilder else "bilder/zucht.jpg",
         "zuchtGruppe": start_gruppen[0] if start_gruppen else [],
-        "zuchtBildAlt": zweisprachig("03-startseite-die-zucht", feld="Bildbeschreibung"),
+        "zuchtBildAlt": mehrsprachig("03-startseite-die-zucht", feld="Bildbeschreibung"),
     }
 
     ueber_bilder, ueber_gruppen = fotos("04-ueber-uns", "ueber-uns")
     ueberuns = {
         "absaetze": [
-            {"titel": zweisprachig("04-ueber-uns", i, "Titel"),
-             "text":  zweisprachig("04-ueber-uns", i)}
+            {"titel": mehrsprachig("04-ueber-uns", i, "Titel"),
+             "text":  mehrsprachig("04-ueber-uns", i)}
             for i in range(anzahl("04-ueber-uns"))
         ],
         "bild":    ueber_bilder[0] if ueber_bilder else "bilder/ueber-uns.jpg",
         "bilder":  ueber_bilder,
         "gruppen": ueber_gruppen,
-        "bildAlt": zweisprachig("04-ueber-uns", 0, "Bildbeschreibung"),
+        "bildAlt": mehrsprachig("04-ueber-uns", 0, "Bildbeschreibung"),
     }
 
     katzen = []
@@ -275,10 +466,10 @@ def bauen():
             "rufname":    feldwert(ordner, "Rufname"),
             "vollerName": feldwert(ordner, "VollerName"),
             "geboren":    feldwert(ordner, "Geboren"),
-            "farbschlag": zweisprachig(ordner, feld="Farbschlag"),
+            "farbschlag": mehrsprachig(ordner, feld="Farbschlag"),
             "blutgruppe": feldwert(ordner, "Blutgruppe"),
             "gentests":   [t.strip() for t in feldwert(ordner, "Gentests").split(";") if t.strip()],
-            "text":       zweisprachig(ordner),
+            "text":       mehrsprachig(ordner),
             "bilder":      k_flach,
             "bildgruppen": k_gruppen,
         })
@@ -294,8 +485,8 @@ def bauen():
             "name":       feldwert(ordner, "Name"),
             "geschlecht": feldwert(ordner, "Geschlecht", standard="w"),
             "status":     feldwert(ordner, "Status", standard="verfuegbar"),
-            "farbschlag": zweisprachig(ordner, feld="Farbschlag"),
-            "text":       zweisprachig(ordner),
+            "farbschlag": mehrsprachig(ordner, feld="Farbschlag"),
+            "text":       mehrsprachig(ordner),
             "bilder":      j_flach,
             "bildgruppen": j_gruppen,
         })
@@ -305,59 +496,71 @@ def bauen():
     wurf = {
         "vorhanden":    feldwert("07-wurf", "Wurf vorhanden", standard="ja").lower()
                         in ("ja", "true", "yes", "1"),
-        "bezeichnung":  feldwert("07-wurf", "Bezeichnung"),
+        "bezeichnung":  mehrsprachig("07-wurf", feld="Bezeichnung"),
         "mutter":       feldwert("07-wurf", "Mutter"),
         "vater":        feldwert("07-wurf", "Vater"),
         "geboren":      feldwert("07-wurf", "Geboren"),
-        "abgabeAb":     zweisprachig("07-wurf", feld="AbgabeAb"),
-        "text":         zweisprachig("07-wurf"),
+        "abgabeAb":     mehrsprachig("07-wurf", feld="AbgabeAb"),
+        "text":         mehrsprachig("07-wurf"),
         "bilder":       wurf_bilder,
         "kitten":       kitten,
-        "keinWurfText": zweisprachig("07-wurf", 1),
+        "keinWurfText": mehrsprachig("07-wurf", 1),
         "archiv":       [],
     }
 
     vermittlung = {
-        "einleitung":  zweisprachig("08-vermittlung", 0),
-        "schritte":    [{"titel": zweisprachig("08-vermittlung", i, "Titel"),
-                         "text":  zweisprachig("08-vermittlung", i)}
+        "einleitung":  mehrsprachig("08-vermittlung", 0),
+        "schritte":    [{"titel": mehrsprachig("08-vermittlung", i, "Titel"),
+                         "text":  mehrsprachig("08-vermittlung", i)}
                         for i in range(1, anzahl("08-vermittlung"))],
         "bedingungen": {
-            "titel":  zweisprachig("09-bedingungen", 0, "Titel"),
-            "punkte": [zweisprachig("09-bedingungen", i)
+            "titel":  mehrsprachig("09-bedingungen", 0, "Titel"),
+            "punkte": [mehrsprachig("09-bedingungen", i)
                        for i in range(1, anzahl("09-bedingungen"))],
         },
         "preis": {
-            "titel": zweisprachig("10-preis", 0, "Titel"),
-            "text":  zweisprachig("10-preis", 0),
+            "titel": mehrsprachig("10-preis", 0, "Titel"),
+            "text":  mehrsprachig("10-preis", 0),
         },
     }
     gesundheit = {
-        "einleitung": zweisprachig("11-gesundheit", 0),
-        "bloecke":    [{"titel": zweisprachig("11-gesundheit", i, "Titel"),
-                        "text":  zweisprachig("11-gesundheit", i)}
+        "einleitung": mehrsprachig("11-gesundheit", 0),
+        "bloecke":    [{"titel": mehrsprachig("11-gesundheit", i, "Titel"),
+                        "text":  mehrsprachig("11-gesundheit", i)}
                        for i in range(1, anzahl("11-gesundheit"))],
     }
 
     kontakt = {
-        "einleitung": zweisprachig("12-kontakt", 0),
-        "hinweis":    zweisprachig("12-kontakt", 1),
+        "einleitung": mehrsprachig("12-kontakt", 0),
+        "hinweis":    mehrsprachig("12-kontakt", 1),
     }
 
+    eine = len(katzen) == 1
     return {
         "zucht": zucht, "start": start, "ueberuns": ueberuns,
         "katzen": katzen, "wurf": wurf, "vermittlung": vermittlung,
         "gesundheit": gesundheit, "kontakt": kontakt,
         "navigation": [
-            {"datei": "ueber-uns.html",   "label": {"de": "Über uns",      "en": "About us"}},
+            {"datei": "ueber-uns.html",
+             "label": {"de": "Über uns", "en": "About us",
+                       "lb": "Iwwer eis", "fr": "À propos"}},
             {"datei": "katzen.html",
-             "label": {"de": "Unsere Katze" if len(katzen) == 1 else "Unsere Katzen",
-                       "en": "Our cat" if len(katzen) == 1 else "Our cats"}},
-            {"datei": "kitten.html",      "label": {"de": "Kitten",        "en": "Kittens"}},
+             "label": {"de": "Unsere Katze" if eine else "Unsere Katzen",
+                       "en": "Our cat" if eine else "Our cats",
+                       "lb": "Eis Kaz" if eine else "Eis Kazen",
+                       "fr": "Notre femelle" if eine else "Nos chats"}},
+            {"datei": "kitten.html",
+             "label": {"de": "Kitten", "en": "Kittens",
+                       "lb": "Kitten", "fr": "Chatons"}},
             {"datei": "vermittlung.html",
-             "label": {"de": "Vermittlung & Preis", "en": "Rehoming & price"}},
-            {"datei": "gesundheit.html",  "label": {"de": "Gesundheit",    "en": "Health"}},
-            {"datei": "kontakt.html",     "label": {"de": "Kontakt",       "en": "Contact"}},
+             "label": {"de": "Vermittlung & Preis", "en": "Rehoming & price",
+                       "lb": "Vermëttlung & Präis", "fr": "Adoption & prix"}},
+            {"datei": "gesundheit.html",
+             "label": {"de": "Gesundheit", "en": "Health",
+                       "lb": "Gesondheet", "fr": "Santé"}},
+            {"datei": "kontakt.html",
+             "label": {"de": "Kontakt", "en": "Contact",
+                       "lb": "Kontakt", "fr": "Contact"}},
         ],
     }
 
@@ -402,15 +605,17 @@ def main():
         return 1
 
     schreiben(daten)
+    entfernt = bilder_aufraeumen()
 
-    bilder = sum(len(k["bilder"]) for k in daten["katzen"])
-    bilder += sum(len(k["bilder"]) for k in daten["wurf"]["kitten"])
     print("\n  Fertig.\n")
-    bilder += len(daten["ueberuns"].get("bilder", [])) + 1
-    print("  %d Katzen, %d Kitten, %d Fotos uebernommen." %
-          (len(daten["katzen"]), len(daten["wurf"]["kitten"]), bilder))
-    if gespart[0] > 0:
-        print("  %.1f MB durch Verkleinern eingespart." % (gespart[0] / 1048576.0))
+    print("  %d Katze(n), %d Kitten, %d Fotos, %d Videos uebernommen." %
+          (len(daten["katzen"]), len(daten["wurf"]["kitten"]),
+           statistik["fotos"], statistik["videos"]))
+    if statistik["gespart"] > 0:
+        print("  %.1f MB durch Verkleinern der Fotos eingespart." %
+              (statistik["gespart"] / 1048576.0))
+    if entfernt:
+        print("  %d nicht mehr verwendete Datei(en) aus bilder/ entfernt." % entfernt)
     if hinweise:
         print("\n  Hinweise:")
         for h in hinweise:
