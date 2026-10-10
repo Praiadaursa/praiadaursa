@@ -12,10 +12,10 @@ Zucht: Heilige Birma von Oldima
 ZuchtLink:
 Rufname: Luigi
 VollerName:
-Geboren:
-Farbschlag:
-Blutgruppe:
-Gentests:
+Geboren: 2025-01-29
+Farbschlag: Blue Silver Tabby Point
+Blutgruppe: A
+Gentests: HCM: Negativ; PKD: Negativ; FeLV / FIV: Negativ
 ---
 Luigi – die Ruhe in Person und ein echter Gentleman auf vier Pfoten
 

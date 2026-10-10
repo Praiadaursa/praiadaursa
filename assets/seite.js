@@ -185,7 +185,7 @@
      im Vollbild; abgespielt werden sie erst, wenn sie zu sehen sind. */
   function medium(pfad, alt, inDiashow) {
     if (istVideo(pfad)) {
-      return '<video src="' + esc(pfad) + '" data-pfad="' + esc(pfad) + '" ' +
+      return '<video src="' + esc(pfad) + '#t=0.1" data-pfad="' + esc(pfad) + '" ' +
         'muted playsinline preload="metadata" disablepictureinpicture ' +
         'disableremoteplayback controlslist="nofullscreen nodownload noremoteplayback"' +
         (inDiashow ? "" : " loop") +

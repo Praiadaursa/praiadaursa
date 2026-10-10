@@ -5,7 +5,7 @@
    Bearbeite stattdessen den Ordner MEINE-INHALTE und starte
    danach aktualisieren.command per Doppelklick.
 
-   Zuletzt erzeugt am 10.10.2026 um 11:26 Uhr
+   Zuletzt erzeugt am 10.10.2026 um 11:48 Uhr
    ============================================================ */
 
 const INHALTE = {
@@ -218,12 +218,19 @@ const INHALTE = {
       "rolle": "kater",
       "rufname": "Luigi",
       "vollerName": "",
-      "geboren": "",
+      "geboren": "2025-01-29",
       "farbschlag": {
-        "de": ""
+        "de": "Blue Silver Tabby Point",
+        "en": "Blue Silver Tabby Point",
+        "lb": "Blue Silver Tabby Point",
+        "fr": "Blue Silver Tabby Point"
       },
-      "blutgruppe": "",
-      "gentests": [],
+      "blutgruppe": "A",
+      "gentests": [
+        "HCM: Negativ",
+        "PKD: Negativ",
+        "FeLV / FIV: Negativ"
+      ],
       "zucht": "Heilige Birma von Oldima",
       "zuchtLink": "",
       "text": {
@@ -335,7 +342,8 @@ const INHALTE = {
           "bilder/amber-6.jpg",
           "bilder/amber-7.jpg",
           "bilder/amber-8.jpg",
-          "bilder/amber-9.jpg"
+          "bilder/amber-9.jpg",
+          "bilder/amber-10.mp4"
         ],
         "bildgruppen": [
           [
@@ -347,7 +355,8 @@ const INHALTE = {
             "bilder/amber-6.jpg",
             "bilder/amber-7.jpg",
             "bilder/amber-8.jpg",
-            "bilder/amber-9.jpg"
+            "bilder/amber-9.jpg",
+            "bilder/amber-10.mp4"
           ]
         ]
       },
@@ -397,10 +406,10 @@ const INHALTE = {
           "fr": "Blue Tabby Point"
         },
         "text": {
-          "de": "Atlas schaut nur mit einem Auge in die Welt – und verpasst trotzdem rein gar nichts! Er ist immer als Erster zur Stelle, wenn es etwas zu entdecken gibt, klettert mit seinen Geschwistern um die Wette und weiß ganz genau, wann und wo das Futter serviert wird.\n\nKatzen kommen mit einem Auge erstaunlich gut zurecht, und Atlas ist der beste Beweis dafür: Er spielt, tobt und kuschelt genauso wie seine Geschwister. Was ihm auf der einen Seite fehlt, macht er mit Neugier, Mut und einer extragroßen Portion Charme mehr als wett.\n\nAtlas sucht keine Familie, die ihn trotzdem nimmt – sondern eine, die genau ihn sucht. Menschen mit einem großen Herzen für das Besondere, bei denen er so geliebt wird, wie er ist. Wer ihm einmal ins Auge geschaut hat, versteht, warum.",
-          "en": "Atlas sees the world through one eye — and still doesn't miss a thing! He is always first on the scene when there is something to discover, races his siblings to the top of every climb, and knows exactly when and where dinner is served.\n\nCats cope remarkably well with one eye, and Atlas is the best proof of it: he plays, romps and cuddles just like his siblings. Whatever he lacks on one side, he more than makes up for with curiosity, courage and an extra-large helping of charm.\n\nAtlas is not looking for a family that will take him anyway — he is looking for one that is looking for exactly him. People with a big heart for the extraordinary, who will love him just as he is. Anyone who has looked him in the eye will understand why.",
-          "lb": "Den Atlas kuckt nëmme mat engem A an d'Welt – a verpasst trotzdem guer näischt! Hien ass ëmmer als Éischten do, wann et eppes z'entdecken gëtt, klëmmt mat senge Geschwëster ëm d'Wett a weess genee, wéini a wou d'Iessen zerwéiert gëtt.\n\nKaze kommen erstaunlech gutt mat engem A eens, an den Atlas ass de beschte Beweis dofir: Hie spillt, tollt a schmust grad esou wéi seng Geschwëster. Wat him op där enger Säit feelt, mécht hie mat Virwëtz, Courage an enger extragrousser Portioun Charme méi wéi wett.\n\nDen Atlas sicht keng Famill, déi hien trotzdem hëlt – mä eng, déi genee hie sicht. Mënsche mat engem groussen Häerz fir dat Besonnescht, bei deenen hien esou gär gehat gëtt, wéi hien ass. Wien him eemol an d'A gekuckt huet, versteet, firwat.",
-          "fr": "Atlas regarde le monde d'un seul œil — et pourtant, rien ne lui échappe ! Toujours le premier sur place dès qu'il y a quelque chose à découvrir, il fait la course avec ses frères et sœurs pour grimper le plus haut et sait exactement quand et où le repas est servi.\n\nLes chats s'adaptent remarquablement bien à la vie avec un seul œil, et Atlas en est la plus belle preuve : il joue, se défoule et réclame des câlins exactement comme ses frères et sœurs. Ce qui lui manque d'un côté, il le compense largement par sa curiosité, son courage et une sacrée dose de charme.\n\nAtlas ne cherche pas une famille qui l'accepterait malgré tout — mais une famille qui le cherche, lui et personne d'autre. Des personnes au grand cœur, sensibles à ce qui sort de l'ordinaire, qui l'aimeront tel qu'il est. Il suffit de croiser son regard pour comprendre pourquoi."
+          "de": "Atlas schaut nur mit einem Auge in die Welt – und will trotzdem mehr von ihr sehen als alle anderen! Kein Karton ist ihm zu tief, kein Regal zu hoch und keine Ecke zu dunkel: Unser kleiner Abenteurer muss einfach überall gewesen sein. Und wenn er von seinen Expeditionen zurückkommt, steuert er schnurstracks den nächsten Schoß an.\n\nDenn Atlas ist mit Abstand der Zutraulichste im Wurf: Er kommt jedem entgegen, lässt sich bereitwillig auf den Arm nehmen und schnurrt los, kaum dass man ihn berührt. Katzen kommen mit einem Auge erstaunlich gut zurecht – und Atlas ist der beste Beweis dafür.\n\nAtlas sucht keine Familie, die ihn trotzdem nimmt – sondern eine, die genau ihn sucht: Menschen mit einem großen Herzen für das Besondere, die seinen Entdeckergeist lieben und ihn so nehmen, wie er ist. Wer ihm einmal ins Auge geschaut hat, versteht, warum.",
+          "en": "Atlas sees the world through one eye — and still wants to see more of it than anyone else! No box is too deep, no shelf too high and no corner too dark: our little adventurer simply has to have been everywhere. And when he returns from his expeditions, he heads straight for the nearest lap.\n\nBecause Atlas is by far the most trusting kitten in the litter: he comes to greet everyone, happily lets himself be picked up and starts purring the moment you touch him. Cats cope remarkably well with one eye — and Atlas is the best proof of it.\n\nAtlas is not looking for a family that will take him anyway — he is looking for one that is looking for exactly him: people with a big heart for the extraordinary, who love his explorer's spirit and take him just as he is. Anyone who has looked him in the eye will understand why.",
+          "lb": "Den Atlas kuckt nëmme mat engem A an d'Welt – a wëll trotzdem méi dovu gesinn ewéi all déi aner! Kee Karton ass him ze déif, kee Regal ze héich a keen Eck ze däischter: Eise klengen Abenteurer muss einfach iwwerall gewiescht sinn. A wann hie vu sengen Expeditiounen zeréckkënnt, geet e schnurstracks op dee nächste Schouss lass.\n\nDen Atlas ass nämlech mat Ofstand dee Zutraulechsten am Wuerf: Hie kënnt jidderengem entgéint, léisst sech gär op den Aarm huelen a fänkt un ze schnurren, soubal een hie beréiert. Kaze kommen erstaunlech gutt mat engem A eens – an den Atlas ass de beschte Beweis dofir.\n\nDen Atlas sicht keng Famill, déi hien trotzdem hëlt – mä eng, déi genee hie sicht: Mënsche mat engem groussen Häerz fir dat Besonnescht, déi säin Entdeckergeescht gär hunn an hien esou huelen, wéi hien ass. Wien him eemol an d'A gekuckt huet, versteet, firwat.",
+          "fr": "Atlas regarde le monde d'un seul œil — et pourtant, il veut en voir plus que tous les autres ! Aucun carton n'est trop profond, aucune étagère trop haute, aucun recoin trop sombre : notre petit aventurier doit absolument être passé partout. Et quand il revient de ses expéditions, il file tout droit vers les genoux les plus proches.\n\nCar Atlas est de loin le plus confiant de la portée : il va au-devant de chacun, se laisse prendre dans les bras sans se faire prier et se met à ronronner dès qu'on le touche. Les chats s'adaptent remarquablement bien à la vie avec un seul œil — et Atlas en est la plus belle preuve.\n\nAtlas ne cherche pas une famille qui l'accepterait malgré tout — mais une famille qui le cherche, lui et personne d'autre : des personnes au grand cœur, sensibles à ce qui sort de l'ordinaire, qui aimeront son âme d'explorateur et l'accepteront tel qu'il est. Il suffit de croiser son regard pour comprendre pourquoi."
         },
         "bilder": [
           "bilder/atlas-1.jpg"
