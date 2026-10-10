@@ -1,6 +1,6 @@
 # Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
 # Drei Abschnitte, getrennt durch eine Zeile mit ===
-# Ein Foto in diesen Ordner legen.
+# Fotos: 1.jpg, 1.1.jpg … = Diashow zu Abschnitt 1; 2.jpg, 2.1.jpg … = Abschnitt 2; 3.jpg … = Abschnitt 3.
 
 Titel: Aufzucht mitten im Leben
 Bildbeschreibung: Kitten im Wohnzimmer

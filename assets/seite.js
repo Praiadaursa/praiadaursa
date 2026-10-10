@@ -691,7 +691,8 @@
     return seitenkopf(UI.vermittlung, UI.vermittlungTitel, v.einleitung) +
       '<section class="abschnitt"><div class="breit">' +
         '<ol class="schritte">' + v.schritte.map(function (s) {
-          return "<li><h3>" + esc(t(s.titel)) + "</h3>" + absaetze(s.text) + "</li>";
+          return "<li><h3>" + esc(t(s.titel)) + "</h3>" +
+            '<div class="schritt-text">' + absaetze(s.text) + "</div></li>";
         }).join("") + "</ol>" +
       "</div></section>" +
       '<section class="abschnitt"><div class="breit">' +
