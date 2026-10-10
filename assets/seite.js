@@ -140,7 +140,12 @@
     bildFehlt:     { de: "Bild fehlt", en: "Image missing", lb: "Bild feelt", fr: "Image manquante" },
     bild:          { de: "Bild", en: "Image", lb: "Bild", fr: "Image" },
     bildZurueck:   { de: "Vorheriges Bild", en: "Previous image", lb: "Viregt Bild", fr: "Image précédente" },
-    bildVor:       { de: "Nächstes Bild", en: "Next image", lb: "Nächst Bild", fr: "Image suivante" }
+    bildVor:       { de: "Nächstes Bild", en: "Next image", lb: "Nächst Bild", fr: "Image suivante" },
+    derVater:      { de: "Der Vater", en: "The father", lb: "De Papp", fr: "Le père" },
+    dieVaeter:     { de: "Die Väter", en: "The fathers", lb: "D'Pappen", fr: "Les pères" },
+    ausDerZucht:   { de: "Deckkater aus der Zucht ", en: "Stud from the cattery ",
+                     lb: "Deckkueder aus der Zucht ", fr: "Mâle reproducteur de l'élevage " },
+    zuchtLabel:    { de: "Zucht", en: "Cattery", lb: "Zucht", fr: "Élevage" }
   };
 
   function u(schluessel) { return t(UI[schluessel]); }
@@ -575,7 +580,10 @@
       [UI.farbschlag, esc(t(k.farbschlag))],
       [UI.vollerName, esc(k.vollerName)],
       [UI.blutgruppe, esc(k.blutgruppe)],
-      [UI.gesundheit, (k.gentests || []).map(esc).join("<br>")]
+      [UI.gesundheit, (k.gentests || []).map(esc).join("<br>")],
+      [UI.zuchtLabel, !k.zucht ? "" : (k.zuchtLink
+        ? '<a href="' + esc(k.zuchtLink) + '" rel="noopener">' + esc(k.zucht) + "</a>"
+        : esc(k.zucht))]
     ].filter(function (e) { return e[1]; });
 
     var farbe = t(k.farbschlag);
@@ -598,9 +606,13 @@
 
   /* Steht das Elterntier auf der Katzen-Seite, wird der Name ein Link */
   function elternteil(name) {
-    var tier = INHALTE.katzen.filter(function (k) { return k.rufname === name; })[0];
+    var finden = function (liste) {
+      return (liste || []).filter(function (k) { return k.rufname === name; })[0];
+    };
+    var tier = finden(INHALTE.katzen), seite = "katzen.html";
+    if (!tier) { tier = finden(INHALTE.vaeter); seite = "vater.html"; }
     if (!tier) { return esc(name); }
-    return '<a href="katzen.html#katze-' + esc(tier.id) + '">' + esc(name) + "</a>";
+    return '<a href="' + seite + "#katze-" + esc(tier.id) + '">' + esc(name) + "</a>";
   }
 
   SEITEN["kitten.html"] = function () {
@@ -653,6 +665,25 @@
         "</div>" +
         '<div class="raster">' + karten + "</div>" +
       "</div></section>" + archiv + kontaktband();
+  };
+
+  /* Kater anderer Zuchten, etwa der Vater des aktuellen Wurfs */
+  SEITEN["vater.html"] = function () {
+    var v = INHALTE.vaeter || [], w = INHALTE.wurf;
+    var eine = v.length === 1;
+    var herkunft = null;
+    if (eine && v[0].zucht) {
+      herkunft = {};
+      ["de", "en", "lb", "fr"].forEach(function (s) {
+        herkunft[s] = UI.ausDerZucht[s] + v[0].zucht;
+      });
+    }
+    return seitenkopf(w.vorhanden ? w.bezeichnung : UI.kitten,
+                      eine ? UI.derVater : UI.dieVaeter, herkunft) +
+      '<section class="abschnitt"><div class="breit">' +
+        '<div class="raster raster--zwei' + (eine ? " raster--einzeln" : "") + '">' +
+          v.map(katzenKarte).join("") +
+        "</div></div></section>" + kontaktband();
   };
 
   SEITEN["vermittlung.html"] = function () {

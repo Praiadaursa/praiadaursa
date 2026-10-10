@@ -225,9 +225,11 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
 }
 @media (max-width: 480px) { .marke-schrift span { display:none; } }
 
-.navi { display:flex; align-items:center; gap:clamp(1rem, 2.2vw, 2.25rem); }
+/* Sieben Menuepunkte plus vier Sprachen: Abstaende etwas enger, damit
+   das volle Menue auch auf verbreiteten 1280er-Laptops in eine Zeile passt. */
+.navi { display:flex; align-items:center; gap:clamp(.85rem, 1.55vw, 2rem); }
 .navi a {
-  font-size:.6875rem; font-weight:400; letter-spacing:.2em;
+  font-size:.6875rem; font-weight:400; letter-spacing:.16em;
   text-transform:uppercase; color:var(--text);
   padding:.5rem 0; border-bottom:1px solid transparent;
 }

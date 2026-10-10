@@ -474,6 +474,28 @@ def bauen():
             "bildgruppen": k_gruppen,
         })
 
+    # Kater anderer Zuchten (z.B. der Vater eines Wurfs) bekommen eine
+    # eigene Seite und stehen NICHT unter "Unsere Katzen".
+    vaeter = []
+    for ordner in sorted(o for o in os.listdir(QUELLE) if o.startswith("05-vater-")):
+        kurz = re.sub(r"^\d+-", "", ordner.replace("05-vater-", ""))
+        v_flach, v_gruppen = fotos(ordner, kurz)
+        vaeter.append({
+            "id":         kurz,
+            "rolle":      "kater",
+            "rufname":    feldwert(ordner, "Rufname"),
+            "vollerName": feldwert(ordner, "VollerName"),
+            "geboren":    feldwert(ordner, "Geboren"),
+            "farbschlag": mehrsprachig(ordner, feld="Farbschlag"),
+            "blutgruppe": feldwert(ordner, "Blutgruppe"),
+            "gentests":   [t.strip() for t in feldwert(ordner, "Gentests").split(";") if t.strip()],
+            "zucht":      feldwert(ordner, "Zucht"),
+            "zuchtLink":  feldwert(ordner, "ZuchtLink"),
+            "text":       mehrsprachig(ordner),
+            "bilder":      v_flach,
+            "bildgruppen": v_gruppen,
+        })
+
     kitten = []
     # Die Zahl im Ordnernamen bestimmt die Reihenfolge auf der Website.
     # 06-kitten-1-ash kommt vor 06-kitten-2-amber.
@@ -538,7 +560,7 @@ def bauen():
     eine = len(katzen) == 1
     return {
         "zucht": zucht, "start": start, "ueberuns": ueberuns,
-        "katzen": katzen, "wurf": wurf, "vermittlung": vermittlung,
+        "katzen": katzen, "vaeter": vaeter, "wurf": wurf, "vermittlung": vermittlung,
         "gesundheit": gesundheit, "kontakt": kontakt,
         "navigation": [
             {"datei": "ueber-uns.html",
@@ -552,6 +574,13 @@ def bauen():
             {"datei": "kitten.html",
              "label": {"de": "Kitten", "en": "Kittens",
                        "lb": "Kitten", "fr": "Chatons"}},
+        ] + ([
+            {"datei": "vater.html",
+             "label": {"de": "Der Vater" if len(vaeter) == 1 else "Die Väter",
+                       "en": "The father" if len(vaeter) == 1 else "The fathers",
+                       "lb": "De Papp" if len(vaeter) == 1 else "D'Pappen",
+                       "fr": "Le père" if len(vaeter) == 1 else "Les pères"}},
+        ] if vaeter else []) + [
             {"datei": "vermittlung.html",
              "label": {"de": "Vermittlung & Preis", "en": "Rehoming & price",
                        "lb": "Vermëttlung & Präis", "fr": "Adoption & prix"}},

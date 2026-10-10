@@ -1,12 +1,15 @@
 # Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
-# Der Vater des A-Wurfs. Erscheint auf der Seite "Unsere Katzen".
+# Der Vater des A-Wurfs. Er gehoert nicht zu uns und bekommt deshalb
+# eine eigene Seite ("Der Vater") statt eines Platzes unter "Unsere Katzen".
+# Zucht: seine Heimatzucht. ZuchtLink: deren Website (leer = kein Link).
 # Fotos und Videos einfach in diesen Ordner legen.
 # 1.jpg, 1.1.jpg, 1.2.jpg ... werden zu einer Diashow.
 # Leere Angaben werden auf der Website ausgeblendet — bitte nach
 # Moeglichkeit ergaenzen, besonders Blutgruppe und Gentests.
 # Gentests mit Semikolon trennen, z.B.: HCM: Negativ; PKD: Negativ
 
-Rolle: Vater
+Zucht: Heilige Birma von Oldima
+ZuchtLink:
 Rufname: Luigi
 VollerName:
 Geboren:

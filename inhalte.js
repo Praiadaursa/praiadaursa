@@ -5,7 +5,7 @@
    Bearbeite stattdessen den Ordner MEINE-INHALTE und starte
    danach aktualisieren.command per Doppelklick.
 
-   Zuletzt erzeugt am 10.10.2026 um 11:07 Uhr
+   Zuletzt erzeugt am 10.10.2026 um 11:26 Uhr
    ============================================================ */
 
 const INHALTE = {
@@ -70,7 +70,10 @@ const INHALTE = {
       "bilder/zucht-8.jpg",
       "bilder/zucht-9.jpg",
       "bilder/zucht-10.jpg",
-      "bilder/zucht-11.jpg"
+      "bilder/zucht-11.jpg",
+      "bilder/zucht-12.jpg",
+      "bilder/zucht-13.jpg",
+      "bilder/zucht-14.jpg"
     ],
     "zuchtBildAlt": {
       "de": "Birma-Katze auf einer Fensterbank",
@@ -129,7 +132,12 @@ const INHALTE = {
       "bilder/ueber-uns-1.jpg",
       "bilder/ueber-uns-2.jpg",
       "bilder/ueber-uns-3.jpg",
-      "bilder/ueber-uns-4.jpg"
+      "bilder/ueber-uns-4.jpg",
+      "bilder/ueber-uns-5.jpg",
+      "bilder/ueber-uns-6.jpg",
+      "bilder/ueber-uns-7.jpg",
+      "bilder/ueber-uns-8.jpg",
+      "bilder/ueber-uns-9.jpg"
     ],
     "gruppen": [
       [
@@ -143,6 +151,19 @@ const INHALTE = {
       ],
       [
         "bilder/ueber-uns-4.jpg"
+      ],
+      [
+        "bilder/ueber-uns-5.jpg"
+      ],
+      [
+        "bilder/ueber-uns-6.jpg"
+      ],
+      [
+        "bilder/ueber-uns-7.jpg"
+      ],
+      [
+        "bilder/ueber-uns-8.jpg",
+        "bilder/ueber-uns-9.jpg"
       ]
     ],
     "bildAlt": {
@@ -153,26 +174,6 @@ const INHALTE = {
     }
   },
   "katzen": [
-    {
-      "id": "luigi",
-      "rolle": "kater",
-      "rufname": "Luigi",
-      "vollerName": "",
-      "geboren": "",
-      "farbschlag": {
-        "de": ""
-      },
-      "blutgruppe": "",
-      "gentests": [],
-      "text": {
-        "de": "Luigi – die Ruhe in Person und ein echter Gentleman auf vier Pfoten\n\nWenn um ihn herum das Chaos tobt, bleibt Luigi einfach gemütlich liegen und schaut sich das Spektakel mit stoischer Gelassenheit an. Hektik? Kennt er nicht. Er ist so gutmütig, dass er keiner Fliege etwas zuleide tun könnte – nicht einmal der, die ihm frech auf der Nase landet.\n\nDafür liebt er Gesellschaft über alles: Ob Mensch oder Tier, bei ihm ist jeder herzlich willkommen, und kaum hat man sich hingesetzt, kommt er schon zum Schmusen vorbei. Genau dieses sanfte, gesellige Wesen wünschen wir uns für unsere Kitten.",
-        "en": "Luigi — calm personified and a true gentleman on four paws\n\nWhen chaos reigns all around him, Luigi simply stays stretched out and watches the spectacle with stoic serenity. Hurry? Not in his vocabulary. He is so good-natured that he would not hurt a fly — not even one cheeky enough to land on his nose.\n\nWhat he loves above all is company: human or animal, everyone gets a warm welcome, and you have barely sat down before he comes over for a cuddle. This gentle, sociable nature is exactly what we wish for our kittens.",
-        "lb": "Luigi – d'Rou a Persoun an e richtege Gentleman op véier Patten\n\nWann ronderëm hien d'Chaos tobt, bleift de Luigi einfach gemittlech leien a kuckt sech d'Spektakel mat absoluter Rou un. Hektik? Kennt hien net. Hien ass esou eng gutt Séil, datt hien enger Méck näischt zeleed kéint doen – och net där, déi him frech op der Nues landt.\n\nDofir huet hien d'Gesellschaft iwwer alles gär: Ob Mënsch oder Déier, bei him ass jiddereen häerzlech wëllkomm, a kaum sëtzt een, kënnt hien och scho bäi fir ze schmusen. Genee dëst sanft, gesellegt Wiesen wënsche mir eis fir eis Kitten.",
-        "fr": "Luigi — le calme incarné et un vrai gentleman à quatre pattes\n\nQuand le chaos règne autour de lui, Luigi reste tranquillement allongé et observe le spectacle avec un flegme imperturbable. La précipitation ? Très peu pour lui. Il est si débonnaire qu'il ne ferait pas de mal à une mouche — pas même à celle qui aurait l'audace de se poser sur son nez.\n\nCe qu'il aime par-dessus tout, c'est la compagnie : humain ou animal, chacun est accueilli à bras ouverts, et l'on est à peine assis qu'il vient déjà réclamer des câlins. C'est précisément ce caractère doux et sociable que nous souhaitons à nos chatons."
-      },
-      "bilder": [],
-      "bildgruppen": []
-    },
     {
       "id": "yoselin",
       "rolle": "koenigin",
@@ -199,12 +200,50 @@ const INHALTE = {
       },
       "bilder": [
         "bilder/yoselin-1.jpg",
-        "bilder/yoselin-2.jpg"
+        "bilder/yoselin-2.jpg",
+        "bilder/yoselin-3.jpg"
       ],
       "bildgruppen": [
         [
           "bilder/yoselin-1.jpg",
-          "bilder/yoselin-2.jpg"
+          "bilder/yoselin-2.jpg",
+          "bilder/yoselin-3.jpg"
+        ]
+      ]
+    }
+  ],
+  "vaeter": [
+    {
+      "id": "luigi",
+      "rolle": "kater",
+      "rufname": "Luigi",
+      "vollerName": "",
+      "geboren": "",
+      "farbschlag": {
+        "de": ""
+      },
+      "blutgruppe": "",
+      "gentests": [],
+      "zucht": "Heilige Birma von Oldima",
+      "zuchtLink": "",
+      "text": {
+        "de": "Luigi – die Ruhe in Person und ein echter Gentleman auf vier Pfoten\n\nWenn um ihn herum das Chaos tobt, bleibt Luigi einfach gemütlich liegen und schaut sich das Spektakel mit stoischer Gelassenheit an. Hektik? Kennt er nicht. Er ist so gutmütig, dass er keiner Fliege etwas zuleide tun könnte – nicht einmal der, die ihm frech auf der Nase landet.\n\nDafür liebt er Gesellschaft über alles: Ob Mensch oder Tier, bei ihm ist jeder herzlich willkommen, und kaum hat man sich hingesetzt, kommt er schon zum Schmusen vorbei. Genau dieses sanfte, gesellige Wesen wünschen wir uns für unsere Kitten.",
+        "en": "Luigi — calm personified and a true gentleman on four paws\n\nWhen chaos reigns all around him, Luigi simply stays stretched out and watches the spectacle with stoic serenity. Hurry? Not in his vocabulary. He is so good-natured that he would not hurt a fly — not even one cheeky enough to land on his nose.\n\nWhat he loves above all is company: human or animal, everyone gets a warm welcome, and you have barely sat down before he comes over for a cuddle. This gentle, sociable nature is exactly what we wish for our kittens.",
+        "lb": "Luigi – d'Rou a Persoun an e richtege Gentleman op véier Patten\n\nWann ronderëm hien d'Chaos tobt, bleift de Luigi einfach gemittlech leien a kuckt sech d'Spektakel mat absoluter Rou un. Hektik? Kennt hien net. Hien ass esou eng gutt Séil, datt hien enger Méck näischt zeleed kéint doen – och net där, déi him frech op der Nues landt.\n\nDofir huet hien d'Gesellschaft iwwer alles gär: Ob Mënsch oder Déier, bei him ass jiddereen häerzlech wëllkomm, a kaum sëtzt een, kënnt hien och scho bäi fir ze schmusen. Genee dëst sanft, gesellegt Wiesen wënsche mir eis fir eis Kitten.",
+        "fr": "Luigi — le calme incarné et un vrai gentleman à quatre pattes\n\nQuand le chaos règne autour de lui, Luigi reste tranquillement allongé et observe le spectacle avec un flegme imperturbable. La précipitation ? Très peu pour lui. Il est si débonnaire qu'il ne ferait pas de mal à une mouche — pas même à celle qui aurait l'audace de se poser sur son nez.\n\nCe qu'il aime par-dessus tout, c'est la compagnie : humain ou animal, chacun est accueilli à bras ouverts, et l'on est à peine assis qu'il vient déjà réclamer des câlins. C'est précisément ce caractère doux et sociable que nous souhaitons à nos chatons."
+      },
+      "bilder": [
+        "bilder/luigi-1.jpg",
+        "bilder/luigi-2.jpg",
+        "bilder/luigi-3.jpg",
+        "bilder/luigi-4.jpg"
+      ],
+      "bildgruppen": [
+        [
+          "bilder/luigi-1.jpg",
+          "bilder/luigi-2.jpg",
+          "bilder/luigi-3.jpg",
+          "bilder/luigi-4.jpg"
         ]
       ]
     }
@@ -240,16 +279,16 @@ const INHALTE = {
         "geschlecht": "m",
         "status": "verfuegbar",
         "farbschlag": {
-          "de": "Black Silver Tabby Point",
-          "en": "Black Silver Tabby Point",
-          "lb": "Black Silver Tabby Point",
-          "fr": "Black Silver Tabby Point"
+          "de": "Blue Silver Tabby Point",
+          "en": "Blue Silver Tabby Point",
+          "lb": "Blue Silver Tabby Point",
+          "fr": "Blue Silver Tabby Point"
         },
         "text": {
-          "de": "Vom kleinsten Zwerg des Wurfes zum unangefochtenen Chef der Rasselbande! Ash hält seine Geschwister ordentlich auf Trab, und sobald auch nur ein Hauch von Milchgeruch in der Luft liegt, gibt es kein Halten mehr.\n\nNeben seinem umwerfenden Charakter ist er auch optisch ein echter Hingucker: Als Black Silver Tabby Point glänzt sein Fell in einem atemberaubenden Silbergrau. Dieser kleine Racker sucht dringend einen Spielgefährten auf Augenhöhe!\n\nDiese kleine Rakete braucht auf jeden Fall jemanden, der genauso viel Lust auf Toben und Spielen hat wie er!",
-          "en": "From the smallest of the litter to the undisputed boss of the gang! Ash keeps his siblings thoroughly on their toes, and the moment there is so much as a hint of milk in the air, there is no stopping him.\n\nBesides his wonderful character, he is a real eye-catcher: as a Black Silver Tabby Point his coat gleams in a breathtaking silver-grey. This little rascal is urgently looking for a playmate who can keep up!\n\nThis little rocket definitely needs someone with just as much appetite for romping and playing as he has.",
-          "lb": "Vum klengsten Zwerg vum Wuerf zum onbestriddene Chef vun der ganzer Band! Den Ash hält seng Geschwëster gutt op Trab, a soubal och nëmmen en Hauch vu Mëllechgeroch an der Loft läit, gëtt et kee Stopp méi.\n\nNieft sengem formidabele Charakter ass hien och e richtege Bléckfänger: Als Black Silver Tabby Point blénkt säi Fell an engem atemberaubende Sëlwergro. Dëse klenge Rackert sicht dréngend e Spillkomerod op Aenhéicht!\n\nDës kleng Rakéit brauch op jidde Fall een, deen esou vill Loscht op Tollen a Spille huet wéi hien!",
-          "fr": "Du plus petit de la portée au chef incontesté de la joyeuse bande ! Ash ne laisse aucun répit à ses frères et sœurs, et dès que flotte dans l'air le moindre parfum de lait, plus rien ne l'arrête.\n\nEn plus de son caractère irrésistible, il ne passe pas inaperçu : en Black Silver Tabby Point, sa fourrure brille d'un gris argenté à couper le souffle. Ce petit chenapan cherche de toute urgence un compagnon de jeu à sa hauteur !\n\nCette petite fusée a besoin de quelqu'un qui aime autant que lui se défouler et jouer !"
+          "de": "Vom kleinsten Zwerg des Wurfes zum unangefochtenen Chef der Rasselbande! Ash hält seine Geschwister ordentlich auf Trab, und sobald auch nur ein Hauch von Milchgeruch in der Luft liegt, gibt es kein Halten mehr.\n\nNeben seinem umwerfenden Charakter ist er auch optisch ein echter Hingucker: Als Blue Silver Tabby Point glänzt sein Fell in einem atemberaubenden Silbergrau. Dieser kleine Racker sucht dringend einen Spielgefährten auf Augenhöhe!\n\nDiese kleine Rakete braucht auf jeden Fall jemanden, der genauso viel Lust auf Toben und Spielen hat wie er!",
+          "en": "From the smallest of the litter to the undisputed boss of the gang! Ash keeps his siblings thoroughly on their toes, and the moment there is so much as a hint of milk in the air, there is no stopping him.\n\nBesides his wonderful character, he is a real eye-catcher: as a Blue Silver Tabby Point his coat gleams in a breathtaking silver-grey. This little rascal is urgently looking for a playmate who can keep up!\n\nThis little rocket definitely needs someone with just as much appetite for romping and playing as he has.",
+          "lb": "Vum klengsten Zwerg vum Wuerf zum onbestriddene Chef vun der ganzer Band! Den Ash hält seng Geschwëster gutt op Trab, a soubal och nëmmen en Hauch vu Mëllechgeroch an der Loft läit, gëtt et kee Stopp méi.\n\nNieft sengem formidabele Charakter ass hien och e richtege Bléckfänger: Als Blue Silver Tabby Point blénkt säi Fell an engem atemberaubende Sëlwergro. Dëse klenge Rackert sicht dréngend e Spillkomerod op Aenhéicht!\n\nDës kleng Rakéit brauch op jidde Fall een, deen esou vill Loscht op Tollen a Spille huet wéi hien!",
+          "fr": "Du plus petit de la portée au chef incontesté de la joyeuse bande ! Ash ne laisse aucun répit à ses frères et sœurs, et dès que flotte dans l'air le moindre parfum de lait, plus rien ne l'arrête.\n\nEn plus de son caractère irrésistible, il ne passe pas inaperçu : en Blue Silver Tabby Point, sa fourrure brille d'un gris argenté à couper le souffle. Ce petit chenapan cherche de toute urgence un compagnon de jeu à sa hauteur !\n\nCette petite fusée a besoin de quelqu'un qui aime autant que lui se défouler et jouer !"
         },
         "bilder": [
           "bilder/ash-1.jpg",
@@ -333,14 +372,16 @@ const INHALTE = {
           "bilder/autumn-1.jpg",
           "bilder/autumn-2.jpg",
           "bilder/autumn-3.jpg",
-          "bilder/autumn-4.jpg"
+          "bilder/autumn-4.jpg",
+          "bilder/autumn-5.jpg"
         ],
         "bildgruppen": [
           [
             "bilder/autumn-1.jpg",
             "bilder/autumn-2.jpg",
             "bilder/autumn-3.jpg",
-            "bilder/autumn-4.jpg"
+            "bilder/autumn-4.jpg",
+            "bilder/autumn-5.jpg"
           ]
         ]
       },
@@ -350,7 +391,10 @@ const INHALTE = {
         "geschlecht": "m",
         "status": "verfuegbar",
         "farbschlag": {
-          "de": ""
+          "de": "Blue Tabby Point",
+          "en": "Blue Tabby Point",
+          "lb": "Blue Tabby Point",
+          "fr": "Blue Tabby Point"
         },
         "text": {
           "de": "Atlas schaut nur mit einem Auge in die Welt – und verpasst trotzdem rein gar nichts! Er ist immer als Erster zur Stelle, wenn es etwas zu entdecken gibt, klettert mit seinen Geschwistern um die Wette und weiß ganz genau, wann und wo das Futter serviert wird.\n\nKatzen kommen mit einem Auge erstaunlich gut zurecht, und Atlas ist der beste Beweis dafür: Er spielt, tobt und kuschelt genauso wie seine Geschwister. Was ihm auf der einen Seite fehlt, macht er mit Neugier, Mut und einer extragroßen Portion Charme mehr als wett.\n\nAtlas sucht keine Familie, die ihn trotzdem nimmt – sondern eine, die genau ihn sucht. Menschen mit einem großen Herzen für das Besondere, bei denen er so geliebt wird, wie er ist. Wer ihm einmal ins Auge geschaut hat, versteht, warum.",
@@ -628,10 +672,10 @@ const INHALTE = {
     {
       "datei": "katzen.html",
       "label": {
-        "de": "Unsere Katzen",
-        "en": "Our cats",
-        "lb": "Eis Kazen",
-        "fr": "Nos chats"
+        "de": "Unsere Katze",
+        "en": "Our cat",
+        "lb": "Eis Kaz",
+        "fr": "Notre femelle"
       }
     },
     {
@@ -641,6 +685,15 @@ const INHALTE = {
         "en": "Kittens",
         "lb": "Kitten",
         "fr": "Chatons"
+      }
+    },
+    {
+      "datei": "vater.html",
+      "label": {
+        "de": "Der Vater",
+        "en": "The father",
+        "lb": "De Papp",
+        "fr": "Le père"
       }
     },
     {

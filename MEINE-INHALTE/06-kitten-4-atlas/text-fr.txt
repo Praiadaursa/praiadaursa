@@ -1,5 +1,5 @@
 # Zeilen mit einem # sind Notizen und erscheinen NICHT auf der Website.
-Farbschlag:
+Farbschlag: Blue Tabby Point
 ---
 Atlas regarde le monde d'un seul œil — et pourtant, rien ne lui échappe ! Toujours le premier sur place dès qu'il y a quelque chose à découvrir, il fait la course avec ses frères et sœurs pour grimper le plus haut et sait exactement quand et où le repas est servi.
 

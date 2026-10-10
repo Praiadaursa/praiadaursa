@@ -133,6 +133,20 @@ darfst du ignorieren.
   Ein Kitten entfernen: Ordner löschen.
 
 
+  KATER ANDERER ZUCHTEN (DER VATER EINES WURFS)
+  ---------------------------------------------
+
+  Ordner, die mit  05-vater-  beginnen (z.B. 05-vater-luigi),
+  erscheinen NICHT unter "Unsere Katze", sondern auf einer
+  eigenen Seite "Der Vater". Dort traegst du unter  Zucht:  seine
+  Heimatzucht ein und unter  ZuchtLink:  deren Website, falls
+  vorhanden. Auf der Kitten-Seite wird sein Name automatisch zum
+  Link auf diese Seite, sobald er unter  Vater:  im Ordner
+  07-wurf genauso geschrieben ist wie unter  Rufname:.
+
+  Eigene Zuchtkatzen kommen dagegen in einen  05-katze-  Ordner.
+
+
   WENN ETWAS NICHT KLAPPT
   -----------------------
 

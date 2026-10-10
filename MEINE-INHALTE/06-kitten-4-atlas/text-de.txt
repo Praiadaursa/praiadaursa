@@ -2,13 +2,12 @@
 # Ein Kitten. Fuer ein weiteres: diesen Ordner kopieren und umbenennen.
 # Geschlecht: m oder w
 # Status: verfuegbar, reserviert oder vergeben
-# Farbschlag: bitte noch eintragen — solange leer, wird er ausgeblendet.
 # Fotos und Videos in diesen Ordner legen. Das erste ist das Hauptbild.
 
 Name: Atlas
 Geschlecht: m
 Status: verfuegbar
-Farbschlag:
+Farbschlag: Blue Tabby Point
 ---
 Atlas schaut nur mit einem Auge in die Welt – und verpasst trotzdem rein gar nichts! Er ist immer als Erster zur Stelle, wenn es etwas zu entdecken gibt, klettert mit seinen Geschwistern um die Wette und weiß ganz genau, wann und wo das Futter serviert wird.
 
