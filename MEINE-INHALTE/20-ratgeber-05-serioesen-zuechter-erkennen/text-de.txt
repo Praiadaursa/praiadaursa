@@ -1,0 +1,59 @@
+# Ratgeber-Artikel. ERSTER Block: Angaben und Einleitung, danach je Block ein Abschnitt.
+# Titel = große Überschrift auf der Seite, Seitentitel = Titel bei Google (max. ~60 Zeichen).
+# Datum in der Zukunft: Der Artikel erscheint automatisch erst ab diesem Tag.
+# Verwandt: Adressen anderer Artikel, mit Semikolon getrennt.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Seriösen Züchter erkennen
+Seitentitel: Seriösen Katzenzüchter erkennen: 10 Fragen | Praia da Ursa
+Beschreibung: Woran du eine seriöse Birma-Zucht erkennst: zehn Fragen, die du vor dem Kauf stellen solltest, und die Warnzeichen, bei denen du besser gehst.
+Kurztext: Zehn Fragen vor dem Kauf – und die Warnzeichen, bei denen du besser gehst.
+Thema: Kitten kaufen
+Datum: 2026-10-11
+Verwandt: heilige-birma-kosten; kitten-abgabealter-12-wochen
+---
+Ein Kitten ist eine Entscheidung für viele Jahre. Umso wichtiger ist, wo es herkommt. Leider gibt es auch bei Rassekatzen Angebote, bei denen Gesundheit und Wohl der Tiere nicht an erster Stelle stehen. Mit diesen Fragen findest du heraus, ob eine Zucht seriös arbeitet – bei uns und überall sonst.
+
+===
+
+Titel: Zehn Fragen, die du stellen solltest
+---
+- Ist die Zucht Mitglied in einem Zuchtverband, und bekommt das Kitten einen Stammbaum?
+- Darf ich die Kitten und die Mutter vor Ort besuchen?
+- Ab welchem Alter zieht das Kitten aus? Die Antwort sollte lauten: frühestens mit zwölf Wochen.
+- Auf welche Krankheiten wurden die Elterntiere getestet, und darf ich die Ergebnisse sehen?
+- Ist das Kitten geimpft, gechippt und entwurmt, und gibt es einen EU-Heimtierausweis?
+- Gibt es einen schriftlichen Kaufvertrag?
+- Nimmt die Zucht die Katze zurück, falls ich sie eines Tages nicht mehr halten kann?
+- Wie wachsen die Kitten auf – mitten im Haushalt oder abgetrennt?
+- Wie viele Würfe hat die Zucht im Jahr, und mit wie vielen Rassen züchtet sie?
+- Kann ich mich auch nach dem Einzug mit Fragen melden?
+
+===
+
+Titel: Achte darauf, was dich gefragt wird
+---
+Eine gute Zucht stellt dir genauso viele Fragen wie du ihr. Wie wohnst du? Welche Tiere leben schon bei dir? Wie viel bist du zu Hause? Das ist kein Misstrauen, sondern Verantwortung. Wer ein Kitten ohne jede Nachfrage an den Erstbesten abgibt, dem ist nicht wichtig, wo es landet.
+
+===
+
+Titel: Warnzeichen
+---
+Bei diesen Zeichen solltest du lieber gehen:
+
+- Das Kitten soll jünger als zwölf Wochen ausziehen
+- Ein Besuch ist nicht möglich, oder die Mutter wird nicht gezeigt
+- Es gibt keinen Stammbaum oder nur Papiere ohne Verband
+- Du sollst Geld überweisen, bevor du die Zucht kennengelernt hast
+- Es sind ständig Kitten verschiedener Rassen verfügbar
+- Fragen zur Gesundheit werden ausweichend beantwortet
+- Der Preis liegt weit unter dem, was andere seriöse Zuchten verlangen
+
+===
+
+Titel: Wie wir es halten
+---
+Wir sind Mitglied im Felidae e.V., haben höchstens einen Wurf im Jahr und unsere Kitten wachsen mitten in unserem Alltag auf. Sie ziehen frühestens mit zwölf Wochen aus, mit Stammbaum, Impfpass, Chip und EU-Heimtierausweis. Die Gesundheitsergebnisse unserer Katzen findest du auf der Seite [Gesundheit](gesundheit.html), den ganzen Ablauf unter [Vermittlung & Preis](vermittlung.html).
+
+Und natürlich darfst du uns all diese Fragen stellen. Wir freuen uns sogar darüber.

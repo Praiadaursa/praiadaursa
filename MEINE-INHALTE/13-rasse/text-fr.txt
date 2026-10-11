@@ -1,0 +1,69 @@
+# Rasseporträt Heilige Birma. ERSTER Block: Überschrift und Einleitung.
+# Jeder weitere Block ist ein Abschnitt, Blöcke durch === getrennt.
+# Fotos kommen automatisch von euren eigenen Katzen.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Le Sacré de Birmanie
+---
+Des yeux d'un bleu profond, un pelage soyeux et quatre pattes blanches, comme si l'on avait enfilé des gants au chat : le Sacré de Birmanie est inimitable. Voici d'où il vient, à quoi il ressemble et pourquoi nous sommes tombés amoureux de cette race entre toutes.
+
+===
+
+Titel: Origines et légende
+---
+Selon la légende, le Birman vivait autrefois dans un temple de Birmanie. À la mort du vieux prêtre Mun-Ha, son chat blanc Sinh bondit sur lui. Son pelage prit la couleur dorée de la statue de la déesse et ses yeux devinrent bleu saphir – seules les pattes qui touchaient le prêtre restèrent blanches.
+
+Aussi belle que soit cette histoire, le Sacré de Birmanie a en réalité été sélectionné en France dans les années 1920. Après la Seconde Guerre mondiale, il ne restait que très peu de chats et la race a dû être patiemment reconstruite. Elle est aujourd'hui reconnue par toutes les grandes fédérations félines.
+
+===
+
+Titel: Apparence : des gants et des yeux bleus
+---
+Le Birman est un chat mi-long de taille moyenne à grande, à l'ossature solide. Son pelage soyeux possède peu de sous-poil : il s'emmêle donc bien moins que celui de nombreuses autres races à poil long.
+
+Deux caractéristiques le rendent inimitable :
+- les yeux bleu profond que possède chaque Birman
+- les « gants » blancs aux quatre pattes, qui remontent un peu à l'arrière des pattes postérieures, ce qu'on appelle les « éperons »
+
+Le masque, les oreilles, les pattes et la queue sont plus foncés que le corps : c'est ce qu'on appelle le patron colourpoint. Et le plus étonnant : les chatons Birman naissent presque blancs, leur couleur ne se développe qu'au fil des mois.
+
+===
+
+Titel: Couleurs et motifs
+---
+Le Birman existe dans de nombreuses couleurs : seal, blue, chocolate, lilac, red, cream et d'autres encore, chacune aussi en tabby (finement rayé) ou silver. La plus connue est le seal point classique, aux extrémités brun foncé.
+
+Nos propres chats montrent déjà une belle palette : Yoselin, Amber et Autumn sont seal tabby point, Atlas est blue tabby point, Ash et son père Luigi sont blue silver tabby point.
+
+===
+
+Titel: Caractère
+---
+Avoir un Birman, c'est avoir une ombre à quatre pattes. Les Birmans sont très attachés à leurs humains, doux et équilibrés, tout en restant joueurs et curieux. Ils vous suivent dans la maison, « racontent » leur journée d'une petite voix et recherchent votre présence sans jamais s'imposer.
+
+Ils s'entendent généralement bien avec les autres chats, et un chien qui aime les chats ne pose aucun problème à un Birman bien socialisé – chez nous, les chatons jouent chaque jour avec notre chienne Willow. Ce qu'ils n'aiment pas du tout : rester seuls longtemps.
+
+===
+
+Titel: Entretien et mode de vie
+---
+L'entretien du pelage est agréablement simple : un à deux brossages par semaine suffisent en général, un peu plus pendant la mue.
+
+Les Birmans sont des chats d'intérieur calmes, mais ils apprécient un balcon sécurisé ou un filet de protection. Parce qu'ils sont si sociables, nous ne confions nos chatons qu'à un foyer avec un second chat ou à des personnes souvent présentes à la maison.
+
+===
+
+Titel: Santé
+---
+Le Sacré de Birmanie est considéré comme une race robuste. Comme tout chat de race, il présente toutefois des risques héréditaires, par exemple la maladie cardiaque HCM ou la polykystose rénale (PKD). Un élevage sérieux en parle ouvertement et les dépiste. Ce que nous testons chez nos chats est détaillé sur notre page [santé](gesundheit.html).
+
+Un Birman en bonne santé peut tout à fait atteindre 15 ans – une longue vie commune, à laquelle il vaut la peine de réfléchir sereinement avant l'arrivée d'un chaton.
+
+===
+
+Titel: Un Birman est-il fait pour vous ?
+---
+Un Birman vous correspond si vous souhaitez un chat doux et affectueux qui participe à la vie de famille – et si vous pouvez lui offrir de la compagnie.
+
+Vous trouverez nos chatons actuels sur la page [chatons](kitten.html). Si aucun n'est disponible en ce moment, ou si vous souhaitez vous positionner pour la prochaine portée, inscrivez-vous sur notre [liste d'attente](warteliste.html).

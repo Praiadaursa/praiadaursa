@@ -203,6 +203,23 @@
     suchGesundheit:{ de: "Gesundheit der Heiligen Birma", en: "Sacred Birman health",
                      lb: "Hellege Birma · Gesondheet", fr: "Santé du Sacré de Birmanie" },
 
+    suchRasse:     { de: "Rasseporträt", en: "Breed profile", lb: "Rasseportrait", fr: "Portrait de la race" },
+    suchFragen:    { de: "Birma Kitten · Häufige Fragen", en: "Birman kittens · FAQ",
+                     lb: "Birma Kitten · Froen", fr: "Chatons Birman · Questions" },
+    suchWarteliste:{ de: "Warteliste für Birma-Kitten", en: "Waiting list for Birman kittens",
+                     lb: "Waardelëscht", fr: "Liste d'attente chatons Birman" },
+    suchRatgeber:  { de: "Ratgeber Heilige Birma", en: "Sacred Birman guides",
+                     lb: "Rotgeber", fr: "Conseils Sacré de Birmanie" },
+    ratgeber:      { de: "Ratgeber", en: "Guides", lb: "Rotgeber", fr: "Conseils" },
+    weiterlesenKurz: { de: "Weiterlesen", en: "Read more", lb: "Weiderliesen", fr: "Lire la suite" },
+    mehrRatgeber:  { de: "Weiterlesen im Ratgeber", en: "More guides", lb: "Méi Rotgeber", fr: "À lire aussi" },
+    stand:         { de: "Stand:", en: "Last updated:", lb: "Stand:", fr: "Mise à jour :" },
+    zurWarteliste: { de: "Kein passendes Kitten dabei? Zur Warteliste", en: "No kitten for you this time? Join the waiting list",
+                     lb: "Keen Kitten fir dech derbäi? Op d'Waardelëscht", fr: "Pas de chaton pour vous ? Liste d'attente" },
+    warteFrage:    { de: "Auf die Warteliste", en: "Join the waiting list", lb: "Op d'Waardelëscht", fr: "S'inscrire sur la liste" },
+    warteBetreff:  { de: "Warteliste Praia da Ursa", en: "Waiting list Praia da Ursa",
+                     lb: "Waardelëscht Praia da Ursa", fr: "Liste d'attente Praia da Ursa" },
+
     /* Bildbeschreibungen fuer Google und Vorleseprogramme */
     altKitten:     { de: "Heilige-Birma-Kitten", en: "Sacred Birman kitten",
                      lb: "Hellege-Birma-Kitten", fr: "Chaton Sacré de Birmanie" },
@@ -224,6 +241,34 @@
   function absaetze(wert) {
     return t(wert).split(/\n\s*\n/).map(function (a) {
       return "<p>" + esc(a).replace(/\n/g, "<br>") + "</p>";
+    }).join("");
+  }
+
+  /* Fuer Ratgeber, Fragen, Rasse und Warteliste: Zeilen mit "- " werden
+     zur Aufzaehlung, [Text](seite.html) wird zum Link. Links auf Seiten,
+     die es in dieser Sprache nicht gibt, bleiben einfacher Text.        */
+  function verlinken(roh) {
+    return esc(roh).replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, function (ganz, text, ziel) {
+      if (/^https:\/\/[^\s"<>]+$/.test(ziel)) {
+        return '<a href="' + ziel + '" rel="noopener">' + text + "</a>";
+      }
+      var datei = ziel.split("#")[0];
+      if (/^[a-z0-9][a-z0-9\-]*\.html$/.test(datei) && gibtEs(sprache, datei)) {
+        return '<a href="' + ziel + '">' + text + "</a>";
+      }
+      return text;
+    });
+  }
+
+  function reichtext(wert) {
+    return t(wert).split(/\n\s*\n/).map(function (a) {
+      var zeilen = a.split("\n");
+      if (zeilen.every(function (z) { return /^\s*-\s+/.test(z); })) {
+        return '<ul class="liste">' + zeilen.map(function (z) {
+          return "<li>" + verlinken(z.replace(/^\s*-\s+/, "")) + "</li>";
+        }).join("") + "</ul>";
+      }
+      return "<p>" + verlinken(a).replace(/\n/g, "<br>") + "</p>";
     }).join("");
   }
 
@@ -363,10 +408,10 @@
     return texte[sprache] || texte.de;
   }
 
-  function whatsappLink() {
+  function whatsappLink(text) {
     var z = INHALTE.zucht;
     return "https://wa.me/" + z.whatsapp.replace(/\D/g, "") +
-      "?text=" + encodeURIComponent(t(z.whatsappText));
+      "?text=" + encodeURIComponent(t(text || z.whatsappText));
   }
 
   /* Ein Bildplatz. Liegen dafuer mehrere Fotos oder Videos vor
@@ -525,17 +570,25 @@
       "</div></div>";
   }
 
-  function kontaktband() {
+  function kontaktband(art) {
     var z = INHALTE.zucht;
+    var warte = art === "warteliste";
+    var wa = warte && INHALTE.warteliste ? whatsappLink(INHALTE.warteliste.whatsappText) : whatsappLink();
+    var mail = "mailto:" + esc(z.email) + (warte ? "?subject=" + encodeURIComponent(u("warteBetreff")) : "");
+    /* Unter den Knoepfen ein dezenter Hinweis auf die Warteliste —
+       ueber sie entscheidet sich, wann der naechste Wurf kommt.      */
+    var hinweis = !warte && gibtEs(sprache, "warteliste.html") && INHALTE.warteliste
+      ? '<p class="warte-hinweis"><a href="' + esc(seitenPfad("warteliste.html")) + '">' +
+        esc(u("zurWarteliste")) + "</a></p>" : "";
     return '<section class="abschnitt"><div class="eng" style="text-align:center">' +
       '<p class="marke">' + esc(u("kontaktMarke")) + "</p>" +
-      '<h2 class="untertitel">' + esc(u("frage")) + "</h2>" +
+      '<h2 class="untertitel">' + esc(u(warte ? "warteFrage" : "frage")) + "</h2>" +
       '<div class="knopf-reihe" style="justify-content:center">' +
-        '<a class="knopf knopf--voll" href="' + whatsappLink() + '" rel="noopener">' +
+        '<a class="knopf knopf--voll" href="' + wa + '" rel="noopener">' +
           esc(u("perWhatsapp")) + "</a>" +
-        '<a class="knopf" href="mailto:' + esc(z.email) + '">' + esc(u("perMail")) + "</a>" +
+        '<a class="knopf" href="' + mail + '">' + esc(u("perMail")) + "</a>" +
         (z.telefon ? '<a class="knopf" href="' + telefonLink() + '">' + esc(u("anrufen")) + "</a>" : "") +
-      "</div></div></section>";
+      "</div>" + hinweis + "</div></section>";
   }
 
   /* ---------- Die einzelnen Seiten ------------------------- */
@@ -837,6 +890,121 @@
           esc(t(k.hinweis)) + "</p></div>" : "") +
       "</div></section>";
   };
+
+  /* ---------- Rasseportraet, Fragen, Warteliste, Ratgeber ----------
+     Gebaut ausschliesslich aus vorhandenen Bausteinen — dieselben
+     Abschnitte, Karten und Schritte wie auf den uebrigen Seiten.      */
+
+  /* Fotos der eigenen Katzen fuer das Rasseportraet: echte Birmas
+     statt Archivbildern. Je Tier das erste Foto, dann die naechsten. */
+  function fotoVorrat() {
+    var tiere = [];
+    (INHALTE.katzen || []).forEach(function (k) {
+      tiere.push({ bilder: k.bilder, alt: bildText(k.rolle === "kater" ? "altKater" : "altKatze",
+                                                   k.rufname, t(k.farbschlag)) });
+    });
+    ((INHALTE.wurf && INHALTE.wurf.kitten) || []).forEach(function (k) {
+      tiere.push({ bilder: k.bilder, alt: bildText("altKitten", k.name, t(k.farbschlag)) });
+    });
+    (INHALTE.vaeter || []).forEach(function (k) {
+      tiere.push({ bilder: k.bilder, alt: bildText("altKater", k.rufname, t(k.farbschlag)) });
+    });
+    var vorrat = [];
+    for (var runde = 0; runde < 3; runde++) {
+      tiere.forEach(function (tier) {
+        var p = (tier.bilder || []).filter(function (x) { return !istVideo(x); })[runde];
+        if (p) { vorrat.push({ pfad: p, alt: tier.alt }); }
+      });
+    }
+    return vorrat;
+  }
+
+  SEITEN["heilige-birma.html"] = function () {
+    var r = INHALTE.rasse, vorrat = fotoVorrat();
+    var bloecke = r.abschnitte.map(function (a, i) {
+      var foto = vorrat[i];
+      return '<section class="abschnitt"><div class="breit' + (foto ? " paar" : "") +
+          (foto && i % 2 ? " paar--umgekehrt" : "") + '">' +
+        "<div>" +
+          '<p class="marke">0' + (i + 1) + "</p>" +
+          '<h2 class="untertitel">' + esc(t(a.titel)) + "</h2>" +
+          '<div class="fliess leise">' + reichtext(a.text) + "</div>" +
+        "</div>" +
+        (foto ? bild(foto.pfad, foto.alt, "hoch bogen gerahmt") : "") +
+      "</div></section>";
+    }).join("");
+    return seitenkopf(UI.suchRasse, r.titel, r.einleitung) + bloecke + kontaktband();
+  };
+
+  SEITEN["fragen.html"] = function () {
+    var f = INHALTE.fragen;
+    return seitenkopf(UI.suchFragen, f.titel, f.einleitung) +
+      '<section class="abschnitt"><div class="breit"><div class="raster raster--zwei">' +
+        f.eintraege.map(function (e) {
+          return '<article class="karte"><hr class="haarlinie">' +
+            '<h2 class="untertitel" style="margin-top:1.5rem">' + esc(t(e.frage)) + "</h2>" +
+            '<div class="karte-text fliess">' + reichtext(e.antwort) + "</div></article>";
+        }).join("") +
+      "</div></div></section>" + kontaktband();
+  };
+
+  SEITEN["warteliste.html"] = function () {
+    var w = INHALTE.warteliste;
+    var schritte = w.schritte.length ? '<section class="abschnitt"><div class="breit">' +
+        '<p class="marke">' + esc(t(w.schritteTitel)) + "</p>" +
+        '<ol class="schritte">' + w.schritte.map(function (s) {
+          return "<li><h3>" + esc(t(s.titel)) + "</h3>" +
+            '<div class="schritt-text">' + reichtext(s.text) + "</div></li>";
+        }).join("") + "</ol></div></section>" : "";
+    var abschnitte = w.abschnitte.map(function (a) {
+      return '<section class="abschnitt"><div class="breit">' +
+        '<h2 class="untertitel">' + esc(t(a.titel)) + "</h2>" +
+        '<div class="fliess">' + reichtext(a.text) + "</div></div></section>";
+    }).join("");
+    return seitenkopf(UI.suchWarteliste, w.titel, w.einleitung) + schritte + abschnitte +
+      kontaktband("warteliste");
+  };
+
+  function artikelKarten(liste) {
+    return '<div class="raster raster--zwei">' + liste.map(function (a) {
+      return '<article class="karte"><hr class="haarlinie">' +
+        '<p class="marke" style="margin-top:1.5rem">' + esc(t(a.thema)) + "</p>" +
+        '<h2 class="untertitel"><a href="' + esc(a.datei) + '">' + esc(t(a.titel)) + "</a></h2>" +
+        '<p class="karte-text">' + esc(t(a.kurztext)) + "</p>" +
+        '<div class="knopf-reihe"><a class="knopf" href="' + esc(a.datei) + '">' +
+          esc(u("weiterlesenKurz")) + "</a></div></article>";
+    }).join("") + "</div>";
+  }
+
+  SEITEN["ratgeber.html"] = function () {
+    var r = INHALTE.ratgeberSeite;
+    return seitenkopf(UI.suchRatgeber, r.titel, r.einleitung) +
+      '<section class="abschnitt"><div class="breit">' + artikelKarten(INHALTE.ratgeber || []) +
+      "</div></section>" + kontaktband();
+  };
+
+  function artikelSeite(a) {
+    var alle = INHALTE.ratgeber || [];
+    var verwandt = (a.verwandt || []).map(function (d) {
+      return alle.filter(function (x) { return x.datei === d; })[0];
+    }).filter(Boolean);
+    var text = a.abschnitte.map(function (b) {
+      return '<h2 class="untertitel">' + esc(t(b.titel)) + "</h2>" +
+        '<div class="fliess">' + reichtext(b.text) + "</div>";
+    }).join("");
+    return seitenkopf(u("ratgeber") + " · " + t(a.thema), a.titel, a.einleitung) +
+      '<section class="abschnitt"><div class="artikel">' + text +
+        '<p class="artikel-stand leise">' + esc(u("stand")) + " " + datum(a.datum) + "</p>" +
+      "</div></section>" +
+      (verwandt.length ? '<section class="abschnitt"><div class="breit">' +
+        '<p class="marke">' + esc(u("mehrRatgeber")) + "</p>" + artikelKarten(verwandt) +
+        "</div></section>" : "") +
+      kontaktband();
+  }
+
+  (INHALTE.ratgeber || []).forEach(function (a) {
+    SEITEN[a.datei] = function () { return artikelSeite(a); };
+  });
 
   /* Impressum und Datenschutz stehen als Text in ihren HTML-Dateien.
      Eingeblendet wird die passende Fassung; gibt es keine, die erste

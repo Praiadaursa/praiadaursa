@@ -1,0 +1,69 @@
+# Rasseporträt Heilige Birma. ERSTER Block: Überschrift und Einleitung.
+# Jeder weitere Block ist ein Abschnitt, Blöcke durch === getrennt.
+# Fotos kommen automatisch von euren eigenen Katzen.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Die Heilige Birma
+---
+Tiefblaue Augen, seidiges Fell und vier weiße Pfoten, als hätte jemand der Katze Handschuhe angezogen: Die Heilige Birma ist unverwechselbar. Hier erzählen wir dir, woher sie kommt, wie sie aussieht und warum wir uns ausgerechnet in diese Rasse verliebt haben.
+
+===
+
+Titel: Herkunft und Legende
+---
+Der Legende nach lebte die Birma einst in einem Tempel in Burma. Als der alte Priester Mun-Ha starb, sprang sein weißer Kater Sinh auf ihn. Das Fell des Katers färbte sich golden wie die Statue der Göttin, die Augen wurden saphirblau – nur die Pfoten, die den Priester berührten, blieben weiß.
+
+So schön die Geschichte ist: Gezüchtet wurde die Heilige Birma tatsächlich in Frankreich, in den 1920er-Jahren. Nach dem Zweiten Weltkrieg gab es nur noch sehr wenige Tiere, und die Rasse musste mühsam neu aufgebaut werden. Heute ist sie in allen großen Zuchtverbänden anerkannt.
+
+===
+
+Titel: Aussehen: Handschuhe und blaue Augen
+---
+Die Birma ist eine mittelgroße bis große, kräftig gebaute Halblanghaarkatze. Ihr Fell ist seidig und hat wenig Unterwolle – es verfilzt deshalb deutlich seltener als bei vielen anderen Langhaarkatzen.
+
+Zwei Merkmale machen sie unverwechselbar:
+- die tiefblauen Augen, die jede Birma hat
+- die weißen „Handschuhe“ an allen vier Pfoten, die an den Hinterbeinen als „Sporen“ ein Stück hinaufreichen
+
+Gesicht, Ohren, Beine und Schwanz sind dunkler als der Körper. Diese Zeichnung nennt man Point. Und das Verblüffendste: [Birma-Kitten kommen fast weiß zur Welt](birma-kitten-weiss-geboren.html) – ihre Farbe entwickelt sich erst über Monate.
+
+===
+
+Titel: Farben und Zeichnungen
+---
+Birmas gibt es in vielen Farben: Seal, Blue, Chocolate, Lilac, Red, Cream und weiteren, jeweils auch als Tabby (mit zarter Streifung) oder Silver. Am bekanntesten ist der klassische Seal Point mit dunkelbraunen Abzeichen.
+
+Unsere eigenen Katzen zeigen schon eine schöne Bandbreite: Yoselin, Amber und Autumn sind Seal Tabby Point, Atlas ist Blue Tabby Point, Ash und sein Vater Luigi tragen Blue Silver Tabby Point. Mehr dazu liest du in unserem Beitrag über die [Farben der Heiligen Birma](heilige-birma-farben.html).
+
+===
+
+Titel: Charakter
+---
+Wer eine Birma hat, hat einen Schatten auf vier Pfoten. Birmas sind ausgesprochen menschenbezogen, sanft und ausgeglichen, dabei verspielt und neugierig. Sie folgen dir durch die Wohnung, „erzählen“ mit leiser Stimme von ihrem Tag und suchen deine Nähe, ohne aufdringlich zu sein.
+
+Mit anderen Katzen kommen sie meist gut zurecht, und auch ein katzenfreundlicher Hund ist für eine gut sozialisierte Birma kein Problem – bei uns spielen die Kitten täglich mit Hündin Willow. Was sie gar nicht mögen: lange allein sein. Ausführlich erklären wir das im Beitrag über den [Charakter der Heiligen Birma](heilige-birma-charakter.html).
+
+===
+
+Titel: Pflege und Haltung
+---
+Die Fellpflege ist erfreulich unkompliziert: Ein- bis zweimal Bürsten pro Woche genügt meist, im Fellwechsel etwas öfter. Wie das am besten klappt, zeigen wir dir in unserem Beitrag zur [Fellpflege](heilige-birma-fellpflege.html).
+
+Birmas sind ruhige Wohnungskatzen, freuen sich aber über einen gesicherten Balkon oder ein Katzennetz. Weil sie so gesellig sind, geben wir unsere Kitten nur zu einer zweiten Katze oder zu Menschen ab, die überwiegend zu Hause sind – warum, liest du unter [Birma nicht allein halten](birma-nicht-allein-halten.html).
+
+===
+
+Titel: Gesundheit
+---
+Die Heilige Birma gilt als robuste Rasse. Wie jede Rassekatze hat sie aber erbliche Risiken, etwa die Herzerkrankung HCM oder Zystennieren (PKD). Seriöse Zucht heißt, offen darüber zu sprechen und gezielt zu untersuchen. Was wir bei unseren Katzen testen, steht auf unserer Seite zur [Gesundheit](gesundheit.html).
+
+Eine gesunde Birma kann gut 15 Jahre alt werden – eine lange gemeinsame Zeit, über die man vor dem Einzug in Ruhe nachdenken sollte.
+
+===
+
+Titel: Passt eine Birma zu dir?
+---
+Eine Birma passt zu dir, wenn du dir eine sanfte, anhängliche Katze wünschst, die am Familienleben teilnimmt – und wenn du ihr Gesellschaft bieten kannst.
+
+Unsere aktuellen Kitten findest du auf der Seite [Kitten](kitten.html). Ist gerade keines frei oder möchtest du für den nächsten Wurf vormerken lassen, trag dich gern auf unsere [Warteliste](warteliste.html) ein.

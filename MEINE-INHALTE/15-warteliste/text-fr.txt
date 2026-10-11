@@ -1,0 +1,52 @@
+# Warteliste. ERSTER Block: Überschrift, WhatsApp-Text und Einleitung.
+# Blöcke mit Schritt: werden zur nummerierten Liste, Blöcke mit Titel: zu Abschnitten.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: La liste d'attente
+SchritteTitel: Comment ça marche
+WhatsAppText: Bonjour, nous aimerions nous inscrire sur votre liste d'attente pour l'une de vos prochaines portées.
+---
+Nous avons au maximum une portée par an, et nous ne planifions la suivante que lorsque suffisamment de personnes attendent sérieusement un chaton. Votre inscription sur la liste d'attente contribue donc vraiment à décider du moment où des chatons gambaderont de nouveau chez nous.
+
+===
+
+Schritt: Écrivez-nous
+---
+Sur WhatsApp ou par e-mail, sans engagement. Parlez-nous un peu de vous et de ce que vous souhaitez.
+
+===
+
+Schritt: Faisons connaissance
+---
+Par téléphone, par Zoom ou lors d'une visite à Trèves. Nous voulons savoir où vivront nos chatons – et vous devez savoir d'où ils viennent.
+
+===
+
+Schritt: Vous êtes sur la liste
+---
+Votre place est ainsi retenue. Rien ne devient ferme avant une réservation, et ce n'est qu'à ce moment-là que les frais de réservation sont dus.
+
+===
+
+Schritt: Nous vous recontactons
+---
+Dès qu'une portée est prévue et dès que les chatons sont nés, vous êtes parmi les premiers informés – photos à l'appui, promis.
+
+===
+
+Titel: Ce qu'il faut nous écrire
+---
+Plus nous en savons sur vous, mieux nous pouvons juger quel chaton vous correspond :
+
+- votre logement, et s'il dispose d'un balcon ou d'un jardin sécurisé
+- les animaux qui vivent déjà chez vous – nos chatons ne partent que dans un foyer avec un second chat
+- s'il y a des enfants dans le foyer
+- le temps que vous passez à la maison
+- si vous souhaitez une femelle ou un mâle, et si vous avez une couleur préférée
+- à partir de quand un chaton pourrait arriver chez vous
+
+===
+
+Titel: Bon à savoir
+---
+Nos chatons partent à douze semaines au plus tôt, avec pedigree, carnet de vaccination, puce et passeport européen. Le prix d'un chaton et le déroulement détaillé de l'adoption sont expliqués sur la page [adoption & prix](vermittlung.html). D'autres réponses vous attendent dans nos [questions fréquentes](fragen.html).

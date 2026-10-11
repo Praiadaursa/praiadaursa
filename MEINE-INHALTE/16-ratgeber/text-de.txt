@@ -1,0 +1,6 @@
+# Übersichtsseite des Ratgebers. Die Artikel selbst liegen in den Ordnern 20-ratgeber-...
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Ratgeber
+---
+Was wir über die Heilige Birma wissen und mit Yoselin und unseren Kitten jeden Tag erleben – für alle, die überlegen, ob eine Birma zu ihnen passt, und für alle, bei denen schon eine eingezogen ist.

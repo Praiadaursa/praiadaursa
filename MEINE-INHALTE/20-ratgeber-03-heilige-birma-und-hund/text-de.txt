@@ -1,0 +1,63 @@
+# Ratgeber-Artikel. ERSTER Block: Angaben und Einleitung, danach je Block ein Abschnitt.
+# Titel = große Überschrift auf der Seite, Seitentitel = Titel bei Google (max. ~60 Zeichen).
+# Datum in der Zukunft: Der Artikel erscheint automatisch erst ab diesem Tag.
+# Verwandt: Adressen anderer Artikel, mit Semikolon getrennt.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Heilige Birma und Hund
+Seitentitel: Heilige Birma und Hund: Passt das? | Praia da Ursa
+Beschreibung: Kann eine Heilige Birma mit Hund zusammenleben? Unsere Erfahrung mit Hündin Willow und eine Anleitung, wie das Zusammenführen Schritt für Schritt gelingt.
+Kurztext: Unsere Kitten wachsen mit Hündin Willow auf. So klappt das Zusammenleben mit Hund.
+Thema: Zusammenleben
+Datum: 2026-10-11
+Verwandt: heilige-birma-charakter; kitten-einzug-checkliste
+---
+Bei uns gehört ein Hund fest zur Familie: Hündin Willow. Für unsere Kitten ist sie keine Bedrohung, sondern die liebste Spielkameradin. Deshalb fragen uns viele Interessenten mit Hund, ob eine Birma zu ihnen passt. Die kurze Antwort: sehr oft ja.
+
+===
+
+Titel: Kann eine Birma mit Hund leben?
+---
+Die Heilige Birma ist sanft, gelassen und gesellig – gute Voraussetzungen für ein Leben mit Hund. Entscheidend sind aber zwei Dinge: Der Hund muss Katzen gegenüber freundlich sein, und die Katze muss Hunde kennenlernen dürfen, bevor sie sich vor ihnen fürchtet.
+
+===
+
+Titel: Warum es bei unseren Kitten leichter ist
+---
+Kitten, die schon in den ersten Wochen einen Hund erleben, speichern ihn als etwas ganz Normales ab. Unsere Kitten lernen früh, dass der große Vierbeiner zum Alltag gehört, dass man mit ihm spielen kann und dass er auch mal seine Ruhe braucht. Mit Zweitkatze Hailey lernen sie zusätzlich, wie erwachsene Katzen kommunizieren.
+
+Ein Kitten aus einem Haushalt mit Hund zieht deshalb in aller Regel deutlich entspannter in ein neues Zuhause mit Hund.
+
+===
+
+Titel: Welcher Hund passt?
+---
+Wichtiger als Rasse oder Größe ist das Wesen des Hundes. Gut geeignet ist ein Hund, der ruhig auf Katzen reagiert, sich abrufen lässt und keinen ausgeprägten Jagdtrieb gegenüber kleinen Tieren zeigt. Bei einem sehr jungen, stürmischen Hund braucht das Zusammenleben mehr Begleitung.
+
+===
+
+Titel: Zusammenführen Schritt für Schritt
+---
+So geht ihr am besten vor:
+
+- Gib dem Kitten zuerst ein eigenes, hundefreies Zimmer mit Klo, Futter und Versteck
+- Tauscht Gerüche aus, etwa über eine Decke, bevor sich die beiden sehen
+- Die erste Begegnung findet ruhig statt, der Hund an der Leine oder hinter einem Gitter
+- Belohnt den Hund für ruhiges Verhalten
+- Verlängert die gemeinsamen Zeiten langsam, über Tage und Wochen
+- Lasst die beiden anfangs nie unbeaufsichtigt allein
+
+Das Tempo bestimmt die Katze. Lieber ein paar Tage länger warten als einen schlechten ersten Eindruck riskieren.
+
+===
+
+Titel: Rückzugsorte sind Pflicht
+---
+Eine Katze muss sich jederzeit in Sicherheit bringen können: auf einen hohen Kratzbaum, ein Regal oder in ein Zimmer, in das der Hund nicht darf. Futter und Katzenklo gehören an Orte, die der Hund nicht erreicht. Wer das von Anfang an einplant, erspart allen viel Stress.
+
+===
+
+Titel: Wenn es nicht auf Anhieb klappt
+---
+Manche Tiere brauchen einfach länger. Geduld hilft fast immer. Bleibt die Katze dauerhaft verängstigt oder reagiert der Hund zu stark, hol dir Rat bei deinem Tierarzt oder einem Hundetrainer. Und wenn du unsicher bist, ob ein Kitten zu deinem Hund passt: [Sprich uns einfach an](kontakt.html).

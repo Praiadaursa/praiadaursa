@@ -168,3 +168,39 @@ darfst du ignorieren.
   Alte Fotos werden nicht gelöscht. Nimmst du ein Bild aus
   einem Ordner heraus, verschwindet es von der Website, die
   Datei bleibt aber in bilder/ liegen. Das stört nicht.
+
+
+================================================================
+  NEU: SUCHMASCHINEN, RATGEBER UND WEITERE SEITEN
+================================================================
+
+  00-suchmaschinen
+    Titel und Beschreibung jeder Seite, so wie sie bei Google
+    erscheinen. Titel höchstens etwa 60 Zeichen, Beschreibung
+    etwa 155. Das Werkzeug warnt, wenn etwas zu lang ist.
+
+  13-rasse         Rasseporträt „Die Heilige Birma“
+  14-fragen        Häufige Fragen (Feld Frage: über jeder Antwort)
+  15-warteliste    Die Warteliste
+  16-ratgeber      Einleitung der Ratgeber-Übersicht
+
+  20-ratgeber-NN-adresse
+    Je Ordner ein Ratgeber-Artikel. Der Teil nach der Nummer wird
+    die Adresse: 20-ratgeber-01-heilige-birma-charakter wird zu
+    praiadaursa.de/heilige-birma-charakter.html
+    Steht bei Datum: ein Tag in der Zukunft, erscheint der Artikel
+    automatisch erst ab diesem Tag (nach dem nächsten Aktualisieren).
+
+  Links im Text:   [angezeigter Text](kitten.html)
+  Aufzählungen:    jede Zeile mit "- " beginnen
+
+  Die neuen Seiten gibt es auf Deutsch, Englisch und Französisch,
+  die Ratgeber-Artikel nur auf Deutsch. Fehlt eine Sprache, zeigt
+  die Website dort automatisch keine Verweise auf diese Seite.
+
+  WAS DAS WERKZEUG JETZT ZUSÄTZLICH TUT
+  * Es schreibt den Text fertig in jede Seite, damit Google ihn
+    sofort findet.
+  * Es legt die Ordner en/, lb/ und fr/ an, je Sprache eine Adresse.
+  * Es erzeugt sitemap.xml und robots.txt.
+  * Es rechnet Fotos nur neu, wenn sich das Original geändert hat.

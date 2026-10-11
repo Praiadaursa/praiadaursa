@@ -1,0 +1,80 @@
+# Ratgeber-Artikel. ERSTER Block: Angaben und Einleitung, danach je Block ein Abschnitt.
+# Titel = große Überschrift auf der Seite, Seitentitel = Titel bei Google (max. ~60 Zeichen).
+# Datum in der Zukunft: Der Artikel erscheint automatisch erst ab diesem Tag.
+# Verwandt: Adressen anderer Artikel, mit Semikolon getrennt.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Was kostet eine Heilige Birma?
+Seitentitel: Was kostet eine Heilige Birma? | Praia da Ursa
+Beschreibung: Was eine Heilige Birma kostet: unser Kaufpreis und was darin steckt, die Erstausstattung und die laufenden Kosten – ehrlich und ohne Schönrechnen.
+Kurztext: Kaufpreis, Erstausstattung, laufende Kosten: was eine Birma wirklich kostet.
+Thema: Kosten
+Datum: 2026-10-11
+Verwandt: serioesen-zuechter-erkennen; kitten-einzug-checkliste
+---
+Die Frage nach dem Preis ist die häufigste, die wir bekommen – und eine sehr vernünftige. Eine Katze begleitet dich viele Jahre. Wer vorher ehrlich rechnet, hat danach mehr Freude. Hier erklären wir, was in unserem Preis steckt und mit welchen Kosten du danach rechnen solltest.
+
+===
+
+Titel: Der Kaufpreis bei uns
+---
+Ein Kitten kostet bei uns 1.100 €. Darin enthalten sind:
+
+- der Stammbaum des Felidae e.V.
+- die erste Impfung
+- der Chip und der EU-Heimtierausweis
+- mehrfache Entwurmung
+- eine Versicherung bis einschließlich der 14. Lebenswoche
+- die tierärztliche Untersuchung
+- ein Startpaket für die ersten Tage
+
+Bei der Reservierung fällt eine Reservierungsgebühr von 300 € an, die auf den Kaufpreis angerechnet wird.
+
+===
+
+Titel: Warum ein Kitten aus seriöser Zucht kostet, was es kostet
+---
+Hinter jedem Wurf stecken Gesundheitstests der Elterntiere, Tierarztbesuche, Impfungen, hochwertiges Futter, Vereinsgebühren und vor allem viele Wochen, in denen sich der Alltag um die Kitten dreht. Ein Preis, der deutlich darunter liegt, bedeutet oft, dass an einer dieser Stellen gespart wurde – meist an der Gesundheit. Woran du eine seriöse Zucht erkennst, liest du in unserem Beitrag [Seriösen Züchter erkennen](serioesen-zuechter-erkennen.html).
+
+===
+
+Titel: Die Erstausstattung
+---
+Vor dem Einzug brauchst du einiges, das du einmalig anschaffst:
+
+- Transportbox
+- mindestens zwei Katzentoiletten und Streu
+- Futter- und Wassernäpfe
+- ein stabiler Kratzbaum
+- Schlafplätze, Spielzeug, Bürste und Kamm
+- je nach Wohnung ein Katzennetz für Balkon oder Fenster
+
+Eine ausführliche Liste findest du in unserer [Checkliste für den Kitten-Einzug](kitten-einzug-checkliste.html).
+
+===
+
+Titel: Die laufenden Kosten
+---
+Jeden Monat und jedes Jahr kommen regelmäßige Ausgaben dazu:
+
+- hochwertiges Futter mit hohem Fleischanteil
+- Katzenstreu
+- jährliche Untersuchung und Impfungen beim Tierarzt
+- Entwurmung nach Bedarf
+- eine Kranken- oder OP-Versicherung, wenn du dich dafür entscheidest
+- Ersatz für Kratzbaum und Spielzeug
+
+Wie hoch diese Posten ausfallen, hängt stark von deiner Region, deinem Tierarzt und deinen Vorlieben ab. Deshalb nennen wir hier bewusst keine Pauschalbeträge, sondern empfehlen dir, die Preise vor Ort zu erfragen.
+
+===
+
+Titel: Vergiss die zweite Katze nicht
+---
+Weil Birmas nicht allein leben sollten, ziehen unsere Kitten nur zu einer zweiten Katze. Lebt bei dir noch keine, verdoppeln sich die meisten laufenden Kosten. Das ist der Punkt, den viele beim ersten Rechnen übersehen.
+
+===
+
+Titel: Rücklagen für den Tierarzt
+---
+Auch eine gesunde Katze kann krank werden oder sich verletzen. Tierärzte rechnen in Deutschland nach der Gebührenordnung für Tierärzte ab, und eine Behandlung kann teuer werden. Plane deshalb von Anfang an einen Notgroschen ein oder schließ eine Versicherung ab. Unsere Kitten sind bis einschließlich der 14. Lebenswoche versichert – danach entscheidest du selbst, ob du den Schutz weiterführst.

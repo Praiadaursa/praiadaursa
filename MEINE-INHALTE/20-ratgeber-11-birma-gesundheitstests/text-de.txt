@@ -1,0 +1,61 @@
+# Ratgeber-Artikel. ERSTER Block: Angaben und Einleitung, danach je Block ein Abschnitt.
+# Titel = große Überschrift auf der Seite, Seitentitel = Titel bei Google (max. ~60 Zeichen).
+# Datum in der Zukunft: Der Artikel erscheint automatisch erst ab diesem Tag.
+# Verwandt: Adressen anderer Artikel, mit Semikolon getrennt.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Gesundheitstests bei der Birma
+Seitentitel: Birma Gesundheit: HCM, PKD, Blutgruppe | Praia da Ursa
+Beschreibung: HCM, PKD, FeLV/FIV und Blutgruppe verständlich erklärt: welche Gesundheitstests bei der Heiligen Birma wichtig sind und wonach du fragen solltest.
+Kurztext: HCM, PKD, FeLV/FIV und Blutgruppe – verständlich erklärt, und wonach du fragen solltest.
+Thema: Gesundheit
+Datum: 2026-10-11
+Verwandt: serioesen-zuechter-erkennen; kitten-abgabealter-12-wochen
+---
+Die Heilige Birma gilt als robuste Rasse. Wie jede Rassekatze hat sie aber erbliche Risiken. Seriöse Zucht heißt, diese Risiken zu kennen, offen darüber zu sprechen und gezielt zu untersuchen. Hier erklären wir die wichtigsten Tests – ohne Fachchinesisch.
+
+===
+
+Titel: HCM – die Herzmuskelerkrankung
+---
+Die hypertrophe Kardiomyopathie, kurz HCM, ist die häufigste Herzerkrankung bei Katzen. Dabei verdickt sich der Herzmuskel. Bei der Birma deckt ein Gentest dieses Risiko nur zum Teil ab. Aussagekräftiger ist ein Herzultraschall beim Kardiologen.
+
+Bei den Elterntieren unserer Zuchtkatzen wurde ein solcher Herzultraschall durchgeführt, so wie es die Zuchtordnung vorsieht.
+
+===
+
+Titel: PKD – Zystennieren
+---
+Bei der polyzystischen Nierenerkrankung bilden sich Zysten in den Nieren. Sie lässt sich per Gentest eindeutig feststellen. Gezüchtet wird ausschließlich mit negativ getesteten Tieren.
+
+===
+
+Titel: FeLV und FIV
+---
+Leukose (FeLV) und Katzenaids (FIV) sind Viruserkrankungen, die sich über einen Bluttest ausschließen lassen. Vor einer Verpaarung sollten beide Elterntiere negativ getestet sein.
+
+===
+
+Titel: Die Blutgruppe – unterschätzt und wichtig
+---
+Katzen haben die Blutgruppen A, B und selten AB. Bei der Birma kommt Blutgruppe B vergleichsweise häufig vor. Das ist wichtig, weil eine Kätzin mit Blutgruppe B Abwehrstoffe gegen Blutgruppe A in ihrer Milch hat. Trinken Kitten mit Blutgruppe A diese Milch, kann das für sie tödlich enden.
+
+Deshalb muss die Blutgruppe beider Elterntiere vor der Verpaarung bekannt sein.
+
+===
+
+Titel: Wonach du fragen solltest
+---
+- Auf welche Krankheiten wurden die Elterntiere getestet?
+- Wurde ein Herzultraschall gemacht, und bei wem?
+- Welche Blutgruppe haben Mutter und Vater?
+- Darf ich die Ergebnisse sehen?
+
+Eine seriöse Zucht beantwortet diese Fragen gern und ohne Ausflüchte. Mehr Tipps findest du im Beitrag [Seriösen Züchter erkennen](serioesen-zuechter-erkennen.html).
+
+===
+
+Titel: Unsere Ergebnisse
+---
+Yoselin und Luigi sind auf HCM, PKD und FeLV/FIV negativ getestet und haben beide Blutgruppe A. Alles Weitere, auch zu Impfung, Entwurmung und Ernährung, steht auf unserer Seite zur [Gesundheit](gesundheit.html).

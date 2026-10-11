@@ -1,0 +1,52 @@
+# Ratgeber-Artikel. ERSTER Block: Angaben und Einleitung, danach je Block ein Abschnitt.
+# Titel = große Überschrift auf der Seite, Seitentitel = Titel bei Google (max. ~60 Zeichen).
+# Datum in der Zukunft: Der Artikel erscheint automatisch erst ab diesem Tag.
+# Verwandt: Adressen anderer Artikel, mit Semikolon getrennt.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Warum Birmas nicht allein leben sollten
+Seitentitel: Birma allein halten? Warum eine Zweitkatze | Praia da Ursa
+Beschreibung: Warum die Heilige Birma Gesellschaft braucht, was Menschen allein nicht ersetzen können und wie du die passende Zweitkatze für deine Birma findest.
+Kurztext: Warum wir keine Einzelkatzen abgeben und wie du die passende Zweitkatze findest.
+Thema: Haltung
+Datum: 2026-10-11
+Verwandt: heilige-birma-charakter; heilige-birma-kosten
+---
+Eine unserer Bedingungen sorgt immer wieder für Nachfragen: Unsere Kitten ziehen nur zu einer zweiten Katze. Das hat nichts mit Strenge zu tun, sondern mit dem Wesen der Heiligen Birma.
+
+===
+
+Titel: Birmas sind Gesellschaftskatzen
+---
+Die Birma ist ausgesprochen menschenbezogen und gesellig. Sie will dabei sein, spielen, kuscheln und „reden“. Genau das macht sie so liebenswert – und genau deshalb leidet sie, wenn sie lange allein ist. Eine gelangweilte Birma kann sich zurückziehen, unruhig werden oder anfangen, Unfug zu treiben.
+
+===
+
+Titel: Was Menschen nicht ersetzen können
+---
+Auch wenn du viel zu Hause bist: Eine zweite Katze bietet etwas, das wir Menschen nicht leisten können. Katzen putzen sich gegenseitig, toben auf Katzenart, schlafen eng aneinandergekuschelt und sprechen dieselbe Sprache. Bei uns sieht man jeden Tag, wie wichtig das ist – Zweitkatze Hailey kümmert sich liebevoll um die Kleinen, und die Geschwister lernen voneinander.
+
+===
+
+Titel: Welche Zweitkatze passt?
+---
+Am einfachsten ist es, zwei Kitten gemeinsam aufzunehmen, die schon zusammen aufgewachsen sind. Lebt bereits eine Katze bei dir, achte darauf, dass Alter und Temperament zusammenpassen:
+
+- eine ruhige, ältere Katze freut sich eher über ein ausgeglichenes Kitten
+- eine verspielte junge Katze passt gut zu einem aktiven Kitten
+- die Zweitkatze muss keine Birma sein, sollte aber sanft und verträglich sein
+
+Wenn du unsicher bist, erzähl uns von deiner Katze. Wir kennen unsere Kitten gut und sagen dir ehrlich, welches passen könnte.
+
+===
+
+Titel: Unsere Regel
+---
+Deshalb steht in unseren Bedingungen: keine Einzelhaltung. Lebt bei dir noch keine Katze, vermitteln wir gern zwei Kitten zusammen. Das ist für die beiden das schönste Geschenk – und ehrlich gesagt auch für dich, denn zwei Birmas beim Spielen zuzusehen, wird nie langweilig.
+
+===
+
+Titel: Was das für dich bedeutet
+---
+Zwei Katzen brauchen mehr Platz, zwei Katzentoiletten mehr und verursachen doppelte laufende Kosten. Plane das von Anfang an ein – mehr dazu im Beitrag [Was kostet eine Heilige Birma?](heilige-birma-kosten.html). Die Freude verdoppelt sich übrigens auch.

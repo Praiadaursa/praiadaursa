@@ -1,0 +1,52 @@
+# Warteliste. ERSTER Block: Überschrift, WhatsApp-Text und Einleitung.
+# Blöcke mit Schritt: werden zur nummerierten Liste, Blöcke mit Titel: zu Abschnitten.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: The waiting list
+SchritteTitel: How it works
+WhatsAppText: Hello, we would like to join your waiting list for one of your next litters.
+---
+We have at most one litter a year, and we only plan the next one once enough people are genuinely waiting for a kitten. So your place on the waiting list really does help decide when kittens tumble through our home again.
+
+===
+
+Schritt: Write to us
+---
+On WhatsApp or by email, with no obligation. Tell us a little about yourself and what you are hoping for.
+
+===
+
+Schritt: We get to know each other
+---
+On the phone, over Zoom or during a visit to Trier. We want to know where our kittens will live – and you should know where they come from.
+
+===
+
+Schritt: You are on the list
+---
+That reserves your place. Nothing becomes binding until a reservation, and only then is the reservation fee due.
+
+===
+
+Schritt: We get in touch
+---
+As soon as a litter is planned and as soon as the kittens arrive, you will be among the first to hear – with photos, we promise.
+
+===
+
+Titel: What to tell us
+---
+The more we know about you, the better we can judge which kitten suits you:
+
+- how you live and whether there is a secured balcony or garden
+- which animals already live with you – remember that our kittens only move to a home with a second cat
+- whether there are children in the household
+- how much time you spend at home
+- whether you would like a female or a male and whether you have a favourite colour
+- from when a kitten could move in with you
+
+===
+
+Titel: Good to know
+---
+Our kittens leave at twelve weeks at the earliest, with pedigree, vaccination record, microchip and EU pet passport. What a kitten costs and how rehoming works in detail is explained under [rehoming & price](vermittlung.html). Answers to further questions are in our [FAQ](fragen.html).

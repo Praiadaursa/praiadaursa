@@ -56,3 +56,24 @@ Seite: kontakt.html
 Titel: Contact: Birman Cattery in Trier | Praia da Ursa
 Beschreibung: Questions about our Sacred Birman kittens? Message us on WhatsApp, send an email or call. Praia da Ursa in Trier, close to Luxembourg.
 ---
+
+===
+
+Seite: heilige-birma.html
+Titel: Sacred Birman: Breed Profile | Praia da Ursa
+Beschreibung: Origins, appearance, colours, personality and care of the Sacred Birman – explained by a small cattery in Trier, with photos of our own cats.
+---
+
+===
+
+Seite: fragen.html
+Titel: Birman Kittens: FAQ | Praia da Ursa
+Beschreibung: Price, age at rehoming, reservation, single cats, dogs, Luxembourg: answers to the most common questions about our Sacred Birman kittens.
+---
+
+===
+
+Seite: warteliste.html
+Titel: Waiting List for Birman Kittens | Praia da Ursa
+Beschreibung: Join the waiting list for one of our next Sacred Birman litters, with no obligation. How the waiting list of our small cattery in Trier works.
+---

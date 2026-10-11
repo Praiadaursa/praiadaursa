@@ -653,3 +653,17 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
   padding:1.75rem var(--rand); text-align:center;
   border-bottom:1px solid var(--linie); font-size:.875rem;
 }
+
+
+/* ---------- RATGEBER, FRAGEN, WARTELISTE -------------------
+   Nur Feinabstimmung vorhandener Bausteine fuer laengere Texte. */
+.artikel { max-width:42em; margin:0 auto; }
+.artikel .untertitel { margin-top:clamp(2.25rem, 5vw, 3.25rem); }
+.artikel .untertitel:first-child { margin-top:0; }
+.artikel .liste, .karte .liste { grid-template-columns:1fr; margin:0 0 1.2em; }
+.artikel-stand { margin-top:3rem; font-size:.8125rem; }
+.untertitel a { color:inherit; }
+.untertitel a:hover { color:var(--blau); text-decoration:none; }
+.warte-hinweis { margin:1.5rem 0 0; font-size:.8125rem; letter-spacing:.04em; }
+.warte-hinweis a { color:var(--text-leise); }
+.warte-hinweis a:hover { color:var(--blau); }

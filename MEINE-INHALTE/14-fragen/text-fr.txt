@@ -1,0 +1,92 @@
+# Häufige Fragen. ERSTER Block: Überschrift und Einleitung.
+# Jeder weitere Block: eine Frage (Feld Frage:) und darunter die Antwort.
+# Google liest diese Fragen zusätzlich als strukturierte Daten.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Questions fréquentes
+---
+Voici les réponses aux questions que l'on nous pose le plus souvent. Vous ne trouvez pas la vôtre ? Écrivez-nous simplement.
+
+===
+
+Frage: Combien coûte un chaton ?
+---
+Un chaton coûte 1 100 €. Ce prix comprend le pedigree du Felidae e.V., la première vaccination, la puce, plusieurs vermifugations, une assurance jusqu'à la 14e semaine incluse, l'examen vétérinaire et un kit de départ pour les premiers jours. Les 300 € de frais de réservation sont déduits du prix d'achat.
+
+===
+
+Frage: À quel âge un chaton peut-il partir ?
+---
+À douze semaines au plus tôt. D'ici là, les petits apprennent auprès de leur mère, de leurs frères et sœurs, de notre chienne Willow et de notre chatte Hailey tout ce dont ils ont besoin pour une vie de chat sereine. La date de départ de la portée actuelle figure sur la page [chatons](kitten.html).
+
+===
+
+Frage: Qu'est-ce que mon chaton emporte ?
+---
+Le pedigree officiel, le carnet de vaccination avec le numéro de puce, le passeport européen pour animal de compagnie, la nourriture habituelle pour les premiers jours et une couverture imprégnée de l'odeur de sa mère et de ses frères et sœurs. L'assurance court jusqu'à la 14e semaine incluse.
+
+===
+
+Frage: Puis-je rendre visite aux chatons avant ?
+---
+Avec plaisir – une visite chez nous à Trèves est la meilleure façon de faire connaissance. Si le trajet est trop long, un premier échange par Zoom ou par téléphone fonctionne aussi.
+
+===
+
+Frage: Comment se passe une réservation ?
+---
+Si le courant passe et que vous êtes sûrs de vous, nous vous réservons le chaton. Les frais de réservation s'élèvent à 300 € et sont déduits du prix d'achat. Un contrat de vente écrit est toujours établi. Tout le déroulement est décrit sur la page [adoption & prix](vermittlung.html).
+
+===
+
+Frage: Pourquoi ne confiez-vous pas de chaton seul ?
+---
+Les Birmans sont très attachés à leurs humains et très sociables. Seuls, ils s'ennuient vite et deviennent malheureux. C'est pourquoi nos chatons ne rejoignent qu'un foyer avec un second chat.
+
+===
+
+Frage: Les chatons doivent-ils être stérilisés ?
+---
+Oui. Nos chatons partent comme chats de compagnie, et la stérilisation est obligatoire pour tous. Le bon moment se décide au mieux avec votre vétérinaire.
+
+===
+
+Frage: Les Birmans peuvent-ils sortir ?
+---
+Notre règle : vie en intérieur ou accès extérieur uniquement sécurisé, par exemple un balcon protégé ou un jardin clôturé. Les Birmans sont des chats calmes et confiants, peu armés face à la circulation et aux animaux inconnus.
+
+===
+
+Frage: Vos chatons s'entendent-ils avec les chiens ?
+---
+Nos chatons grandissent avec notre chienne Willow et notre chatte Hailey : ils connaissent donc les chiens dès leur plus jeune âge. Un chien qui aime les chats ne pose en général aucun problème.
+
+===
+
+Frage: Confiez-vous des chatons au Luxembourg ou en Sarre ?
+---
+Oui, nos chatons partent dans toute la région autour de Trèves, y compris au Luxembourg et en Sarre. Le passage d'une frontière avec un animal de compagnie est soumis aux règles européennes. Nous en clarifions les détails avec vous et notre vétérinaire avant le départ du chaton.
+
+===
+
+Frage: Quand aura lieu la prochaine portée ?
+---
+Nous avons au maximum une portée par an. Nous planifions la suivante dès que suffisamment de personnes se sont inscrites sur notre [liste d'attente](warteliste.html) – la liste d'attente contribue donc à décider de la suite.
+
+===
+
+Frage: Êtes-vous membre d'une fédération d'élevage ?
+---
+Oui, nous sommes membres inscrits du Felidae e.V. et élevons selon son règlement d'élevage et d'enregistrement. Chaque chaton part avec un pedigree reconnu.
+
+===
+
+Frage: Les parents sont-ils testés ?
+---
+Oui. Yoselin et Luigi sont testés négatifs HCM, PKD et FeLV/FIV et sont de groupe sanguin A. Leurs propres parents ont en outre passé une échographie cardiaque chez un cardiologue, comme le prévoit le règlement d'élevage. Les détails figurent sur notre page [santé](gesundheit.html).
+
+===
+
+Frage: Et si je ne peux plus garder mon chat plus tard ?
+---
+Il sera toujours le bienvenu chez nous. Si l'un de nos chats doit un jour être replacé, il revient toujours d'abord chez nous. Les refuges sont absolument exclus.

@@ -1,0 +1,92 @@
+# Häufige Fragen. ERSTER Block: Überschrift und Einleitung.
+# Jeder weitere Block: eine Frage (Feld Frage:) und darunter die Antwort.
+# Google liest diese Fragen zusätzlich als strukturierte Daten.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Häufige Fragen
+---
+Hier beantworten wir, was uns Interessenten am häufigsten fragen. Fehlt deine Frage? Dann schreib uns einfach.
+
+===
+
+Frage: Was kostet ein Kitten bei euch?
+---
+Ein Kitten kostet 1.100 €. Darin enthalten sind der Stammbaum des Felidae e.V., die erste Impfung, der Chip, mehrfache Entwurmung, eine Versicherung bis einschließlich der 14. Lebenswoche, die tierärztliche Untersuchung und ein Startpaket für die ersten Tage. Die Reservierungsgebühr von 300 € wird auf den Kaufpreis angerechnet.
+
+===
+
+Frage: Ab wann darf ein Kitten ausziehen?
+---
+Frühestens mit zwölf Wochen. Bis dahin lernen die Kleinen bei Mama, Geschwistern, Hündin Willow und Zweitkatze Hailey alles, was sie für ein entspanntes Katzenleben brauchen. Den Auszugstermin des aktuellen Wurfs findest du auf der Seite [Kitten](kitten.html).
+
+===
+
+Frage: Was bekommt mein Kitten mit?
+---
+Den offiziellen Stammbaum, den Impfpass samt Chipnummer, den EU-Heimtierausweis, das gewohnte Futter für die ersten Tage und eine Decke mit dem Geruch von Mama und Geschwistern. Der Versicherungsschutz läuft bis einschließlich der 14. Lebenswoche.
+
+===
+
+Frage: Kann ich die Kitten vorher besuchen?
+---
+Sehr gern – ein Besuch bei uns in Trier ist der beste Weg, sich kennenzulernen. Ist der Weg zu weit, klappt ein erstes Kennenlernen auch per Zoom oder Telefon.
+
+===
+
+Frage: Wie läuft eine Reservierung ab?
+---
+Wenn die Chemie stimmt und ihr euch sicher seid, reservieren wir das Kitten fest für euch. Die Reservierungsgebühr beträgt 300 € und fließt in den Kaufpreis ein. Es gibt immer einen schriftlichen Kaufvertrag. Den ganzen Ablauf beschreiben wir unter [Vermittlung & Preis](vermittlung.html).
+
+===
+
+Frage: Warum gebt ihr keine Einzelkatzen ab?
+---
+Birmas sind ausgesprochen menschenbezogen und gesellig. Allein langweilen sie sich schnell und werden unglücklich. Deshalb ziehen unsere Kitten nur zu einer zweiten Katze. Mehr dazu im Beitrag [Warum Birmas nicht allein leben sollten](birma-nicht-allein-halten.html).
+
+===
+
+Frage: Müssen die Kitten kastriert werden?
+---
+Ja. Unsere Kitten ziehen als Liebhabertiere aus, und für alle gilt eine Kastrationspflicht. Den passenden Zeitpunkt besprichst du am besten mit deinem Tierarzt.
+
+===
+
+Frage: Dürfen Birmas nach draußen?
+---
+Bei uns gilt: Wohnungshaltung oder ausschließlich gesicherter Freigang, also etwa ein gesicherter Balkon oder ein eingezäunter Garten. Birmas sind ruhige, vertrauensvolle Katzen, die mit Straßenverkehr und fremden Tieren schlecht zurechtkommen.
+
+===
+
+Frage: Vertragen sich eure Kitten mit Hunden?
+---
+Unsere Kitten wachsen mit Hündin Willow und Zweitkatze Hailey auf und kennen Hunde deshalb von klein auf. Ein katzenfreundlicher Hund ist für sie in aller Regel kein Problem. Worauf es beim Zusammenführen ankommt, erklären wir im Beitrag [Heilige Birma und Hund](heilige-birma-und-hund.html).
+
+===
+
+Frage: Gebt ihr Kitten auch nach Luxemburg oder ins Saarland ab?
+---
+Ja, unsere Kitten ziehen in die ganze Region rund um Trier, auch nach Luxemburg und ins Saarland. Für den Umzug über eine Landesgrenze gelten die EU-Regeln für Haustiere. Die Einzelheiten klären wir gemeinsam mit euch und unserem Tierarzt, bevor das Kitten auszieht.
+
+===
+
+Frage: Wann gibt es den nächsten Wurf?
+---
+Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir, sobald sich genug Interessenten auf unserer [Warteliste](warteliste.html) gemeldet haben – die Warteliste entscheidet also mit, wann es weitergeht.
+
+===
+
+Frage: Seid ihr Mitglied in einem Zuchtverband?
+---
+Ja, wir sind eingetragenes Mitglied im Felidae e.V. und züchten nach dessen Zucht- und Registrierordnung. Jedes Kitten zieht mit einem anerkannten Stammbaum aus.
+
+===
+
+Frage: Sind die Elterntiere auf Krankheiten getestet?
+---
+Ja. Yoselin und Luigi sind auf HCM, PKD und FeLV/FIV negativ getestet und haben Blutgruppe A. Bei ihren Eltern wurde zusätzlich ein Herzultraschall beim Kardiologen gemacht, so wie es die Zuchtordnung vorsieht. Details stehen auf unserer Seite zur [Gesundheit](gesundheit.html).
+
+===
+
+Frage: Was passiert, wenn ich meine Katze später nicht mehr halten kann?
+---
+Dann ist sie bei uns jederzeit willkommen. Muss eine unserer Katzen irgendwann abgegeben werden, geht sie immer zuerst zurück an uns. Tierheime sind für uns absolut tabu.

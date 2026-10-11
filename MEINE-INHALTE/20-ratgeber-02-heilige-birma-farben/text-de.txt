@@ -1,0 +1,71 @@
+# Ratgeber-Artikel. ERSTER Block: Angaben und Einleitung, danach je Block ein Abschnitt.
+# Titel = große Überschrift auf der Seite, Seitentitel = Titel bei Google (max. ~60 Zeichen).
+# Datum in der Zukunft: Der Artikel erscheint automatisch erst ab diesem Tag.
+# Verwandt: Adressen anderer Artikel, mit Semikolon getrennt.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Die Farben der Heiligen Birma
+Seitentitel: Heilige Birma Farben: Seal, Blue & Tabby | Praia da Ursa
+Beschreibung: Seal Point, Blue Tabby Point, Silver: Welche Farben es bei der Heiligen Birma gibt, was die Namen bedeuten und woran man sie beim Kitten erkennt.
+Kurztext: Seal, Blue, Tabby, Silver – was hinter den Farbnamen steckt und woran man sie erkennt.
+Thema: Farben
+Datum: 2026-10-11
+Verwandt: birma-kitten-weiss-geboren; heilige-birma-charakter
+---
+„Blue Silver Tabby Point“ klingt eher nach einem Cocktail als nach einer Katze. Dahinter steckt aber ein ganz logisches System. Wenn du es einmal kennst, kannst du jede Birma-Farbe entschlüsseln.
+
+===
+
+Titel: Was „Point“ bedeutet
+---
+Alle Heiligen Birmas tragen die sogenannte Point-Zeichnung: Gesicht, Ohren, Beine und Schwanz sind dunkler gefärbt als der helle Körper. Dazu kommen die weißen Handschuhe an allen vier Pfoten und die tiefblauen Augen, die zu jeder Birma gehören.
+
+Der Farbname beschreibt also im Grunde nur, welche Farbe diese dunklen Abzeichen haben.
+
+===
+
+Titel: Die Grundfarben
+---
+Die bekanntesten Farben sind:
+
+- Seal: dunkles Braun, die klassische Birma-Farbe
+- Blue: ein kühles Blaugrau
+- Chocolate: ein warmes, helleres Braun
+- Lilac: ein zartes, rosig-graues Grau
+- Red und Cream: rötliche und cremefarbene Abzeichen
+- Tortie: eine Mischung, die nur bei Kätzinnen vorkommt
+
+Welche Farben ein Verband genau anerkennt, regelt jeweils sein Rassestandard.
+
+===
+
+Titel: Tabby: die zarte Streifung
+---
+Steht „Tabby“ im Namen, haben die Abzeichen eine feine Streifung, besonders gut sichtbar im Gesicht und am Schwanz. Typisch ist ein Muster auf der Stirn, das oft wie ein kleines M aussieht. Tabby-Birmas wirken dadurch ein wenig wilder und zugleich sehr zart.
+
+===
+
+Titel: Silver: der Silberschimmer
+---
+„Silver“ bedeutet, dass das Fell an der Basis sehr hell, fast weiß ist. Dadurch bekommt die Katze einen kühlen, glänzenden Schimmer. Bei unserem Ash heißt das: Als Blue Silver Tabby Point glänzt sein Fell in einem wunderschönen Silbergrau.
+
+===
+
+Titel: Die Farben bei uns
+---
+Unsere eigenen Katzen zeigen schon eine schöne Bandbreite:
+
+- Yoselin, Amber und Autumn: Seal Tabby Point
+- Atlas: Blue Tabby Point
+- Ash und sein Vater Luigi: Blue Silver Tabby Point
+
+Fotos aller Kitten findest du auf der Seite [Kitten](kitten.html).
+
+===
+
+Titel: Woran man die Farbe beim Kitten erkennt
+---
+Birma-Kitten kommen fast weiß zur Welt, ihre Farbe entwickelt sich erst nach und nach – warum, erklären wir im Beitrag [Warum Birma-Kitten weiß geboren werden](birma-kitten-weiss-geboren.html). Erfahrene Züchter erkennen die Richtung oft schon früh an der Farbe von Nasenspiegel und Pfotenballen.
+
+Ganz ausgefärbt ist eine Birma erst nach Monaten, manchmal nach bis zu zwei Jahren. Ein Kitten-Foto ist also immer nur eine Momentaufnahme.

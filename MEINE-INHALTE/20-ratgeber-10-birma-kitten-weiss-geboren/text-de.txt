@@ -1,0 +1,48 @@
+# Ratgeber-Artikel. ERSTER Block: Angaben und Einleitung, danach je Block ein Abschnitt.
+# Titel = große Überschrift auf der Seite, Seitentitel = Titel bei Google (max. ~60 Zeichen).
+# Datum in der Zukunft: Der Artikel erscheint automatisch erst ab diesem Tag.
+# Verwandt: Adressen anderer Artikel, mit Semikolon getrennt.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Warum Birma-Kitten weiß geboren werden
+Seitentitel: Warum Birma-Kitten weiß geboren werden | Praia da Ursa
+Beschreibung: Birma-Kitten kommen fast weiß zur Welt und färben sich erst nach und nach. Wir erklären, warum das so ist und wann die Farbe vollständig entwickelt ist.
+Kurztext: Fast weiß zur Welt, farbig erst nach Monaten: das Geheimnis der Point-Färbung.
+Thema: Farben
+Datum: 2026-10-11
+Verwandt: heilige-birma-farben; heilige-birma-charakter
+---
+Wer zum ersten Mal einen frisch geborenen Birma-Wurf sieht, ist überrascht: lauter kleine, fast weiße Fellknäuel. Von den dunklen Abzeichen, die man von erwachsenen Birmas kennt, ist noch nichts zu sehen. Das ist völlig normal – und hat einen faszinierenden Grund.
+
+===
+
+Titel: Eine Farbe, die von der Temperatur abhängt
+---
+Die Point-Färbung der Birma entsteht durch ein Enzym, das den Farbstoff im Fell bildet. Dieses Enzym arbeitet nur bei etwas kühleren Temperaturen richtig. Deshalb färben sich vor allem die kühleren Körperstellen dunkel: Gesicht, Ohren, Beine und Schwanz. Der warme Körper bleibt hell.
+
+Dieses Phänomen kennt man auch von Siamkatzen und anderen Point-Rassen.
+
+===
+
+Titel: Warum die Kitten weiß zur Welt kommen
+---
+Im Mutterleib ist es überall gleichmäßig warm. Das Enzym hat also keine kühlen Stellen, an denen es arbeiten kann – die Kitten kommen fast weiß zur Welt. Erst nach der Geburt, wenn Nase, Ohren und Schwanz etwas kühler werden, beginnt dort die Farbe zu erscheinen.
+
+===
+
+Titel: Wann die Farbe kommt
+---
+Die ersten Abzeichen zeigen sich meist schon in den ersten Lebenswochen, zuerst an Ohren und Nase. Danach dunkeln die Points langsam nach. Ganz ausgefärbt ist eine Birma aber erst nach vielen Monaten, manchmal nach bis zu zwei Jahren. Auch später kann sich das Fell noch etwas verändern – in kühlen Monaten werden die Abzeichen oft ein wenig dunkler.
+
+===
+
+Titel: Und die weißen Pfoten?
+---
+Die weißen Handschuhe haben mit der Point-Färbung nichts zu tun – sie sind ein eigenes, rassetypisches Merkmal. Sie sind deshalb von Anfang an da und bleiben ein Leben lang weiß.
+
+===
+
+Titel: Bei unseren Kitten
+---
+Unsere Kitten aus dem A-Wurf haben diese Verwandlung gerade hinter sich. Wie unterschiedlich die Farben dabei werden können, siehst du an ihren Fotos auf der Seite [Kitten](kitten.html) – und was die einzelnen Farbnamen bedeuten, erklären wir im Beitrag [Die Farben der Heiligen Birma](heilige-birma-farben.html).

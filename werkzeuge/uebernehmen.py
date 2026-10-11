@@ -116,7 +116,7 @@ def _hol(liste, i, feld):
     return "\n\n".join(e["absaetze"])
 
 
-def mehrsprachig(ordner, index=0, feld=None):
+def mehrsprachig(ordner, index=0, feld=None, erwartet=SPRACHEN):
     """Holt denselben Wert in allen Sprachen.
 
        Fehlt eine Sprache, wird sie weggelassen — die Website zeigt dann
@@ -130,8 +130,9 @@ def mehrsprachig(ordner, index=0, feld=None):
     for spr in SPRACHEN[1:]:
         liste = eintraege(ordner, spr)
         if liste is None:
-            melden(hinweise, "%s: keine %s Fassung, dort erscheint die Ersatzsprache."
-                   % (ordner, SPRACHNAME[spr]))
+            if spr in erwartet:
+                melden(hinweise, "%s: keine %s Fassung, dort erscheint die Ersatzsprache."
+                       % (ordner, SPRACHNAME[spr]))
             continue
         if len(liste) != len(de):
             melden(fehler,
@@ -638,8 +639,11 @@ def bauen():
         "hinweis":    mehrsprachig("12-kontakt", 1),
     }
 
+    # ------------------------------------------------ neue Seiten
+    zusatz, extra = neue_seiten()
+
     eine = len(katzen) == 1
-    return {
+    return dict(extra, **{
         "zucht": zucht, "start": start, "ueberuns": ueberuns,
         "katzen": katzen, "vaeter": vaeter, "wurf": wurf, "vermittlung": vermittlung,
         "gesundheit": gesundheit, "kontakt": kontakt,
@@ -672,7 +676,149 @@ def bauen():
              "label": {"de": "Kontakt", "en": "Contact",
                        "lb": "Kontakt", "fr": "Contact"}},
         ],
-    }
+        "zusatzseiten": zusatz,
+        "wissen": [w for w in [
+            {"datei": "heilige-birma.html",
+             "label": {"de": "Die Heilige Birma", "en": "The Sacred Birman",
+                       "fr": "Le Sacré de Birmanie"}},
+            {"datei": "fragen.html",
+             "label": {"de": "Häufige Fragen", "en": "FAQ", "fr": "Questions fréquentes"}},
+            {"datei": "warteliste.html",
+             "label": {"de": "Warteliste", "en": "Waiting list", "fr": "Liste d'attente"}},
+            {"datei": "ratgeber.html",
+             "label": {"de": "Ratgeber", "en": "Guides", "fr": "Conseils"}},
+        ] if any(z["datei"] == w["datei"] for z in zusatz)],
+    })
+
+
+# ---------------------------------------------------------------- neue Seiten
+
+def sprachen_von(ordner):
+    return [s for s in SPRACHEN if eintraege(ordner, s)]
+
+
+def bloecke(ordner, erwartet):
+    """Alle Bloecke ab dem zweiten als [{titel, text, ...felder}]."""
+    return [{"titel": mehrsprachig(ordner, i, "Titel", erwartet),
+             "text":  mehrsprachig(ordner, i, None, erwartet)}
+            for i in range(1, anzahl(ordner))]
+
+
+def neue_seiten():
+    """Rasseportraet, Fragen, Warteliste und Ratgeber.
+       Rueckgabe: (zusatzseiten fuer den Generator, Daten fuer inhalte.js)."""
+    zusatz, extra = [], {}
+    drei = ("de", "en", "fr")
+
+    if eintraege("13-rasse", "de"):
+        extra["rasse"] = {
+            "titel":      mehrsprachig("13-rasse", 0, "Titel", drei),
+            "einleitung": mehrsprachig("13-rasse", 0, None, drei),
+            "abschnitte": bloecke("13-rasse", drei),
+        }
+        zusatz.append({"datei": "heilige-birma.html", "sprachen": sprachen_von("13-rasse")})
+
+    if eintraege("14-fragen", "de"):
+        eintraege_ = [{"frage":   mehrsprachig("14-fragen", i, "Frage", drei),
+                       "antwort": mehrsprachig("14-fragen", i, None, drei)}
+                      for i in range(1, anzahl("14-fragen"))]
+        extra["fragen"] = {
+            "titel":      mehrsprachig("14-fragen", 0, "Titel", drei),
+            "einleitung": mehrsprachig("14-fragen", 0, None, drei),
+            "eintraege":  eintraege_,
+        }
+        sprachen = sprachen_von("14-fragen")
+        ld = {}
+        for s in sprachen:
+            ld[s] = [{
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [{
+                    "@type": "Question",
+                    "name": e["frage"].get(s, e["frage"]["de"]),
+                    "acceptedAnswer": {"@type": "Answer",
+                                       "text": re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1",
+                                                      e["antwort"].get(s, e["antwort"]["de"]))},
+                } for e in eintraege_],
+            }]
+        zusatz.append({"datei": "fragen.html", "sprachen": sprachen, "jsonld": ld})
+
+    if eintraege("15-warteliste", "de"):
+        w = {"titel": mehrsprachig("15-warteliste", 0, "Titel", drei),
+             "einleitung": mehrsprachig("15-warteliste", 0, None, drei),
+             "whatsappText": mehrsprachig("15-warteliste", 0, "WhatsAppText", drei),
+             "schritteTitel": mehrsprachig("15-warteliste", 0, "SchritteTitel", drei),
+             "schritte": [], "abschnitte": []}
+        for i in range(1, anzahl("15-warteliste")):
+            eintrag = eintraege("15-warteliste", "de")[i]["felder"]
+            if "schritt" in eintrag:
+                w["schritte"].append({"titel": mehrsprachig("15-warteliste", i, "Schritt", drei),
+                                      "text": mehrsprachig("15-warteliste", i, None, drei)})
+            else:
+                w["abschnitte"].append({"titel": mehrsprachig("15-warteliste", i, "Titel", drei),
+                                        "text": mehrsprachig("15-warteliste", i, None, drei)})
+        extra["warteliste"] = w
+        zusatz.append({"datei": "warteliste.html", "sprachen": sprachen_von("15-warteliste")})
+
+    # Ratgeber: je Artikel ein Ordner 20-ratgeber-NN-adresse
+    heute = datetime.date.today().isoformat()
+    artikel = []
+    for ordner in sorted(o for o in os.listdir(QUELLE) if o.startswith("20-ratgeber-")):
+        adresse_ = re.sub(r"^\d+-", "", ordner.replace("20-ratgeber-", ""))
+        datum = feldwert(ordner, "Datum", standard=heute)
+        if datum > heute:
+            continue          # erscheint automatisch ab diesem Tag
+        nur_de = ("de",)
+        artikel.append({
+            "datei":      adresse_ + ".html",
+            "titel":      mehrsprachig(ordner, 0, "Titel", nur_de),
+            "seitentitel": feldwert(ordner, "Seitentitel"),
+            "beschreibung": feldwert(ordner, "Beschreibung"),
+            "kurztext":   mehrsprachig(ordner, 0, "Kurztext", nur_de),
+            "thema":      mehrsprachig(ordner, 0, "Thema", nur_de),
+            "datum":      datum,
+            "verwandt":   [v.strip() + ".html" for v in feldwert(ordner, "Verwandt").split(";")
+                           if v.strip()],
+            "einleitung": mehrsprachig(ordner, 0, None, nur_de),
+            "abschnitte": bloecke(ordner, nur_de),
+        })
+    if artikel:
+        extra["ratgeber"] = artikel
+        extra["ratgeberSeite"] = {
+            "titel":      mehrsprachig("16-ratgeber", 0, "Titel", ("de",)),
+            "einleitung": mehrsprachig("16-ratgeber", 0, None, ("de",)),
+        }
+        zusatz.append({"datei": "ratgeber.html", "sprachen": ["de"]})
+        for a in artikel:
+            zusatz.append({
+                "datei": a["datei"], "sprachen": ["de"], "eltern": "ratgeber.html",
+                "jsonld": {"de": [{
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    "headline": a["seitentitel"].split(" | ")[0] or a["titel"]["de"],
+                    "description": a["beschreibung"],
+                    "inLanguage": "de",
+                    "datePublished": a["datum"],
+                    "dateModified": a["datum"],
+                    "mainEntityOfPage": vorrendern.adresse("de", a["datei"]),
+                    "author": {"@type": "Organization", "@id": vorrendern.DOMAIN + "/#zucht",
+                               "name": "Praia da Ursa", "url": vorrendern.DOMAIN + "/"},
+                    "publisher": {"@type": "Organization", "@id": vorrendern.DOMAIN + "/#zucht",
+                                  "name": "Praia da Ursa", "url": vorrendern.DOMAIN + "/"},
+                }]},
+            })
+    return zusatz, extra
+
+
+def artikel_kopfdaten(daten, meta):
+    """Titel und Beschreibung der Ratgeber-Artikel stehen in ihrem eigenen Ordner."""
+    for a in daten.get("ratgeber", []):
+        meta.setdefault("de", {})[a["datei"]] = {"titel": a["seitentitel"],
+                                                 "beschreibung": a["beschreibung"]}
+        if len(a["seitentitel"]) > 65:
+            melden(hinweise, "Ratgeber %s: Seitentitel hat %d Zeichen, Google zeigt etwa 60."
+                   % (a["datei"], len(a["seitentitel"])))
+    return meta
 
 
 # ---------------------------------------------------------------- schreiben
@@ -694,9 +840,13 @@ def schreiben(daten):
         "   ============================================================ */\n\n"
         "const INHALTE = "
     )
+    schlank = dict(daten)
+    if "ratgeber" in schlank:
+        schlank["ratgeber"] = [{k: v for k, v in a.items() if k not in ("abschnitte", "einleitung")}
+                               for a in daten["ratgeber"]]
     with open(ZIEL, "w", encoding="utf-8") as f:
         f.write(kopf)
-        f.write(json.dumps(daten, ensure_ascii=False, indent=2))
+        f.write(json.dumps(schlank, ensure_ascii=False, indent=2))
         f.write(";\n")
 
 
@@ -752,7 +902,7 @@ def main():
 
     try:
         seiten_anzahl, url_anzahl = vorrendern.alles_erzeugen(
-            WURZEL, daten, kopfdaten_lesen(), versionsnummern(),
+            WURZEL, daten, artikel_kopfdaten(daten, kopfdaten_lesen()), versionsnummern(),
             datetime.date.today().isoformat())
     except Exception as e:
         print("\n  FEHLER beim Erzeugen der Seiten:\n  " + str(e))

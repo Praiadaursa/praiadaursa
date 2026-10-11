@@ -1,0 +1,62 @@
+# Ratgeber-Artikel. ERSTER Block: Angaben und Einleitung, danach je Block ein Abschnitt.
+# Titel = große Überschrift auf der Seite, Seitentitel = Titel bei Google (max. ~60 Zeichen).
+# Datum in der Zukunft: Der Artikel erscheint automatisch erst ab diesem Tag.
+# Verwandt: Adressen anderer Artikel, mit Semikolon getrennt.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Der Charakter der Heiligen Birma
+Seitentitel: Heilige Birma Charakter: So ist sie wirklich | Praia da Ursa
+Beschreibung: Anhänglich, sanft, verspielt: Wie die Heilige Birma wirklich ist, was sie mag, was sie gar nicht mag und für wen sie die richtige Katze ist.
+Kurztext: Anhänglich, sanft und verspielt – und gar nicht gern allein. Was die Birma ausmacht.
+Thema: Charakter
+Datum: 2026-10-11
+Verwandt: birma-nicht-allein-halten; heilige-birma-und-hund
+---
+Ehrlich gesagt: Den Unterschied zwischen einer Hauskatze und einer Rassekatze wollten wir lange nicht so recht glauben. Dann zog Yoselin bei uns ein. Seitdem wissen wir, warum Birma-Halter so schwärmen – und auch, warum diese Rasse nicht zu jedem passt.
+
+===
+
+Titel: Menschenbezogen wie kaum eine andere
+---
+Eine Birma will dabei sein. Sie folgt dir durch die Wohnung, setzt sich neben den Laptop und prüft gründlich, was im Wäschekorb passiert. Yoselin besetzt jeden Schoß, sobald sich jemand auch nur kurz hinsetzt, und schläft am liebsten mitten im Bett.
+
+Diese Anhänglichkeit ist kein Klammern. Birmas suchen deine Nähe, ohne aufdringlich zu werden – sie sind einfach gern dort, wo ihre Menschen sind.
+
+===
+
+Titel: Sanft, aber nicht langweilig
+---
+Birmas gelten als ruhig und ausgeglichen, und das stimmt: Hektik ist ihre Sache nicht, Krallen setzen sie im Spiel kaum ein. Langweilig sind sie trotzdem nicht. Sie spielen gern und ausdauernd, jagen Federangeln, erkunden jede offene Schublade und behalten ihren Spieltrieb oft bis ins hohe Alter.
+
+Unsere Kitten zeigen gut, wie unterschiedlich das aussehen kann: Amber hüpft noch durch die Wohnung, wenn alle anderen längst schlafen, während Autumn lieber erst beobachtet und dann ganz gezielt eingreift.
+
+===
+
+Titel: Gesprächig – auf leise Art
+---
+Birmas erzählen gern, aber mit sanfter Stimme. Sie begrüßen dich, kommentieren das Futter und melden sich, wenn ihnen etwas nicht passt. Yoselin meckert hörbar, wenn das Futter nicht ihren Vorstellungen entspricht. Ein lautes Schreien, wie man es von manchen anderen Rassen kennt, ist bei Birmas aber selten.
+
+===
+
+Titel: Mit anderen Katzen, Hunden und Kindern
+---
+Mit Artgenossen kommen Birmas meist gut zurecht, und gerade weil sie so gesellig sind, sollten sie nicht allein leben. Auch ein katzenfreundlicher Hund ist für eine gut sozialisierte Birma in aller Regel kein Problem – unsere Kitten wachsen mit Hündin Willow auf, die ihre liebste Spielkameradin ist.
+
+Für Familien mit rücksichtsvollen Kindern ist die Birma eine wunderbare Katze. Wichtig ist nur, dass sie sich jederzeit zurückziehen kann.
+
+===
+
+Titel: Was eine Birma gar nicht mag
+---
+Allein sein. Eine Birma, die viele Stunden am Tag ohne Gesellschaft verbringt, wird unglücklich. Deshalb vermitteln wir unsere Kitten nur zu einer zweiten Katze. Warum das so wichtig ist, erklären wir ausführlich im Beitrag [Warum Birmas nicht allein leben sollten](birma-nicht-allein-halten.html).
+
+Auch viel Trubel ohne Rückzugsmöglichkeit und ständige Veränderungen sind nicht ihr Ding. Birmas lieben Routinen und ein verlässliches Zuhause.
+
+===
+
+Titel: Passt eine Birma zu dir?
+---
+Eine Birma passt zu dir, wenn du dir eine Katze wünschst, die am Familienleben teilnimmt, kuschelt und mit dir „spricht“ – und wenn du ihr Gesellschaft bieten kannst, durch eine zweite Katze und durch Menschen, die oft zu Hause sind.
+
+Wenn du unsere Katzen kennenlernen möchtest, schau dir unsere [aktuellen Kitten](kitten.html) an oder trag dich auf die [Warteliste](warteliste.html) ein.

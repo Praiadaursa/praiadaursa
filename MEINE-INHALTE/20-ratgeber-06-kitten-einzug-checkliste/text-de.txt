@@ -1,0 +1,71 @@
+# Ratgeber-Artikel. ERSTER Block: Angaben und Einleitung, danach je Block ein Abschnitt.
+# Titel = große Überschrift auf der Seite, Seitentitel = Titel bei Google (max. ~60 Zeichen).
+# Datum in der Zukunft: Der Artikel erscheint automatisch erst ab diesem Tag.
+# Verwandt: Adressen anderer Artikel, mit Semikolon getrennt.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Checkliste für den Kitten-Einzug
+Seitentitel: Kitten Erstausstattung: Checkliste | Praia da Ursa
+Beschreibung: Was du vor dem Einzug deines Kittens brauchst und wie die ersten Tage gelingen: unsere Checkliste für Erstausstattung, Sicherheit und Eingewöhnung.
+Kurztext: Was du vorbereiten solltest und wie die ersten Tage mit deinem Kitten gelingen.
+Thema: Einzug
+Datum: 2026-10-11
+Verwandt: heilige-birma-kosten; wohnungskatze-oder-freigang
+---
+Der Tag, an dem dein Kitten einzieht, ist aufregend – für dich und noch viel mehr für das Kitten. Mit guter Vorbereitung wird daraus ein entspannter Start. Diese Liste geben wir allen mit, bei denen eines unserer Kitten einzieht.
+
+===
+
+Titel: Bevor das Kitten kommt
+---
+- Transportbox, möglichst mit Öffnung von oben
+- mindestens zwei Katzentoiletten mit derselben Streu, die das Kitten von uns kennt
+- das gewohnte Futter – wir geben dir eine Futterempfehlung und einen Vorrat mit
+- Näpfe für Futter und Wasser, gern auch ein Trinkbrunnen
+- ein stabiler Kratzbaum, der auch beim Toben nicht umkippt
+- mehrere Schlafplätze, auch erhöhte
+- Spielzeug, vor allem eine Federangel
+- eine weiche Bürste und ein Kamm
+
+===
+
+Titel: Die Wohnung kittensicher machen
+---
+Kitten sind neugierig und passen durch erstaunlich kleine Lücken. Prüfe deshalb vorher:
+
+- Fenster und Balkon sichern, gekippte Fenster sind eine echte Gefahr
+- giftige Zimmerpflanzen entfernen
+- Kabel, Bänder und Schnüre wegräumen
+- Waschmaschine und Trockner vor dem Einschalten kontrollieren
+- kleine Gegenstände, die verschluckt werden können, wegräumen
+
+===
+
+Titel: Der erste Tag
+---
+Bring das Kitten zuerst in ein ruhiges Zimmer, in dem Klo, Futter, Wasser und ein Versteck bereitstehen. Öffne die Box und lass es selbst herauskommen. Die mitgegebene Decke mit dem Geruch von Mama und Geschwistern hilft dabei, sich sicher zu fühlen.
+
+Halte den ersten Tag ruhig: Besuch von Freunden und Familie hat Zeit bis später.
+
+===
+
+Titel: Die ersten Wochen
+---
+Erweitere das Revier Schritt für Schritt, sobald das Kitten sich sicher bewegt. Lebt schon eine Katze oder ein Hund bei dir, führst du die Tiere langsam zusammen – wie das mit Hund klappt, steht im Beitrag [Heilige Birma und Hund](heilige-birma-und-hund.html).
+
+Bleib anfangs beim gewohnten Futter. Eine Umstellung sollte nicht mit dem Umzug zusammenfallen.
+
+===
+
+Titel: Tierarzt und Versicherung
+---
+Such dir schon vor dem Einzug einen Tierarzt in deiner Nähe. Die erste Impfung hat dein Kitten bei uns bekommen, die zweite folgt nach dem Auszug – den Termin findest du im Impfpass.
+
+Unsere Kitten sind bis einschließlich der 14. Lebenswoche versichert. Danach entscheidest du selbst, ob du den Schutz weiterlaufen lässt.
+
+===
+
+Titel: Wir bleiben für dich da
+---
+Auch nach dem Einzug kannst du dich jederzeit mit Fragen bei uns melden – über das erste Futter genauso wie über das erste nächtliche Getobe. Wir freuen uns immer über Fotos.

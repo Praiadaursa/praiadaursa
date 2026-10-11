@@ -56,3 +56,31 @@ Seite: kontakt.html
 Titel: Kontakt: Birma-Zucht in Trier | Praia da Ursa
 Beschreibung: Fragen zu unseren Heilige-Birma-Kitten? Schreib uns per WhatsApp oder E-Mail oder ruf an. Praia da Ursa in Trier, nah an Luxemburg und dem Saarland.
 ---
+
+===
+
+Seite: heilige-birma.html
+Titel: Heilige Birma: Rasseporträt | Praia da Ursa
+Beschreibung: Herkunft, Aussehen, Farben, Charakter und Pflege der Heiligen Birma – erklärt von einer kleinen Zucht in Trier, mit Fotos unserer eigenen Katzen.
+---
+
+===
+
+Seite: fragen.html
+Titel: Birma Kitten: Häufige Fragen | Praia da Ursa
+Beschreibung: Preis, Abgabealter, Reservierung, Einzelhaltung, Hunde, Luxemburg: Antworten auf die häufigsten Fragen zu unseren Heilige-Birma-Kitten.
+---
+
+===
+
+Seite: warteliste.html
+Titel: Warteliste für Birma-Kitten | Praia da Ursa
+Beschreibung: Lass dich unverbindlich für einen unserer nächsten Heilige-Birma-Würfe vormerken. So funktioniert die Warteliste unserer kleinen Zucht in Trier.
+---
+
+===
+
+Seite: ratgeber.html
+Titel: Ratgeber Heilige Birma | Praia da Ursa
+Beschreibung: Charakter, Farben, Kosten, Pflege, Gesundheit und Kitten-Einzug: unser Ratgeber zur Heiligen Birma aus einer kleinen Zucht in Trier.
+---

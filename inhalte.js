@@ -5,10 +5,626 @@
    Bearbeite stattdessen den Ordner MEINE-INHALTE und starte
    danach aktualisieren.command per Doppelklick.
 
-   Zuletzt erzeugt am 11.10.2026 um 18:30 Uhr
+   Zuletzt erzeugt am 11.10.2026 um 18:44 Uhr
    ============================================================ */
 
 const INHALTE = {
+  "rasse": {
+    "titel": {
+      "de": "Die Heilige Birma",
+      "en": "The Sacred Birman",
+      "fr": "Le Sacré de Birmanie"
+    },
+    "einleitung": {
+      "de": "Tiefblaue Augen, seidiges Fell und vier weiße Pfoten, als hätte jemand der Katze Handschuhe angezogen: Die Heilige Birma ist unverwechselbar. Hier erzählen wir dir, woher sie kommt, wie sie aussieht und warum wir uns ausgerechnet in diese Rasse verliebt haben.",
+      "en": "Deep blue eyes, a silky coat and four white paws, as if someone had put gloves on the cat: the Sacred Birman is unmistakable. Here we tell you where she comes from, what she looks like and why we fell in love with this breed of all breeds.",
+      "fr": "Des yeux d'un bleu profond, un pelage soyeux et quatre pattes blanches, comme si l'on avait enfilé des gants au chat : le Sacré de Birmanie est inimitable. Voici d'où il vient, à quoi il ressemble et pourquoi nous sommes tombés amoureux de cette race entre toutes."
+    },
+    "abschnitte": [
+      {
+        "titel": {
+          "de": "Herkunft und Legende",
+          "en": "Origins and legend",
+          "fr": "Origines et légende"
+        },
+        "text": {
+          "de": "Der Legende nach lebte die Birma einst in einem Tempel in Burma. Als der alte Priester Mun-Ha starb, sprang sein weißer Kater Sinh auf ihn. Das Fell des Katers färbte sich golden wie die Statue der Göttin, die Augen wurden saphirblau – nur die Pfoten, die den Priester berührten, blieben weiß.\n\nSo schön die Geschichte ist: Gezüchtet wurde die Heilige Birma tatsächlich in Frankreich, in den 1920er-Jahren. Nach dem Zweiten Weltkrieg gab es nur noch sehr wenige Tiere, und die Rasse musste mühsam neu aufgebaut werden. Heute ist sie in allen großen Zuchtverbänden anerkannt.",
+          "en": "Legend has it that the Birman once lived in a temple in Burma. When the old priest Mun-Ha died, his white cat Sinh leapt onto him. The cat's coat turned golden like the statue of the goddess and his eyes became sapphire blue – only the paws touching the priest stayed white.\n\nLovely as the story is, the Sacred Birman was actually bred in France in the 1920s. After the Second World War very few cats were left, and the breed had to be painstakingly rebuilt. Today it is recognised by all major cat associations.",
+          "fr": "Selon la légende, le Birman vivait autrefois dans un temple de Birmanie. À la mort du vieux prêtre Mun-Ha, son chat blanc Sinh bondit sur lui. Son pelage prit la couleur dorée de la statue de la déesse et ses yeux devinrent bleu saphir – seules les pattes qui touchaient le prêtre restèrent blanches.\n\nAussi belle que soit cette histoire, le Sacré de Birmanie a en réalité été sélectionné en France dans les années 1920. Après la Seconde Guerre mondiale, il ne restait que très peu de chats et la race a dû être patiemment reconstruite. Elle est aujourd'hui reconnue par toutes les grandes fédérations félines."
+        }
+      },
+      {
+        "titel": {
+          "de": "Aussehen: Handschuhe und blaue Augen",
+          "en": "Appearance: gloves and blue eyes",
+          "fr": "Apparence : des gants et des yeux bleus"
+        },
+        "text": {
+          "de": "Die Birma ist eine mittelgroße bis große, kräftig gebaute Halblanghaarkatze. Ihr Fell ist seidig und hat wenig Unterwolle – es verfilzt deshalb deutlich seltener als bei vielen anderen Langhaarkatzen.\n\nZwei Merkmale machen sie unverwechselbar:\n- die tiefblauen Augen, die jede Birma hat\n- die weißen „Handschuhe“ an allen vier Pfoten, die an den Hinterbeinen als „Sporen“ ein Stück hinaufreichen\n\nGesicht, Ohren, Beine und Schwanz sind dunkler als der Körper. Diese Zeichnung nennt man Point. Und das Verblüffendste: [Birma-Kitten kommen fast weiß zur Welt](birma-kitten-weiss-geboren.html) – ihre Farbe entwickelt sich erst über Monate.",
+          "en": "The Birman is a medium to large, sturdily built semi-longhaired cat. Her coat is silky with little undercoat, so it mats far less than that of many other longhaired breeds.\n\nTwo features make her unmistakable:\n- the deep blue eyes every Birman has\n- the white \"gloves\" on all four paws, which reach a little way up the hind legs as \"laces\"\n\nFace, ears, legs and tail are darker than the body – a pattern known as pointed. And the most surprising part: Birman kittens are born almost white, and their colour only develops over months.",
+          "fr": "Le Birman est un chat mi-long de taille moyenne à grande, à l'ossature solide. Son pelage soyeux possède peu de sous-poil : il s'emmêle donc bien moins que celui de nombreuses autres races à poil long.\n\nDeux caractéristiques le rendent inimitable :\n- les yeux bleu profond que possède chaque Birman\n- les « gants » blancs aux quatre pattes, qui remontent un peu à l'arrière des pattes postérieures, ce qu'on appelle les « éperons »\n\nLe masque, les oreilles, les pattes et la queue sont plus foncés que le corps : c'est ce qu'on appelle le patron colourpoint. Et le plus étonnant : les chatons Birman naissent presque blancs, leur couleur ne se développe qu'au fil des mois."
+        }
+      },
+      {
+        "titel": {
+          "de": "Farben und Zeichnungen",
+          "en": "Colours and patterns",
+          "fr": "Couleurs et motifs"
+        },
+        "text": {
+          "de": "Birmas gibt es in vielen Farben: Seal, Blue, Chocolate, Lilac, Red, Cream und weiteren, jeweils auch als Tabby (mit zarter Streifung) oder Silver. Am bekanntesten ist der klassische Seal Point mit dunkelbraunen Abzeichen.\n\nUnsere eigenen Katzen zeigen schon eine schöne Bandbreite: Yoselin, Amber und Autumn sind Seal Tabby Point, Atlas ist Blue Tabby Point, Ash und sein Vater Luigi tragen Blue Silver Tabby Point. Mehr dazu liest du in unserem Beitrag über die [Farben der Heiligen Birma](heilige-birma-farben.html).",
+          "en": "Birmans come in many colours: seal, blue, chocolate, lilac, red, cream and more, each also as tabby (with delicate striping) or silver. The best known is the classic seal point with dark brown points.\n\nOur own cats already show a lovely range: Yoselin, Amber and Autumn are seal tabby point, Atlas is blue tabby point, and Ash and his father Luigi are blue silver tabby point.",
+          "fr": "Le Birman existe dans de nombreuses couleurs : seal, blue, chocolate, lilac, red, cream et d'autres encore, chacune aussi en tabby (finement rayé) ou silver. La plus connue est le seal point classique, aux extrémités brun foncé.\n\nNos propres chats montrent déjà une belle palette : Yoselin, Amber et Autumn sont seal tabby point, Atlas est blue tabby point, Ash et son père Luigi sont blue silver tabby point."
+        }
+      },
+      {
+        "titel": {
+          "de": "Charakter",
+          "en": "Personality",
+          "fr": "Caractère"
+        },
+        "text": {
+          "de": "Wer eine Birma hat, hat einen Schatten auf vier Pfoten. Birmas sind ausgesprochen menschenbezogen, sanft und ausgeglichen, dabei verspielt und neugierig. Sie folgen dir durch die Wohnung, „erzählen“ mit leiser Stimme von ihrem Tag und suchen deine Nähe, ohne aufdringlich zu sein.\n\nMit anderen Katzen kommen sie meist gut zurecht, und auch ein katzenfreundlicher Hund ist für eine gut sozialisierte Birma kein Problem – bei uns spielen die Kitten täglich mit Hündin Willow. Was sie gar nicht mögen: lange allein sein. Ausführlich erklären wir das im Beitrag über den [Charakter der Heiligen Birma](heilige-birma-charakter.html).",
+          "en": "Owning a Birman means having a shadow on four paws. Birmans are remarkably people-oriented, gentle and even-tempered, yet playful and curious. They follow you around the flat, \"chat\" about their day in a soft voice and seek your company without being pushy.\n\nThey usually get on well with other cats, and a cat-friendly dog is no problem for a well-socialised Birman – our kittens play with Willow the dog every day. What they really dislike is being left alone for long.",
+          "fr": "Avoir un Birman, c'est avoir une ombre à quatre pattes. Les Birmans sont très attachés à leurs humains, doux et équilibrés, tout en restant joueurs et curieux. Ils vous suivent dans la maison, « racontent » leur journée d'une petite voix et recherchent votre présence sans jamais s'imposer.\n\nIls s'entendent généralement bien avec les autres chats, et un chien qui aime les chats ne pose aucun problème à un Birman bien socialisé – chez nous, les chatons jouent chaque jour avec notre chienne Willow. Ce qu'ils n'aiment pas du tout : rester seuls longtemps."
+        }
+      },
+      {
+        "titel": {
+          "de": "Pflege und Haltung",
+          "en": "Care and keeping",
+          "fr": "Entretien et mode de vie"
+        },
+        "text": {
+          "de": "Die Fellpflege ist erfreulich unkompliziert: Ein- bis zweimal Bürsten pro Woche genügt meist, im Fellwechsel etwas öfter. Wie das am besten klappt, zeigen wir dir in unserem Beitrag zur [Fellpflege](heilige-birma-fellpflege.html).\n\nBirmas sind ruhige Wohnungskatzen, freuen sich aber über einen gesicherten Balkon oder ein Katzennetz. Weil sie so gesellig sind, geben wir unsere Kitten nur zu einer zweiten Katze oder zu Menschen ab, die überwiegend zu Hause sind – warum, liest du unter [Birma nicht allein halten](birma-nicht-allein-halten.html).",
+          "en": "Grooming is pleasantly simple: brushing once or twice a week is usually enough, a little more often during the moult.\n\nBirmans are calm indoor cats but love a secured balcony or cat netting. Because they are so sociable, we only rehome our kittens to a home with a second cat or to people who are at home most of the time.",
+          "fr": "L'entretien du pelage est agréablement simple : un à deux brossages par semaine suffisent en général, un peu plus pendant la mue.\n\nLes Birmans sont des chats d'intérieur calmes, mais ils apprécient un balcon sécurisé ou un filet de protection. Parce qu'ils sont si sociables, nous ne confions nos chatons qu'à un foyer avec un second chat ou à des personnes souvent présentes à la maison."
+        }
+      },
+      {
+        "titel": {
+          "de": "Gesundheit",
+          "en": "Health",
+          "fr": "Santé"
+        },
+        "text": {
+          "de": "Die Heilige Birma gilt als robuste Rasse. Wie jede Rassekatze hat sie aber erbliche Risiken, etwa die Herzerkrankung HCM oder Zystennieren (PKD). Seriöse Zucht heißt, offen darüber zu sprechen und gezielt zu untersuchen. Was wir bei unseren Katzen testen, steht auf unserer Seite zur [Gesundheit](gesundheit.html).\n\nEine gesunde Birma kann gut 15 Jahre alt werden – eine lange gemeinsame Zeit, über die man vor dem Einzug in Ruhe nachdenken sollte.",
+          "en": "The Sacred Birman is considered a robust breed. Like every pedigree cat, though, she carries hereditary risks such as the heart condition HCM or polycystic kidney disease (PKD). Responsible breeding means talking about them openly and testing for them. What we test our cats for is set out on our [health](gesundheit.html) page.\n\nA healthy Birman can easily live to 15 – a long time together that is worth thinking through calmly before a kitten moves in.",
+          "fr": "Le Sacré de Birmanie est considéré comme une race robuste. Comme tout chat de race, il présente toutefois des risques héréditaires, par exemple la maladie cardiaque HCM ou la polykystose rénale (PKD). Un élevage sérieux en parle ouvertement et les dépiste. Ce que nous testons chez nos chats est détaillé sur notre page [santé](gesundheit.html).\n\nUn Birman en bonne santé peut tout à fait atteindre 15 ans – une longue vie commune, à laquelle il vaut la peine de réfléchir sereinement avant l'arrivée d'un chaton."
+        }
+      },
+      {
+        "titel": {
+          "de": "Passt eine Birma zu dir?",
+          "en": "Is a Birman right for you?",
+          "fr": "Un Birman est-il fait pour vous ?"
+        },
+        "text": {
+          "de": "Eine Birma passt zu dir, wenn du dir eine sanfte, anhängliche Katze wünschst, die am Familienleben teilnimmt – und wenn du ihr Gesellschaft bieten kannst.\n\nUnsere aktuellen Kitten findest du auf der Seite [Kitten](kitten.html). Ist gerade keines frei oder möchtest du für den nächsten Wurf vormerken lassen, trag dich gern auf unsere [Warteliste](warteliste.html) ein.",
+          "en": "A Birman suits you if you would like a gentle, affectionate cat who takes part in family life – and if you can offer her company.\n\nYou will find our current kittens on the [kittens](kitten.html) page. If none is available right now, or you would like to reserve a place for the next litter, do join our [waiting list](warteliste.html).",
+          "fr": "Un Birman vous correspond si vous souhaitez un chat doux et affectueux qui participe à la vie de famille – et si vous pouvez lui offrir de la compagnie.\n\nVous trouverez nos chatons actuels sur la page [chatons](kitten.html). Si aucun n'est disponible en ce moment, ou si vous souhaitez vous positionner pour la prochaine portée, inscrivez-vous sur notre [liste d'attente](warteliste.html)."
+        }
+      }
+    ]
+  },
+  "fragen": {
+    "titel": {
+      "de": "Häufige Fragen",
+      "en": "Frequently asked questions",
+      "fr": "Questions fréquentes"
+    },
+    "einleitung": {
+      "de": "Hier beantworten wir, was uns Interessenten am häufigsten fragen. Fehlt deine Frage? Dann schreib uns einfach.",
+      "en": "Here we answer the questions enquirers ask us most often. Can't find yours? Just drop us a message.",
+      "fr": "Voici les réponses aux questions que l'on nous pose le plus souvent. Vous ne trouvez pas la vôtre ? Écrivez-nous simplement."
+    },
+    "eintraege": [
+      {
+        "frage": {
+          "de": "Was kostet ein Kitten bei euch?",
+          "en": "How much does a kitten cost?",
+          "fr": "Combien coûte un chaton ?"
+        },
+        "antwort": {
+          "de": "Ein Kitten kostet 1.100 €. Darin enthalten sind der Stammbaum des Felidae e.V., die erste Impfung, der Chip, mehrfache Entwurmung, eine Versicherung bis einschließlich der 14. Lebenswoche, die tierärztliche Untersuchung und ein Startpaket für die ersten Tage. Die Reservierungsgebühr von 300 € wird auf den Kaufpreis angerechnet.",
+          "en": "A kitten costs 1,100 €. This includes the Felidae e.V. pedigree, the first vaccination, microchip, repeated deworming, insurance up to and including the 14th week of life, a veterinary check and a starter pack for the first few days. The 300 € reservation fee goes towards the purchase price.",
+          "fr": "Un chaton coûte 1 100 €. Ce prix comprend le pedigree du Felidae e.V., la première vaccination, la puce, plusieurs vermifugations, une assurance jusqu'à la 14e semaine incluse, l'examen vétérinaire et un kit de départ pour les premiers jours. Les 300 € de frais de réservation sont déduits du prix d'achat."
+        }
+      },
+      {
+        "frage": {
+          "de": "Ab wann darf ein Kitten ausziehen?",
+          "en": "When can a kitten move out?",
+          "fr": "À quel âge un chaton peut-il partir ?"
+        },
+        "antwort": {
+          "de": "Frühestens mit zwölf Wochen. Bis dahin lernen die Kleinen bei Mama, Geschwistern, Hündin Willow und Zweitkatze Hailey alles, was sie für ein entspanntes Katzenleben brauchen. Den Auszugstermin des aktuellen Wurfs findest du auf der Seite [Kitten](kitten.html).",
+          "en": "At twelve weeks at the earliest. Until then the little ones learn everything they need for a relaxed cat life from their mum, their siblings, Willow the dog and our second cat Hailey. The moving date of the current litter is on our [kittens](kitten.html) page.",
+          "fr": "À douze semaines au plus tôt. D'ici là, les petits apprennent auprès de leur mère, de leurs frères et sœurs, de notre chienne Willow et de notre chatte Hailey tout ce dont ils ont besoin pour une vie de chat sereine. La date de départ de la portée actuelle figure sur la page [chatons](kitten.html)."
+        }
+      },
+      {
+        "frage": {
+          "de": "Was bekommt mein Kitten mit?",
+          "en": "What does my kitten come with?",
+          "fr": "Qu'est-ce que mon chaton emporte ?"
+        },
+        "antwort": {
+          "de": "Den offiziellen Stammbaum, den Impfpass samt Chipnummer, den EU-Heimtierausweis, das gewohnte Futter für die ersten Tage und eine Decke mit dem Geruch von Mama und Geschwistern. Der Versicherungsschutz läuft bis einschließlich der 14. Lebenswoche.",
+          "en": "The official pedigree, the vaccination record including the chip number, the EU pet passport, the food they are used to for the first few days, and a blanket carrying the scent of mum and siblings. Insurance cover runs up to and including the 14th week of life.",
+          "fr": "Le pedigree officiel, le carnet de vaccination avec le numéro de puce, le passeport européen pour animal de compagnie, la nourriture habituelle pour les premiers jours et une couverture imprégnée de l'odeur de sa mère et de ses frères et sœurs. L'assurance court jusqu'à la 14e semaine incluse."
+        }
+      },
+      {
+        "frage": {
+          "de": "Kann ich die Kitten vorher besuchen?",
+          "en": "Can I visit the kittens beforehand?",
+          "fr": "Puis-je rendre visite aux chatons avant ?"
+        },
+        "antwort": {
+          "de": "Sehr gern – ein Besuch bei uns in Trier ist der beste Weg, sich kennenzulernen. Ist der Weg zu weit, klappt ein erstes Kennenlernen auch per Zoom oder Telefon.",
+          "en": "Absolutely – a visit to us in Trier is the best way to get to know each other. If the journey is too far, a first meeting over Zoom or by phone works too.",
+          "fr": "Avec plaisir – une visite chez nous à Trèves est la meilleure façon de faire connaissance. Si le trajet est trop long, un premier échange par Zoom ou par téléphone fonctionne aussi."
+        }
+      },
+      {
+        "frage": {
+          "de": "Wie läuft eine Reservierung ab?",
+          "en": "How does a reservation work?",
+          "fr": "Comment se passe une réservation ?"
+        },
+        "antwort": {
+          "de": "Wenn die Chemie stimmt und ihr euch sicher seid, reservieren wir das Kitten fest für euch. Die Reservierungsgebühr beträgt 300 € und fließt in den Kaufpreis ein. Es gibt immer einen schriftlichen Kaufvertrag. Den ganzen Ablauf beschreiben wir unter [Vermittlung & Preis](vermittlung.html).",
+          "en": "If the chemistry is right and you are sure, we reserve the kitten for you. The reservation fee is 300 € and goes towards the purchase price. There is always a written contract. We describe the whole process under [rehoming & price](vermittlung.html).",
+          "fr": "Si le courant passe et que vous êtes sûrs de vous, nous vous réservons le chaton. Les frais de réservation s'élèvent à 300 € et sont déduits du prix d'achat. Un contrat de vente écrit est toujours établi. Tout le déroulement est décrit sur la page [adoption & prix](vermittlung.html)."
+        }
+      },
+      {
+        "frage": {
+          "de": "Warum gebt ihr keine Einzelkatzen ab?",
+          "en": "Why don't you rehome kittens as single cats?",
+          "fr": "Pourquoi ne confiez-vous pas de chaton seul ?"
+        },
+        "antwort": {
+          "de": "Birmas sind ausgesprochen menschenbezogen und gesellig. Allein langweilen sie sich schnell und werden unglücklich. Deshalb ziehen unsere Kitten nur zu einer zweiten Katze. Mehr dazu im Beitrag [Warum Birmas nicht allein leben sollten](birma-nicht-allein-halten.html).",
+          "en": "Birmans are remarkably people-oriented and sociable. On their own they quickly get bored and unhappy. That is why our kittens only move to a home with a second cat.",
+          "fr": "Les Birmans sont très attachés à leurs humains et très sociables. Seuls, ils s'ennuient vite et deviennent malheureux. C'est pourquoi nos chatons ne rejoignent qu'un foyer avec un second chat."
+        }
+      },
+      {
+        "frage": {
+          "de": "Müssen die Kitten kastriert werden?",
+          "en": "Do the kittens have to be neutered?",
+          "fr": "Les chatons doivent-ils être stérilisés ?"
+        },
+        "antwort": {
+          "de": "Ja. Unsere Kitten ziehen als Liebhabertiere aus, und für alle gilt eine Kastrationspflicht. Den passenden Zeitpunkt besprichst du am besten mit deinem Tierarzt.",
+          "en": "Yes. Our kittens leave as pets, and neutering is required for all of them. The right time is best discussed with your vet.",
+          "fr": "Oui. Nos chatons partent comme chats de compagnie, et la stérilisation est obligatoire pour tous. Le bon moment se décide au mieux avec votre vétérinaire."
+        }
+      },
+      {
+        "frage": {
+          "de": "Dürfen Birmas nach draußen?",
+          "en": "Can Birmans go outside?",
+          "fr": "Les Birmans peuvent-ils sortir ?"
+        },
+        "antwort": {
+          "de": "Bei uns gilt: Wohnungshaltung oder ausschließlich gesicherter Freigang, also etwa ein gesicherter Balkon oder ein eingezäunter Garten. Birmas sind ruhige, vertrauensvolle Katzen, die mit Straßenverkehr und fremden Tieren schlecht zurechtkommen.",
+          "en": "Our rule is: indoor living or secured outdoor access only, such as a secured balcony or a fenced garden. Birmans are calm, trusting cats who cope poorly with traffic and unfamiliar animals.",
+          "fr": "Notre règle : vie en intérieur ou accès extérieur uniquement sécurisé, par exemple un balcon protégé ou un jardin clôturé. Les Birmans sont des chats calmes et confiants, peu armés face à la circulation et aux animaux inconnus."
+        }
+      },
+      {
+        "frage": {
+          "de": "Vertragen sich eure Kitten mit Hunden?",
+          "en": "Do your kittens get on with dogs?",
+          "fr": "Vos chatons s'entendent-ils avec les chiens ?"
+        },
+        "antwort": {
+          "de": "Unsere Kitten wachsen mit Hündin Willow und Zweitkatze Hailey auf und kennen Hunde deshalb von klein auf. Ein katzenfreundlicher Hund ist für sie in aller Regel kein Problem. Worauf es beim Zusammenführen ankommt, erklären wir im Beitrag [Heilige Birma und Hund](heilige-birma-und-hund.html).",
+          "en": "Our kittens grow up with Willow the dog and our second cat Hailey, so they know dogs from an early age. A cat-friendly dog is usually no problem for them at all.",
+          "fr": "Nos chatons grandissent avec notre chienne Willow et notre chatte Hailey : ils connaissent donc les chiens dès leur plus jeune âge. Un chien qui aime les chats ne pose en général aucun problème."
+        }
+      },
+      {
+        "frage": {
+          "de": "Gebt ihr Kitten auch nach Luxemburg oder ins Saarland ab?",
+          "en": "Do you rehome kittens to Luxembourg or the Saarland?",
+          "fr": "Confiez-vous des chatons au Luxembourg ou en Sarre ?"
+        },
+        "antwort": {
+          "de": "Ja, unsere Kitten ziehen in die ganze Region rund um Trier, auch nach Luxemburg und ins Saarland. Für den Umzug über eine Landesgrenze gelten die EU-Regeln für Haustiere. Die Einzelheiten klären wir gemeinsam mit euch und unserem Tierarzt, bevor das Kitten auszieht.",
+          "en": "Yes, our kittens move all over the region around Trier, including Luxembourg and the Saarland. Moving a pet across a national border is subject to the EU rules for pets. We clarify the details together with you and our vet before the kitten moves out.",
+          "fr": "Oui, nos chatons partent dans toute la région autour de Trèves, y compris au Luxembourg et en Sarre. Le passage d'une frontière avec un animal de compagnie est soumis aux règles européennes. Nous en clarifions les détails avec vous et notre vétérinaire avant le départ du chaton."
+        }
+      },
+      {
+        "frage": {
+          "de": "Wann gibt es den nächsten Wurf?",
+          "en": "When is the next litter?",
+          "fr": "Quand aura lieu la prochaine portée ?"
+        },
+        "antwort": {
+          "de": "Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir, sobald sich genug Interessenten auf unserer [Warteliste](warteliste.html) gemeldet haben – die Warteliste entscheidet also mit, wann es weitergeht.",
+          "en": "We have at most one litter a year. We plan the next one once enough people have joined our [waiting list](warteliste.html) – so the waiting list helps decide when things continue.",
+          "fr": "Nous avons au maximum une portée par an. Nous planifions la suivante dès que suffisamment de personnes se sont inscrites sur notre [liste d'attente](warteliste.html) – la liste d'attente contribue donc à décider de la suite."
+        }
+      },
+      {
+        "frage": {
+          "de": "Seid ihr Mitglied in einem Zuchtverband?",
+          "en": "Are you a member of a breeding association?",
+          "fr": "Êtes-vous membre d'une fédération d'élevage ?"
+        },
+        "antwort": {
+          "de": "Ja, wir sind eingetragenes Mitglied im Felidae e.V. und züchten nach dessen Zucht- und Registrierordnung. Jedes Kitten zieht mit einem anerkannten Stammbaum aus.",
+          "en": "Yes, we are a registered member of Felidae e.V. and breed under its breeding and registration rules. Every kitten leaves with a recognised pedigree.",
+          "fr": "Oui, nous sommes membres inscrits du Felidae e.V. et élevons selon son règlement d'élevage et d'enregistrement. Chaque chaton part avec un pedigree reconnu."
+        }
+      },
+      {
+        "frage": {
+          "de": "Sind die Elterntiere auf Krankheiten getestet?",
+          "en": "Are the parents tested for diseases?",
+          "fr": "Les parents sont-ils testés ?"
+        },
+        "antwort": {
+          "de": "Ja. Yoselin und Luigi sind auf HCM, PKD und FeLV/FIV negativ getestet und haben Blutgruppe A. Bei ihren Eltern wurde zusätzlich ein Herzultraschall beim Kardiologen gemacht, so wie es die Zuchtordnung vorsieht. Details stehen auf unserer Seite zur [Gesundheit](gesundheit.html).",
+          "en": "Yes. Yoselin and Luigi have tested negative for HCM, PKD and FeLV/FIV and are blood group A. Their own parents additionally had a cardiac ultrasound with a cardiologist, as the breeding rules require. Details are on our [health](gesundheit.html) page.",
+          "fr": "Oui. Yoselin et Luigi sont testés négatifs HCM, PKD et FeLV/FIV et sont de groupe sanguin A. Leurs propres parents ont en outre passé une échographie cardiaque chez un cardiologue, comme le prévoit le règlement d'élevage. Les détails figurent sur notre page [santé](gesundheit.html)."
+        }
+      },
+      {
+        "frage": {
+          "de": "Was passiert, wenn ich meine Katze später nicht mehr halten kann?",
+          "en": "What if I can no longer keep my cat later on?",
+          "fr": "Et si je ne peux plus garder mon chat plus tard ?"
+        },
+        "antwort": {
+          "de": "Dann ist sie bei uns jederzeit willkommen. Muss eine unserer Katzen irgendwann abgegeben werden, geht sie immer zuerst zurück an uns. Tierheime sind für uns absolut tabu.",
+          "en": "Then she is always welcome back with us. If one of our cats ever has to be rehomed, she always comes back to us first. Animal shelters are absolutely out of the question.",
+          "fr": "Il sera toujours le bienvenu chez nous. Si l'un de nos chats doit un jour être replacé, il revient toujours d'abord chez nous. Les refuges sont absolument exclus."
+        }
+      }
+    ]
+  },
+  "warteliste": {
+    "titel": {
+      "de": "Die Warteliste",
+      "en": "The waiting list",
+      "fr": "La liste d'attente"
+    },
+    "einleitung": {
+      "de": "Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir erst, wenn genug Menschen ernsthaft auf ein Kitten warten. Deine Anfrage auf der Warteliste entscheidet also wirklich mit, wann es bei uns wieder wuselt.",
+      "en": "We have at most one litter a year, and we only plan the next one once enough people are genuinely waiting for a kitten. So your place on the waiting list really does help decide when kittens tumble through our home again.",
+      "fr": "Nous avons au maximum une portée par an, et nous ne planifions la suivante que lorsque suffisamment de personnes attendent sérieusement un chaton. Votre inscription sur la liste d'attente contribue donc vraiment à décider du moment où des chatons gambaderont de nouveau chez nous."
+    },
+    "whatsappText": {
+      "de": "Hallo, wir möchten uns gern auf eure Warteliste für einen der nächsten Würfe setzen lassen.",
+      "en": "Hello, we would like to join your waiting list for one of your next litters.",
+      "fr": "Bonjour, nous aimerions nous inscrire sur votre liste d'attente pour l'une de vos prochaines portées."
+    },
+    "schritteTitel": {
+      "de": "So funktioniert es",
+      "en": "How it works",
+      "fr": "Comment ça marche"
+    },
+    "schritte": [
+      {
+        "titel": {
+          "de": "Schreib uns",
+          "en": "Write to us",
+          "fr": "Écrivez-nous"
+        },
+        "text": {
+          "de": "Per WhatsApp oder E-Mail, ganz unverbindlich. Erzähl uns kurz von dir und davon, was du dir wünschst.",
+          "en": "On WhatsApp or by email, with no obligation. Tell us a little about yourself and what you are hoping for.",
+          "fr": "Sur WhatsApp ou par e-mail, sans engagement. Parlez-nous un peu de vous et de ce que vous souhaitez."
+        }
+      },
+      {
+        "titel": {
+          "de": "Wir lernen uns kennen",
+          "en": "We get to know each other",
+          "fr": "Faisons connaissance"
+        },
+        "text": {
+          "de": "Bei einem Telefonat, per Zoom oder bei einem Besuch in Trier. Wir möchten wissen, wo unsere Kitten einmal leben – und du sollst wissen, wo sie herkommen.",
+          "en": "On the phone, over Zoom or during a visit to Trier. We want to know where our kittens will live – and you should know where they come from.",
+          "fr": "Par téléphone, par Zoom ou lors d'une visite à Trèves. Nous voulons savoir où vivront nos chatons – et vous devez savoir d'où ils viennent."
+        }
+      },
+      {
+        "titel": {
+          "de": "Du stehst auf der Liste",
+          "en": "You are on the list",
+          "fr": "Vous êtes sur la liste"
+        },
+        "text": {
+          "de": "Damit bist du vorgemerkt. Verbindlich wird es erst bei einer Reservierung, und erst dann fällt die Reservierungsgebühr an.",
+          "en": "That reserves your place. Nothing becomes binding until a reservation, and only then is the reservation fee due.",
+          "fr": "Votre place est ainsi retenue. Rien ne devient ferme avant une réservation, et ce n'est qu'à ce moment-là que les frais de réservation sont dus."
+        }
+      },
+      {
+        "titel": {
+          "de": "Wir melden uns",
+          "en": "We get in touch",
+          "fr": "Nous vous recontactons"
+        },
+        "text": {
+          "de": "Sobald ein Wurf geplant ist und sobald die Kitten da sind, hörst du als Erstes von uns – mit Fotos, versprochen.",
+          "en": "As soon as a litter is planned and as soon as the kittens arrive, you will be among the first to hear – with photos, we promise.",
+          "fr": "Dès qu'une portée est prévue et dès que les chatons sont nés, vous êtes parmi les premiers informés – photos à l'appui, promis."
+        }
+      }
+    ],
+    "abschnitte": [
+      {
+        "titel": {
+          "de": "Was du uns schreiben solltest",
+          "en": "What to tell us",
+          "fr": "Ce qu'il faut nous écrire"
+        },
+        "text": {
+          "de": "Je mehr wir von dir wissen, desto besser können wir einschätzen, welches Kitten zu dir passt:\n\n- wie du wohnst und ob es einen gesicherten Balkon oder Garten gibt\n- welche Tiere schon bei dir leben – denk daran, dass unsere Kitten nur zu einer zweiten Katze ziehen\n- ob Kinder im Haushalt leben\n- wie viel Zeit du zu Hause verbringst\n- ob du dir ein Weibchen oder einen Kater wünschst und ob du eine Lieblingsfarbe hast\n- ab wann ein Kitten bei dir einziehen könnte",
+          "en": "The more we know about you, the better we can judge which kitten suits you:\n\n- how you live and whether there is a secured balcony or garden\n- which animals already live with you – remember that our kittens only move to a home with a second cat\n- whether there are children in the household\n- how much time you spend at home\n- whether you would like a female or a male and whether you have a favourite colour\n- from when a kitten could move in with you",
+          "fr": "Plus nous en savons sur vous, mieux nous pouvons juger quel chaton vous correspond :\n\n- votre logement, et s'il dispose d'un balcon ou d'un jardin sécurisé\n- les animaux qui vivent déjà chez vous – nos chatons ne partent que dans un foyer avec un second chat\n- s'il y a des enfants dans le foyer\n- le temps que vous passez à la maison\n- si vous souhaitez une femelle ou un mâle, et si vous avez une couleur préférée\n- à partir de quand un chaton pourrait arriver chez vous"
+        }
+      },
+      {
+        "titel": {
+          "de": "Gut zu wissen",
+          "en": "Good to know",
+          "fr": "Bon à savoir"
+        },
+        "text": {
+          "de": "Unsere Kitten ziehen frühestens mit zwölf Wochen aus, mit Stammbaum, Impfpass, Chip und EU-Heimtierausweis. Was ein Kitten kostet und wie die Vermittlung im Einzelnen abläuft, erklären wir unter [Vermittlung & Preis](vermittlung.html). Antworten auf weitere Fragen findest du unter [Häufige Fragen](fragen.html).",
+          "en": "Our kittens leave at twelve weeks at the earliest, with pedigree, vaccination record, microchip and EU pet passport. What a kitten costs and how rehoming works in detail is explained under [rehoming & price](vermittlung.html). Answers to further questions are in our [FAQ](fragen.html).",
+          "fr": "Nos chatons partent à douze semaines au plus tôt, avec pedigree, carnet de vaccination, puce et passeport européen. Le prix d'un chaton et le déroulement détaillé de l'adoption sont expliqués sur la page [adoption & prix](vermittlung.html). D'autres réponses vous attendent dans nos [questions fréquentes](fragen.html)."
+        }
+      }
+    ]
+  },
+  "ratgeber": [
+    {
+      "datei": "heilige-birma-charakter.html",
+      "titel": {
+        "de": "Der Charakter der Heiligen Birma"
+      },
+      "seitentitel": "Heilige Birma Charakter: So ist sie wirklich | Praia da Ursa",
+      "beschreibung": "Anhänglich, sanft, verspielt: Wie die Heilige Birma wirklich ist, was sie mag, was sie gar nicht mag und für wen sie die richtige Katze ist.",
+      "kurztext": {
+        "de": "Anhänglich, sanft und verspielt – und gar nicht gern allein. Was die Birma ausmacht."
+      },
+      "thema": {
+        "de": "Charakter"
+      },
+      "datum": "2026-10-11",
+      "verwandt": [
+        "birma-nicht-allein-halten.html",
+        "heilige-birma-und-hund.html"
+      ]
+    },
+    {
+      "datei": "heilige-birma-farben.html",
+      "titel": {
+        "de": "Die Farben der Heiligen Birma"
+      },
+      "seitentitel": "Heilige Birma Farben: Seal, Blue & Tabby | Praia da Ursa",
+      "beschreibung": "Seal Point, Blue Tabby Point, Silver: Welche Farben es bei der Heiligen Birma gibt, was die Namen bedeuten und woran man sie beim Kitten erkennt.",
+      "kurztext": {
+        "de": "Seal, Blue, Tabby, Silver – was hinter den Farbnamen steckt und woran man sie erkennt."
+      },
+      "thema": {
+        "de": "Farben"
+      },
+      "datum": "2026-10-11",
+      "verwandt": [
+        "birma-kitten-weiss-geboren.html",
+        "heilige-birma-charakter.html"
+      ]
+    },
+    {
+      "datei": "heilige-birma-und-hund.html",
+      "titel": {
+        "de": "Heilige Birma und Hund"
+      },
+      "seitentitel": "Heilige Birma und Hund: Passt das? | Praia da Ursa",
+      "beschreibung": "Kann eine Heilige Birma mit Hund zusammenleben? Unsere Erfahrung mit Hündin Willow und eine Anleitung, wie das Zusammenführen Schritt für Schritt gelingt.",
+      "kurztext": {
+        "de": "Unsere Kitten wachsen mit Hündin Willow auf. So klappt das Zusammenleben mit Hund."
+      },
+      "thema": {
+        "de": "Zusammenleben"
+      },
+      "datum": "2026-10-11",
+      "verwandt": [
+        "heilige-birma-charakter.html",
+        "kitten-einzug-checkliste.html"
+      ]
+    },
+    {
+      "datei": "heilige-birma-kosten.html",
+      "titel": {
+        "de": "Was kostet eine Heilige Birma?"
+      },
+      "seitentitel": "Was kostet eine Heilige Birma? | Praia da Ursa",
+      "beschreibung": "Was eine Heilige Birma kostet: unser Kaufpreis und was darin steckt, die Erstausstattung und die laufenden Kosten – ehrlich und ohne Schönrechnen.",
+      "kurztext": {
+        "de": "Kaufpreis, Erstausstattung, laufende Kosten: was eine Birma wirklich kostet."
+      },
+      "thema": {
+        "de": "Kosten"
+      },
+      "datum": "2026-10-11",
+      "verwandt": [
+        "serioesen-zuechter-erkennen.html",
+        "kitten-einzug-checkliste.html"
+      ]
+    },
+    {
+      "datei": "serioesen-zuechter-erkennen.html",
+      "titel": {
+        "de": "Seriösen Züchter erkennen"
+      },
+      "seitentitel": "Seriösen Katzenzüchter erkennen: 10 Fragen | Praia da Ursa",
+      "beschreibung": "Woran du eine seriöse Birma-Zucht erkennst: zehn Fragen, die du vor dem Kauf stellen solltest, und die Warnzeichen, bei denen du besser gehst.",
+      "kurztext": {
+        "de": "Zehn Fragen vor dem Kauf – und die Warnzeichen, bei denen du besser gehst."
+      },
+      "thema": {
+        "de": "Kitten kaufen"
+      },
+      "datum": "2026-10-11",
+      "verwandt": [
+        "heilige-birma-kosten.html",
+        "kitten-abgabealter-12-wochen.html"
+      ]
+    },
+    {
+      "datei": "kitten-einzug-checkliste.html",
+      "titel": {
+        "de": "Checkliste für den Kitten-Einzug"
+      },
+      "seitentitel": "Kitten Erstausstattung: Checkliste | Praia da Ursa",
+      "beschreibung": "Was du vor dem Einzug deines Kittens brauchst und wie die ersten Tage gelingen: unsere Checkliste für Erstausstattung, Sicherheit und Eingewöhnung.",
+      "kurztext": {
+        "de": "Was du vorbereiten solltest und wie die ersten Tage mit deinem Kitten gelingen."
+      },
+      "thema": {
+        "de": "Einzug"
+      },
+      "datum": "2026-10-11",
+      "verwandt": [
+        "heilige-birma-kosten.html",
+        "wohnungskatze-oder-freigang.html"
+      ]
+    },
+    {
+      "datei": "birma-nicht-allein-halten.html",
+      "titel": {
+        "de": "Warum Birmas nicht allein leben sollten"
+      },
+      "seitentitel": "Birma allein halten? Warum eine Zweitkatze | Praia da Ursa",
+      "beschreibung": "Warum die Heilige Birma Gesellschaft braucht, was Menschen allein nicht ersetzen können und wie du die passende Zweitkatze für deine Birma findest.",
+      "kurztext": {
+        "de": "Warum wir keine Einzelkatzen abgeben und wie du die passende Zweitkatze findest."
+      },
+      "thema": {
+        "de": "Haltung"
+      },
+      "datum": "2026-10-11",
+      "verwandt": [
+        "heilige-birma-charakter.html",
+        "heilige-birma-kosten.html"
+      ]
+    },
+    {
+      "datei": "heilige-birma-fellpflege.html",
+      "titel": {
+        "de": "Fellpflege bei der Heiligen Birma"
+      },
+      "seitentitel": "Heilige Birma Fellpflege: So geht's richtig | Praia da Ursa",
+      "beschreibung": "Wie oft du eine Heilige Birma bürsten solltest, welches Werkzeug sich eignet und worauf es im Fellwechsel ankommt – dazu Krallen, Augen, Ohren und Zähne.",
+      "kurztext": {
+        "de": "Wie oft bürsten, welches Werkzeug – und warum die Birma pflegeleichter ist als gedacht."
+      },
+      "thema": {
+        "de": "Pflege"
+      },
+      "datum": "2026-10-11",
+      "verwandt": [
+        "heilige-birma-farben.html",
+        "kitten-einzug-checkliste.html"
+      ]
+    },
+    {
+      "datei": "wohnungskatze-oder-freigang.html",
+      "titel": {
+        "de": "Wohnung oder gesicherter Freigang?"
+      },
+      "seitentitel": "Birma als Wohnungskatze oder Freigang? | Praia da Ursa",
+      "beschreibung": "Warum die Heilige Birma keine Freigängerin ist, wie gesicherter Freigang auf Balkon und im Garten gelingt und wie du die Wohnung katzengerecht gestaltest.",
+      "kurztext": {
+        "de": "Warum die Birma keine Freigängerin ist – und wie Balkon, Netz und Wohnung glücklich machen."
+      },
+      "thema": {
+        "de": "Haltung"
+      },
+      "datum": "2026-10-11",
+      "verwandt": [
+        "kitten-einzug-checkliste.html",
+        "birma-nicht-allein-halten.html"
+      ]
+    },
+    {
+      "datei": "birma-kitten-weiss-geboren.html",
+      "titel": {
+        "de": "Warum Birma-Kitten weiß geboren werden"
+      },
+      "seitentitel": "Warum Birma-Kitten weiß geboren werden | Praia da Ursa",
+      "beschreibung": "Birma-Kitten kommen fast weiß zur Welt und färben sich erst nach und nach. Wir erklären, warum das so ist und wann die Farbe vollständig entwickelt ist.",
+      "kurztext": {
+        "de": "Fast weiß zur Welt, farbig erst nach Monaten: das Geheimnis der Point-Färbung."
+      },
+      "thema": {
+        "de": "Farben"
+      },
+      "datum": "2026-10-11",
+      "verwandt": [
+        "heilige-birma-farben.html",
+        "heilige-birma-charakter.html"
+      ]
+    },
+    {
+      "datei": "birma-gesundheitstests.html",
+      "titel": {
+        "de": "Gesundheitstests bei der Birma"
+      },
+      "seitentitel": "Birma Gesundheit: HCM, PKD, Blutgruppe | Praia da Ursa",
+      "beschreibung": "HCM, PKD, FeLV/FIV und Blutgruppe verständlich erklärt: welche Gesundheitstests bei der Heiligen Birma wichtig sind und wonach du fragen solltest.",
+      "kurztext": {
+        "de": "HCM, PKD, FeLV/FIV und Blutgruppe – verständlich erklärt, und wonach du fragen solltest."
+      },
+      "thema": {
+        "de": "Gesundheit"
+      },
+      "datum": "2026-10-11",
+      "verwandt": [
+        "serioesen-zuechter-erkennen.html",
+        "kitten-abgabealter-12-wochen.html"
+      ]
+    },
+    {
+      "datei": "kitten-abgabealter-12-wochen.html",
+      "titel": {
+        "de": "Warum ein Kitten erst mit 12 Wochen auszieht"
+      },
+      "seitentitel": "Kitten Abgabealter: Warum 12 Wochen? | Praia da Ursa",
+      "beschreibung": "Warum ein Rassekitten frühestens mit zwölf Wochen ausziehen sollte: was es bis dahin von Mutter und Geschwistern lernt und warum früher keine gute Idee ist.",
+      "kurztext": {
+        "de": "Was Kitten bis zur zwölften Woche lernen – und warum früher keine gute Idee ist."
+      },
+      "thema": {
+        "de": "Kitten kaufen"
+      },
+      "datum": "2026-10-11",
+      "verwandt": [
+        "serioesen-zuechter-erkennen.html",
+        "kitten-einzug-checkliste.html"
+      ]
+    }
+  ],
+  "ratgeberSeite": {
+    "titel": {
+      "de": "Ratgeber"
+    },
+    "einleitung": {
+      "de": "Was wir über die Heilige Birma wissen und mit Yoselin und unseren Kitten jeden Tag erleben – für alle, die überlegen, ob eine Birma zu ihnen passt, und für alle, bei denen schon eine eingezogen ist."
+    }
+  },
   "zucht": {
     "name": "Praia da Ursa",
     "untertitel": {
@@ -726,6 +1342,830 @@ const INHALTE = {
       }
     }
   ],
+  "zusatzseiten": [
+    {
+      "datei": "heilige-birma.html",
+      "sprachen": [
+        "de",
+        "en",
+        "fr"
+      ]
+    },
+    {
+      "datei": "fragen.html",
+      "sprachen": [
+        "de",
+        "en",
+        "fr"
+      ],
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Was kostet ein Kitten bei euch?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ein Kitten kostet 1.100 €. Darin enthalten sind der Stammbaum des Felidae e.V., die erste Impfung, der Chip, mehrfache Entwurmung, eine Versicherung bis einschließlich der 14. Lebenswoche, die tierärztliche Untersuchung und ein Startpaket für die ersten Tage. Die Reservierungsgebühr von 300 € wird auf den Kaufpreis angerechnet."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Ab wann darf ein Kitten ausziehen?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Frühestens mit zwölf Wochen. Bis dahin lernen die Kleinen bei Mama, Geschwistern, Hündin Willow und Zweitkatze Hailey alles, was sie für ein entspanntes Katzenleben brauchen. Den Auszugstermin des aktuellen Wurfs findest du auf der Seite Kitten."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Was bekommt mein Kitten mit?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Den offiziellen Stammbaum, den Impfpass samt Chipnummer, den EU-Heimtierausweis, das gewohnte Futter für die ersten Tage und eine Decke mit dem Geruch von Mama und Geschwistern. Der Versicherungsschutz läuft bis einschließlich der 14. Lebenswoche."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Kann ich die Kitten vorher besuchen?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sehr gern – ein Besuch bei uns in Trier ist der beste Weg, sich kennenzulernen. Ist der Weg zu weit, klappt ein erstes Kennenlernen auch per Zoom oder Telefon."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Wie läuft eine Reservierung ab?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Wenn die Chemie stimmt und ihr euch sicher seid, reservieren wir das Kitten fest für euch. Die Reservierungsgebühr beträgt 300 € und fließt in den Kaufpreis ein. Es gibt immer einen schriftlichen Kaufvertrag. Den ganzen Ablauf beschreiben wir unter Vermittlung & Preis."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Warum gebt ihr keine Einzelkatzen ab?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Birmas sind ausgesprochen menschenbezogen und gesellig. Allein langweilen sie sich schnell und werden unglücklich. Deshalb ziehen unsere Kitten nur zu einer zweiten Katze. Mehr dazu im Beitrag Warum Birmas nicht allein leben sollten."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Müssen die Kitten kastriert werden?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ja. Unsere Kitten ziehen als Liebhabertiere aus, und für alle gilt eine Kastrationspflicht. Den passenden Zeitpunkt besprichst du am besten mit deinem Tierarzt."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Dürfen Birmas nach draußen?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Bei uns gilt: Wohnungshaltung oder ausschließlich gesicherter Freigang, also etwa ein gesicherter Balkon oder ein eingezäunter Garten. Birmas sind ruhige, vertrauensvolle Katzen, die mit Straßenverkehr und fremden Tieren schlecht zurechtkommen."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Vertragen sich eure Kitten mit Hunden?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Unsere Kitten wachsen mit Hündin Willow und Zweitkatze Hailey auf und kennen Hunde deshalb von klein auf. Ein katzenfreundlicher Hund ist für sie in aller Regel kein Problem. Worauf es beim Zusammenführen ankommt, erklären wir im Beitrag Heilige Birma und Hund."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Gebt ihr Kitten auch nach Luxemburg oder ins Saarland ab?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ja, unsere Kitten ziehen in die ganze Region rund um Trier, auch nach Luxemburg und ins Saarland. Für den Umzug über eine Landesgrenze gelten die EU-Regeln für Haustiere. Die Einzelheiten klären wir gemeinsam mit euch und unserem Tierarzt, bevor das Kitten auszieht."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Wann gibt es den nächsten Wurf?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir, sobald sich genug Interessenten auf unserer Warteliste gemeldet haben – die Warteliste entscheidet also mit, wann es weitergeht."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Seid ihr Mitglied in einem Zuchtverband?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ja, wir sind eingetragenes Mitglied im Felidae e.V. und züchten nach dessen Zucht- und Registrierordnung. Jedes Kitten zieht mit einem anerkannten Stammbaum aus."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Sind die Elterntiere auf Krankheiten getestet?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ja. Yoselin und Luigi sind auf HCM, PKD und FeLV/FIV negativ getestet und haben Blutgruppe A. Bei ihren Eltern wurde zusätzlich ein Herzultraschall beim Kardiologen gemacht, so wie es die Zuchtordnung vorsieht. Details stehen auf unserer Seite zur Gesundheit."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Was passiert, wenn ich meine Katze später nicht mehr halten kann?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Dann ist sie bei uns jederzeit willkommen. Muss eine unserer Katzen irgendwann abgegeben werden, geht sie immer zuerst zurück an uns. Tierheime sind für uns absolut tabu."
+                }
+              }
+            ]
+          }
+        ],
+        "en": [
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much does a kitten cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A kitten costs 1,100 €. This includes the Felidae e.V. pedigree, the first vaccination, microchip, repeated deworming, insurance up to and including the 14th week of life, a veterinary check and a starter pack for the first few days. The 300 € reservation fee goes towards the purchase price."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When can a kitten move out?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "At twelve weeks at the earliest. Until then the little ones learn everything they need for a relaxed cat life from their mum, their siblings, Willow the dog and our second cat Hailey. The moving date of the current litter is on our kittens page."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does my kitten come with?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The official pedigree, the vaccination record including the chip number, the EU pet passport, the food they are used to for the first few days, and a blanket carrying the scent of mum and siblings. Insurance cover runs up to and including the 14th week of life."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I visit the kittens beforehand?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely – a visit to us in Trier is the best way to get to know each other. If the journey is too far, a first meeting over Zoom or by phone works too."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does a reservation work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If the chemistry is right and you are sure, we reserve the kitten for you. The reservation fee is 300 € and goes towards the purchase price. There is always a written contract. We describe the whole process under rehoming & price."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why don't you rehome kittens as single cats?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Birmans are remarkably people-oriented and sociable. On their own they quickly get bored and unhappy. That is why our kittens only move to a home with a second cat."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do the kittens have to be neutered?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Our kittens leave as pets, and neutering is required for all of them. The right time is best discussed with your vet."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can Birmans go outside?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our rule is: indoor living or secured outdoor access only, such as a secured balcony or a fenced garden. Birmans are calm, trusting cats who cope poorly with traffic and unfamiliar animals."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do your kittens get on with dogs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our kittens grow up with Willow the dog and our second cat Hailey, so they know dogs from an early age. A cat-friendly dog is usually no problem for them at all."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you rehome kittens to Luxembourg or the Saarland?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, our kittens move all over the region around Trier, including Luxembourg and the Saarland. Moving a pet across a national border is subject to the EU rules for pets. We clarify the details together with you and our vet before the kitten moves out."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "When is the next litter?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We have at most one litter a year. We plan the next one once enough people have joined our waiting list – so the waiting list helps decide when things continue."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are you a member of a breeding association?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, we are a registered member of Felidae e.V. and breed under its breeding and registration rules. Every kitten leaves with a recognised pedigree."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are the parents tested for diseases?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Yoselin and Luigi have tested negative for HCM, PKD and FeLV/FIV and are blood group A. Their own parents additionally had a cardiac ultrasound with a cardiologist, as the breeding rules require. Details are on our health page."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What if I can no longer keep my cat later on?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Then she is always welcome back with us. If one of our cats ever has to be rehomed, she always comes back to us first. Animal shelters are absolutely out of the question."
+                }
+              }
+            ]
+          }
+        ],
+        "fr": [
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Combien coûte un chaton ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Un chaton coûte 1 100 €. Ce prix comprend le pedigree du Felidae e.V., la première vaccination, la puce, plusieurs vermifugations, une assurance jusqu'à la 14e semaine incluse, l'examen vétérinaire et un kit de départ pour les premiers jours. Les 300 € de frais de réservation sont déduits du prix d'achat."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "À quel âge un chaton peut-il partir ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "À douze semaines au plus tôt. D'ici là, les petits apprennent auprès de leur mère, de leurs frères et sœurs, de notre chienne Willow et de notre chatte Hailey tout ce dont ils ont besoin pour une vie de chat sereine. La date de départ de la portée actuelle figure sur la page chatons."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Qu'est-ce que mon chaton emporte ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Le pedigree officiel, le carnet de vaccination avec le numéro de puce, le passeport européen pour animal de compagnie, la nourriture habituelle pour les premiers jours et une couverture imprégnée de l'odeur de sa mère et de ses frères et sœurs. L'assurance court jusqu'à la 14e semaine incluse."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Puis-je rendre visite aux chatons avant ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Avec plaisir – une visite chez nous à Trèves est la meilleure façon de faire connaissance. Si le trajet est trop long, un premier échange par Zoom ou par téléphone fonctionne aussi."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Comment se passe une réservation ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Si le courant passe et que vous êtes sûrs de vous, nous vous réservons le chaton. Les frais de réservation s'élèvent à 300 € et sont déduits du prix d'achat. Un contrat de vente écrit est toujours établi. Tout le déroulement est décrit sur la page adoption & prix."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Pourquoi ne confiez-vous pas de chaton seul ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Les Birmans sont très attachés à leurs humains et très sociables. Seuls, ils s'ennuient vite et deviennent malheureux. C'est pourquoi nos chatons ne rejoignent qu'un foyer avec un second chat."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Les chatons doivent-ils être stérilisés ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Oui. Nos chatons partent comme chats de compagnie, et la stérilisation est obligatoire pour tous. Le bon moment se décide au mieux avec votre vétérinaire."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Les Birmans peuvent-ils sortir ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Notre règle : vie en intérieur ou accès extérieur uniquement sécurisé, par exemple un balcon protégé ou un jardin clôturé. Les Birmans sont des chats calmes et confiants, peu armés face à la circulation et aux animaux inconnus."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Vos chatons s'entendent-ils avec les chiens ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nos chatons grandissent avec notre chienne Willow et notre chatte Hailey : ils connaissent donc les chiens dès leur plus jeune âge. Un chien qui aime les chats ne pose en général aucun problème."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Confiez-vous des chatons au Luxembourg ou en Sarre ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Oui, nos chatons partent dans toute la région autour de Trèves, y compris au Luxembourg et en Sarre. Le passage d'une frontière avec un animal de compagnie est soumis aux règles européennes. Nous en clarifions les détails avec vous et notre vétérinaire avant le départ du chaton."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quand aura lieu la prochaine portée ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Nous avons au maximum une portée par an. Nous planifions la suivante dès que suffisamment de personnes se sont inscrites sur notre liste d'attente – la liste d'attente contribue donc à décider de la suite."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Êtes-vous membre d'une fédération d'élevage ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Oui, nous sommes membres inscrits du Felidae e.V. et élevons selon son règlement d'élevage et d'enregistrement. Chaque chaton part avec un pedigree reconnu."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Les parents sont-ils testés ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Oui. Yoselin et Luigi sont testés négatifs HCM, PKD et FeLV/FIV et sont de groupe sanguin A. Leurs propres parents ont en outre passé une échographie cardiaque chez un cardiologue, comme le prévoit le règlement d'élevage. Les détails figurent sur notre page santé."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Et si je ne peux plus garder mon chat plus tard ?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Il sera toujours le bienvenu chez nous. Si l'un de nos chats doit un jour être replacé, il revient toujours d'abord chez nous. Les refuges sont absolument exclus."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "datei": "warteliste.html",
+      "sprachen": [
+        "de",
+        "en",
+        "fr"
+      ]
+    },
+    {
+      "datei": "ratgeber.html",
+      "sprachen": [
+        "de"
+      ]
+    },
+    {
+      "datei": "heilige-birma-charakter.html",
+      "sprachen": [
+        "de"
+      ],
+      "eltern": "ratgeber.html",
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Heilige Birma Charakter: So ist sie wirklich",
+            "description": "Anhänglich, sanft, verspielt: Wie die Heilige Birma wirklich ist, was sie mag, was sie gar nicht mag und für wen sie die richtige Katze ist.",
+            "inLanguage": "de",
+            "datePublished": "2026-10-11",
+            "dateModified": "2026-10-11",
+            "mainEntityOfPage": "https://praiadaursa.de/heilige-birma-charakter.html",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datei": "heilige-birma-farben.html",
+      "sprachen": [
+        "de"
+      ],
+      "eltern": "ratgeber.html",
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Heilige Birma Farben: Seal, Blue & Tabby",
+            "description": "Seal Point, Blue Tabby Point, Silver: Welche Farben es bei der Heiligen Birma gibt, was die Namen bedeuten und woran man sie beim Kitten erkennt.",
+            "inLanguage": "de",
+            "datePublished": "2026-10-11",
+            "dateModified": "2026-10-11",
+            "mainEntityOfPage": "https://praiadaursa.de/heilige-birma-farben.html",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datei": "heilige-birma-und-hund.html",
+      "sprachen": [
+        "de"
+      ],
+      "eltern": "ratgeber.html",
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Heilige Birma und Hund: Passt das?",
+            "description": "Kann eine Heilige Birma mit Hund zusammenleben? Unsere Erfahrung mit Hündin Willow und eine Anleitung, wie das Zusammenführen Schritt für Schritt gelingt.",
+            "inLanguage": "de",
+            "datePublished": "2026-10-11",
+            "dateModified": "2026-10-11",
+            "mainEntityOfPage": "https://praiadaursa.de/heilige-birma-und-hund.html",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datei": "heilige-birma-kosten.html",
+      "sprachen": [
+        "de"
+      ],
+      "eltern": "ratgeber.html",
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Was kostet eine Heilige Birma?",
+            "description": "Was eine Heilige Birma kostet: unser Kaufpreis und was darin steckt, die Erstausstattung und die laufenden Kosten – ehrlich und ohne Schönrechnen.",
+            "inLanguage": "de",
+            "datePublished": "2026-10-11",
+            "dateModified": "2026-10-11",
+            "mainEntityOfPage": "https://praiadaursa.de/heilige-birma-kosten.html",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datei": "serioesen-zuechter-erkennen.html",
+      "sprachen": [
+        "de"
+      ],
+      "eltern": "ratgeber.html",
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Seriösen Katzenzüchter erkennen: 10 Fragen",
+            "description": "Woran du eine seriöse Birma-Zucht erkennst: zehn Fragen, die du vor dem Kauf stellen solltest, und die Warnzeichen, bei denen du besser gehst.",
+            "inLanguage": "de",
+            "datePublished": "2026-10-11",
+            "dateModified": "2026-10-11",
+            "mainEntityOfPage": "https://praiadaursa.de/serioesen-zuechter-erkennen.html",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datei": "kitten-einzug-checkliste.html",
+      "sprachen": [
+        "de"
+      ],
+      "eltern": "ratgeber.html",
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Kitten Erstausstattung: Checkliste",
+            "description": "Was du vor dem Einzug deines Kittens brauchst und wie die ersten Tage gelingen: unsere Checkliste für Erstausstattung, Sicherheit und Eingewöhnung.",
+            "inLanguage": "de",
+            "datePublished": "2026-10-11",
+            "dateModified": "2026-10-11",
+            "mainEntityOfPage": "https://praiadaursa.de/kitten-einzug-checkliste.html",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datei": "birma-nicht-allein-halten.html",
+      "sprachen": [
+        "de"
+      ],
+      "eltern": "ratgeber.html",
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Birma allein halten? Warum eine Zweitkatze",
+            "description": "Warum die Heilige Birma Gesellschaft braucht, was Menschen allein nicht ersetzen können und wie du die passende Zweitkatze für deine Birma findest.",
+            "inLanguage": "de",
+            "datePublished": "2026-10-11",
+            "dateModified": "2026-10-11",
+            "mainEntityOfPage": "https://praiadaursa.de/birma-nicht-allein-halten.html",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datei": "heilige-birma-fellpflege.html",
+      "sprachen": [
+        "de"
+      ],
+      "eltern": "ratgeber.html",
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Heilige Birma Fellpflege: So geht's richtig",
+            "description": "Wie oft du eine Heilige Birma bürsten solltest, welches Werkzeug sich eignet und worauf es im Fellwechsel ankommt – dazu Krallen, Augen, Ohren und Zähne.",
+            "inLanguage": "de",
+            "datePublished": "2026-10-11",
+            "dateModified": "2026-10-11",
+            "mainEntityOfPage": "https://praiadaursa.de/heilige-birma-fellpflege.html",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datei": "wohnungskatze-oder-freigang.html",
+      "sprachen": [
+        "de"
+      ],
+      "eltern": "ratgeber.html",
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Birma als Wohnungskatze oder Freigang?",
+            "description": "Warum die Heilige Birma keine Freigängerin ist, wie gesicherter Freigang auf Balkon und im Garten gelingt und wie du die Wohnung katzengerecht gestaltest.",
+            "inLanguage": "de",
+            "datePublished": "2026-10-11",
+            "dateModified": "2026-10-11",
+            "mainEntityOfPage": "https://praiadaursa.de/wohnungskatze-oder-freigang.html",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datei": "birma-kitten-weiss-geboren.html",
+      "sprachen": [
+        "de"
+      ],
+      "eltern": "ratgeber.html",
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Warum Birma-Kitten weiß geboren werden",
+            "description": "Birma-Kitten kommen fast weiß zur Welt und färben sich erst nach und nach. Wir erklären, warum das so ist und wann die Farbe vollständig entwickelt ist.",
+            "inLanguage": "de",
+            "datePublished": "2026-10-11",
+            "dateModified": "2026-10-11",
+            "mainEntityOfPage": "https://praiadaursa.de/birma-kitten-weiss-geboren.html",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datei": "birma-gesundheitstests.html",
+      "sprachen": [
+        "de"
+      ],
+      "eltern": "ratgeber.html",
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Birma Gesundheit: HCM, PKD, Blutgruppe",
+            "description": "HCM, PKD, FeLV/FIV und Blutgruppe verständlich erklärt: welche Gesundheitstests bei der Heiligen Birma wichtig sind und wonach du fragen solltest.",
+            "inLanguage": "de",
+            "datePublished": "2026-10-11",
+            "dateModified": "2026-10-11",
+            "mainEntityOfPage": "https://praiadaursa.de/birma-gesundheitstests.html",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "datei": "kitten-abgabealter-12-wochen.html",
+      "sprachen": [
+        "de"
+      ],
+      "eltern": "ratgeber.html",
+      "jsonld": {
+        "de": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Kitten Abgabealter: Warum 12 Wochen?",
+            "description": "Warum ein Rassekitten frühestens mit zwölf Wochen ausziehen sollte: was es bis dahin von Mutter und Geschwistern lernt und warum früher keine gute Idee ist.",
+            "inLanguage": "de",
+            "datePublished": "2026-10-11",
+            "dateModified": "2026-10-11",
+            "mainEntityOfPage": "https://praiadaursa.de/kitten-abgabealter-12-wochen.html",
+            "author": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "@id": "https://praiadaursa.de/#zucht",
+              "name": "Praia da Ursa",
+              "url": "https://praiadaursa.de/"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "wissen": [
+    {
+      "datei": "heilige-birma.html",
+      "label": {
+        "de": "Die Heilige Birma",
+        "en": "The Sacred Birman",
+        "fr": "Le Sacré de Birmanie"
+      }
+    },
+    {
+      "datei": "fragen.html",
+      "label": {
+        "de": "Häufige Fragen",
+        "en": "FAQ",
+        "fr": "Questions fréquentes"
+      }
+    },
+    {
+      "datei": "warteliste.html",
+      "label": {
+        "de": "Warteliste",
+        "en": "Waiting list",
+        "fr": "Liste d'attente"
+      }
+    },
+    {
+      "datei": "ratgeber.html",
+      "label": {
+        "de": "Ratgeber",
+        "en": "Guides",
+        "fr": "Conseils"
+      }
+    }
+  ],
   "seitenJeSprache": {
     "de": [
       "index.html",
@@ -735,7 +2175,23 @@ const INHALTE = {
       "kitten.html",
       "vermittlung.html",
       "gesundheit.html",
-      "kontakt.html"
+      "kontakt.html",
+      "heilige-birma.html",
+      "fragen.html",
+      "warteliste.html",
+      "ratgeber.html",
+      "heilige-birma-charakter.html",
+      "heilige-birma-farben.html",
+      "heilige-birma-und-hund.html",
+      "heilige-birma-kosten.html",
+      "serioesen-zuechter-erkennen.html",
+      "kitten-einzug-checkliste.html",
+      "birma-nicht-allein-halten.html",
+      "heilige-birma-fellpflege.html",
+      "wohnungskatze-oder-freigang.html",
+      "birma-kitten-weiss-geboren.html",
+      "birma-gesundheitstests.html",
+      "kitten-abgabealter-12-wochen.html"
     ],
     "en": [
       "index.html",
@@ -745,7 +2201,10 @@ const INHALTE = {
       "kitten.html",
       "vermittlung.html",
       "gesundheit.html",
-      "kontakt.html"
+      "kontakt.html",
+      "heilige-birma.html",
+      "fragen.html",
+      "warteliste.html"
     ],
     "lb": [
       "index.html",
@@ -765,7 +2224,10 @@ const INHALTE = {
       "kitten.html",
       "vermittlung.html",
       "gesundheit.html",
-      "kontakt.html"
+      "kontakt.html",
+      "heilige-birma.html",
+      "fragen.html",
+      "warteliste.html"
     ]
   }
 };

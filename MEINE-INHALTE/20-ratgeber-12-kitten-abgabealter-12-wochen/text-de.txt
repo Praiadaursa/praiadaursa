@@ -1,0 +1,53 @@
+# Ratgeber-Artikel. ERSTER Block: Angaben und Einleitung, danach je Block ein Abschnitt.
+# Titel = große Überschrift auf der Seite, Seitentitel = Titel bei Google (max. ~60 Zeichen).
+# Datum in der Zukunft: Der Artikel erscheint automatisch erst ab diesem Tag.
+# Verwandt: Adressen anderer Artikel, mit Semikolon getrennt.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Warum ein Kitten erst mit 12 Wochen auszieht
+Seitentitel: Kitten Abgabealter: Warum 12 Wochen? | Praia da Ursa
+Beschreibung: Warum ein Rassekitten frühestens mit zwölf Wochen ausziehen sollte: was es bis dahin von Mutter und Geschwistern lernt und warum früher keine gute Idee ist.
+Kurztext: Was Kitten bis zur zwölften Woche lernen – und warum früher keine gute Idee ist.
+Thema: Kitten kaufen
+Datum: 2026-10-11
+Verwandt: serioesen-zuechter-erkennen; kitten-einzug-checkliste
+---
+Acht Wochen alt, frisch entwöhnt, sofort abholbereit: Solche Angebote sieht man leider oft. Bei uns ziehen Kitten frühestens mit zwölf Wochen aus. Diese vier Wochen Unterschied klingen wenig – für ein Kitten sind sie aber entscheidend.
+
+===
+
+Titel: Was Kitten von Mama und Geschwistern lernen
+---
+In ihren ersten Lebenswochen lernen Kitten alles, was eine Katze ausmacht – und zwar vor allem von ihrer Mutter und ihren Geschwistern:
+
+- wie fest man beim Spielen zubeißen darf
+- wie man mit anderen Katzen kommuniziert und Streit beilegt
+- wie man sich putzt und das Katzenklo benutzt
+- dass Menschen, Geräusche und andere Tiere nichts Bedrohliches sind
+
+Bei uns kommen Hündin Willow und Zweitkatze Hailey dazu. So lernen die Kitten früh einen ganz normalen Familienalltag kennen.
+
+===
+
+Titel: Warum zu früh keine gute Idee ist
+---
+Kitten, die zu früh von Mutter und Geschwistern getrennt werden, haben diese Lektionen oft nicht vollständig gelernt. Sie können später ängstlicher sein, im Spiel zu grob werden oder sich mit anderen Katzen schwerer tun. Auch körperlich profitieren die Kleinen von jeder Woche, die sie in Ruhe bei der Mutter heranwachsen dürfen.
+
+===
+
+Titel: Gesundheit und Impfungen
+---
+Bis zum Auszug ist die erste Impfung gegeben, die Kitten sind gechippt, mehrfach entwurmt und tierärztlich untersucht. Sie ziehen mit Impfpass und EU-Heimtierausweis aus. Die zweite Impfung folgt nach dem Auszug.
+
+===
+
+Titel: Was die Verbände sagen
+---
+Zuchtverbände legen ein Mindestabgabealter fest, auch der Felidae e.V., nach dessen Zuchtordnung wir züchten. Wer ein Rassekitten deutlich jünger abgibt, sollte dich deshalb stutzig machen – mehr Warnzeichen findest du im Beitrag [Seriösen Züchter erkennen](serioesen-zuechter-erkennen.html).
+
+===
+
+Titel: Bei uns
+---
+Unsere Kitten ziehen frühestens mit zwölf Wochen aus. Bis dahin halten wir dich mit Fotos und Neuigkeiten auf dem Laufenden, damit du die Zeit bis zum Einzug trotzdem miterlebst. Den Auszugstermin des aktuellen Wurfs findest du auf der Seite [Kitten](kitten.html).

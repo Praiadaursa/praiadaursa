@@ -1,0 +1,92 @@
+# Häufige Fragen. ERSTER Block: Überschrift und Einleitung.
+# Jeder weitere Block: eine Frage (Feld Frage:) und darunter die Antwort.
+# Google liest diese Fragen zusätzlich als strukturierte Daten.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Frequently asked questions
+---
+Here we answer the questions enquirers ask us most often. Can't find yours? Just drop us a message.
+
+===
+
+Frage: How much does a kitten cost?
+---
+A kitten costs 1,100 €. This includes the Felidae e.V. pedigree, the first vaccination, microchip, repeated deworming, insurance up to and including the 14th week of life, a veterinary check and a starter pack for the first few days. The 300 € reservation fee goes towards the purchase price.
+
+===
+
+Frage: When can a kitten move out?
+---
+At twelve weeks at the earliest. Until then the little ones learn everything they need for a relaxed cat life from their mum, their siblings, Willow the dog and our second cat Hailey. The moving date of the current litter is on our [kittens](kitten.html) page.
+
+===
+
+Frage: What does my kitten come with?
+---
+The official pedigree, the vaccination record including the chip number, the EU pet passport, the food they are used to for the first few days, and a blanket carrying the scent of mum and siblings. Insurance cover runs up to and including the 14th week of life.
+
+===
+
+Frage: Can I visit the kittens beforehand?
+---
+Absolutely – a visit to us in Trier is the best way to get to know each other. If the journey is too far, a first meeting over Zoom or by phone works too.
+
+===
+
+Frage: How does a reservation work?
+---
+If the chemistry is right and you are sure, we reserve the kitten for you. The reservation fee is 300 € and goes towards the purchase price. There is always a written contract. We describe the whole process under [rehoming & price](vermittlung.html).
+
+===
+
+Frage: Why don't you rehome kittens as single cats?
+---
+Birmans are remarkably people-oriented and sociable. On their own they quickly get bored and unhappy. That is why our kittens only move to a home with a second cat.
+
+===
+
+Frage: Do the kittens have to be neutered?
+---
+Yes. Our kittens leave as pets, and neutering is required for all of them. The right time is best discussed with your vet.
+
+===
+
+Frage: Can Birmans go outside?
+---
+Our rule is: indoor living or secured outdoor access only, such as a secured balcony or a fenced garden. Birmans are calm, trusting cats who cope poorly with traffic and unfamiliar animals.
+
+===
+
+Frage: Do your kittens get on with dogs?
+---
+Our kittens grow up with Willow the dog and our second cat Hailey, so they know dogs from an early age. A cat-friendly dog is usually no problem for them at all.
+
+===
+
+Frage: Do you rehome kittens to Luxembourg or the Saarland?
+---
+Yes, our kittens move all over the region around Trier, including Luxembourg and the Saarland. Moving a pet across a national border is subject to the EU rules for pets. We clarify the details together with you and our vet before the kitten moves out.
+
+===
+
+Frage: When is the next litter?
+---
+We have at most one litter a year. We plan the next one once enough people have joined our [waiting list](warteliste.html) – so the waiting list helps decide when things continue.
+
+===
+
+Frage: Are you a member of a breeding association?
+---
+Yes, we are a registered member of Felidae e.V. and breed under its breeding and registration rules. Every kitten leaves with a recognised pedigree.
+
+===
+
+Frage: Are the parents tested for diseases?
+---
+Yes. Yoselin and Luigi have tested negative for HCM, PKD and FeLV/FIV and are blood group A. Their own parents additionally had a cardiac ultrasound with a cardiologist, as the breeding rules require. Details are on our [health](gesundheit.html) page.
+
+===
+
+Frage: What if I can no longer keep my cat later on?
+---
+Then she is always welcome back with us. If one of our cats ever has to be rehomed, she always comes back to us first. Animal shelters are absolutely out of the question.

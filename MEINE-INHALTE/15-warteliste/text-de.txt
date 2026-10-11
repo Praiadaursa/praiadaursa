@@ -1,0 +1,52 @@
+# Warteliste. ERSTER Block: Überschrift, WhatsApp-Text und Einleitung.
+# Blöcke mit Schritt: werden zur nummerierten Liste, Blöcke mit Titel: zu Abschnitten.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Die Warteliste
+SchritteTitel: So funktioniert es
+WhatsAppText: Hallo, wir möchten uns gern auf eure Warteliste für einen der nächsten Würfe setzen lassen.
+---
+Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir erst, wenn genug Menschen ernsthaft auf ein Kitten warten. Deine Anfrage auf der Warteliste entscheidet also wirklich mit, wann es bei uns wieder wuselt.
+
+===
+
+Schritt: Schreib uns
+---
+Per WhatsApp oder E-Mail, ganz unverbindlich. Erzähl uns kurz von dir und davon, was du dir wünschst.
+
+===
+
+Schritt: Wir lernen uns kennen
+---
+Bei einem Telefonat, per Zoom oder bei einem Besuch in Trier. Wir möchten wissen, wo unsere Kitten einmal leben – und du sollst wissen, wo sie herkommen.
+
+===
+
+Schritt: Du stehst auf der Liste
+---
+Damit bist du vorgemerkt. Verbindlich wird es erst bei einer Reservierung, und erst dann fällt die Reservierungsgebühr an.
+
+===
+
+Schritt: Wir melden uns
+---
+Sobald ein Wurf geplant ist und sobald die Kitten da sind, hörst du als Erstes von uns – mit Fotos, versprochen.
+
+===
+
+Titel: Was du uns schreiben solltest
+---
+Je mehr wir von dir wissen, desto besser können wir einschätzen, welches Kitten zu dir passt:
+
+- wie du wohnst und ob es einen gesicherten Balkon oder Garten gibt
+- welche Tiere schon bei dir leben – denk daran, dass unsere Kitten nur zu einer zweiten Katze ziehen
+- ob Kinder im Haushalt leben
+- wie viel Zeit du zu Hause verbringst
+- ob du dir ein Weibchen oder einen Kater wünschst und ob du eine Lieblingsfarbe hast
+- ab wann ein Kitten bei dir einziehen könnte
+
+===
+
+Titel: Gut zu wissen
+---
+Unsere Kitten ziehen frühestens mit zwölf Wochen aus, mit Stammbaum, Impfpass, Chip und EU-Heimtierausweis. Was ein Kitten kostet und wie die Vermittlung im Einzelnen abläuft, erklären wir unter [Vermittlung & Preis](vermittlung.html). Antworten auf weitere Fragen findest du unter [Häufige Fragen](fragen.html).

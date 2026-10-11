@@ -1,0 +1,59 @@
+# Ratgeber-Artikel. ERSTER Block: Angaben und Einleitung, danach je Block ein Abschnitt.
+# Titel = große Überschrift auf der Seite, Seitentitel = Titel bei Google (max. ~60 Zeichen).
+# Datum in der Zukunft: Der Artikel erscheint automatisch erst ab diesem Tag.
+# Verwandt: Adressen anderer Artikel, mit Semikolon getrennt.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Wohnung oder gesicherter Freigang?
+Seitentitel: Birma als Wohnungskatze oder Freigang? | Praia da Ursa
+Beschreibung: Warum die Heilige Birma keine Freigängerin ist, wie gesicherter Freigang auf Balkon und im Garten gelingt und wie du die Wohnung katzengerecht gestaltest.
+Kurztext: Warum die Birma keine Freigängerin ist – und wie Balkon, Netz und Wohnung glücklich machen.
+Thema: Haltung
+Datum: 2026-10-11
+Verwandt: kitten-einzug-checkliste; birma-nicht-allein-halten
+---
+Bei uns gilt: Wohnungshaltung oder ausschließlich gesicherter Freigang. Diese Bedingung steht nicht zufällig in unserem Vertrag. Hier erklären wir, warum – und wie eine Birma in der Wohnung rundum glücklich wird.
+
+===
+
+Titel: Warum die Birma keine Freigängerin ist
+---
+Die Heilige Birma ist ruhig, zutraulich und neugierig auf Menschen. Was in der Wohnung so liebenswert ist, wird draußen zum Risiko: Straßenverkehr, fremde Katzen, Hunde und Menschen, die eine auffällige Rassekatze einfach mitnehmen. Eine Birma hat schlicht nicht die Vorsicht und Wehrhaftigkeit, die ein Leben auf der Straße verlangt.
+
+===
+
+Titel: Gesicherter Freigang: frische Luft ohne Gefahr
+---
+Frische Luft, Sonne und Vogelgezwitscher tun auch einer Birma gut. Das geht wunderbar sicher:
+
+- ein Balkon mit Katzennetz, gut befestigt und ohne Lücken
+- gesicherte Fenster mit Schutzgittern
+- ein Freigehege im Garten
+- ein komplett katzensicher eingezäunter Garten
+
+Gekippte Fenster sind übrigens eine unterschätzte Gefahr: Katzen können darin stecken bleiben und sich schwer verletzen.
+
+===
+
+Titel: Die Wohnung katzengerecht gestalten
+---
+Eine Wohnungskatze braucht Abwechslung und Höhe:
+
+- ein stabiler Kratzbaum, am besten mit Blick aus dem Fenster
+- Liegeplätze auf verschiedenen Ebenen, etwa Regale oder Wandbretter
+- Verstecke und Rückzugsorte
+- Katzengras zum Knabbern
+- mehrere Katzentoiletten an ruhigen Orten
+
+===
+
+Titel: Beschäftigung ist das Wichtigste
+---
+Gelangweilte Katzen werden unglücklich. Spiel jeden Tag mit deiner Birma, etwa mit einer Federangel, versteck Leckerli in Fummelbrettern oder bau aus Kartons eine kleine Höhle. Und weil Birmas nicht allein leben sollten, ist die beste Beschäftigung ohnehin eine zweite Katze – warum, liest du in [Warum Birmas nicht allein leben sollten](birma-nicht-allein-halten.html).
+
+===
+
+Titel: Fazit
+---
+Eine Birma braucht keinen Freigang, um glücklich zu sein. Sie braucht ihre Menschen, eine zweite Katze, eine abwechslungsreiche Wohnung – und wenn möglich einen sicheren Platz an der frischen Luft.

@@ -1,0 +1,61 @@
+# Ratgeber-Artikel. ERSTER Block: Angaben und Einleitung, danach je Block ein Abschnitt.
+# Titel = große Überschrift auf der Seite, Seitentitel = Titel bei Google (max. ~60 Zeichen).
+# Datum in der Zukunft: Der Artikel erscheint automatisch erst ab diesem Tag.
+# Verwandt: Adressen anderer Artikel, mit Semikolon getrennt.
+# [Text](seite.html) wird ein Link, Zeilen mit - werden eine Aufzählung.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Titel: Fellpflege bei der Heiligen Birma
+Seitentitel: Heilige Birma Fellpflege: So geht's richtig | Praia da Ursa
+Beschreibung: Wie oft du eine Heilige Birma bürsten solltest, welches Werkzeug sich eignet und worauf es im Fellwechsel ankommt – dazu Krallen, Augen, Ohren und Zähne.
+Kurztext: Wie oft bürsten, welches Werkzeug – und warum die Birma pflegeleichter ist als gedacht.
+Thema: Pflege
+Datum: 2026-10-11
+Verwandt: heilige-birma-farben; kitten-einzug-checkliste
+---
+Halblanghaar klingt nach viel Arbeit. Bei der Heiligen Birma ist die Fellpflege aber erfreulich unkompliziert – wenn man ein paar Dinge weiß und früh damit anfängt.
+
+===
+
+Titel: Das Birma-Fell
+---
+Das Fell der Birma ist seidig und hat nur wenig Unterwolle. Deshalb verfilzt es deutlich seltener als bei vielen anderen Langhaarkatzen. Am längsten ist es an Hals, Brust und Schwanz, im Gesicht und an den Beinen bleibt es kürzer.
+
+===
+
+Titel: Wie oft bürsten?
+---
+Meist genügt es, eine Birma ein- bis zweimal pro Woche gründlich zu bürsten. Im Fellwechsel, vor allem im Frühjahr, verliert sie mehr Haare – dann ist häufigeres Bürsten sinnvoll. Es entfernt lose Haare, bevor sie auf dem Sofa landen oder beim Putzen verschluckt werden.
+
+===
+
+Titel: Das richtige Werkzeug
+---
+- ein Kamm mit abgerundeten Zinken, für kleine Knoten und die Kontrolle
+- eine weiche Bürste für das tägliche Glätten
+- Vorsicht mit groben Entfilzungswerkzeugen – sie können das seidige Fell und die empfindliche Haut reizen
+
+Bürste immer in Wuchsrichtung und mit sanftem Druck.
+
+===
+
+Titel: Wenn sich doch ein Knoten bildet
+---
+Kleine Knoten entstehen am ehesten hinter den Ohren, unter den Achseln und an der Hose. Lockere sie vorsichtig mit den Fingern oder dem Kamm, nie mit Zug. Größere Verfilzungen solltest du nicht selbst herausschneiden – die Haut ist dünn und schnell verletzt. Dann hilft der Tierarzt.
+
+===
+
+Titel: Krallen, Augen, Ohren und Zähne
+---
+- Krallen: Ein guter Kratzbaum hält sie meist kurz. Werden sie zu lang, kürzt sie der Tierarzt.
+- Augen: Bei Bedarf mit einem weichen, feuchten Tuch sanft von innen nach außen wischen.
+- Ohren: regelmäßig anschauen. Sind sie verschmutzt oder riecht es, gehört das zum Tierarzt.
+- Zähne: bei der jährlichen Untersuchung kontrollieren lassen.
+
+===
+
+Titel: Früh daran gewöhnen
+---
+Je früher eine Katze die Bürste kennenlernt, desto entspannter bleibt sie dabei. Mach aus der Fellpflege ein kleines Ritual mit Lob und Leckerli. Viele Birmas genießen die Bürste irgendwann regelrecht.
+
+Baden ist bei einer gesunden Birma übrigens normalerweise nicht nötig.

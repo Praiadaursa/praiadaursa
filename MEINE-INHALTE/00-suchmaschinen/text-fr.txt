@@ -56,3 +56,24 @@ Seite: kontakt.html
 Titel: Contact : élevage de Birmans à Trèves | Praia da Ursa
 Beschreibung: Une question sur nos chatons Sacré de Birmanie ? Écrivez-nous sur WhatsApp ou par e-mail, ou appelez-nous. Praia da Ursa à Trèves, près de Luxembourg.
 ---
+
+===
+
+Seite: heilige-birma.html
+Titel: Sacré de Birmanie : portrait de race | Praia da Ursa
+Beschreibung: Origines, apparence, couleurs, caractère et entretien du Sacré de Birmanie, expliqués par un petit élevage de Trèves, avec photos de nos chats.
+---
+
+===
+
+Seite: fragen.html
+Titel: Chatons Birman : questions fréquentes | Praia da Ursa
+Beschreibung: Prix, âge de départ, réservation, chat seul, chiens, Luxembourg : les réponses aux questions les plus fréquentes sur nos chatons Sacré de Birmanie.
+---
+
+===
+
+Seite: warteliste.html
+Titel: Liste d'attente chatons Birman | Praia da Ursa
+Beschreibung: Inscrivez-vous sans engagement pour l'une de nos prochaines portées de Sacrés de Birmanie. Comment fonctionne notre liste d'attente à Trèves.
+---
