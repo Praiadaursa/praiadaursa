@@ -1002,7 +1002,8 @@
       kontaktband();
   }
 
-  (INHALTE.ratgeber || []).forEach(function (a) {
+  /* Fertige Seiten laden inhalte.js nicht — dort ist nichts zu registrieren. */
+  ((typeof INHALTE !== "undefined" && INHALTE.ratgeber) || []).forEach(function (a) {
     SEITEN[a.datei] = function () { return artikelSeite(a); };
   });
 
