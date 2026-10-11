@@ -1,0 +1,58 @@
+# Titel und Beschreibung, wie sie in den Google-Ergebnissen erscheinen.
+# Je Seite ein Block, Bloecke durch === getrennt.
+# Titel hoechstens etwa 60 Zeichen, Beschreibung etwa 155.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Seite: index.html
+Titel: Heilige Birma Kitten aus Trier | Praia da Ursa
+Beschreibung: Kleine Heilige-Birma-Zucht in Trier, Mitglied im Felidae e.V. Kitten mit Stammbaum, aufgewachsen mit Hund und Katze. Abgabe ab 12 Wochen.
+---
+
+===
+
+Seite: ueber-uns.html
+Titel: Unsere Birma-Zucht in Trier | Praia da Ursa
+Beschreibung: Wie wir Heilige Birma züchten: ein Wurf im Jahr, Aufzucht mitten im Familienleben mit Hund und Katze, Zucht nach den Regeln des Felidae e.V.
+---
+
+===
+
+Seite: katzen.html
+Titel: Unsere Birma-Zuchtkatze | Praia da Ursa
+Beschreibung: Lernt Yoselin kennen, die Mutter unserer Kitten: Heilige Birma in Seal Tabby Point, Blutgruppe A, auf HCM, PKD und FeLV/FIV getestet.
+---
+
+===
+
+Seite: vater.html
+Titel: Deckkater Luigi, Vater des A-Wurfs | Praia da Ursa
+Beschreibung: Luigi, der Vater unseres A-Wurfs: ein gutmütiger, geselliger Heilige-Birma-Kater aus der Zucht von Oldima. Steckbrief, Fotos und Gesundheit.
+---
+
+===
+
+Seite: kitten.html
+Titel: Heilige Birma Kitten abzugeben | Praia da Ursa
+Beschreibung: Unsere aktuellen Heilige-Birma-Kitten aus Trier: Fotos, Charakter, Farbschlag und Verfügbarkeit. Abgabe ab 12 Wochen, gechippt, mit Stammbaum.
+---
+
+===
+
+Seite: vermittlung.html
+Titel: Birma Kitten kaufen: Ablauf & Preis | Praia da Ursa
+Beschreibung: So läuft die Vermittlung unserer Heilige-Birma-Kitten: Kennenlernen, Reservierung, Auszug ab 12 Wochen. Preis inklusive Stammbaum und Impfung.
+---
+
+===
+
+Seite: gesundheit.html
+Titel: Gesundheit der Heiligen Birma | Praia da Ursa
+Beschreibung: Worauf wir bei unseren Birmas achten: Tests auf HCM, PKD und FeLV/FIV, Blutgruppe, Impfung, Entwurmung und Ernährung – offen erklärt.
+---
+
+===
+
+Seite: kontakt.html
+Titel: Kontakt: Birma-Zucht in Trier | Praia da Ursa
+Beschreibung: Fragen zu unseren Heilige-Birma-Kitten? Schreib uns per WhatsApp oder E-Mail oder ruf an. Praia da Ursa in Trier, nah an Luxemburg und dem Saarland.
+---

@@ -1,0 +1,10 @@
+# Praia da Ursa — Hinweise fuer Suchmaschinen
+User-agent: *
+Allow: /
+# Arbeitsordner und Notizen gehoeren nicht in die Suchergebnisse
+Disallow: /MEINE-INHALTE/
+Disallow: /werkzeuge/
+Disallow: /docs/
+Disallow: /*.md$
+
+Sitemap: https://praiadaursa.de/sitemap.xml

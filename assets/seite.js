@@ -18,7 +18,20 @@
   };
   var GEBIET = { de: "de-DE", en: "en-GB", lb: "lb-LU", fr: "fr-FR" };
 
+  /* Drei Betriebsarten:
+     BAU      — das Werkzeug erzeugt gerade die fertigen HTML-Seiten
+     STATISCH — eine fertig erzeugte Seite ist im Browser geoeffnet;
+                der Inhalt steht schon im HTML, hier kommt nur noch
+                Bewegung dazu (Menue, Diashow, Leuchtkasten)
+     sonst    — Impressum und Datenschutz, die weiter im Browser
+                zusammengebaut werden                                */
+  var BAU = window.PDU_VORRENDERN || null;
+  var STATISCH = !BAU && !!(document.body && document.body.hasAttribute("data-vorgerendert"));
+
   function spracheLesen() {
+    if (BAU) return BAU.sprache;
+    var fest = document.documentElement.getAttribute("data-sprache");
+    if (STATISCH && SPRACHEN.indexOf(fest) > -1) return fest;
     var ausUrl = new URLSearchParams(location.search).get("lang");
     if (SPRACHEN.indexOf(ausUrl) > -1) return ausUrl;
     try {
@@ -39,6 +52,32 @@
     else { url.searchParams.set("lang", neu); }
     history.replaceState(null, "", url);
     aufbauen();
+  }
+
+  /* ---------- Pfade -----------------------------------------
+     Deutsch liegt im Hauptordner, jede andere Sprache in einem
+     eigenen Unterordner (/en/, /lb/, /fr/). Gibt es eine Seite in
+     einer Sprache nicht, fuehrt der Link zur Startseite dieser Sprache. */
+  function gibtEs(ziel, datei) {
+    var liste = (typeof INHALTE !== "undefined" ? INHALTE.seitenJeSprache : null) ||
+                window.PDU_SEITEN || null;
+    return !liste || !liste[ziel] || liste[ziel].indexOf(datei) > -1;
+  }
+
+  function ordnerHier() { return (BAU || STATISCH) ? sprache : "de"; }
+
+  function seitenPfad(datei, ziel) {
+    ziel = ziel || sprache;
+    if (!gibtEs(ziel, datei)) { datei = "index.html"; }
+    var hier = ordnerHier();
+    if (ziel === hier) { return datei; }
+    return (hier === "de" ? "" : "../") + (ziel === "de" ? "" : ziel + "/") + datei;
+  }
+
+  /* Impressum und Datenschutz gibt es nur im Hauptordner */
+  function rechtsPfad(datei) {
+    return (ordnerHier() === "de" ? "" : "../") + datei +
+           (sprache === "de" ? "" : "?lang=" + sprache);
   }
 
   /* ---------- Helfer --------------------------------------- */
@@ -145,7 +184,32 @@
     dieVaeter:     { de: "Die Väter", en: "The fathers", lb: "D'Pappen", fr: "Les pères" },
     ausDerZucht:   { de: "Deckkater aus der Zucht ", en: "Stud from the cattery ",
                      lb: "Deckkueder aus der Zucht ", fr: "Mâle reproducteur de l'élevage " },
-    zuchtLabel:    { de: "Zucht", en: "Cattery", lb: "Zucht", fr: "Élevage" }
+    zuchtLabel:    { de: "Zucht", en: "Cattery", lb: "Zucht", fr: "Élevage" },
+    wissen:        { de: "Wissen", en: "Guides", lb: "Wëssen", fr: "Conseils" },
+
+    /* Kleine Zeile ueber jeder Hauptueberschrift. Sie gehoert mit zur
+       Ueberschrift und traegt den Begriff, nach dem Menschen suchen.   */
+    suchUeberUns:  { de: "Heilige-Birma-Zucht in Trier", en: "Sacred Birman cattery in Trier",
+                     lb: "Hellege Birma · Zucht zu Tréier", fr: "Élevage de Sacrés de Birmanie à Trèves" },
+    suchKatze:     { de: "Unsere Birma-Zuchtkatze", en: "Our Birman queen",
+                     lb: "Hellege Birma · Eis Zuchtkaz", fr: "Notre femelle Sacré de Birmanie" },
+    suchKatzen:    { de: "Unsere Birma-Zuchtkatzen", en: "Our Birman breeding cats",
+                     lb: "Hellege Birma · Eis Zuchtkazen", fr: "Nos Sacrés de Birmanie reproducteurs" },
+    suchVater:     { de: "Deckkater", en: "Stud", lb: "Deckkueder", fr: "Mâle reproducteur" },
+    suchKitten:    { de: "Heilige Birma Kitten", en: "Sacred Birman kittens",
+                     lb: "Hellege Birma · Kitten", fr: "Chatons Sacré de Birmanie" },
+    suchVermittlung: { de: "Vermittlung & Preis", en: "Rehoming & price",
+                     lb: "Vermëttlung & Präis", fr: "Adoption & prix" },
+    suchGesundheit:{ de: "Gesundheit der Heiligen Birma", en: "Sacred Birman health",
+                     lb: "Hellege Birma · Gesondheet", fr: "Santé du Sacré de Birmanie" },
+
+    /* Bildbeschreibungen fuer Google und Vorleseprogramme */
+    altKitten:     { de: "Heilige-Birma-Kitten", en: "Sacred Birman kitten",
+                     lb: "Hellege-Birma-Kitten", fr: "Chaton Sacré de Birmanie" },
+    altKatze:      { de: "Heilige-Birma-Katze", en: "Sacred Birman cat",
+                     lb: "Hellege-Birma-Kaz", fr: "Chatte Sacré de Birmanie" },
+    altKater:      { de: "Heilige-Birma-Kater", en: "Sacred Birman stud",
+                     lb: "Hellege-Birma-Kueder", fr: "Chat Sacré de Birmanie" }
   };
 
   function u(schluessel) { return t(UI[schluessel]); }
@@ -314,7 +378,7 @@
 
     var dias = liste.map(function (pfad, i) {
       return '<div class="dia" data-aktiv="' + (i === 0) + '">' +
-        medium(pfad, i === 0 ? alt : "", true) + "</div>";
+        medium(pfad, i === 0 ? alt : nummeriert(alt, i + 1), true) + "</div>";
     }).join("");
 
     var punkte = liste.map(function (pfad, i) {
@@ -330,6 +394,17 @@
       '<div class="dia-punkte">' + punkte + "</div></div>";
   }
 
+  /* "Heilige-Birma-Kitten Ash (Blue Silver Tabby Point)" */
+  function bildText(art, name, farbe) {
+    return u(art) + " " + name + (farbe ? " (" + farbe + ")" : "");
+  }
+
+  /* Weitere Fotos derselben Katze: "… · Bild 2" */
+  function nummeriert(alt, nr) {
+    var grund = t(alt);
+    return grund ? grund + " · " + u("bild") + " " + nr : "";
+  }
+
   /* Fotos, die nicht schon im ersten Bildplatz stecken */
   function restBilder(o) {
     var erste = (o.bildgruppen && o.bildgruppen[0]) ? o.bildgruppen[0].length : 1;
@@ -339,17 +414,17 @@
   /* Waagerechter Galeriestreifen, anklickbar wie die uebrigen Galerien */
   function streifen(bilder, alt) {
     if (!bilder || !bilder.length) return "";
-    return '<div class="streifen">' + bilder.map(function (pfad) {
+    return '<div class="streifen">' + bilder.map(function (pfad, i) {
       return '<button type="button" data-gross="' + esc(pfad) + '">' +
-        bild(pfad, alt, "hoch bogen gerahmt") + "</button>";
+        bild(pfad, nummeriert(alt, i + 1), "hoch bogen gerahmt") + "</button>";
     }).join("") + "</div>";
   }
 
   function galerie(bilder, alt) {
     if (!bilder || !bilder.length) return "";
-    return '<div class="galerie">' + bilder.map(function (p) {
+    return '<div class="galerie">' + bilder.map(function (p, i) {
       return '<button type="button" data-gross="' + esc(p) + '">' +
-        bild(p, alt, "quadr") + "</button>";
+        bild(p, nummeriert(alt, i + 2), "quadr") + "</button>";
     }).join("") + "</div>";
   }
 
@@ -359,17 +434,23 @@
     var z = INHALTE.zucht;
     var punkte = INHALTE.navigation.map(function (n) {
       var aktiv = n.datei === seite ? ' aria-current="page"' : "";
-      return '<a href="' + esc(n.datei) + '"' + aktiv + ">" + esc(t(n.label)) + "</a>";
+      return '<a href="' + esc(seitenPfad(n.datei)) + '"' + aktiv + ">" + esc(t(n.label)) + "</a>";
     }).join("");
 
+    /* Auf fertig erzeugten Seiten fuehrt jede Sprache zu ihrer eigenen
+       Adresse — so findet Google jede Sprachfassung einzeln.          */
     var umschalter = SPRACHEN.map(function (s) {
+      if (BAU || STATISCH) {
+        return '<a href="' + esc(seitenPfad(seite, s)) + '" lang="' + s + '" hreflang="' + s + '"' +
+          (s === sprache ? ' aria-current="true"' : "") + ">" + s.toUpperCase() + "</a>";
+      }
       return '<button type="button" data-sprache="' + s + '" lang="' + s + '" aria-pressed="' +
         (s === sprache) + '">' + s.toUpperCase() + "</button>";
     }).join("<span>/</span>");
 
     return '<a class="sprung" href="#inhalt">' + esc(u("sprung")) + "</a>" +
       '<header class="kopf">' +
-        '<a class="wortmarke" href="index.html">' +
+        '<a class="wortmarke" href="' + esc(seitenPfad("index.html")) + '">' +
           '<span class="marke-oval">' + bild(logoPfad(), z.name, "") + "</span>" +
           '<span class="marke-schrift"><b>' + esc(z.name) + "</b>" +
             "<span>" + esc(t(z.untertitel)) + "</span></span>" +
@@ -387,8 +468,16 @@
   function fussBauen() {
     var z = INHALTE.zucht;
     var punkte = INHALTE.navigation.map(function (n) {
-      return "<li><a href=" + '"' + esc(n.datei) + '">' + esc(t(n.label)) + "</a></li>";
+      return "<li><a href=" + '"' + esc(seitenPfad(n.datei)) + '">' + esc(t(n.label)) + "</a></li>";
     }).join("");
+
+    /* Zweite Spalte fuer Ratgeber, Rasse, Fragen und Warteliste — das
+       Hauptmenue bleibt dadurch bei seinen Punkten.                    */
+    var wissen = (INHALTE.wissen || []).filter(function (n) { return gibtEs(sprache, n.datei); });
+    var wissenSpalte = wissen.length ? '<div><p class="marke">' + esc(u("wissen")) + "</p><ul>" +
+      wissen.map(function (n) {
+        return '<li><a href="' + esc(seitenPfad(n.datei)) + '">' + esc(t(n.label)) + "</a></li>";
+      }).join("") + "</ul></div>" : "";
 
     return '<footer class="fuss"><div class="fuss-innen">' +
         "<div>" +
@@ -396,6 +485,7 @@
           '<p class="leise" style="margin:0">' + esc(t(z.untertitel)) + "</p>" +
         "</div>" +
         '<div><p class="marke">' + esc(u("seiten")) + "</p><ul>" + punkte + "</ul></div>" +
+        wissenSpalte +
         '<div><p class="marke">' + esc(u("kontakt")) + "</p><ul>" +
           '<li><a href="' + whatsappLink() + '" rel="noopener">WhatsApp</a></li>' +
           '<li><a href="mailto:' + esc(z.email) + '">' + esc(z.email) + "</a></li>" +
@@ -408,8 +498,8 @@
       "</div>" +
       '<div class="fuss-unten">' +
         "<span>© " + new Date().getFullYear() + " " + esc(z.name) + "</span>" +
-        '<a href="impressum.html">' + esc(u("impressum")) + "</a>" +
-        '<a href="datenschutz.html">' + esc(u("datenschutz")) + "</a>" +
+        '<a href="' + esc(rechtsPfad("impressum.html")) + '">' + esc(u("impressum")) + "</a>" +
+        '<a href="' + esc(rechtsPfad("datenschutz.html")) + '">' + esc(u("datenschutz")) + "</a>" +
       "</div></footer>";
   }
 
@@ -429,8 +519,8 @@
 
   function seitenkopf(marke, titel, text) {
     return '<div class="seitenkopf"><div class="breit">' + FLEURON +
-      '<p class="marke">' + esc(t(marke)) + "</p>" +
-      '<h1 class="titel">' + esc(t(titel)) + "</h1>" +
+      '<h1 class="kopf-titel"><span class="marke">' + esc(t(marke)) + "</span> " +
+        '<span class="titel">' + esc(t(titel)) + "</span></h1>" +
       (text ? '<div class="fliess leise">' + absaetze(text) + "</div>" : "") +
       "</div></div>";
   }
@@ -483,11 +573,11 @@
         '<div class="medaillon">' + KRANZ +
           '<div class="medaillon-bild"><div class="bild-rahmen">' +
             '<img src="' + esc(logoPfad()) + '" data-pfad="' + esc(logoPfad()) + '" alt="' +
-            esc(z.name) + '"></div></div>' +
+            esc(z.name + " · " + t(z.untertitel)) + '" fetchpriority="high"></div></div>' +
         "</div>" +
-        '<h1 class="empfang-name">' + esc(z.name) + "</h1>" +
-        (z.gegruendet ? '<p class="est">Est. ' + esc(z.gegruendet) + "</p>" : "") +
-        '<p class="empfang-unter">' + esc(t(z.untertitel)) + "</p>" +
+        '<h1 class="empfang-titel"><span class="empfang-name">' + esc(z.name) + "</span> " +
+          (z.gegruendet ? '<span class="est">Est. ' + esc(z.gegruendet) + "</span> " : "") +
+          '<span class="empfang-unter">' + esc(t(z.untertitel)) + "</span></h1>" +
         '<p class="empfang-satz">' + esc(t(z.leitsatz)) + "</p>" +
         '<a class="weiter" href="#zucht">' + esc(u("weiterlesen")) + "</a>" +
       "</section>" +
@@ -512,7 +602,7 @@
             esc(u("ihrSteckbrief")) + "</a></div>" +
         "</div>" +
         bildplatz(katze.bildgruppen && katze.bildgruppen[0], katze.bilder[0],
-                  katze.rufname, "hoch bogen gerahmt") +
+                  bildText("altKatze", katze.rufname, t(katze.farbschlag)), "hoch bogen gerahmt") +
       "</div></section>" : "") +
 
       '<section class="abschnitt"><div class="breit paar">' +
@@ -520,7 +610,7 @@
         bildplatz(w.bilder && w.bilder.length ? [w.bilder[0]] :
                     (w.vorhanden && w.kitten[0] ? w.kitten[0].bildgruppen[0] : null),
                   w.vorhanden && w.kitten[0] ? w.kitten[0].bilder[0] : "bilder/zucht.jpg",
-                  UI.kitten, "hoch bogen gerahmt") +
+                  UI.suchKitten, "hoch bogen gerahmt") +
       "</div></section>" +
 
       kontaktband();
@@ -543,7 +633,7 @@
         "</div></section>";
     }).join("");
 
-    return seitenkopf(UI.ueberUns, UI.wieWirZuechten, UI.ueberUnsIntro) +
+    return seitenkopf(UI.suchUeberUns, UI.wieWirZuechten, UI.ueberUnsIntro) +
       bloecke + kontaktband();
   };
 
@@ -569,7 +659,7 @@
     }).join("");
 
     var eine = INHALTE.katzen.length === 1;
-    return seitenkopf(eine ? UI.katzeEine : UI.katzeMehr,
+    return seitenkopf(eine ? UI.suchKatze : UI.suchKatzen,
                       eine ? UI.katzeTitelEine : UI.katzeTitelMehr, null) +
       teile + kontaktband();
   };
@@ -587,10 +677,10 @@
     ].filter(function (e) { return e[1]; });
 
     var farbe = t(k.farbschlag);
+    var bt = bildText(k.rolle === "kater" ? "altKater" : "altKatze", k.rufname, farbe);
     return '<article class="karte" id="katze-' + esc(k.id) + '">' +
       '<div class="paar" style="align-items:start">' +
-        bildplatz(k.bildgruppen && k.bildgruppen[0], k.bilder[0],
-                  k.rufname, "hoch bogen gerahmt") +
+        bildplatz(k.bildgruppen && k.bildgruppen[0], k.bilder[0], bt, "hoch bogen gerahmt") +
         "<div>" +
           '<h2 class="karte-name">' + esc(k.rufname) + "</h2>" +
           (farbe ? '<p class="karte-zeile">' + esc(farbe) + "</p>" : "") +
@@ -600,7 +690,7 @@
           }).join("") + "</dl>" +
         "</div>" +
       "</div>" +
-      galerie(restBilder(k), k.rufname) +
+      galerie(restBilder(k), bt) +
       "</article>";
   }
 
@@ -619,7 +709,7 @@
     var w = INHALTE.wurf;
 
     if (!w.vorhanden) {
-      return seitenkopf(UI.kitten, UI.keineKitten, w.keinWurfText) + kontaktband();
+      return seitenkopf(UI.suchKitten, UI.keineKitten, w.keinWurfText) + kontaktband();
     }
 
     var kopfDaten = [
@@ -632,14 +722,14 @@
     var karten = w.kitten.map(function (k) {
       var geschlecht = k.geschlecht === "w" ? u("kaetzin") : u("kater");
       var farbe = t(k.farbschlag);
+      var bt = bildText("altKitten", k.name, farbe);
       return '<article class="karte">' +
-        bildplatz(k.bildgruppen && k.bildgruppen[0], k.bilder[0],
-                  k.name, "hoch bogen gerahmt") +
+        bildplatz(k.bildgruppen && k.bildgruppen[0], k.bilder[0], bt, "hoch bogen gerahmt") +
         '<h3 class="karte-name">' + esc(k.name) + "</h3>" +
         '<p class="karte-zeile">' + esc(geschlecht) + (farbe ? " · " + esc(farbe) : "") + "</p>" +
         "<p>" + statusMarke(k.status, k.geschlecht) + "</p>" +
         '<div class="karte-text fliess" style="margin-top:1rem">' + absaetze(k.text) + "</div>" +
-        galerie(restBilder(k), k.name) +
+        galerie(restBilder(k), bt) +
         "</article>";
     }).join("");
 
@@ -654,9 +744,9 @@
         }).join("") + "</div></div></section>";
     }
 
-    return seitenkopf(UI.kitten, w.bezeichnung, null) +
+    return seitenkopf(UI.suchKitten, w.bezeichnung, null) +
       '<section class="abschnitt"><div class="breit">' +
-        streifen(w.bilder, w.bezeichnung) +
+        streifen(w.bilder, u("suchKitten") + " · " + t(w.bezeichnung)) +
         '<div class="wurfkopf">' +
           '<div class="fliess">' + absaetze(w.text) + "</div>" +
           '<dl class="steckbrief" style="margin:0">' + kopfDaten.map(function (e) {
@@ -678,7 +768,7 @@
         herkunft[s] = UI.ausDerZucht[s] + v[0].zucht;
       });
     }
-    return seitenkopf(w.vorhanden ? w.bezeichnung : UI.kitten,
+    return seitenkopf(u("suchVater") + (w.vorhanden ? " · " + t(w.bezeichnung) : ""),
                       eine ? UI.derVater : UI.dieVaeter, herkunft) +
       '<section class="abschnitt"><div class="breit">' +
         '<div class="raster raster--zwei' + (eine ? " raster--einzeln" : "") + '">' +
@@ -688,7 +778,7 @@
 
   SEITEN["vermittlung.html"] = function () {
     var v = INHALTE.vermittlung;
-    return seitenkopf(UI.vermittlung, UI.vermittlungTitel, v.einleitung) +
+    return seitenkopf(UI.suchVermittlung, UI.vermittlungTitel, v.einleitung) +
       '<section class="abschnitt"><div class="breit">' +
         '<ol class="schritte">' + v.schritte.map(function (s) {
           return "<li><h3>" + esc(t(s.titel)) + "</h3>" +
@@ -710,7 +800,7 @@
 
   SEITEN["gesundheit.html"] = function () {
     var g = INHALTE.gesundheit, z = INHALTE.zucht;
-    return seitenkopf(UI.gesundheit, UI.gesundheitTitel, g.einleitung) +
+    return seitenkopf(UI.suchGesundheit, UI.gesundheitTitel, g.einleitung) +
       '<section class="abschnitt"><div class="breit"><div class="raster raster--zwei">' +
         g.bloecke.map(function (b) {
           return '<article class="karte"><hr class="haarlinie">' +
@@ -729,7 +819,7 @@
 
   SEITEN["kontakt.html"] = function () {
     var z = INHALTE.zucht, k = INHALTE.kontakt;
-    return seitenkopf(UI.kontakt, UI.sprichUnsAn, k.einleitung) +
+    return seitenkopf(u("kontakt") + " · " + t(z.ort), UI.sprichUnsAn, k.einleitung) +
       '<section class="abschnitt"><div class="breit">' +
         '<div class="kontaktreihe">' +
           '<div><p class="marke">WhatsApp</p>' +
@@ -899,16 +989,26 @@
   function aufbauen() {
     var seite = document.body.getAttribute("data-seite") || "index.html";
 
-    document.documentElement.lang = sprache;
-
     var kopfZiel = document.getElementById("kopfzeile");
     var inhalt   = document.getElementById("inhalt");
     var fussZiel = document.getElementById("fusszeile");
 
-    kopfZiel.innerHTML = kopfBauen(seite);
-    if (SEITEN[seite]) { inhalt.innerHTML = SEITEN[seite](); }
-    fussZiel.innerHTML = fussBauen();
-    rechtstexteUmschalten();
+    if (STATISCH) {
+      /* Alte geteilte Links wie kitten.html?lang=fr fuehren weiterhin
+         zur richtigen Sprachfassung.                                  */
+      var gewuenscht = null;
+      try { gewuenscht = new URLSearchParams(location.search).get("lang"); } catch (e) {}
+      if (gewuenscht && gewuenscht !== sprache && SPRACHEN.indexOf(gewuenscht) > -1) {
+        location.replace(seitenPfad(seite, gewuenscht) + location.hash);
+        return;
+      }
+    } else {
+      document.documentElement.lang = sprache;
+      kopfZiel.innerHTML = kopfBauen(seite);
+      if (SEITEN[seite]) { inhalt.innerHTML = SEITEN[seite](); }
+      fussZiel.innerHTML = fussBauen();
+      rechtstexteUmschalten();
+    }
 
     bilderAbsichern(document.body);
     videosVorbereiten(document.body);
@@ -946,10 +1046,25 @@
 
   /* Titel und Beschreibung der Seite ergaenzen */
   function kopfdatenSetzen() {
+    if (STATISCH) { return; }                 /* Titel steht schon im HTML */
     var z = INHALTE.zucht;
     if (!document.title || document.title.indexOf("|") === -1) {
       document.title = z.name + " | " + t(z.untertitel);
     }
+  }
+
+  /* Beim Erzeugen der Seiten: nur die Bausteine bereitstellen,
+     nichts im (nicht vorhandenen) Browserfenster anfassen.      */
+  if (BAU) {
+    window.PDU = {
+      sprache: function (s) { sprache = s; },
+      kopf: kopfBauen,
+      fuss: fussBauen,
+      seite: function (datei) { return SEITEN[datei] ? SEITEN[datei]() : ""; },
+      ui: u,
+      text: t
+    };
+    return;
   }
 
   if (document.readyState === "loading") {

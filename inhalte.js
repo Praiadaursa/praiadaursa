@@ -5,7 +5,7 @@
    Bearbeite stattdessen den Ordner MEINE-INHALTE und starte
    danach aktualisieren.command per Doppelklick.
 
-   Zuletzt erzeugt am 10.10.2026 um 12:03 Uhr
+   Zuletzt erzeugt am 11.10.2026 um 18:30 Uhr
    ============================================================ */
 
 const INHALTE = {
@@ -37,6 +37,9 @@ const INHALTE = {
     "telefon": "+49 177 1530695",
     "email": "magnani.giasophie@gmail.com",
     "instagram": "",
+    "plz": "54294",
+    "region": "Rheinland-Pfalz",
+    "einzugsgebiet": "Trier; Rheinland-Pfalz; Saarland; Luxemburg",
     "logoBild": "bilder/logo-portrait.jpg",
     "leitsatz": {
       "de": "Eine Birma lebt mit dir, nicht nur neben dir.",
@@ -569,10 +572,10 @@ const INHALTE = {
           "fr": "HCM — cardiomyopathie hypertrophique"
         },
         "text": {
-          "de": "Die hypertrophe Kardiomyopathie ist die häufigste Herzerkrankung der Katze und bei Birmas nachgewiesen. Unsere Zuchttiere werden per Ultraschall beim Kardiologen untersucht, nicht nur per Gentest — der deckt bei dieser Rasse nur einen Teil ab.",
-          "en": "Hypertrophic cardiomyopathy is the most common feline heart disease and is documented in Birmans. Our breeding cats are examined by ultrasound with a cardiologist, not only by genetic test — which covers only part of the picture in this breed.",
-          "lb": "Déi hypertroph Kardiomyopathie ass déi heefegst Häerzkrankheet bei der Kaz a bei Birmaen nogewisen. Eis Zuchtdéiere ginn duerch Ultraschall beim Kardiolog ënnersicht, net nëmmen duerch e Gentest — dee deckt bei dëser Rass just en Deel of.",
-          "fr": "La cardiomyopathie hypertrophique est la maladie cardiaque la plus fréquente chez le chat, et elle est documentée chez le Sacré de Birmanie. Nos reproducteurs sont examinés par échographie chez un cardiologue, et pas seulement par test génétique — celui-ci ne couvre qu'une partie du risque dans cette race."
+          "de": "Die hypertrophe Kardiomyopathie ist die häufigste Herzerkrankung der Katze und bei Birmas nachgewiesen. Ein Gentest deckt sie bei dieser Rasse nur zum Teil ab. Deshalb wurden die Elterntiere unserer Zuchtkatzen per Herzultraschall beim Kardiologen untersucht — so sieht es die Zuchtordnung vor.",
+          "en": "Hypertrophic cardiomyopathy is the most common feline heart disease and is documented in Birmans. In this breed a genetic test covers only part of the picture. That is why the parents of our breeding cats were examined by cardiac ultrasound with a cardiologist, as the breeding rules require.",
+          "lb": "Déi hypertroph Kardiomyopathie ass déi heefegst Häerzkrankheet bei der Kaz a bei Birmaen nogewisen. E Gentest deckt bei dëser Rass just en Deel of. Dofir goufen d'Elteren vun eisen Zuchtdéieren duerch Ultraschall beim Kardiolog ënnersicht, sou wéi d'Zuchtuerdnung et virgesäit.",
+          "fr": "La cardiomyopathie hypertrophique est la maladie cardiaque la plus fréquente chez le chat, et elle est documentée chez le Sacré de Birmanie. Dans cette race, un test génétique ne couvre qu'une partie du risque. C'est pourquoi les parents de nos reproducteurs ont passé une échographie cardiaque chez un cardiologue, comme le prévoit le règlement d'élevage."
         }
       },
       {
@@ -722,5 +725,47 @@ const INHALTE = {
         "fr": "Contact"
       }
     }
-  ]
+  ],
+  "seitenJeSprache": {
+    "de": [
+      "index.html",
+      "ueber-uns.html",
+      "katzen.html",
+      "vater.html",
+      "kitten.html",
+      "vermittlung.html",
+      "gesundheit.html",
+      "kontakt.html"
+    ],
+    "en": [
+      "index.html",
+      "ueber-uns.html",
+      "katzen.html",
+      "vater.html",
+      "kitten.html",
+      "vermittlung.html",
+      "gesundheit.html",
+      "kontakt.html"
+    ],
+    "lb": [
+      "index.html",
+      "ueber-uns.html",
+      "katzen.html",
+      "vater.html",
+      "kitten.html",
+      "vermittlung.html",
+      "gesundheit.html",
+      "kontakt.html"
+    ],
+    "fr": [
+      "index.html",
+      "ueber-uns.html",
+      "katzen.html",
+      "vater.html",
+      "kitten.html",
+      "vermittlung.html",
+      "gesundheit.html",
+      "kontakt.html"
+    ]
+  }
 };

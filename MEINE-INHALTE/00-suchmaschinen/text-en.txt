@@ -1,0 +1,58 @@
+# Titel und Beschreibung, wie sie in den Google-Ergebnissen erscheinen.
+# Je Seite ein Block, Bloecke durch === getrennt.
+# Titel hoechstens etwa 60 Zeichen, Beschreibung etwa 155.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Seite: index.html
+Titel: Birman Kittens in Trier near Luxembourg | Praia da Ursa
+Beschreibung: Small Sacred Birman cattery in Trier, member of Felidae e.V. Pedigree kittens raised with a dog and a second cat. Ready to leave at 12 weeks.
+---
+
+===
+
+Seite: ueber-uns.html
+Titel: Our Birman Cattery in Trier | Praia da Ursa
+Beschreibung: How we breed Sacred Birmans: one litter a year, kittens raised in the middle of family life with a dog and a cat, under Felidae e.V. rules.
+---
+
+===
+
+Seite: katzen.html
+Titel: Our Birman Queen | Praia da Ursa
+Beschreibung: Meet Yoselin, the mother of our kittens: a Seal Tabby Point Sacred Birman, blood group A, tested for HCM, PKD and FeLV/FIV.
+---
+
+===
+
+Seite: vater.html
+Titel: Stud Luigi, Father of the A Litter | Praia da Ursa
+Beschreibung: Luigi, father of our A litter: a good-natured, sociable Sacred Birman stud from the von Oldima cattery. Profile, photos and health.
+---
+
+===
+
+Seite: kitten.html
+Titel: Birman Kittens for Sale | Praia da Ursa
+Beschreibung: Our current Sacred Birman kittens from Trier: photos, personality, colour and availability. Ready at 12 weeks, microchipped, with pedigree.
+---
+
+===
+
+Seite: vermittlung.html
+Titel: Buying a Birman Kitten: Process & Price | Praia da Ursa
+Beschreibung: How rehoming works: getting to know each other, reservation, moving out from 12 weeks. The price includes pedigree, vaccination and microchip.
+---
+
+===
+
+Seite: gesundheit.html
+Titel: Sacred Birman Health | Praia da Ursa
+Beschreibung: What we look out for in our Birmans: tests for HCM, PKD and FeLV/FIV, blood group, vaccination, deworming and diet – explained openly.
+---
+
+===
+
+Seite: kontakt.html
+Titel: Contact: Birman Cattery in Trier | Praia da Ursa
+Beschreibung: Questions about our Sacred Birman kittens? Message us on WhatsApp, send an email or call. Praia da Ursa in Trier, close to Luxembourg.
+---

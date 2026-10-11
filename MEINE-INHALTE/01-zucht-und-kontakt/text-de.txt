@@ -6,6 +6,10 @@
 Zuchtname: Praia da Ursa
 Untertitel: Heilige Birma · Trier
 Ort: Trier
+PLZ: 54294
+Region: Rheinland-Pfalz
+# Einzugsgebiet: Orte und Regionen, mit Semikolon getrennt (fuer Google)
+Einzugsgebiet: Trier; Rheinland-Pfalz; Saarland; Luxemburg
 Gegruendet: 2025
 Verband: Felidae e.V.
 VerbandLink: https://www.felidae-ev.de/

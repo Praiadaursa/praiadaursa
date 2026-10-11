@@ -1,0 +1,58 @@
+# Titel und Beschreibung, wie sie in den Google-Ergebnissen erscheinen.
+# Je Seite ein Block, Bloecke durch === getrennt.
+# Titel hoechstens etwa 60 Zeichen, Beschreibung etwa 155.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Seite: index.html
+Titel: Hellege Birma Kitten bei Tréier | Praia da Ursa
+Beschreibung: Kleng Hellege-Birma-Zucht zu Tréier, Member am Felidae e.V. Kitten mat Stammbam, grouss ginn mat Hond a Kaz. Ëmzuch ab 12 Wochen.
+---
+
+===
+
+Seite: ueber-uns.html
+Titel: Eis Hellege-Birma-Zucht zu Tréier | Praia da Ursa
+Beschreibung: Wéi mir Hellege Birma zuchten: ee Wuerf am Joer, Kitten déi mëtt am Familljeliewen mat Hond a Kaz opwuessen, no de Regele vum Felidae e.V.
+---
+
+===
+
+Seite: katzen.html
+Titel: Eis Birma-Zuchtkaz | Praia da Ursa
+Beschreibung: Léiert d'Yoselin kennen, d'Mamm vun eise Kitten: Hellege Birma a Seal Tabby Point, Bluttgrupp A, op HCM, PKD a FeLV/FIV getest.
+---
+
+===
+
+Seite: vater.html
+Titel: Deckkueder Luigi | Praia da Ursa
+Beschreibung: De Luigi, de Papp vun eisem A-Wuerf: e frëndlechen, geselleche Hellege-Birma-Kueder aus der Zucht von Oldima. Steckbréif, Fotoen a Gesondheet.
+---
+
+===
+
+Seite: kitten.html
+Titel: Hellege Birma Kitten | Praia da Ursa
+Beschreibung: Eis aktuell Hellege-Birma-Kitten vun Tréier: Fotoen, Charakter, Faarf an Disponibilitéit. Ëmzuch ab 12 Wochen, mat Chip a Stammbam.
+---
+
+===
+
+Seite: vermittlung.html
+Titel: Vermëttlung & Präis | Praia da Ursa
+Beschreibung: Wéi d'Vermëttlung leeft: Kennenléieren, Reservatioun, Ëmzuch ab 12 Wochen. De Präis enthält Stammbam, Impfung a Chip.
+---
+
+===
+
+Seite: gesundheit.html
+Titel: Gesondheet vun der Hellege Birma | Praia da Ursa
+Beschreibung: Wourop mir bei eise Birmaen oppassen: Tester op HCM, PKD a FeLV/FIV, Bluttgrupp, Impfung, Entworme an Ernärung.
+---
+
+===
+
+Seite: kontakt.html
+Titel: Kontakt: Birma-Zucht zu Tréier | Praia da Ursa
+Beschreibung: Froen zu eise Hellege-Birma-Kitten? Schreift eis iwwer WhatsApp oder E-Mail, oder rufft un. Praia da Ursa zu Tréier, no bei Lëtzebuerg.
+---

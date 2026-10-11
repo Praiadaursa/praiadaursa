@@ -6,6 +6,8 @@ PRAIA DA URSA — Inhalte uebernehmen
 Liest den Ordner MEINE-INHALTE aus und erzeugt daraus
   * inhalte.js   (alle Texte der Website, in allen Sprachen)
   * bilder/      (alle Fotos und Videos, passend benannt und verkleinert)
+  * alle HTML-Seiten mit fertigem Text, je Sprache ein Ordner
+  * sitemap.xml und robots.txt fuer Suchmaschinen
 
 Aufruf: Doppelklick auf aktualisieren.command
         oder  python3 werkzeuge/uebernehmen.py
@@ -20,6 +22,9 @@ import shutil
 import struct
 import subprocess
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import vorrendern  # noqa: E402  (liegt im selben Ordner)
 
 WURZEL    = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 QUELLE    = os.path.join(WURZEL, "MEINE-INHALTE")
@@ -167,6 +172,28 @@ def rolle_deuten(wert):
     return "koenigin"
 
 
+def kopfdaten_lesen():
+    """Titel und Beschreibung je Seite und Sprache aus 00-suchmaschinen.
+       Rueckgabe: {sprache: {datei: {"titel": ..., "beschreibung": ...}}}"""
+    ergebnis = {}
+    for sprache in SPRACHEN:
+        liste = eintraege("00-suchmaschinen", sprache) or []
+        for e in liste:
+            datei = e["felder"].get("seite")
+            if not datei:
+                continue
+            titel = e["felder"].get("titel", "")
+            besch = e["felder"].get("beschreibung", "")
+            if len(titel) > 65:
+                melden(hinweise, "00-suchmaschinen (%s): Titel fuer %s hat %d Zeichen, "
+                       "Google zeigt nur etwa 60." % (sprache, datei, len(titel)))
+            if len(besch) > 165:
+                melden(hinweise, "00-suchmaschinen (%s): Beschreibung fuer %s hat %d Zeichen, "
+                       "Google zeigt nur etwa 155." % (sprache, datei, len(besch)))
+            ergebnis.setdefault(sprache, {})[datei] = {"titel": titel, "beschreibung": besch}
+    return ergebnis
+
+
 def anzahl(ordner):
     de = eintraege(ordner, "de")
     return len(de) if de else 0
@@ -179,13 +206,60 @@ QUALITAET = 80       # JPEG-Qualitaet
 statistik = {"gespart": 0, "fotos": 0, "videos": 0}
 
 
-def verkleinern(pfad):
+LOGO_KANTE = 900     # das Medaillon ist hoechstens ~400 px breit
+
+# Merkliste, aus welchem Original jede Datei in bilder/ entstanden ist.
+# Ohne sie wuerde jedes Foto bei jedem Lauf neu berechnet — das Ergebnis
+# unterscheidet sich jedes Mal um ein paar Bytes, und jeder Upload
+# schoebe alle Fotos erneut zu GitHub.
+MERKLISTE = os.path.join(ZWISCHEN, "fotos.json")
+_merk = None
+
+
+def merkliste():
+    global _merk
+    if _merk is None:
+        try:
+            with open(MERKLISTE, encoding="utf-8") as f:
+                _merk = json.load(f)
+        except Exception:
+            _merk = {}
+    return _merk
+
+
+def merkliste_speichern():
+    if _merk is None:
+        return
+    os.makedirs(ZWISCHEN, exist_ok=True)
+    with open(MERKLISTE, "w", encoding="utf-8") as f:
+        json.dump(_merk, f, indent=1, sort_keys=True)
+
+
+def foto_aktuell(quelle, ziel, kante):
+    """True, wenn ziel schon aus genau diesem Original entstanden ist."""
+    st = os.stat(quelle)
+    kennung = "%s|%d|%d|%s" % (os.path.relpath(quelle, QUELLE), st.st_size,
+                               int(st.st_mtime), kante or MAX_KANTE)
+    name = os.path.basename(ziel)
+    merk = merkliste()
+    if os.path.exists(ziel):
+        if merk.get(name) == kennung:
+            return True, kennung
+        # Erster Lauf mit Merkliste: eine Datei, die juenger ist als ihr
+        # Original, wurde bereits daraus erzeugt.
+        if name not in merk and os.path.getmtime(ziel) >= st.st_mtime:
+            merk[name] = kennung
+            return True, kennung
+    return False, kennung
+
+
+def verkleinern(pfad, kante=None):
     """Rechnet grosse Handyfotos auf Webgroesse herunter.
        Nutzt sips, das auf jedem Mac vorhanden ist. Die Originale
        in MEINE-INHALTE bleiben unveraendert."""
     vorher = os.path.getsize(pfad)
     try:
-        subprocess.run(["sips", "-Z", str(MAX_KANTE), pfad],
+        subprocess.run(["sips", "-Z", str(kante or MAX_KANTE), pfad],
                        check=True, capture_output=True)
         if pfad.lower().endswith((".jpg", ".jpeg")):
             subprocess.run(["sips", "-s", "formatOptions", str(QUALITAET), pfad],
@@ -200,7 +274,7 @@ def verkleinern(pfad):
 # ---------------------------------------------------------------- videos
 
 MAX_SEKUNDEN = 60    # laengere Videos werden gekuerzt
-UMWANDLUNG_VERSION = 2
+UMWANDLUNG_VERSION = 3   # 3: 960x540 statt 1280x720
 WARNGROESSE  = 40    # MB; darueber wird es fuer GitHub und Handys zaeh
 
 
@@ -263,7 +337,7 @@ def videodauer(pfad):
 
 
 def video_uebernehmen(quelle, ziel):
-    """Wandelt ein Handyvideo in webtaugliches MP4 um (720p, H.264).
+    """Wandelt ein Handyvideo in webtaugliches MP4 um (540p, H.264).
 
        avconvert gehoert zu macOS und entfernt dabei auch Standortdaten.
        Umgewandelte Videos landen im Zwischenspeicher, damit sie nicht
@@ -282,7 +356,7 @@ def video_uebernehmen(quelle, ziel):
         os.makedirs(ZWISCHEN, exist_ok=True)
         print("    wandle Video um: %s" % name)
         vorlaeufig = zwischen + ".teil.mp4"
-        befehl = ["avconvert", "--source", quelle, "--preset", "Preset1280x720",
+        befehl = ["avconvert", "--source", quelle, "--preset", "Preset960x540",
                   "--output", vorlaeufig, "--replace"]
         # Achtung: --duration kuerzt nicht nur, es FUELLT kuerzere Videos
         # mit einem stehenden Bild auf. Deshalb nur bei wirklich zu langen.
@@ -378,8 +452,12 @@ def fotos(ordner, praefix):
                 continue
             statistik["videos"] += 1
         else:
-            shutil.copy2(os.path.join(quelle, datei), ziel)
-            verkleinern(ziel)
+            kante = LOGO_KANTE if praefix == "logo-portrait" else None
+            aktuell, kennung = foto_aktuell(os.path.join(quelle, datei), ziel, kante)
+            if not aktuell:
+                shutil.copy2(os.path.join(quelle, datei), ziel)
+                verkleinern(ziel, kante)
+                merkliste()[name] = kennung
             statistik["fotos"] += 1
 
         verwendet.add(name)
@@ -430,6 +508,9 @@ def bauen():
         "telefon":     feldwert("01-zucht-und-kontakt", "Telefon"),
         "email":       feldwert("01-zucht-und-kontakt", "EMail"),
         "instagram":   feldwert("01-zucht-und-kontakt", "Instagram"),
+        "plz":         feldwert("01-zucht-und-kontakt", "PLZ"),
+        "region":      feldwert("01-zucht-und-kontakt", "Region"),
+        "einzugsgebiet": feldwert("01-zucht-und-kontakt", "Einzugsgebiet"),
         "logoBild":    logo[0] if logo else "bilder/logo-portrait.jpg",
         "leitsatz":    mehrsprachig("01-zucht-und-kontakt"),
     }
@@ -619,11 +700,7 @@ def schreiben(daten):
         f.write(";\n")
 
 
-def versionen_stempeln():
-    """Haengt an stil.css, seite.js und inhalte.js in allen Seiten eine
-       Versionsnummer an (?v=...). Aendert sich eine Datei, aendert sich
-       die Nummer — so laden Browser sofort die neue Fassung statt einer
-       alten Kopie aus ihrem Zwischenspeicher."""
+def versionsnummern():
     dateien = ["assets/stil.css", "assets/seite.js", "inhalte.js"]
     nummern = {}
     for d in dateien:
@@ -632,6 +709,15 @@ def versionen_stempeln():
         # Die Zeile mit dem Erzeugungsdatum zaehlt nicht mit
         inhalt = re.sub(rb"Zuletzt erzeugt am [^\n]*", b"", inhalt)
         nummern[d] = hashlib.sha1(inhalt).hexdigest()[:8]
+    return nummern
+
+
+def versionen_stempeln():
+    """Haengt an stil.css, seite.js und inhalte.js in Impressum und
+       Datenschutz eine Versionsnummer an (?v=...). Aendert sich eine Datei,
+       aendert sich die Nummer — so laden Browser sofort die neue Fassung.
+       Die uebrigen Seiten bekommen ihre Nummer direkt beim Erzeugen."""
+    nummern = versionsnummern()
     for seite in sorted(os.listdir(WURZEL)):
         if not seite.endswith(".html"):
             continue
@@ -661,11 +747,23 @@ def main():
         print("\nEs wurde nichts geaendert. Bitte die Dateien pruefen.")
         return 1
 
+    daten["seitenJeSprache"] = vorrendern.seiten_je_sprache(daten)
     schreiben(daten)
+
+    try:
+        seiten_anzahl, url_anzahl = vorrendern.alles_erzeugen(
+            WURZEL, daten, kopfdaten_lesen(), versionsnummern(),
+            datetime.date.today().isoformat())
+    except Exception as e:
+        print("\n  FEHLER beim Erzeugen der Seiten:\n  " + str(e))
+        return 1
+
     versionen_stempeln()
     entfernt = bilder_aufraeumen()
+    merkliste_speichern()
 
     print("\n  Fertig.\n")
+    print("  %d Seiten erzeugt, %d Adressen in der Sitemap." % (seiten_anzahl, url_anzahl))
     print("  %d Katze(n), %d Kitten, %d Fotos, %d Videos uebernommen." %
           (len(daten["katzen"]), len(daten["wurf"]["kitten"]),
            statistik["fotos"], statistik["videos"]))

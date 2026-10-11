@@ -1,0 +1,58 @@
+# Titel und Beschreibung, wie sie in den Google-Ergebnissen erscheinen.
+# Je Seite ein Block, Bloecke durch === getrennt.
+# Titel hoechstens etwa 60 Zeichen, Beschreibung etwa 155.
+# Zeilen mit # erscheinen NICHT auf der Website.
+
+Seite: index.html
+Titel: Chatons Sacré de Birmanie près de Luxembourg | Praia da Ursa
+Beschreibung: Petit élevage de Sacrés de Birmanie à Trèves, membre du Felidae e.V. Chatons avec pedigree, élevés avec un chien et un chat. Départ dès 12 semaines.
+---
+
+===
+
+Seite: ueber-uns.html
+Titel: Élevage de Sacrés de Birmanie à Trèves | Praia da Ursa
+Beschreibung: Notre façon d'élever : une portée par an, des chatons élevés au cœur de la vie de famille avec un chien et un chat, selon les règles du Felidae e.V.
+---
+
+===
+
+Seite: katzen.html
+Titel: Notre femelle Sacré de Birmanie | Praia da Ursa
+Beschreibung: Découvrez Yoselin, la mère de nos chatons : Sacré de Birmanie Seal Tabby Point, groupe sanguin A, testée HCM, PKD et FeLV/FIV.
+---
+
+===
+
+Seite: vater.html
+Titel: Luigi, père de la portée A | Praia da Ursa
+Beschreibung: Luigi, père de notre portée A : un mâle Sacré de Birmanie doux et sociable, issu de l'élevage von Oldima. Fiche, photos et santé.
+---
+
+===
+
+Seite: kitten.html
+Titel: Chatons Sacré de Birmanie disponibles | Praia da Ursa
+Beschreibung: Nos chatons Sacré de Birmanie de Trèves : photos, caractère, couleur et disponibilité. Départ dès 12 semaines, pucés, avec pedigree.
+---
+
+===
+
+Seite: vermittlung.html
+Titel: Adopter un Sacré de Birmanie : prix | Praia da Ursa
+Beschreibung: Comment se passe l'adoption : rencontre, réservation, départ dès 12 semaines. Le prix comprend le pedigree, la vaccination et la puce.
+---
+
+===
+
+Seite: gesundheit.html
+Titel: Santé du Sacré de Birmanie | Praia da Ursa
+Beschreibung: Ce que nous surveillons : tests HCM, PKD et FeLV/FIV, groupe sanguin, vaccination, vermifugation et alimentation – expliqués en toute transparence.
+---
+
+===
+
+Seite: kontakt.html
+Titel: Contact : élevage de Birmans à Trèves | Praia da Ursa
+Beschreibung: Une question sur nos chatons Sacré de Birmanie ? Écrivez-nous sur WhatsApp ou par e-mail, ou appelez-nous. Praia da Ursa à Trèves, près de Luxembourg.
+---

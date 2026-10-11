@@ -247,6 +247,21 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
 }
 .sprachen button[aria-pressed="true"] { color:var(--blau); }
 .sprachen span { color:var(--linie); font-size:.6875rem; }
+/* Auf fertig erzeugten Seiten sind die Sprachen Links statt Knoepfe —
+   sie sehen exakt gleich aus.                                         */
+.sprachen a {
+  font-family:var(--sans); font-size:.6875rem; font-weight:400;
+  letter-spacing:.16em; text-transform:uppercase;
+  padding:.35rem .2rem; color:var(--text-leise); text-decoration:none;
+}
+.sprachen a:hover { text-decoration:none; color:var(--blau); }
+.sprachen a[aria-current="true"] { color:var(--blau); }
+
+/* Hauptueberschriften fassen Suchzeile und Titel zusammen. Die
+   Teile behalten ihr Aussehen, das h1 selbst ist unsichtbar.    */
+.kopf-titel, .empfang-titel { margin:0; font:inherit; letter-spacing:normal; color:inherit; }
+.kopf-titel > .marke, .kopf-titel > .titel,
+.empfang-titel > .empfang-name, .empfang-titel > .empfang-unter { display:block; }
 
 .menuetaste {
   display:none; background:none; border:0; padding:.5rem; cursor:pointer;
