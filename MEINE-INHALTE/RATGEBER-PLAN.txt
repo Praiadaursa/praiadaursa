@@ -1,0 +1,39 @@
+================================================================
+  RATGEBER-PLAN · Praia da Ursa
+================================================================
+
+  So läuft es:
+  Am 1. jedes Monats um 9 Uhr bereitet Claude automatisch die
+  Beiträge des Monats vor (ein neuer Artikel und ein ausgebauter).
+  Du bekommst eine Benachrichtigung, liest die Texte und schreibst
+  "Ja" – dann stellt Claude sie online. Ohne dein Ja geht nichts
+  online. Sagst du "Nein" oder wünschst Änderungen, passt Claude
+  die Texte an.
+
+  Die Claude-App muss dafür geöffnet sein. Ist sie am 1. zu,
+  läuft die Vorbereitung beim nächsten Öffnen.
+
+  Hast du die Benachrichtigung verpasst, schreib in einem neuen
+  Gespräch einfach: "Ratgeber online stellen".
+
+  Status:  offen        = noch nicht vorbereitet
+           vorbereitet  = wartet auf dein Ja
+           online       = veröffentlicht
+  Du kannst Themen hier ändern, tauschen oder streichen.
+  Zeilen mit # werden ignoriert.
+
+----------------------------------------------------------------
+Monat | Art | Ordner / Artikel | Thema | Status
+----------------------------------------------------------------
+2026-11 | neu | 20-ratgeber-13-heilige-birma-kater-oder-katze | Kater oder Katze? Unterschiede im Alltag, was bei der Wahl wirklich zählt | offen
+2026-11 | ausbau | 20-ratgeber-01-heilige-birma-charakter | Erlebnisse mit dem A-Wurf ergänzen (Ash, Amber, Autumn, Atlas) | offen
+2026-12 | neu | 20-ratgeber-14-heilige-birma-und-kinder | Heilige Birma und Kinder: Regeln, Alter, erste Begegnung | offen
+2026-12 | ausbau | 20-ratgeber-06-kitten-einzug-checkliste | Abschnitt: Warum ein Kitten kein Überraschungsgeschenk zu Weihnachten ist | offen
+2027-01 | neu | 20-ratgeber-15-birma-kitten-ernaehrung | Was frisst ein Birma-Kitten? Umstellung, Futterplan der ersten Wochen | offen
+2027-01 | ausbau | 20-ratgeber-04-heilige-birma-kosten | Beispielrechnung erstes Jahr übersichtlicher (nur als Schätzung gekennzeichnet) | offen
+2027-02 | neu | 20-ratgeber-16-heilige-birma-oder-ragdoll | Heilige Birma oder Ragdoll? Ähnlich und doch verschieden | offen
+2027-02 | ausbau | 20-ratgeber-02-heilige-birma-farben | Farbentwicklung des A-Wurfs mit Fotos von Woche zu Woche | offen
+2027-03 | neu | 20-ratgeber-17-birma-beschaeftigung | Spielen und Beschäftigen: Ideen für Wohnungskatzen | offen
+2027-03 | ausbau | 20-ratgeber-08-heilige-birma-fellpflege | Frühjahrs-Fellwechsel: was dann anders ist | offen
+2027-04 | neu | 20-ratgeber-18-schutzvertrag-katze | Der Schutzvertrag: was drinsteht und warum (nach unseren Bedingungen) | offen
+2027-04 | ausbau | 20-ratgeber-09-wohnungskatze-oder-freigang | Balkonsaison: Katzennetz anbringen Schritt für Schritt | offen
