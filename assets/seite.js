@@ -353,7 +353,7 @@
   var STATUS_TEXT = {
     verfuegbar: { de: "Verfügbar", en: "Available", lb: "Disponibel", fr: "Disponible" },
     reserviert: { de: "Reserviert", en: "Reserved", lb: "Reservéiert", fr: "Réservé" },
-    vergeben:   { de: "Vergeben",   en: "Homed",    lb: "Adoptéiert",  fr: "Adopté" }
+    vergeben:   { de: "Familie gefunden", en: "Found a family",    lb: "Adoptéiert",  fr: "Adopté" }
   };
   /* Im Franzoesischen richtet sich das Wort nach dem Geschlecht */
   var STATUS_FR = {

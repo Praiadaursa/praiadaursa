@@ -5,7 +5,7 @@
    Bearbeite stattdessen den Ordner MEINE-INHALTE und starte
    danach aktualisieren.command per Doppelklick.
 
-   Zuletzt erzeugt am 11.10.2026 um 19:00 Uhr
+   Zuletzt erzeugt am 16.10.2026 um 15:23 Uhr
    ============================================================ */
 
 const INHALTE = {
@@ -893,7 +893,7 @@ const INHALTE = {
         "id": "ash",
         "name": "Ash",
         "geschlecht": "m",
-        "status": "verfuegbar",
+        "status": "vergeben",
         "farbschlag": {
           "de": "Blue Silver Tabby Point",
           "en": "Blue Silver Tabby Point",
@@ -973,7 +973,7 @@ const INHALTE = {
         "id": "autumn",
         "name": "Autumn",
         "geschlecht": "w",
-        "status": "verfuegbar",
+        "status": "vergeben",
         "farbschlag": {
           "de": "Seal Tabby Point",
           "en": "Seal Tabby Point",
@@ -1007,7 +1007,7 @@ const INHALTE = {
         "id": "atlas",
         "name": "Atlas",
         "geschlecht": "m",
-        "status": "verfuegbar",
+        "status": "vergeben",
         "farbschlag": {
           "de": "Blue Tabby Point",
           "en": "Blue Tabby Point",

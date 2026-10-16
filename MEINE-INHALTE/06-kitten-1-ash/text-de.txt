@@ -6,7 +6,7 @@
 
 Name: Ash
 Geschlecht: m
-Status: verfuegbar
+Status: vergeben
 Farbschlag: Blue Silver Tabby Point
 ---
 
