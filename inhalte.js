@@ -5,7 +5,7 @@
    Bearbeite stattdessen den Ordner MEINE-INHALTE und starte
    danach aktualisieren.command per Doppelklick.
 
-   Zuletzt erzeugt am 16.10.2026 um 15:23 Uhr
+   Zuletzt erzeugt am 24.10.2026 um 18:59 Uhr
    ============================================================ */
 
 const INHALTE = {
@@ -126,9 +126,9 @@ const INHALTE = {
           "fr": "Combien coûte un chaton ?"
         },
         "antwort": {
-          "de": "Ein Kitten kostet 1.100 €. Darin enthalten sind der Stammbaum des Felidae e.V., die erste Impfung, der Chip, mehrfache Entwurmung, eine Versicherung bis einschließlich der 14. Lebenswoche, die tierärztliche Untersuchung und ein Startpaket für die ersten Tage. Die Reservierungsgebühr von 300 € wird auf den Kaufpreis angerechnet.",
-          "en": "A kitten costs 1,100 €. This includes the Felidae e.V. pedigree, the first vaccination, microchip, repeated deworming, insurance up to and including the 14th week of life, a veterinary check and a starter pack for the first few days. The 300 € reservation fee goes towards the purchase price.",
-          "fr": "Un chaton coûte 1 100 €. Ce prix comprend le pedigree du Felidae e.V., la première vaccination, la puce, plusieurs vermifugations, une assurance jusqu'à la 14e semaine incluse, l'examen vétérinaire et un kit de départ pour les premiers jours. Les 300 € de frais de réservation sont déduits du prix d'achat."
+          "de": "Ein Kitten kostet 1.000 €. Darin enthalten sind der Stammbaum des Felidae e.V., die erste Impfung, der Chip, mehrfache Entwurmung, eine Versicherung bis einschließlich der 14. Lebenswoche, die tierärztliche Untersuchung und ein Startpaket für die ersten Tage. Die Reservierungsgebühr von 300 € wird auf den Kaufpreis angerechnet.",
+          "en": "A kitten costs 1,000 €. This includes the Felidae e.V. pedigree, the first vaccination, microchip, repeated deworming, insurance up to and including the 14th week of life, a veterinary check and a starter pack for the first few days. The 300 € reservation fee goes towards the purchase price.",
+          "fr": "Un chaton coûte 1 000 €. Ce prix comprend le pedigree du Felidae e.V., la première vaccination, la puce, plusieurs vermifugations, une assurance jusqu'à la 14e semaine incluse, l'examen vétérinaire et un kit de départ pour les premiers jours. Les 300 € de frais de réservation sont déduits du prix d'achat."
         }
       },
       {
@@ -246,9 +246,9 @@ const INHALTE = {
           "fr": "Quand aura lieu la prochaine portée ?"
         },
         "antwort": {
-          "de": "Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir, sobald sich genug Interessenten auf unserer [Warteliste](warteliste.html) gemeldet haben – die Warteliste entscheidet also mit, wann es weitergeht.",
-          "en": "We have at most one litter a year. We plan the next one once enough people have joined our [waiting list](warteliste.html) – so the waiting list helps decide when things continue.",
-          "fr": "Nous avons au maximum une portée par an. Nous planifions la suivante dès que suffisamment de personnes se sont inscrites sur notre [liste d'attente](warteliste.html) – la liste d'attente contribue donc à décider de la suite."
+          "de": "Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir, sobald sich drei Interessenten auf unserer [Warteliste](warteliste.html) gemeldet haben (einer steht schon darauf) – die Warteliste entscheidet also mit, wann es weitergeht.",
+          "en": "We have at most one litter a year. We plan the next one once three people have joined our [waiting list](warteliste.html) (one is already on it) – so the waiting list helps decide when things continue.",
+          "fr": "Nous avons au maximum une portée par an. Nous planifions la suivante dès que trois personnes se sont inscrites sur notre [liste d'attente](warteliste.html) (une y figure déjà) – la liste d'attente contribue donc à décider de la suite."
         }
       },
       {
@@ -296,9 +296,9 @@ const INHALTE = {
       "fr": "La liste d'attente"
     },
     "einleitung": {
-      "de": "Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir erst, wenn genug Menschen ernsthaft auf ein Kitten warten. Deine Anfrage auf der Warteliste entscheidet also wirklich mit, wann es bei uns wieder wuselt.",
-      "en": "We have at most one litter a year, and we only plan the next one once enough people are genuinely waiting for a kitten. So your place on the waiting list really does help decide when kittens tumble through our home again.",
-      "fr": "Nous avons au maximum une portée par an, et nous ne planifions la suivante que lorsque suffisamment de personnes attendent sérieusement un chaton. Votre inscription sur la liste d'attente contribue donc vraiment à décider du moment où des chatons gambaderont de nouveau chez nous."
+      "de": "Wir haben höchstens einen Wurf im Jahr. Ab drei Interessenten auf der Warteliste planen wir den nächsten Wurf. Eine Person steht schon darauf, es fehlen also noch zwei. Mit deiner Anfrage entscheidest du wirklich mit, wann es bei uns wieder wuselt.",
+      "en": "We have at most one litter a year, and we plan the next one once three people are on the waiting list. One person is already on it, so two places are still missing. Your request really does help decide when kittens tumble through our home again.",
+      "fr": "Nous avons au maximum une portée par an, et nous planifions la suivante dès que trois personnes sont inscrites sur la liste d'attente. Une personne y figure déjà, il en manque donc encore deux. Votre demande contribue vraiment à décider du moment où des chatons gambaderont de nouveau chez nous."
     },
     "whatsappText": {
       "de": "Hallo, wir möchten uns gern auf eure Warteliste für einen der nächsten Würfe setzen lassen.",
@@ -363,9 +363,9 @@ const INHALTE = {
     "abschnitte": [
       {
         "titel": {
-          "de": "Was du uns schreiben solltest",
-          "en": "What to tell us",
-          "fr": "Ce qu'il faut nous écrire"
+          "de": "Erzähl uns von dir",
+          "en": "Tell us about yourself",
+          "fr": "Parlez-nous de vous"
         },
         "text": {
           "de": "Je mehr wir von dir wissen, desto besser können wir einschätzen, welches Kitten zu dir passt:\n\n- wie du wohnst und ob es einen gesicherten Balkon oder Garten gibt\n- welche Tiere schon bei dir leben – denk daran, dass unsere Kitten nur zu einer zweiten Katze ziehen\n- ob Kinder im Haushalt leben\n- wie viel Zeit du zu Hause verbringst\n- ob du dir ein Weibchen oder einen Kater wünschst und ob du eine Lieblingsfarbe hast\n- ab wann ein Kitten bei dir einziehen könnte",
@@ -692,7 +692,14 @@ const INHALTE = {
       "bilder/zucht-11.jpg",
       "bilder/zucht-12.jpg",
       "bilder/zucht-13.jpg",
-      "bilder/zucht-14.jpg"
+      "bilder/zucht-14.jpg",
+      "bilder/zucht-15.jpg",
+      "bilder/zucht-16.jpg",
+      "bilder/zucht-17.jpg",
+      "bilder/zucht-18.jpg",
+      "bilder/zucht-19.jpg",
+      "bilder/zucht-20.mp4",
+      "bilder/zucht-21.jpg"
     ],
     "zuchtBildAlt": {
       "de": "Birma-Katze auf einer Fensterbank",
@@ -912,7 +919,8 @@ const INHALTE = {
           "bilder/ash-3.jpg",
           "bilder/ash-4.jpg",
           "bilder/ash-5.jpg",
-          "bilder/ash-6.jpg"
+          "bilder/ash-6.jpg",
+          "bilder/ash-7.mp4"
         ],
         "bildgruppen": [
           [
@@ -921,7 +929,8 @@ const INHALTE = {
             "bilder/ash-3.jpg",
             "bilder/ash-4.jpg",
             "bilder/ash-5.jpg",
-            "bilder/ash-6.jpg"
+            "bilder/ash-6.jpg",
+            "bilder/ash-7.mp4"
           ]
         ]
       },
@@ -952,7 +961,10 @@ const INHALTE = {
           "bilder/amber-7.jpg",
           "bilder/amber-8.jpg",
           "bilder/amber-9.jpg",
-          "bilder/amber-10.mp4"
+          "bilder/amber-10.mp4",
+          "bilder/amber-11.jpg",
+          "bilder/amber-12.jpg",
+          "bilder/amber-13.jpg"
         ],
         "bildgruppen": [
           [
@@ -965,7 +977,10 @@ const INHALTE = {
             "bilder/amber-7.jpg",
             "bilder/amber-8.jpg",
             "bilder/amber-9.jpg",
-            "bilder/amber-10.mp4"
+            "bilder/amber-10.mp4",
+            "bilder/amber-11.jpg",
+            "bilder/amber-12.jpg",
+            "bilder/amber-13.jpg"
           ]
         ]
       },
@@ -1007,7 +1022,7 @@ const INHALTE = {
         "id": "atlas",
         "name": "Atlas",
         "geschlecht": "m",
-        "status": "vergeben",
+        "status": "verfuegbar",
         "farbschlag": {
           "de": "Blue Tabby Point",
           "en": "Blue Tabby Point",
@@ -1021,11 +1036,27 @@ const INHALTE = {
           "fr": "Atlas regarde le monde d'un seul œil — et pourtant, il veut en voir plus que tous les autres ! Aucun carton n'est trop profond, aucune étagère trop haute, aucun recoin trop sombre : notre petit aventurier doit absolument être passé partout. Et quand il revient de ses expéditions, il file tout droit vers les genoux les plus proches.\n\nCar Atlas est de loin le plus confiant de la portée : il va au-devant de chacun, se laisse prendre dans les bras sans se faire prier et se met à ronronner dès qu'on le touche. Les chats s'adaptent remarquablement bien à la vie avec un seul œil — et Atlas en est la plus belle preuve.\n\nAtlas ne cherche pas une famille qui l'accepterait malgré tout — mais une famille qui le cherche, lui et personne d'autre : des personnes au grand cœur, sensibles à ce qui sort de l'ordinaire, qui aimeront son âme d'explorateur et l'accepteront tel qu'il est. Il suffit de croiser son regard pour comprendre pourquoi."
         },
         "bilder": [
-          "bilder/atlas-1.jpg"
+          "bilder/atlas-1.jpg",
+          "bilder/atlas-2.jpg",
+          "bilder/atlas-3.jpg",
+          "bilder/atlas-4.jpg",
+          "bilder/atlas-5.jpg",
+          "bilder/atlas-6.jpg",
+          "bilder/atlas-7.jpg",
+          "bilder/atlas-8.jpg",
+          "bilder/atlas-9.mp4"
         ],
         "bildgruppen": [
           [
-            "bilder/atlas-1.jpg"
+            "bilder/atlas-1.jpg",
+            "bilder/atlas-2.jpg",
+            "bilder/atlas-3.jpg",
+            "bilder/atlas-4.jpg",
+            "bilder/atlas-5.jpg",
+            "bilder/atlas-6.jpg",
+            "bilder/atlas-7.jpg",
+            "bilder/atlas-8.jpg",
+            "bilder/atlas-9.mp4"
           ]
         ]
       }
@@ -1165,9 +1196,9 @@ const INHALTE = {
         "fr": "Prix"
       },
       "text": {
-        "de": "Ein Kitten kostet 1.100 €. Darin enthalten sind Stammbaum des Felidae e.V., erste Impfung, Chip, mehrfache Entwurmung, Versicherung bis einschließlich 14. Lebenswoche, tierärztliche Untersuchung und das Startpaket für die ersten Tage.",
-        "en": "A kitten costs 1,100 €. This includes the Felidae e.V. pedigree, the first vaccination, microchip, repeated deworming, insurance up to and including the fourteenth week of life, veterinary examination and a starter pack for the first few days.",
-        "lb": "E Kitten kascht 1.100 €. Am Präis sinn de Stammbam vum Felidae e.V., déi éischt Impfung, de Chip, méifach Entwuermung, d'Versécherung bis an déi 14. Liewenswoch, déi déierärztlech Ënnersichung an de Startpak fir déi éischt Deeg dran.",
+        "de": "Ein Kitten kostet 1.000 €. Darin enthalten sind Stammbaum des Felidae e.V., erste Impfung, Chip, mehrfache Entwurmung, Versicherung bis einschließlich 14. Lebenswoche, tierärztliche Untersuchung und das Startpaket für die ersten Tage.",
+        "en": "A kitten costs 1,000 €. This includes the Felidae e.V. pedigree, the first vaccination, microchip, repeated deworming, insurance up to and including the fourteenth week of life, veterinary examination and a starter pack for the first few days.",
+        "lb": "E Kitten kascht 1.000 €. Am Präis sinn de Stammbam vum Felidae e.V., déi éischt Impfung, de Chip, méifach Entwuermung, d'Versécherung bis an déi 14. Liewenswoch, déi déierärztlech Ënnersichung an de Startpak fir déi éischt Deeg dran.",
         "fr": "Un chaton coûte 1 100 €. Ce prix comprend le pedigree du Felidae e.V., la première vaccination, la puce électronique, plusieurs vermifugations, l'assurance jusqu'à la fin de la 14e semaine, l'examen vétérinaire et le kit de départ pour les premiers jours."
       }
     }
@@ -1324,6 +1355,15 @@ const INHALTE = {
       }
     },
     {
+      "datei": "warteliste.html",
+      "label": {
+        "de": "Warteliste",
+        "en": "Waiting list",
+        "lb": "Waardelëscht",
+        "fr": "Liste d'attente"
+      }
+    },
+    {
       "datei": "gesundheit.html",
       "label": {
         "de": "Gesundheit",
@@ -1369,7 +1409,7 @@ const INHALTE = {
                 "name": "Was kostet ein Kitten bei euch?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Ein Kitten kostet 1.100 €. Darin enthalten sind der Stammbaum des Felidae e.V., die erste Impfung, der Chip, mehrfache Entwurmung, eine Versicherung bis einschließlich der 14. Lebenswoche, die tierärztliche Untersuchung und ein Startpaket für die ersten Tage. Die Reservierungsgebühr von 300 € wird auf den Kaufpreis angerechnet."
+                  "text": "Ein Kitten kostet 1.000 €. Darin enthalten sind der Stammbaum des Felidae e.V., die erste Impfung, der Chip, mehrfache Entwurmung, eine Versicherung bis einschließlich der 14. Lebenswoche, die tierärztliche Untersuchung und ein Startpaket für die ersten Tage. Die Reservierungsgebühr von 300 € wird auf den Kaufpreis angerechnet."
                 }
               },
               {
@@ -1449,7 +1489,7 @@ const INHALTE = {
                 "name": "Wann gibt es den nächsten Wurf?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir, sobald sich genug Interessenten auf unserer Warteliste gemeldet haben – die Warteliste entscheidet also mit, wann es weitergeht."
+                  "text": "Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir, sobald sich drei Interessenten auf unserer Warteliste gemeldet haben (einer steht schon darauf) – die Warteliste entscheidet also mit, wann es weitergeht."
                 }
               },
               {
@@ -1489,7 +1529,7 @@ const INHALTE = {
                 "name": "How much does a kitten cost?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A kitten costs 1,100 €. This includes the Felidae e.V. pedigree, the first vaccination, microchip, repeated deworming, insurance up to and including the 14th week of life, a veterinary check and a starter pack for the first few days. The 300 € reservation fee goes towards the purchase price."
+                  "text": "A kitten costs 1,000 €. This includes the Felidae e.V. pedigree, the first vaccination, microchip, repeated deworming, insurance up to and including the 14th week of life, a veterinary check and a starter pack for the first few days. The 300 € reservation fee goes towards the purchase price."
                 }
               },
               {
@@ -1569,7 +1609,7 @@ const INHALTE = {
                 "name": "When is the next litter?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We have at most one litter a year. We plan the next one once enough people have joined our waiting list – so the waiting list helps decide when things continue."
+                  "text": "We have at most one litter a year. We plan the next one once three people have joined our waiting list (one is already on it) – so the waiting list helps decide when things continue."
                 }
               },
               {
@@ -1609,7 +1649,7 @@ const INHALTE = {
                 "name": "Combien coûte un chaton ?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Un chaton coûte 1 100 €. Ce prix comprend le pedigree du Felidae e.V., la première vaccination, la puce, plusieurs vermifugations, une assurance jusqu'à la 14e semaine incluse, l'examen vétérinaire et un kit de départ pour les premiers jours. Les 300 € de frais de réservation sont déduits du prix d'achat."
+                  "text": "Un chaton coûte 1 000 €. Ce prix comprend le pedigree du Felidae e.V., la première vaccination, la puce, plusieurs vermifugations, une assurance jusqu'à la 14e semaine incluse, l'examen vétérinaire et un kit de départ pour les premiers jours. Les 300 € de frais de réservation sont déduits du prix d'achat."
                 }
               },
               {
@@ -1689,7 +1729,7 @@ const INHALTE = {
                 "name": "Quand aura lieu la prochaine portée ?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Nous avons au maximum une portée par an. Nous planifions la suivante dès que suffisamment de personnes se sont inscrites sur notre liste d'attente – la liste d'attente contribue donc à décider de la suite."
+                  "text": "Nous avons au maximum une portée par an. Nous planifions la suivante dès que trois personnes se sont inscrites sur notre liste d'attente (une y figure déjà) – la liste d'attente contribue donc à décider de la suite."
                 }
               },
               {
@@ -2147,14 +2187,6 @@ const INHALTE = {
         "de": "Häufige Fragen",
         "en": "FAQ",
         "fr": "Questions fréquentes"
-      }
-    },
-    {
-      "datei": "warteliste.html",
-      "label": {
-        "de": "Warteliste",
-        "en": "Waiting list",
-        "fr": "Liste d'attente"
       }
     },
     {

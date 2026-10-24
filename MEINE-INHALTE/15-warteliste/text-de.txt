@@ -6,7 +6,7 @@ Titel: Die Warteliste
 SchritteTitel: So funktioniert es
 WhatsAppText: Hallo, wir möchten uns gern auf eure Warteliste für einen der nächsten Würfe setzen lassen.
 ---
-Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir erst, wenn genug Menschen ernsthaft auf ein Kitten warten. Deine Anfrage auf der Warteliste entscheidet also wirklich mit, wann es bei uns wieder wuselt.
+Wir haben höchstens einen Wurf im Jahr. Ab drei Interessenten auf der Warteliste planen wir den nächsten Wurf. Eine Person steht schon darauf, es fehlen also noch zwei. Mit deiner Anfrage entscheidest du wirklich mit, wann es bei uns wieder wuselt.
 
 ===
 
@@ -34,7 +34,7 @@ Sobald ein Wurf geplant ist und sobald die Kitten da sind, hörst du als Erstes 
 
 ===
 
-Titel: Was du uns schreiben solltest
+Titel: Erzähl uns von dir
 ---
 Je mehr wir von dir wissen, desto besser können wir einschätzen, welches Kitten zu dir passt:
 

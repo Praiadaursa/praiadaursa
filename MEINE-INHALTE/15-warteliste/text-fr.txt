@@ -6,7 +6,7 @@ Titel: La liste d'attente
 SchritteTitel: Comment ça marche
 WhatsAppText: Bonjour, nous aimerions nous inscrire sur votre liste d'attente pour l'une de vos prochaines portées.
 ---
-Nous avons au maximum une portée par an, et nous ne planifions la suivante que lorsque suffisamment de personnes attendent sérieusement un chaton. Votre inscription sur la liste d'attente contribue donc vraiment à décider du moment où des chatons gambaderont de nouveau chez nous.
+Nous avons au maximum une portée par an, et nous planifions la suivante dès que trois personnes sont inscrites sur la liste d'attente. Une personne y figure déjà, il en manque donc encore deux. Votre demande contribue vraiment à décider du moment où des chatons gambaderont de nouveau chez nous.
 
 ===
 
@@ -34,7 +34,7 @@ Dès qu'une portée est prévue et dès que les chatons sont nés, vous êtes pa
 
 ===
 
-Titel: Ce qu'il faut nous écrire
+Titel: Parlez-nous de vous
 ---
 Plus nous en savons sur vous, mieux nous pouvons juger quel chaton vous correspond :
 

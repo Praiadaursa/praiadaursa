@@ -173,8 +173,8 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
   --linie-fein:#9A8C7B;
   --taupe:     #6E6254;
 }
-@media (min-width: 1220px) {
-  /* Weichzeichner nur am Desktop — unterhalb 1220px liegt das
+@media (min-width: 1460px) {
+  /* Weichzeichner nur am Desktop — unterhalb 1460px liegt das
      Klappmenue als position:fixed IN der Kopfzeile, und ein
      backdrop-filter wuerde es auf Kopfzeilenhoehe zusammenfalten. */
   .kopf {
@@ -231,7 +231,7 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
 .navi a {
   font-size:.6875rem; font-weight:400; letter-spacing:.16em;
   text-transform:uppercase; color:var(--text);
-  padding:.5rem 0; border-bottom:1px solid transparent;
+  padding:.5rem 0; border-bottom:1px solid transparent; white-space:nowrap;
 }
 .navi a:hover { text-decoration:none; color:var(--blau); }
 .navi a[aria-current="page"] {
@@ -269,9 +269,9 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
   letter-spacing:.2em; text-transform:uppercase; color:var(--text);
 }
 
-/* Ab 1220px passt das Menue mit vier Sprachen in eine Zeile;
+/* Ab 1460px passt das Menue mit acht Punkten und vier Sprachen in eine Zeile;
    darunter (Tablets, kleine Laptops) uebernimmt das Klappmenue. */
-@media (max-width: 1219px) {
+@media (max-width: 1459px) {
   .menuetaste { display:block; }
   .navi {
     position:fixed; inset:var(--kopf) 0 0 0;
@@ -667,3 +667,50 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
 .warte-hinweis { margin:1.5rem 0 0; font-size:.8125rem; letter-spacing:.04em; }
 .warte-hinweis a { color:var(--text-leise); }
 .warte-hinweis a:hover { color:var(--blau); }
+
+
+/* ---------- Mittig gesetzte Abschnitte -------------------- */
+.mitte { text-align:center; }
+.mitte .fliess { margin-left:auto; margin-right:auto; }
+.mitte .liste { grid-template-columns:1fr; max-width:34rem; margin:0 auto; }
+.mitte .liste li { padding:1rem 0; }
+.mitte .liste li::before { position:static; display:block; margin:0 auto .7rem; }
+
+/* Schritte als vier Spalten, jeweils mittig */
+.schritte--mitte { grid-template-columns:repeat(auto-fit, minmax(min(13rem, 100%), 1fr)); gap:0 clamp(1.5rem, 3vw, 3rem); }
+.schritte--mitte li { grid-template-columns:1fr; justify-items:center; text-align:center; gap:.9rem; }
+.schritte--mitte li::before { grid-row:auto; font-size:2rem; }
+.schritte--mitte .schritt-text { grid-column:1; }
+.schritte--mitte p { margin-left:auto; margin-right:auto; }
+
+/* ---------- Kollage der Kitten ---------------------------- */
+.kollage { --hoehe:clamp(10rem, 21vw, 16rem); --abstand:clamp(.75rem, 1.6vw, 1.25rem);
+  display:grid; gap:var(--abstand); padding:0 0 var(--luft); overflow:hidden;
+  -webkit-mask-image:linear-gradient(to right, transparent, #000 9%, #000 91%, transparent);
+          mask-image:linear-gradient(to right, transparent, #000 9%, #000 91%, transparent); }
+.kollage-reihe { overflow:hidden; }
+.kollage-spur { display:flex; width:max-content; animation:kollage-links 110s linear infinite; }
+.kollage-reihe--rechts .kollage-spur { animation-name:kollage-rechts; animation-duration:125s; }
+.kollage:hover .kollage-spur { animation-play-state:paused; }
+.kollage-bild { overflow:hidden; margin:0 var(--abstand) 0 0; height:var(--hoehe); flex:0 0 auto; background:var(--flaeche);
+  outline:1px solid var(--linie); outline-offset:.35rem; }
+.kollage-bild--h { aspect-ratio:3 / 4; border-radius:50% 50% 0 0 / 22% 22% 0 0; }
+.kollage-bild--q { aspect-ratio:1 / 1; }
+.kollage-bild--b { aspect-ratio:5 / 4; }
+.kollage-bild img { width:100%; height:100%; object-fit:cover; display:block; }
+.kollage-reihe--rechts .kollage-bild { height:calc(var(--hoehe) * .86); align-self:center; }
+@keyframes kollage-links  { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+@keyframes kollage-rechts { from { transform:translateX(-50%); } to { transform:translateX(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .kollage-spur { animation:none; }
+  .kollage-reihe { overflow-x:auto; }
+  .kollage-bild[aria-hidden="true"] { display:none; }
+}
+
+/* ---------- "Neu"-Marke ----------------------------------- */
+.neu { display:inline-block; margin-left:1.1em; padding:.3em .85em .26em; border:1px solid var(--blau);
+  border-radius:999px; font-size:.5625rem; font-weight:500; letter-spacing:.26em; text-transform:uppercase;
+  color:var(--blau); line-height:1.2; vertical-align:.1em; }
+.neu[hidden] { display:none; }
+.neu-zeile { margin:0 0 1.1rem; }
+.neu-zeile .neu { margin-left:0; }

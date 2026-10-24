@@ -6,7 +6,7 @@ Titel: The waiting list
 SchritteTitel: How it works
 WhatsAppText: Hello, we would like to join your waiting list for one of your next litters.
 ---
-We have at most one litter a year, and we only plan the next one once enough people are genuinely waiting for a kitten. So your place on the waiting list really does help decide when kittens tumble through our home again.
+We have at most one litter a year, and we plan the next one once three people are on the waiting list. One person is already on it, so two places are still missing. Your request really does help decide when kittens tumble through our home again.
 
 ===
 
@@ -34,7 +34,7 @@ As soon as a litter is planned and as soon as the kittens arrive, you will be am
 
 ===
 
-Titel: What to tell us
+Titel: Tell us about yourself
 ---
 The more we know about you, the better we can judge which kitten suits you:
 

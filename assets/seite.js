@@ -211,6 +211,9 @@
     suchRatgeber:  { de: "Ratgeber Heilige Birma", en: "Sacred Birman guides",
                      lb: "Rotgeber", fr: "Conseils Sacré de Birmanie" },
     ratgeber:      { de: "Ratgeber", en: "Guides", lb: "Rotgeber", fr: "Conseils" },
+    neu:           { de: "Neu", en: "New", lb: "Nei", fr: "Nouveau" },
+    kollageAlt:    { de: "Fotos unserer Kitten", en: "Photos of our kittens",
+                     lb: "Fotoen vun eise Kitten", fr: "Photos de nos chatons" },
     weiterlesenKurz: { de: "Weiterlesen", en: "Read more", lb: "Weiderliesen", fr: "Lire la suite" },
     mehrRatgeber:  { de: "Weiterlesen im Ratgeber", en: "More guides", lb: "Méi Rotgeber", fr: "À lire aussi" },
     stand:         { de: "Stand:", en: "Last updated:", lb: "Stand:", fr: "Mise à jour :" },
@@ -477,7 +480,7 @@
 
   function kopfBauen(seite) {
     var z = INHALTE.zucht;
-    var punkte = INHALTE.navigation.map(function (n) {
+    var punkte = INHALTE.navigation.filter(function (n) { return gibtEs(sprache, n.datei); }).map(function (n) {
       var aktiv = n.datei === seite ? ' aria-current="page"' : "";
       return '<a href="' + esc(seitenPfad(n.datei)) + '"' + aktiv + ">" + esc(t(n.label)) + "</a>";
     }).join("");
@@ -512,11 +515,11 @@
 
   function fussBauen() {
     var z = INHALTE.zucht;
-    var punkte = INHALTE.navigation.map(function (n) {
+    var punkte = INHALTE.navigation.filter(function (n) { return gibtEs(sprache, n.datei); }).map(function (n) {
       return "<li><a href=" + '"' + esc(seitenPfad(n.datei)) + '">' + esc(t(n.label)) + "</a></li>";
     }).join("");
 
-    /* Zweite Spalte fuer Ratgeber, Rasse, Fragen und Warteliste — das
+    /* Zweite Spalte fuer Ratgeber, Rasse und Fragen — das
        Hauptmenue bleibt dadurch bei seinen Punkten.                    */
     var wissen = (INHALTE.wissen || []).filter(function (n) { return gibtEs(sprache, n.datei); });
     var wissenSpalte = wissen.length ? '<div><p class="marke">' + esc(u("wissen")) + "</p><ul>" +
@@ -562,8 +565,8 @@
       '<path d="M70 6 L74 11 L70 16 L66 11 Z" fill="currentColor" stroke="none"/>' +
     "</svg>";
 
-  function seitenkopf(marke, titel, text) {
-    return '<div class="seitenkopf"><div class="breit">' + FLEURON +
+  function seitenkopf(marke, titel, text, zusatz) {
+    return '<div class="seitenkopf"><div class="breit">' + FLEURON + (zusatz || "") +
       '<h1 class="kopf-titel"><span class="marke">' + esc(t(marke)) + "</span> " +
         '<span class="titel">' + esc(t(titel)) + "</span></h1>" +
       (text ? '<div class="fliess leise">' + absaetze(text) + "</div>" : "") +
@@ -861,7 +864,7 @@
             '<p class="karte-text">' + esc(t(b.text)) + "</p></article>";
         }).join("") +
       "</div></div></section>" +
-      '<section class="abschnitt"><div class="breit">' +
+      '<section class="abschnitt"><div class="eng mitte">' +
         '<p class="marke">' + esc(u("verband")) + "</p>" +
         '<h2 class="untertitel">' + esc(z.verband.name) + "</h2>" +
         '<div class="fliess leise"><p>' + esc(u("verbandVor")) +
@@ -948,27 +951,74 @@
       "</div></div></section>" + kontaktband();
   };
 
+  /* Collage: zwei Fotoreihen mit allen Kitten, die gegenlaeufig und sehr
+     langsam durchlaufen. Jede Reihe steht doppelt hintereinander, damit
+     die Schleife ohne Sprung schliesst. Bei "Bewegung reduzieren" steht
+     alles still und laesst sich seitlich wischen.                       */
+  function kollage() {
+    var tiere = ((INHALTE.wurf && INHALTE.wurf.kitten) || []).map(function (k) {
+      return { bilder: (k.bilder || []).filter(function (x) { return !istVideo(x); }),
+               alt: bildText("altKitten", k.name, t(k.farbschlag)) };
+    });
+    var vorrat = [], tiefe = 0;
+    tiere.forEach(function (x) { tiefe = Math.max(tiefe, x.bilder.length); });
+    for (var i = 0; i < tiefe; i++) {
+      tiere.forEach(function (x) { if (x.bilder[i]) { vorrat.push({ pfad: x.bilder[i], alt: x.alt }); } });
+    }
+    if (vorrat.length < 8) return "";
+    var reihen = [[], []];
+    vorrat.forEach(function (f, n) { reihen[n % 2].push(f); });
+    reihen[1].reverse();
+    var FORM = ["h", "q", "b", "q", "h", "b"];
+    function spur(liste, doppelt) {
+      return liste.map(function (f, n) {
+        return '<figure class="kollage-bild kollage-bild--' + FORM[n % FORM.length] + '"' +
+          (doppelt ? ' aria-hidden="true"' : "") + '><img src="' + esc(f.pfad) + '" alt="' +
+          (doppelt ? "" : esc(f.alt)) + '" loading="lazy" decoding="async" data-pfad="' + esc(f.pfad) + '"></figure>';
+      }).join("");
+    }
+    return '<section class="kollage" aria-label="' + esc(u("kollageAlt")) + '">' +
+      reihen.map(function (liste, n) {
+        return '<div class="kollage-reihe kollage-reihe--' + (n ? "rechts" : "links") + '">' +
+          '<div class="kollage-spur">' + spur(liste, false) + spur(liste, true) + "</div></div>";
+      }).join("") + "</section>";
+  }
+
   SEITEN["warteliste.html"] = function () {
     var w = INHALTE.warteliste;
-    var schritte = w.schritte.length ? '<section class="abschnitt"><div class="breit">' +
+    var schritte = w.schritte.length ? '<section class="abschnitt"><div class="breit mitte">' +
         '<p class="marke">' + esc(t(w.schritteTitel)) + "</p>" +
-        '<ol class="schritte">' + w.schritte.map(function (s) {
+        '<ol class="schritte schritte--mitte">' + w.schritte.map(function (s) {
           return "<li><h3>" + esc(t(s.titel)) + "</h3>" +
             '<div class="schritt-text">' + reichtext(s.text) + "</div></li>";
         }).join("") + "</ol></div></section>" : "";
     var abschnitte = w.abschnitte.map(function (a) {
-      return '<section class="abschnitt"><div class="breit">' +
+      return '<section class="abschnitt"><div class="eng mitte">' +
         '<h2 class="untertitel">' + esc(t(a.titel)) + "</h2>" +
         '<div class="fliess">' + reichtext(a.text) + "</div></div></section>";
     }).join("");
-    return seitenkopf(UI.suchWarteliste, w.titel, w.einleitung) + schritte + abschnitte +
+    return seitenkopf(UI.suchWarteliste, w.titel, w.einleitung) + kollage() + schritte + abschnitte +
       kontaktband("warteliste");
   };
+
+  /* "Neu"-Marke fuer Beitraege der letzten 30 Tage. Auf fertig erzeugten
+     Seiten prueft der Browser beim Laden noch einmal, damit eine Marke
+     von selbst verschwindet, auch wenn die Seite nicht neu gebaut wird. */
+  var NEU_TAGE = 30;
+  function istNeu(iso) {
+    if (!iso || !/^\d{4}-\d{2}-\d{2}$/.test(iso)) return false;
+    var tage = (Date.now() - new Date(iso + "T12:00:00").getTime()) / 864e5;
+    return tage >= -1 && tage <= NEU_TAGE;
+  }
+  function neuMarke(a, klasse) {
+    return istNeu(a.datum) ? '<span class="neu ' + (klasse || "") + '" data-datum="' + esc(a.datum) + '">' +
+      esc(u("neu")) + "</span>" : "";
+  }
 
   function artikelKarten(liste) {
     return '<div class="raster raster--zwei">' + liste.map(function (a) {
       return '<article class="karte"><hr class="haarlinie">' +
-        '<p class="marke" style="margin-top:1.5rem">' + esc(t(a.thema)) + "</p>" +
+        '<p class="marke" style="margin-top:1.5rem">' + esc(t(a.thema)) + neuMarke(a) + "</p>" +
         '<h2 class="untertitel"><a href="' + esc(a.datei) + '">' + esc(t(a.titel)) + "</a></h2>" +
         '<p class="karte-text">' + esc(t(a.kurztext)) + "</p>" +
         '<div class="knopf-reihe"><a class="knopf" href="' + esc(a.datei) + '">' +
@@ -992,7 +1042,9 @@
       return '<h2 class="untertitel">' + esc(t(b.titel)) + "</h2>" +
         '<div class="fliess">' + reichtext(b.text) + "</div>";
     }).join("");
-    return seitenkopf(u("ratgeber") + " · " + t(a.thema), a.titel, a.einleitung) +
+    var neu = neuMarke(a);
+    return seitenkopf(u("ratgeber") + " · " + t(a.thema), a.titel, a.einleitung,
+                      neu ? '<p class="neu-zeile">' + neuMarke(a, "neu--ohne-rand") + "</p>" : "") +
       '<section class="abschnitt"><div class="artikel">' + text +
         '<p class="artikel-stand leise">' + esc(u("stand")) + " " + datum(a.datum) + "</p>" +
       "</div></section>" +
@@ -1178,6 +1230,10 @@
       fussZiel.innerHTML = fussBauen();
       rechtstexteUmschalten();
     }
+
+    document.querySelectorAll(".neu[data-datum]").forEach(function (el) {
+      if (!istNeu(el.getAttribute("data-datum"))) { el.hidden = true; }
+    });
 
     bilderAbsichern(document.body);
     videosVorbereiten(document.body);

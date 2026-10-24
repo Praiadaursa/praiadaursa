@@ -274,8 +274,8 @@ def verkleinern(pfad, kante=None):
 
 # ---------------------------------------------------------------- videos
 
-MAX_SEKUNDEN = 60    # laengere Videos werden gekuerzt
-UMWANDLUNG_VERSION = 3   # 3: 960x540 statt 1280x720
+MAX_SEKUNDEN = 30    # laengere Videos werden gekuerzt (schont Handys und GitHub)
+UMWANDLUNG_VERSION = 5   # 5: auf 30 s gekuerzt; 4: ohne Ton; 3: 960x540
 WARNGROESSE  = 40    # MB; darueber wird es fuer GitHub und Handys zaeh
 
 
@@ -337,6 +337,20 @@ def videodauer(pfad):
         return None
 
 
+def ton_entfernen(datei):
+    """Entfernt die Tonspur (Videos laufen auf der Website ohnehin stumm).
+       Das Hilfsprogramm werkzeuge/stumm.swift wird einmal uebersetzt und
+       im Zwischenspeicher abgelegt."""
+    quelle = os.path.join(WURZEL, "werkzeuge", "stumm.swift")
+    programm = os.path.join(ZWISCHEN, "stumm")
+    if not os.path.exists(programm) or os.path.getmtime(programm) < os.path.getmtime(quelle):
+        subprocess.run(["swiftc", "-O", "-o", programm, quelle], check=True,
+                       capture_output=True, timeout=600)
+    ohne = datei + ".stumm.mp4"
+    subprocess.run([programm, datei, ohne], check=True, capture_output=True, timeout=1800)
+    os.replace(ohne, datei)
+
+
 def video_uebernehmen(quelle, ziel):
     """Wandelt ein Handyvideo in webtaugliches MP4 um (540p, H.264).
 
@@ -365,6 +379,7 @@ def video_uebernehmen(quelle, ziel):
             befehl += ["--duration", str(MAX_SEKUNDEN)]
         try:
             subprocess.run(befehl, check=True, capture_output=True, timeout=1800)
+            ton_entfernen(vorlaeufig)
             os.replace(vorlaeufig, zwischen)
         except Exception:
             if os.path.exists(vorlaeufig):
@@ -669,6 +684,11 @@ def bauen():
             {"datei": "vermittlung.html",
              "label": {"de": "Vermittlung & Preis", "en": "Rehoming & price",
                        "lb": "Vermëttlung & Präis", "fr": "Adoption & prix"}},
+        ] + ([
+            {"datei": "warteliste.html",
+             "label": {"de": "Warteliste", "en": "Waiting list",
+                       "lb": "Waardelëscht", "fr": "Liste d'attente"}},
+        ] if any(z["datei"] == "warteliste.html" for z in zusatz) else []) + [
             {"datei": "gesundheit.html",
              "label": {"de": "Gesundheit", "en": "Health",
                        "lb": "Gesondheet", "fr": "Santé"}},
@@ -683,8 +703,6 @@ def bauen():
                        "fr": "Le Sacré de Birmanie"}},
             {"datei": "fragen.html",
              "label": {"de": "Häufige Fragen", "en": "FAQ", "fr": "Questions fréquentes"}},
-            {"datei": "warteliste.html",
-             "label": {"de": "Warteliste", "en": "Waiting list", "fr": "Liste d'attente"}},
             {"datei": "ratgeber.html",
              "label": {"de": "Ratgeber", "en": "Guides", "fr": "Conseils"}},
         ] if any(z["datei"] == w["datei"] for z in zusatz)],
