@@ -5,8 +5,11 @@
 Titel: La liste d'attente
 SchritteTitel: Comment ça marche
 WhatsAppText: Bonjour, nous aimerions nous inscrire sur votre liste d'attente pour l'une de vos prochaines portées.
+Eingetragen: 1
+Benoetigt: 3
+ZaehlerText: La planification commence dès que trois familles sont inscrites
 ---
-Nous avons au maximum une portée par an, et nous planifions la suivante dès que trois personnes sont inscrites sur la liste d'attente. Une personne y figure déjà, il en manque donc encore deux. Votre demande contribue vraiment à décider du moment où des chatons gambaderont de nouveau chez nous.
+Nous avons au maximum une portée par an et ne planifions la suivante que lorsque suffisamment de familles attendent un chaton. Si vous rêvez d'une petite âme de Sacré de Birmanie, inscrivez-vous : votre demande contribue vraiment à décider du moment où des chatons gambaderont de nouveau chez nous.
 
 ===
 
@@ -16,21 +19,21 @@ Sur WhatsApp ou par e-mail, sans engagement. Parlez-nous un peu de vous et de ce
 
 ===
 
-Schritt: Faisons connaissance
+Schritt: Vous êtes sur la liste d'attente
 ---
-Par téléphone, par Zoom ou lors d'une visite à Trèves. Nous voulons savoir où vivront nos chatons – et vous devez savoir d'où ils viennent.
+Votre nom figure désormais sur notre liste, sans engagement et gratuitement. Nous faisons connaissance par téléphone, par Zoom ou lors d'une visite à Trèves, car nous voulons savoir où vivront nos chatons. Dès que la planification de la prochaine portée commence, vous l'apprenez directement par nous.
 
 ===
 
-Schritt: Vous êtes sur la liste
+Schritt: La planification commence
 ---
-Votre place est ainsi retenue. Rien ne devient ferme avant une réservation, et ce n'est qu'à ce moment-là que les frais de réservation sont dus.
+Nous avons assez de familles ! Dès maintenant, vous êtes au cœur de l'aventure : vous recevez toutes les dates de notre part et vous êtes les premiers informés dès que les chatons sont là et quand ils pourront emménager. Ce n'est qu'avec la réservation que cela devient ferme, et c'est alors seulement que les frais de réservation sont dus.
 
 ===
 
-Schritt: Nous vous recontactons
+Schritt: Vous faites partie de la famille
 ---
-Dès qu'une portée est prévue et dès que les chatons sont nés, vous êtes parmi les premiers informés – photos à l'appui, promis.
+Dès le premier jour, vous faites partie de notre famille. Vous recevez photos, vidéos et nouvelles de la chambre des chatons, et vous participez au choix de votre chaton et de son prénom.
 
 ===
 

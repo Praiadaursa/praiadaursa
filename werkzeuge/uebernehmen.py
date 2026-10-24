@@ -766,6 +766,9 @@ def neue_seiten():
              "einleitung": mehrsprachig("15-warteliste", 0, None, drei),
              "whatsappText": mehrsprachig("15-warteliste", 0, "WhatsAppText", drei),
              "schritteTitel": mehrsprachig("15-warteliste", 0, "SchritteTitel", drei),
+             "zaehlerText": mehrsprachig("15-warteliste", 0, "ZaehlerText", drei),
+             "eingetragen": int(feldwert("15-warteliste", "Eingetragen", standard="0") or 0),
+             "benoetigt": int(feldwert("15-warteliste", "Benoetigt", standard="3") or 3),
              "schritte": [], "abschnitte": []}
         for i in range(1, anzahl("15-warteliste")):
             eintrag = eintraege("15-warteliste", "de")[i]["felder"]

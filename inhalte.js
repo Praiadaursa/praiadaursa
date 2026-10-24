@@ -5,7 +5,7 @@
    Bearbeite stattdessen den Ordner MEINE-INHALTE und starte
    danach aktualisieren.command per Doppelklick.
 
-   Zuletzt erzeugt am 24.10.2026 um 18:59 Uhr
+   Zuletzt erzeugt am 24.10.2026 um 19:15 Uhr
    ============================================================ */
 
 const INHALTE = {
@@ -246,9 +246,9 @@ const INHALTE = {
           "fr": "Quand aura lieu la prochaine portée ?"
         },
         "antwort": {
-          "de": "Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir, sobald sich drei Interessenten auf unserer [Warteliste](warteliste.html) gemeldet haben (einer steht schon darauf) – die Warteliste entscheidet also mit, wann es weitergeht.",
-          "en": "We have at most one litter a year. We plan the next one once three people have joined our [waiting list](warteliste.html) (one is already on it) – so the waiting list helps decide when things continue.",
-          "fr": "Nous avons au maximum une portée par an. Nous planifions la suivante dès que trois personnes se sont inscrites sur notre [liste d'attente](warteliste.html) (une y figure déjà) – la liste d'attente contribue donc à décider de la suite."
+          "de": "Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir, sobald sich drei Familien auf unserer [Warteliste](warteliste.html) gemeldet haben (eine steht schon darauf) – die Warteliste entscheidet also mit, wann es weitergeht.",
+          "en": "We have at most one litter a year. We plan the next one once three families have joined our [waiting list](warteliste.html) (one is already on it) – so the waiting list helps decide when things continue.",
+          "fr": "Nous avons au maximum une portée par an. Nous planifions la suivante dès que trois familles se sont inscrites sur notre [liste d'attente](warteliste.html) (une y figure déjà) – la liste d'attente contribue donc à décider de la suite."
         }
       },
       {
@@ -296,9 +296,9 @@ const INHALTE = {
       "fr": "La liste d'attente"
     },
     "einleitung": {
-      "de": "Wir haben höchstens einen Wurf im Jahr. Ab drei Interessenten auf der Warteliste planen wir den nächsten Wurf. Eine Person steht schon darauf, es fehlen also noch zwei. Mit deiner Anfrage entscheidest du wirklich mit, wann es bei uns wieder wuselt.",
-      "en": "We have at most one litter a year, and we plan the next one once three people are on the waiting list. One person is already on it, so two places are still missing. Your request really does help decide when kittens tumble through our home again.",
-      "fr": "Nous avons au maximum une portée par an, et nous planifions la suivante dès que trois personnes sont inscrites sur la liste d'attente. Une personne y figure déjà, il en manque donc encore deux. Votre demande contribue vraiment à décider du moment où des chatons gambaderont de nouveau chez nous."
+      "de": "Wir haben höchstens einen Wurf im Jahr und planen den nächsten erst, wenn genug Familien auf ein Kitten warten. Wenn du dir eine kleine Birma-Seele wünschst, trag dich ein: Deine Anfrage entscheidet wirklich mit, wann es bei uns wieder wuselt.",
+      "en": "We have at most one litter a year and only plan the next one once enough families are waiting for a kitten. If you are dreaming of a little Birman soul, add your name: your request really does help decide when kittens tumble through our home again.",
+      "fr": "Nous avons au maximum une portée par an et ne planifions la suivante que lorsque suffisamment de familles attendent un chaton. Si vous rêvez d'une petite âme de Sacré de Birmanie, inscrivez-vous : votre demande contribue vraiment à décider du moment où des chatons gambaderont de nouveau chez nous."
     },
     "whatsappText": {
       "de": "Hallo, wir möchten uns gern auf eure Warteliste für einen der nächsten Würfe setzen lassen.",
@@ -310,6 +310,13 @@ const INHALTE = {
       "en": "How it works",
       "fr": "Comment ça marche"
     },
+    "zaehlerText": {
+      "de": "Ab drei Familien startet die Planung",
+      "en": "Planning starts once three families have signed up",
+      "fr": "La planification commence dès que trois familles sont inscrites"
+    },
+    "eingetragen": 1,
+    "benoetigt": 3,
     "schritte": [
       {
         "titel": {
@@ -325,38 +332,38 @@ const INHALTE = {
       },
       {
         "titel": {
-          "de": "Wir lernen uns kennen",
-          "en": "We get to know each other",
-          "fr": "Faisons connaissance"
+          "de": "Du stehst auf der Warteliste",
+          "en": "You are on the waiting list",
+          "fr": "Vous êtes sur la liste d'attente"
         },
         "text": {
-          "de": "Bei einem Telefonat, per Zoom oder bei einem Besuch in Trier. Wir möchten wissen, wo unsere Kitten einmal leben – und du sollst wissen, wo sie herkommen.",
-          "en": "On the phone, over Zoom or during a visit to Trier. We want to know where our kittens will live – and you should know where they come from.",
-          "fr": "Par téléphone, par Zoom ou lors d'une visite à Trèves. Nous voulons savoir où vivront nos chatons – et vous devez savoir d'où ils viennent."
+          "de": "Damit bist du bei uns vorgemerkt, ganz ohne Verpflichtung und ohne Kosten. Wir lernen uns bei einem Telefonat, per Zoom oder bei einem Besuch in Trier kennen, denn wir möchten wissen, wo unsere Kitten einmal leben. Sobald die Planung des nächsten Wurfs beginnt, erfährst du es direkt von uns.",
+          "en": "That's you noted down with us, without obligation and free of charge. We get to know each other over the phone, on Zoom or on a visit in Trier, because we want to know where our kittens will live. As soon as planning for the next litter begins, you hear it straight from us.",
+          "fr": "Votre nom figure désormais sur notre liste, sans engagement et gratuitement. Nous faisons connaissance par téléphone, par Zoom ou lors d'une visite à Trèves, car nous voulons savoir où vivront nos chatons. Dès que la planification de la prochaine portée commence, vous l'apprenez directement par nous."
         }
       },
       {
         "titel": {
-          "de": "Du stehst auf der Liste",
-          "en": "You are on the list",
-          "fr": "Vous êtes sur la liste"
+          "de": "Die Planung startet",
+          "en": "Planning begins",
+          "fr": "La planification commence"
         },
         "text": {
-          "de": "Damit bist du vorgemerkt. Verbindlich wird es erst bei einer Reservierung, und erst dann fällt die Reservierungsgebühr an.",
-          "en": "That reserves your place. Nothing becomes binding until a reservation, and only then is the reservation fee due.",
-          "fr": "Votre place est ainsi retenue. Rien ne devient ferme avant une réservation, et ce n'est qu'à ce moment-là que les frais de réservation sont dus."
+          "de": "Wir haben genug Familien beisammen! Ab jetzt bist du hautnah dabei: Du bekommst alle Termine von uns und hörst als Erstes, sobald die Kitten da sind und wann sie bei dir einziehen können. Verbindlich wird es erst mit der Reservierung, und erst dann fällt die Reservierungsgebühr an.",
+          "en": "We have enough families! From here on you are right in the middle of it: you receive every date from us and hear first, as soon as the kittens are here and when they can move in. It only becomes binding with a reservation, and only then is the reservation fee due.",
+          "fr": "Nous avons assez de familles ! Dès maintenant, vous êtes au cœur de l'aventure : vous recevez toutes les dates de notre part et vous êtes les premiers informés dès que les chatons sont là et quand ils pourront emménager. Ce n'est qu'avec la réservation que cela devient ferme, et c'est alors seulement que les frais de réservation sont dus."
         }
       },
       {
         "titel": {
-          "de": "Wir melden uns",
-          "en": "We get in touch",
-          "fr": "Nous vous recontactons"
+          "de": "Du gehörst zur Familie",
+          "en": "You are part of the family",
+          "fr": "Vous faites partie de la famille"
         },
         "text": {
-          "de": "Sobald ein Wurf geplant ist und sobald die Kitten da sind, hörst du als Erstes von uns – mit Fotos, versprochen.",
-          "en": "As soon as a litter is planned and as soon as the kittens arrive, you will be among the first to hear – with photos, we promise.",
-          "fr": "Dès qu'une portée est prévue et dès que les chatons sont nés, vous êtes parmi les premiers informés – photos à l'appui, promis."
+          "de": "Von Anfang an bist du Teil unserer Familie. Du bekommst Fotos, Videos und Neuigkeiten aus dem Kittenzimmer und darfst bei der Wahl deines Kittens und seines Namens mitentscheiden.",
+          "en": "From the very first day you are part of our family. You receive photos, videos and news from the kitten room, and you have a say in choosing your kitten and its name.",
+          "fr": "Dès le premier jour, vous faites partie de notre famille. Vous recevez photos, vidéos et nouvelles de la chambre des chatons, et vous participez au choix de votre chaton et de son prénom."
         }
       }
     ],
@@ -1044,7 +1051,8 @@ const INHALTE = {
           "bilder/atlas-6.jpg",
           "bilder/atlas-7.jpg",
           "bilder/atlas-8.jpg",
-          "bilder/atlas-9.mp4"
+          "bilder/atlas-9.mp4",
+          "bilder/atlas-10.mp4"
         ],
         "bildgruppen": [
           [
@@ -1056,7 +1064,8 @@ const INHALTE = {
             "bilder/atlas-6.jpg",
             "bilder/atlas-7.jpg",
             "bilder/atlas-8.jpg",
-            "bilder/atlas-9.mp4"
+            "bilder/atlas-9.mp4",
+            "bilder/atlas-10.mp4"
           ]
         ]
       }
@@ -1489,7 +1498,7 @@ const INHALTE = {
                 "name": "Wann gibt es den nächsten Wurf?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir, sobald sich drei Interessenten auf unserer Warteliste gemeldet haben (einer steht schon darauf) – die Warteliste entscheidet also mit, wann es weitergeht."
+                  "text": "Wir haben höchstens einen Wurf im Jahr. Den nächsten planen wir, sobald sich drei Familien auf unserer Warteliste gemeldet haben (eine steht schon darauf) – die Warteliste entscheidet also mit, wann es weitergeht."
                 }
               },
               {
@@ -1609,7 +1618,7 @@ const INHALTE = {
                 "name": "When is the next litter?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "We have at most one litter a year. We plan the next one once three people have joined our waiting list (one is already on it) – so the waiting list helps decide when things continue."
+                  "text": "We have at most one litter a year. We plan the next one once three families have joined our waiting list (one is already on it) – so the waiting list helps decide when things continue."
                 }
               },
               {
@@ -1729,7 +1738,7 @@ const INHALTE = {
                 "name": "Quand aura lieu la prochaine portée ?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Nous avons au maximum une portée par an. Nous planifions la suivante dès que trois personnes se sont inscrites sur notre liste d'attente (une y figure déjà) – la liste d'attente contribue donc à décider de la suite."
+                  "text": "Nous avons au maximum une portée par an. Nous planifions la suivante dès que trois familles se sont inscrites sur notre liste d'attente (une y figure déjà) – la liste d'attente contribue donc à décider de la suite."
                 }
               },
               {

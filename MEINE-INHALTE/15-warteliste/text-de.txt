@@ -5,8 +5,11 @@
 Titel: Die Warteliste
 SchritteTitel: So funktioniert es
 WhatsAppText: Hallo, wir möchten uns gern auf eure Warteliste für einen der nächsten Würfe setzen lassen.
+Eingetragen: 1
+Benoetigt: 3
+ZaehlerText: Ab drei Familien startet die Planung
 ---
-Wir haben höchstens einen Wurf im Jahr. Ab drei Interessenten auf der Warteliste planen wir den nächsten Wurf. Eine Person steht schon darauf, es fehlen also noch zwei. Mit deiner Anfrage entscheidest du wirklich mit, wann es bei uns wieder wuselt.
+Wir haben höchstens einen Wurf im Jahr und planen den nächsten erst, wenn genug Familien auf ein Kitten warten. Wenn du dir eine kleine Birma-Seele wünschst, trag dich ein: Deine Anfrage entscheidet wirklich mit, wann es bei uns wieder wuselt.
 
 ===
 
@@ -16,21 +19,21 @@ Per WhatsApp oder E-Mail, ganz unverbindlich. Erzähl uns kurz von dir und davon
 
 ===
 
-Schritt: Wir lernen uns kennen
+Schritt: Du stehst auf der Warteliste
 ---
-Bei einem Telefonat, per Zoom oder bei einem Besuch in Trier. Wir möchten wissen, wo unsere Kitten einmal leben – und du sollst wissen, wo sie herkommen.
+Damit bist du bei uns vorgemerkt, ganz ohne Verpflichtung und ohne Kosten. Wir lernen uns bei einem Telefonat, per Zoom oder bei einem Besuch in Trier kennen, denn wir möchten wissen, wo unsere Kitten einmal leben. Sobald die Planung des nächsten Wurfs beginnt, erfährst du es direkt von uns.
 
 ===
 
-Schritt: Du stehst auf der Liste
+Schritt: Die Planung startet
 ---
-Damit bist du vorgemerkt. Verbindlich wird es erst bei einer Reservierung, und erst dann fällt die Reservierungsgebühr an.
+Wir haben genug Familien beisammen! Ab jetzt bist du hautnah dabei: Du bekommst alle Termine von uns und hörst als Erstes, sobald die Kitten da sind und wann sie bei dir einziehen können. Verbindlich wird es erst mit der Reservierung, und erst dann fällt die Reservierungsgebühr an.
 
 ===
 
-Schritt: Wir melden uns
+Schritt: Du gehörst zur Familie
 ---
-Sobald ein Wurf geplant ist und sobald die Kitten da sind, hörst du als Erstes von uns – mit Fotos, versprochen.
+Von Anfang an bist du Teil unserer Familie. Du bekommst Fotos, Videos und Neuigkeiten aus dem Kittenzimmer und darfst bei der Wahl deines Kittens und seines Namens mitentscheiden.
 
 ===
 

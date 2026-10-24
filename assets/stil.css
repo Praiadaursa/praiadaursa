@@ -714,3 +714,13 @@ a:hover { text-decoration:underline; text-underline-offset:.28em; }
 .neu[hidden] { display:none; }
 .neu-zeile { margin:0 0 1.1rem; }
 .neu-zeile .neu { margin-left:0; }
+
+/* ---------- Zaehler der Warteliste ------------------------ */
+.zaehler { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:.6rem 1.1rem;
+  width:fit-content; max-width:calc(100% - 2 * var(--rand)); margin:0 auto clamp(2rem, 4vw, 3rem);
+  padding:.7rem 1.5rem; border:1px solid var(--linie); border-radius:999px; }
+.zaehler-zahl { font-family:var(--serif); font-size:1.375rem; font-weight:400; color:var(--blau); line-height:1; letter-spacing:.06em; }
+.zaehler-punkte { display:flex; gap:.5rem; }
+.zaehler-punkte i { width:.55rem; height:.55rem; transform:rotate(45deg); border:1px solid var(--taupe); }
+.zaehler-punkte i.an { background:var(--blau); border-color:var(--blau); }
+.zaehler-text { font-size:.625rem; font-weight:400; letter-spacing:.22em; text-transform:uppercase; color:var(--text-leise); }

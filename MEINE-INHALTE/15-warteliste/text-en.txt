@@ -5,8 +5,11 @@
 Titel: The waiting list
 SchritteTitel: How it works
 WhatsAppText: Hello, we would like to join your waiting list for one of your next litters.
+Eingetragen: 1
+Benoetigt: 3
+ZaehlerText: Planning starts once three families have signed up
 ---
-We have at most one litter a year, and we plan the next one once three people are on the waiting list. One person is already on it, so two places are still missing. Your request really does help decide when kittens tumble through our home again.
+We have at most one litter a year and only plan the next one once enough families are waiting for a kitten. If you are dreaming of a little Birman soul, add your name: your request really does help decide when kittens tumble through our home again.
 
 ===
 
@@ -16,21 +19,21 @@ On WhatsApp or by email, with no obligation. Tell us a little about yourself and
 
 ===
 
-Schritt: We get to know each other
+Schritt: You are on the waiting list
 ---
-On the phone, over Zoom or during a visit to Trier. We want to know where our kittens will live – and you should know where they come from.
+That's you noted down with us, without obligation and free of charge. We get to know each other over the phone, on Zoom or on a visit in Trier, because we want to know where our kittens will live. As soon as planning for the next litter begins, you hear it straight from us.
 
 ===
 
-Schritt: You are on the list
+Schritt: Planning begins
 ---
-That reserves your place. Nothing becomes binding until a reservation, and only then is the reservation fee due.
+We have enough families! From here on you are right in the middle of it: you receive every date from us and hear first, as soon as the kittens are here and when they can move in. It only becomes binding with a reservation, and only then is the reservation fee due.
 
 ===
 
-Schritt: We get in touch
+Schritt: You are part of the family
 ---
-As soon as a litter is planned and as soon as the kittens arrive, you will be among the first to hear – with photos, we promise.
+From the very first day you are part of our family. You receive photos, videos and news from the kitten room, and you have a say in choosing your kitten and its name.
 
 ===
 

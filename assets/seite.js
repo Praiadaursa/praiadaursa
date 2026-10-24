@@ -997,7 +997,19 @@
         '<h2 class="untertitel">' + esc(t(a.titel)) + "</h2>" +
         '<div class="fliess">' + reichtext(a.text) + "</div></div></section>";
     }).join("");
-    return seitenkopf(UI.suchWarteliste, w.titel, w.einleitung) + kollage() + schritte + abschnitte +
+    /* Kleiner Zaehler: wie viele Familien stehen schon auf der Liste? */
+    var zaehler = "";
+    if (w.benoetigt > 0 && t(w.zaehlerText)) {
+      var punkte = "";
+      for (var n = 0; n < w.benoetigt; n++) {
+        punkte += '<i' + (n < w.eingetragen ? ' class="an"' : "") + "></i>";
+      }
+      zaehler = '<div class="zaehler" role="img" aria-label="' + w.eingetragen + " / " + w.benoetigt + " · " +
+        esc(t(w.zaehlerText)) + '"><span class="zaehler-zahl">' + w.eingetragen + " / " + w.benoetigt +
+        '</span><span class="zaehler-punkte" aria-hidden="true">' + punkte + "</span>" +
+        '<span class="zaehler-text">' + esc(t(w.zaehlerText)) + "</span></div>";
+    }
+    return seitenkopf(UI.suchWarteliste, w.titel, w.einleitung) + zaehler + kollage() + schritte + abschnitte +
       kontaktband("warteliste");
   };
 
